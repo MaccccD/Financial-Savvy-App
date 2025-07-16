@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dumis\\FinancialLitApp\\FinancialLitApp.csproj": {}
+    "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\FinancialLitApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dumis\\FinancialLitApp\\FinancialLitApp.csproj": {
+    "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\FinancialLitApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dumis\\FinancialLitApp\\FinancialLitApp.csproj",
+        "projectUniqueName": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\FinancialLitApp.csproj",
         "projectName": "FinancialLitApp",
-        "projectPath": "C:\\Users\\Dumis\\FinancialLitApp\\FinancialLitApp.csproj",
+        "projectPath": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\FinancialLitApp.csproj",
         "packagesPath": "C:\\Users\\Dumis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dumis\\FinancialLitApp\\obj\\",
+        "outputPath": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [

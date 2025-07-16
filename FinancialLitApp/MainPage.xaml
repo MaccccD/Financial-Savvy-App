@@ -13,6 +13,7 @@
                 Aspect="AspectFit"
                 SemanticProperties.Description="dot net bot in a hovercraft number nine" />
 
+             <Label
                 Text="Hello, Dumisani Mofolo."
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
@@ -23,8 +24,8 @@
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
 
-            <
-                x:NButtoname="CounterBtn"
+            <Button
+                x:Name="CounterBtn"
                 Text="Click me" 
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
