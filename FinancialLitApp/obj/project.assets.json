@@ -26316,10 +26316,6 @@
         "warn": true,
         "downloadDependencies": [
           {
-            "name": "Microsoft.Net.Sdk.Compilers.Toolset",
-            "version": "[9.0.200, 9.0.200]"
-          },
-          {
             "name": "Microsoft.NETCore.App.Ref",
             "version": "[9.0.7, 9.0.7]"
           }
@@ -26364,10 +26360,6 @@
         "assetTargetFallback": true,
         "warn": true,
         "downloadDependencies": [
-          {
-            "name": "Microsoft.Net.Sdk.Compilers.Toolset",
-            "version": "[9.0.200, 9.0.200]"
-          },
           {
             "name": "Microsoft.NETCore.App.Ref",
             "version": "[9.0.7, 9.0.7]"
@@ -26415,10 +26407,6 @@
         "warn": true,
         "downloadDependencies": [
           {
-            "name": "Microsoft.Net.Sdk.Compilers.Toolset",
-            "version": "[9.0.200, 9.0.200]"
-          },
-          {
             "name": "Microsoft.NETCore.App.Ref",
             "version": "[9.0.7, 9.0.7]"
           }
@@ -26457,10 +26445,6 @@
         "assetTargetFallback": true,
         "warn": true,
         "downloadDependencies": [
-          {
-            "name": "Microsoft.Net.Sdk.Compilers.Toolset",
-            "version": "[9.0.200, 9.0.200]"
-          },
           {
             "name": "Microsoft.Windows.SDK.NET.Ref",
             "version": "[10.0.19041.57, 10.0.19041.57]"
