@@ -5,61 +5,82 @@ using FinancialLitApp.Views.Pages;
 using FinancialLitApp.Views.Pages.Challenges;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+//using CommunityToolkit.Mvvm.Messaging;
+//using Android.Telephony;
+using System.Linq.Expressions;
+using System.Diagnostics;
+//using Google.Android.Material.AppBar;
+//using Android.App;
 
 
 namespace FinancialLitApp;
 
 public partial class AppShell : Shell
 {
-	public AppShellViewModel ViewModel { get; }
+	public bool _isAuthenticated = false;
 	public AppShell()
 	{
 		InitializeComponent(); //loads the XAML Files
-		BindingContext = ViewModel; // connecting XAML bindings to view moodel properties
+
+		//here i'm registering the routs for the oages that are not part of the main tab
+		Routing.RegisterRoute("forgotpassword", typeof(ForgotPasswordPage));
+		Routing.RegisterRoute("lessondetailpage", typeof(LessonDetailPage));
 
 
-		RegisterRoutes();
+		//setting up the initial navigation based on the user's authentinication status
+		SetInitialNavigation();
+
+		//creating a connection between the iAuthenticator Service and the App Shell to check the lgoicn status of the user throught the app:
+		MessagingCenter.Subscribe<object>(this, "UserLoggedIn", OnUserLoggedIn);
+		MessagingCenter.Subscribe<object>(this, "UserLoggedOut", OnUserLoggedOut);
 
 	}
-	//page life cycle method:
 
 	private void RegisterRoutes()
 	{
-		//Detailing pages that are not directly in the shell hierarchy:
-		Routing.RegisterRoute("accountSetUpPage1", typeof(AccountSetUpPage1));
-		Routing.RegisterRoute("login", typeof(Login));
-		Routing.RegisterRoute("homepage", typeof(HomePage));
-		Routing.RegisterRoute("challengedetail", typeof(ChallengeDetailPage));
-		Routing.RegisterRoute("quiz", typeof(QuizPage));
-		Routing.RegisterRoute("lessondetail", typeof(LessonDetailPage));
 
+	}
 
-		//nested routes for the specifc challenges that focus on each financial concept:
-		Routing.RegisterRoute("challenges/budgeting", typeof(Budgeting));
-		Routing.RegisterRoute("challenges/savings", typeof(Savings));
+	private void SetInitialNavigation()
+	{
+		if (_isAuthenticated)
+		{
+			ShowMainApp();
+		}
+		else
+		{
+			ShowAuthenticationFlow();
+		}
+	}
+	
 
+	
 
+	 private void ShowMainApp()
+	{
+		//LoginContent.visible = false;
+	}
 
+	private void ShowAuthenticationFlow()
+	{
+
+	}
+
+	private void OnUserLoggedIn(object sender)
+	{
+		_isAuthenticated = true;
+		ShowMainApp();
+
+	}
+
+	private void OnUserLoggedOut(object sender)
+	{
+		_isAuthenticated = false;
+		ShowAuthenticationFlow();
+
+		//clear any stored authetnication data:
+		Preferences.Clear();
+		SecureStorage.RemoveAll();
 	}
 }
 
-public partial class AppShellViewModel : ObservableObject
-{
-	[RelayCommand]
-	async Task NavigateToLogin()
-	{
-		await Shell.Current.GoToAsync("login");
-	}
-
-	[RelayCommand]
-	async Task NavigateToHomePage()
-	{
-		await Shell.Current.GoToAsync("homepage");
-	}
-
-	[RelayCommand]
-	async Task NavigatetoLessonDetailPage()
-	{
-		await Shell.Current.GoToAsync("lessondetail");
-	}
-}

@@ -99,6 +99,18 @@ build_metadata.AdditionalFiles.ManifestResourceName = FinancialLitApp.Views.Page
 build_metadata.AdditionalFiles.TargetPath = Views\Pages\Challenges\Savings.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Pages\Challenges\Savings.xaml
 
+[C:/GitHub/Financial-Savvy-App/FinancialLitApp/Views/Pages/FeedbackPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinancialLitApp.Views.Pages.FeedbackPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Pages\FeedbackPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Pages\FeedbackPage.xaml
+
+[C:/GitHub/Financial-Savvy-App/FinancialLitApp/Views/Pages/ForgotPasswordPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinancialLitApp.Views.Pages.ForgotPasswordPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Pages\ForgotPasswordPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Pages\ForgotPasswordPage.xaml
+
 [C:/GitHub/Financial-Savvy-App/FinancialLitApp/Views/Pages/HomePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinancialLitApp.Views.Pages.HomePage.xaml
@@ -116,12 +128,6 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinancialLitApp.Views.Pages.LoginPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\Pages\LoginPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Pages\LoginPage.xaml
-
-[C:/GitHub/Financial-Savvy-App/FinancialLitApp/Views/Pages/ProgressPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = FinancialLitApp.Views.Pages.ProgressPage.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\Pages\ProgressPage.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\Pages\ProgressPage.xaml
 
 [C:/GitHub/Financial-Savvy-App/FinancialLitApp/Views/Pages/RewardsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

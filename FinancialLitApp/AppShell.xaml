@@ -4,11 +4,58 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:FinancialLitApp"
-    Title="FinancialLitApp">
+    Title="Financial Literacy App"
+    FlyoutBehavior="Disabled">
 
+    
+    <!--:Authtncation Flow: This is the content that wil show before the user has autheticated-->
     <ShellContent
-        Title="Account Creation Page"
+       x:Name="AccountSetUpContent"
+        Title="Create Account"
         ContentTemplate="{DataTemplate local:AccountSetUpPage1}"
-        Route="AccountSetUpPage1" />
+        Route="accountsetup"
+        Shell.FlyoutBehavior="Disabled"/>
+
+    <ShellContent 
+        x:Name="LoginContent"
+        Title=" Login"
+        ContentTemplate="{DataTemplate local:LoginPage}"
+        Route="login"
+        Shell.FlyoutBehavior="Disabled" />
+    
+    <!--Main App Flow:This is the content that  will only show after rhe user has authenticated:-->
+
+    <TabBar x:Name="MainTabBar" IsVisible="False">
+        <ShellContent
+            Title="Home"
+            Icon="home.png"
+            ContentTemplate="{DataTemplate local:HomePage}"
+            Route="home"/>
+
+        <ShellContent
+            Title="Lessons"
+            Icon="lesson.png"
+            ContentTemplate="{DataTemplate local: LessonDetailPage}"
+            Route="lessondetailpage" />
+        <ShellContent 
+            Title="Challenges"
+            Icon="challenges.png"
+            ContentTemplate="{DataTemplate local:ChallengesPage}"
+            Route="challenges" />
+
+        <ShellContent
+            Title="Feedback"
+            Icon="feedback.png"
+            ContentTemplate="{DataTemplate local: FeedbackPage}"
+            Route="Feedback" />
+
+        <ShellContent
+            Title="Rewards"
+            Icon="rewards.png"
+            ContentTemplate="{DataTemplate local: RewardsPage}"
+            Route="rewards"/>
+
+    </TabBar>
+
 
 </Shell>
