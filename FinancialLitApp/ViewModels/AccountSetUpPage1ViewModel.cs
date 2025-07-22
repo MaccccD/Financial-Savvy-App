@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 namespace FinancialLitApp.ViewModels
 {
- public class AppShellViewModel
+ public   class AccountSetUpPage1ViewModel
     {
     }
 }

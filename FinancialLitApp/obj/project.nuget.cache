@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "KlnFeszIiv4=",
+  "dgSpecHash": "AKoEbt6hz5w=",
   "success": true,
   "projectFilePath": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\FinancialLitApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Dumis\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.0\\communitytoolkit.mvvm.8.4.0.nupkg.sha512",
     "C:\\Users\\Dumis\\.nuget\\packages\\googlegson\\2.11.0.5\\googlegson.2.11.0.5.nupkg.sha512",
     "C:\\Users\\Dumis\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.0\\microsoft.extensions.configuration.9.0.0.nupkg.sha512",
     "C:\\Users\\Dumis\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.0\\microsoft.extensions.configuration.abstractions.9.0.0.nupkg.sha512",
@@ -119,9 +120,13 @@
     "C:\\Users\\Dumis\\.nuget\\packages\\xamarin.kotlinx.coroutines.core.jvm\\1.9.0.2\\xamarin.kotlinx.coroutines.core.jvm.1.9.0.2.nupkg.sha512",
     "C:\\Users\\Dumis\\.nuget\\packages\\xamarin.kotlinx.serialization.core\\1.7.3.2\\xamarin.kotlinx.serialization.core.1.7.3.2.nupkg.sha512",
     "C:\\Users\\Dumis\\.nuget\\packages\\xamarin.kotlinx.serialization.core.jvm\\1.7.3.2\\xamarin.kotlinx.serialization.core.jvm.1.7.3.2.nupkg.sha512",
+    "C:\\Users\\Dumis\\.nuget\\packages\\microsoft.net.sdk.compilers.toolset\\9.0.200\\microsoft.net.sdk.compilers.toolset.9.0.200.nupkg.sha512",
     "C:\\Users\\Dumis\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.7\\microsoft.netcore.app.ref.9.0.7.nupkg.sha512",
+    "C:\\Users\\Dumis\\.nuget\\packages\\microsoft.net.sdk.compilers.toolset\\9.0.200\\microsoft.net.sdk.compilers.toolset.9.0.200.nupkg.sha512",
     "C:\\Users\\Dumis\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.7\\microsoft.netcore.app.ref.9.0.7.nupkg.sha512",
+    "C:\\Users\\Dumis\\.nuget\\packages\\microsoft.net.sdk.compilers.toolset\\9.0.200\\microsoft.net.sdk.compilers.toolset.9.0.200.nupkg.sha512",
     "C:\\Users\\Dumis\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.7\\microsoft.netcore.app.ref.9.0.7.nupkg.sha512",
+    "C:\\Users\\Dumis\\.nuget\\packages\\microsoft.net.sdk.compilers.toolset\\9.0.200\\microsoft.net.sdk.compilers.toolset.9.0.200.nupkg.sha512",
     "C:\\Users\\Dumis\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.57\\microsoft.windows.sdk.net.ref.10.0.19041.57.nupkg.sha512"
   ],
   "logs": []

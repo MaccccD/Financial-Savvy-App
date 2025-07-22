@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FinancialLitApp.ViewModels
 {
-    class ProgressViewModel
+   public class ProgressViewModel
     {
     }
 }

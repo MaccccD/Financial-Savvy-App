@@ -7,8 +7,8 @@
     Title="FinancialLitApp">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Title="Account Creation Page"
+        ContentTemplate="{DataTemplate local:AccountSetUpPage1}"
+        Route="AccountSetUpPage1" />
 
 </Shell>

@@ -3,6 +3,11 @@ build_property.EnableAotAnalyzer =
 build_property.EnableSingleFileAnalyzer = true
 build_property.EnableTrimAnalyzer = false
 build_property.IncludeAllContentForSelfExtract = 
+build_property.MvvmToolkitEnableINotifyPropertyChangingSupport = true
+build_property._MvvmToolkitIsUsingWindowsRuntimePack = false
+build_property.CsWinRTComponent = 
+build_property.CsWinRTAotOptimizerEnabled = 
+build_property.CsWinRTAotWarningLevel = 
 build_property.TargetFramework = net9.0-android
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = 
@@ -66,11 +71,47 @@ build_metadata.AdditionalFiles.ManifestResourceName = FinancialLitApp.Views.Deta
 build_metadata.AdditionalFiles.TargetPath = Views\DetailPages\QuizPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\DetailPages\QuizPage.xaml
 
+[C:/GitHub/Financial-Savvy-App/FinancialLitApp/Views/Pages/AccountSetUpPage1.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinancialLitApp.Views.Pages.AccountSetUpPage1.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Pages\AccountSetUpPage1.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Pages\AccountSetUpPage1.xaml
+
 [C:/GitHub/Financial-Savvy-App/FinancialLitApp/Views/Pages/ChallengesPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinancialLitApp.Views.Pages.ChallengesPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\Pages\ChallengesPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Pages\ChallengesPage.xaml
+
+[C:/GitHub/Financial-Savvy-App/FinancialLitApp/Views/Pages/Challenges/Budgeting.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinancialLitApp.Views.Pages.Challenges.Budgeting.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Pages\Challenges\Budgeting.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Pages\Challenges\Budgeting.xaml
+
+[C:/GitHub/Financial-Savvy-App/FinancialLitApp/Views/Pages/Challenges/Savings.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinancialLitApp.Views.Pages.Challenges.Savings.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Pages\Challenges\Savings.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Pages\Challenges\Savings.xaml
+
+[C:/GitHub/Financial-Savvy-App/FinancialLitApp/Views/Pages/HomePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinancialLitApp.Views.Pages.HomePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Pages\HomePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Pages\HomePage.xaml
+
+[C:/GitHub/Financial-Savvy-App/FinancialLitApp/Views/Pages/LessonDetailPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinancialLitApp.Views.Pages.LessonDetailPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Pages\LessonDetailPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Pages\LessonDetailPage.xaml
+
+[C:/GitHub/Financial-Savvy-App/FinancialLitApp/Views/Pages/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinancialLitApp.Views.Pages.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Pages\LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Pages\LoginPage.xaml
 
 [C:/GitHub/Financial-Savvy-App/FinancialLitApp/Views/Pages/ProgressPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

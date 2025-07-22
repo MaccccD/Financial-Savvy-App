@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-namespace FinancialLitApp.ViewModels
+namespace FinancialLitApp.Views.Pages.Challenges
 {
- public class AppShellViewModel
+    class Budgeting
     {
     }
 }
