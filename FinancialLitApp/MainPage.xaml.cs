@@ -14,7 +14,7 @@ public partial class MainPage : ContentPage
 		count += 15;
 
 		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
+			CounterBtn.Text = $"Clicked {count} time"; // string interpolation
 		else
 			CounterBtn.Text = $"Clicked {count} times";
 
