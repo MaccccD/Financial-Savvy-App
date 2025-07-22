@@ -52,35 +52,110 @@ public partial class AppShell : Shell
 			ShowAuthenticationFlow();
 		}
 	}
-	
+    private void OnUserLoggedIn(object sender)
+    {
+        _isAuthenticated = true;
+        ShowMainApp();
 
-	
+    }
 
-	 private void ShowMainApp()
+    private void OnUserLoggedOut(object sender)
+    {
+        _isAuthenticated = false;
+        ShowAuthenticationFlow();
+
+        //clear any stored authentication data:
+        Preferences.Clear();
+        SecureStorage.RemoveAll();
+    }
+
+
+
+    private void ShowMainApp()
 	{
-		//LoginContent.visible = false;
+		//The authentication content becomes disbaled once the user has authenticated successfully.
+		AccountSetUpContent.IsVisible = false;
+		LoginContent.IsVisible = false;
+
+		//show the main app tabs:
+		MainTabBar.IsVisible = true;
+
+		//navigate the user to home page after the have authenticated:
+		Shell.Current.GoToAsync("//home");
+
 	}
 
 	private void ShowAuthenticationFlow()
 	{
+		//the app content will become disabled untill the user has authenticated:
+		MainTabBar.IsVisible = false;
 
+		//show the authentication content:
+		AccountSetUpContent.IsVisible = true;
+		LoginContent.IsVisible = true;
+
+		//navigate the user to the login page once they have created an account :
+		Shell.Current.GoToAsync("//login");
 	}
 
-	private void OnUserLoggedIn(object sender)
+
+	//navigation helper methodds:
+
+	public async Task NavigateToAccountSetUp()
 	{
-		_isAuthenticated = true;
-		ShowMainApp();
-
+		await Shell.Current.GoToAsync("//accountsetup");
 	}
-
-	private void OnUserLoggedOut(object sender)
+	public async Task NavigateToLogin()
 	{
-		_isAuthenticated = false;
-		ShowAuthenticationFlow();
-
-		//clear any stored authetnication data:
-		Preferences.Clear();
-		SecureStorage.RemoveAll();
+		await Shell.Current.GoToAsync("//login");
 	}
+    public async Task NavigateToHome()
+    {
+        await Shell.Current.GoToAsync("//home");
+    }
+	
+	//this method below is a nvaigation helper method that checks if the page click has a route as well as paramaters and makes navigatiuon easier
+    public async Task NavigateToPage(string route, IDictionary<string, object> parameters = null)
+    {
+        if (parameters != null)
+        {
+            await Shell.Current.GoToAsync(route, parameters); //navogates to the specifc page based on the parameters passin 
+        }
+        else
+        {
+            await Shell.Current.GoToAsync(route); //still takes you to the pasoecifc page even withut parameters.
+
+        }
+    }
+
+
+    //this method below is to protected the content in pages that are only supposed to be seen by authenticated users:
+    protected override async void OnNavigating(ShellNavigatingEventArgs args)
+    {
+        base.OnNavigating(args);
+
+		//checking if the user is trying to access authenticated pages while they are not logged in:
+		var targetRoute = args.Target.Location.OriginalString;
+		var authenticatedRoutes = new[] { "home", "lessondetail", "challenges", "feedback", "rewards" };
+
+		if (authenticatedRoutes.Any(route => targetRoute.Contains(route)) && !_isAuthenticated) {
+			// so if the user is trying to access conent that issupposed to be for users that are authenticated:
+			args.Cancel();
+			Device.BeginInvokeOnMainThread(async () =>
+			{
+				await NavigateToLogin();
+			});
+		}
+    }
+
+
+    //cleaming up the subcriptions:
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
+		MessagingCenter.Unsubscribe<object>(this, "UserLoggedIn");
+		MessagingCenter.Unsubscribe<object>(this, "UserLoggedOut");
+
+    }
 }
 
