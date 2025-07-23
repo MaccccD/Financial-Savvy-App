@@ -7,8 +7,25 @@
     Title="Financial Literacy App"
     FlyoutBehavior="Disabled">
 
-    
-    <!--:Authtncation Flow: This is the content that wil show before the user has autheticated-->
+    <!-- Define the visual appearance of the shell(the main navigation container that holds the app's pages, tabs and flyout  -->
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="#0D1738" />
+                <Setter Property="Shell.ForegroundColor" Value="#FFEBD7" />
+                <Setter Property="Shell.TitleColor" Value="#FFEBD7" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="#2196F3" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="AntiqueWhite"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="AntiqueWhite"/>
+            </Style>
+        </ResourceDictionary>
+    </Shell.Resources>
+
+
+    <!--Authentication Flow: This is the content that wil show before the user has autheticated-->
     <ShellContent
        x:Name="AccountSetUpContent"
         Title="Create Account"
