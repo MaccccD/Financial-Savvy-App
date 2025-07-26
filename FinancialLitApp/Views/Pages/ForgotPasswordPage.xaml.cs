@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace FinancialLitApp.Views.Pages
 {
-    class ForgotPasswordPage
+   public partial class ForgotPasswordPage : ContentPage
     {
+        public ForgotPasswordPage()
+        {
+            InitializeComponent();
+        }
     }
 }

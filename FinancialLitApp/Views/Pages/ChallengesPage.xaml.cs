@@ -5,15 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using FinancialLitApp.ViewModels;
 
-namespace FinancialLitApp.Views
+namespace FinancialLitApp.Views.Pages
 {
    
   public partial class ChallengesPage : ContentPage
     {
-       public ChallengesPage(ChallengesViewModel challengesPageViewModel)
+       public ChallengesPage()
         {
-           // InitializeComponent();
-            BindingContext = challengesPageViewModel;
+            InitializeComponent();
+           
         }
     }
 }

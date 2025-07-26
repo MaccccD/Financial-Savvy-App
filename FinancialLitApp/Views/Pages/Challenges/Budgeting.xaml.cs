@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace FinancialLitApp.Views.Pages.Challenges
 {
-    class Budgeting
+   public partial class Budgeting : ContentPage
     {
+        public Budgeting() 
+        {
+            InitializeComponent();
+        }
     }
 }

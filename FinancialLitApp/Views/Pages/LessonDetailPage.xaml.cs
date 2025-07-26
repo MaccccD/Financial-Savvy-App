@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace FinancialLitApp.Views.Pages
 {
-    class LessonDetailPage
+   public partial class LessonDetailPage : ContentPage
     {
+        public LessonDetailPage() 
+        { 
+            InitializeComponent();
+        }
     }
 }

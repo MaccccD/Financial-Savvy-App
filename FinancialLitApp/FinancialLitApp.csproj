@@ -66,9 +66,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Views\Pages\LoginPage.xaml.cs">
-	    <DependentUpon>LoginPage.xaml</DependentUpon>
-	  </Compile>
 	  <Compile Update="Views\Pages\FeedbackPage.xaml.cs">
 	    <DependentUpon>FeedbackPage.xaml</DependentUpon>
 	  </Compile>
@@ -105,10 +102,10 @@
 	  <MauiXaml Update="Views\Pages\LessonDetailPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Pages\LoginPage.xaml">
+	  <MauiXaml Update="Views\Pages\FeedbackPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Pages\FeedbackPage.xaml">
+	  <MauiXaml Update="Views\Pages\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Pages\RewardsPage.xaml">
