@@ -70,7 +70,7 @@ namespace FinancialLitApp.Views.Pages
 
         private async void OnForgotPasswordTapped(object sender , EventArgs e)
         {
-            await Shell.Current.GoToAsync("forgotpasswordpage");
+            await Shell.Current.GoToAsync("ForgotPasswordPage");
         }
 
         private async void OnSignUpTapped(object sender ,EventArgs e)
@@ -94,7 +94,7 @@ namespace FinancialLitApp.Views.Pages
             if (isLoading)
             {
                 LogInBtn.Text = "Signing In...";
-                Console.WriteLine(" Im working yayy!");
+                Console.WriteLine("I'm working yayy!");
             }
             else
             {

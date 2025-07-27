@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace FinancialLitApp.Views.Pages
 {
-   public partial class AccountSetUpPage1 : ContentPage
+   public partial class AccountSetUpPage : ContentPage
     {
         private readonly IAuthenticationService _authService;
-        public AccountSetUpPage1()
+        public AccountSetUpPage()
         {
             InitializeComponent();
             _authService = new AuthenticationService();
@@ -111,7 +111,7 @@ namespace FinancialLitApp.Views.Pages
 
             try
             {
-                var inputResult = await _authService.RegisterAsync(email, firstName, lastName, password, IdNumber);
+                var inputResult = await _authService.RegisterAsync(email, password, firstName, lastName, IdNumber);
                 if (inputResult.IsSuccess) 
                 {
                     //App shelllhandles logic here 
@@ -127,7 +127,7 @@ namespace FinancialLitApp.Views.Pages
             catch
             (Exception ex)
             {
-                ShowError($"Rehgistration failed: {ex.Message}");
+                ShowError($"Registration failed: {ex.Message}");
             }
             finally
             {

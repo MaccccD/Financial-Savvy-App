@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage x:Class="FinancialLitApp.Views.Pages.AccountSetUpPage1"
+<ContentPage x:Class="FinancialLitApp.Views.Pages.AccountSetUpPage"
              xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="Create Account"
 			 BackgroundColor="#0D1738">
-    <StackLayout>
-        
-    </StackLayout>
+
 
 	<ScrollView>
 		<Grid RowDefinitions="Auto,*,Auto" Padding="30,20">
@@ -16,21 +14,21 @@
 				  HorizontalOptions="CenterAndExpand" />
 				<Label Text="Welcome to Financial Savvy : A financial literacy dedicated platform"
 					   FontSize="24"
-					   FontAttribute="Bold"
+					   FontAttributes="Bold"
 					   HorizontalOptions="Center"
-					   TextColor="#FF3BD7"/>
+					   TextColor="AntiqueWhite"/>
 				<Label Text ="Start your journey towards financial freedom"
 					   FontSize="15"
 					   HorizontalOptions="Center"
-					   TextColor="#FF3BD7"/>
+					   TextColor="AntiqueWhite"/>
 					
 			</StackLayout>
 			<StackLayout Grid.Row="1" Spacing="15">
 				<!---Enter first name input field design -->
-				<Frame BackgroundColor="Grey"
+				<Frame BorderColor="Grey"
 					   HasShadow="False"
 					   CornerRadius="10"
-					   BorderRadius="15"
+					
 					   Padding="0">
 					<Entry x:Name="FirstNameEntry"
 						   Placeholder="First Name"
@@ -39,35 +37,36 @@
 						   Margin="15,10"/>
 				</Frame>
 				<!-- Enter last name input field desin -->
-				<Frame BackgroundColor="Grey"
+				<Frame BorderColor="Grey"
                        HasShadow="False"
                        CornerRadius="10"
                        Padding="0">
 					<Entry x:Name="LastNameEntry"
+                           TextColor="AntiqueWhite"
+                         
                            Placeholder="Last Name"
-                           Keyboard="Last Name"
                            ReturnType="Next"
                            FontSize="16"
                            Margin="15,10"/>
 				</Frame>
 				<!---Id Number Input Design-->
-				<Frame BackgroundColo="Grey"
+				<Frame BorderColor="Grey"
 					   HasShadow="False"
 					   CornerRadius="10"
-					   BorderRadius="15"
+					   
 					   Padding="0">
 					<Entry x:Name="IdNumberEntry"
 						   Placeholder="Id Number"
-						   IsIdNumber="True"
+						  
 						   ReturnType="Next"
 						   Margin="15,10"/>
 				</Frame>
 					   
 				<!-- Email Input Designn -->
-				<Frame BackgroundColor="Grey"
+				<Frame BorderColor="Grey"
                        HasShadow="False"
                        CornerRadius="10"
-					   BorderRadis ="16"
+					  
                        Padding="0">
 					<Entry x:Name="EmailEntry"
                            Placeholder="Email address"
@@ -78,10 +77,9 @@
 				</Frame>
 
 				<!-- Password Input Designn -->
-				<Frame BackgroundColor="Grey"
+				<Frame BorderColor="Grey"
                        HasShadow="False"
                        CornerRadius="10"
-					   BorderRadius="15"
                        Padding="0">
 					<Entry x:Name="PasswordEntry"
                            Placeholder="Password (min, 6 characters)"
@@ -92,10 +90,10 @@
 				</Frame>
 
 				<!--Confirm Password Input Design -->
-				<Frame BackgroundColor="Grey"
+				<Frame BorderColor="Grey"
                        HasShadow="False"
                        CornerRadius="10"
-					   BorderRadius="10"
+
                        Padding="0">
 					<Entry x:Name="ConfirmPasswordEntry"
                            Placeholder="Confirm password"
@@ -116,7 +114,7 @@
 				<Button x:Name="CreateAccountButton"
 							Text="Create Account"
 							BackgroundColor="#103D81"
-							TextColor="#FF3BD7"
+							TextColor="#FFEBD7"
 							FontSize="18"
 							FontAttributes="Bold"
 							CornerRadius="10"
@@ -133,23 +131,23 @@
 
 			</StackLayout>
 
-			<StackLayout Grid.Row="2"
-						 Orientation="Horizontal"
-						 HorizontalOptions="Center"
-						 Spacing="5"
-						 Margin="0,30,0,20"/>
-			<Label Text="Already have an account?"
-				   Fontsoze="14"
-				   Textcolor="#FF3BDT"/>
-			<Label Text="Sign In"
-				   FontSize="14"
-				   FontAttributes="Bold"
-				   TextColor="#2196F3"/>
-			 <Label.GestureRecognizers>
-				 <TapGestureRecognizer Tapped="OnSignInTapped"/>
-			 </Label.GestureRecognizers>
-
-			
-		</Grid>
+            <StackLayout Grid.Row="2" 
+                         Orientation="Horizontal" 
+                         HorizontalOptions="Center" 
+                         Spacing="5" 
+                         Margin="0,30,0,20">
+                <Label Text="Already have an account?" 
+                       FontSize="14" 
+                       TextColor= "#FFEBD7"/>
+                <Label Text="Sign In" 
+                       FontSize="14" 
+                       FontAttributes="Bold" 
+                       TextColor="#2196F3">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnSignInTapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+        </Grid>
 	</ScrollView>
 </ContentPage>

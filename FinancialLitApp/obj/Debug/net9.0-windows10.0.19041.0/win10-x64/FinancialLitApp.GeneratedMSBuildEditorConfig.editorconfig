@@ -75,11 +75,11 @@ build_metadata.AdditionalFiles.ManifestResourceName = FinancialLitApp.Views.Deta
 build_metadata.AdditionalFiles.TargetPath = Views\DetailPages\QuizPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\DetailPages\QuizPage.xaml
 
-[C:/GitHub/Financial-Savvy-App/FinancialLitApp/Views/Pages/AccountSetUpPage1.xaml]
+[C:/GitHub/Financial-Savvy-App/FinancialLitApp/Views/Pages/AccountSetUpPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = FinancialLitApp.Views.Pages.AccountSetUpPage1.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\Pages\AccountSetUpPage1.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\Pages\AccountSetUpPage1.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinancialLitApp.Views.Pages.AccountSetUpPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Pages\AccountSetUpPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Pages\AccountSetUpPage.xaml
 
 [C:/GitHub/Financial-Savvy-App/FinancialLitApp/Views/Pages/ChallengesPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

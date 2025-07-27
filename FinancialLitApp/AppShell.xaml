@@ -29,47 +29,47 @@
     <ShellContent
        x:Name="AccountSetUpContent"
         Title="Create Account"
-        ContentTemplate="{DataTemplate local:AccountSetUpPage1}"
-        Route="accountsetup"
+        ContentTemplate="{DataTemplate local:Views.Pages.AccountSetUpPage}"
+        Route="accountsetuppage"
         Shell.FlyoutBehavior="Disabled"/>
 
     <ShellContent 
         x:Name="LoginContent"
         Title=" Login"
-        ContentTemplate="{DataTemplate local:LoginPage}"
+        ContentTemplate="{DataTemplate local:Views.Pages.LoginPage}"
         Route="login"
         Shell.FlyoutBehavior="Disabled" />
     
-    <!--Main App Flow:This is the content that  will only show after rhe user has authenticated:-->
+    <!--Main App Flow:This is the content that  will only show after the user has authenticated:-->
 
     <TabBar x:Name="MainTabBar" IsVisible="False">
         <ShellContent
             Title="Home"
             Icon="home.png"
-            ContentTemplate="{DataTemplate local:HomePage}"
+            ContentTemplate="{DataTemplate local:Views.Pages.HomePage}"
             Route="home"/>
 
         <ShellContent
             Title="Lessons"
             Icon="lesson.png"
-            ContentTemplate="{DataTemplate local: LessonDetailPage}"
+            ContentTemplate="{DataTemplate local:Views.Pages.LessonDetailPage}"
             Route="lessondetailpage" />
         <ShellContent 
             Title="Challenges"
             Icon="challenges.png"
-            ContentTemplate="{DataTemplate local:ChallengesPage}"
+            ContentTemplate="{DataTemplate local:Views.Pages.ChallengesPage}"
             Route="challenges" />
 
         <ShellContent
             Title="Feedback"
             Icon="feedback.png"
-            ContentTemplate="{DataTemplate local: FeedbackPage}"
-            Route="Feedback" />
+            ContentTemplate="{DataTemplate local:Views.Pages.FeedbackPage}"
+            Route="feedback" />
 
         <ShellContent
             Title="Rewards"
             Icon="rewards.png"
-            ContentTemplate="{DataTemplate local: RewardsPage}"
+            ContentTemplate="{DataTemplate local:Views.Pages.RewardsPage}"
             Route="rewards"/>
 
     </TabBar>
