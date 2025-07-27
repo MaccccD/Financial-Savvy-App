@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace FinancialLitApp.Views.Controls
 {
-    class ChallengeCard
+   public partial class ChallengeCard : ContentPage
     {
+        public ChallengeCard()
+        {
+            InitializeComponent();
+        }
     }
 }

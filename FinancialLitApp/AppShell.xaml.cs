@@ -103,7 +103,7 @@ public partial class AppShell : Shell
 
 	public async Task NavigateToAccountSetUp()
 	{
-		await Shell.Current.GoToAsync("//accountsetup");
+		await Shell.Current.GoToAsync("//accountsetuppage1");
 	}
 	public async Task NavigateToLogin()
 	{
