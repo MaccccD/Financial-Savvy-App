@@ -10,8 +10,8 @@ namespace FinancialLitApp.Services
     public interface IAuthenticationService
     {
         //in here I'm perfoming different task that relate to the account creation set up, login as well as the authication status.
+         Task<AuthResult> RegisterAsync(string email, string password, string firstName, string lastName, string idNumber);
         Task<AuthResult> LoginAsync(string email, string password);
-        Task<AuthResult> RegisterAsync(string email, string password, string firstName, string lastName, string idNumber);
         Task<bool> LogoutAsync();
         Task<bool> IsAuthenticatedAsync();
         Task<UserProfile> GetCurrentUserAsync();
@@ -23,86 +23,6 @@ namespace FinancialLitApp.Services
         private const string TOKEN_KEY = "user_token";
         private const string USER_KEY = "user_profile";
 
-        public async Task<AuthResult> LoginAsync(string email, string password) // this is the method /task that will validate the login details entred by the user.
-        {
-            try
-            {
-                // Here I'm checking the details the user types in in the field and clearing any white space.
-                if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
-                {
-                    return new AuthResult
-                    { //if the fields are null, i retrun a messsage as feedback.
-                        IsSuccess = false,
-                        ErrorMessage = "Email and password are required"
-                    };
-                }
-
-                if (!IsValidEmail(email)) // checking if the user has typed in an email.
-                {
-                    return new AuthResult
-                    {
-                        IsSuccess = false,
-                        ErrorMessage = "Please enter a valid email address"
-                    };
-                }
-
-        
-                // Simulating an API delay ( for data loading purposes)
-                await Task.Delay(1000);
-
-                //check if the account details used by the user are matching in this section as well:
-                var storedAccountJson = await SecureStorage.GetAsync($"account_{email}");
-                var storedPassword = await SecureStorage.GetAsync($"password_{email}");
-
-                if (string.IsNullOrEmpty(storedAccountJson) || string.IsNullOrEmpty(storedPassword))
-                {
-                    return new AuthResult
-                    {
-                        IsSuccess = false,
-                        ErrorMessage = "Account not found. Please create an account first."
-                    };
-                }
-
-                if (storedPassword != password) //checking if the password used to create the accoutn and the one used to login mathces 
-                {
-                    return new AuthResult
-                    {
-                        IsSuccess = false,
-                        ErrorMessage = "Invalid email or password. Please try again."
-                    };
-                }
-
-                // Login successful - deserialize user profile
-                var userProfile = JsonSerializer.Deserialize<UserProfile>(storedAccountJson);
-                var token = GenerateToken(userProfile);
-
-                    // Store authentication data securely using the (Maui's) platform API
-                    await SecureStorage.SetAsync(TOKEN_KEY, token);
-    
-                    await SecureStorage.SetAsync(USER_KEY, JsonSerializer.Serialize(userProfile));
-
-                    // Notify the app's shell.xaml that user is logged in
-                    MessagingCenter.Send<object>(this, "UserLoggedIn");
-
-                    return new AuthResult 
-                    {
-                        //once user has logged in using their email address and password, send the notif to the "AppShell's code behind" so that the approrpiate UI shows based on this updated status
-                        IsSuccess = true,
-                        User = userProfile,
-                        Token = token
-                    };
-
-                }
-                catch (Exception ex)
-            {
-                return new AuthResult
-                {
-                    //a message to catch when the login authentication has failed.
-                    IsSuccess = false,
-                    ErrorMessage = $"Login failed: {ex.Message}"
-                };
-            }
-        }
 
         public async Task<AuthResult> RegisterAsync(string email, string password, string firstName, string lastName, string idNumber)
         { // this method is meant to register or record the user details as they are typed in
@@ -165,10 +85,14 @@ namespace FinancialLitApp.Services
                // var token = GenerateToken(userProfile);
 
                 // Store authentication data securely
-              //  await SecureStorage.SetAsync(TOKEN_KEY, token);
+              //  await SecureStorage.SetAsync(TOKEN_KEY, token); //secure storage is losing data during run time, causing the storage data to be emty by the time the same saved data is being retrieved
                // await SecureStorage.SetAsync(USER_KEY, JsonSerializer.Serialize(userProfile));
-                await SecureStorage.SetAsync($"user_account_{email}", JsonSerializer.Serialize(userProfile));
-                await SecureStorage.SetAsync($"user_password_{email}", password);
+
+                Preferences.Set($"account_{email}", JsonSerializer.Serialize(userProfile));
+                Preferences.Set($"password_{email}", password);
+
+                System.Diagnostics.Debug.WriteLine($"Stored with Preferences for email: {email}");
+
 
                 // Notify the app that user is logged in
                 //  MessagingCenter.Send<object>(this, "UserLoggedIn");
@@ -185,11 +109,97 @@ namespace FinancialLitApp.Services
                 return new AuthResult
                 {
                     IsSuccess = false,
-                    ErrorMessage = $"Registration failed: {ex.Message}"
+                    ErrorMessage = $"Registration  and account failed: {ex.Message}"
+
                 };
             }
         }
 
+
+
+        public async Task<AuthResult> LoginAsync(string email, string password) // this is the method /task that will validate the login details entred by the user.
+        {
+            try
+            {
+                // Here I'm checking the details the user types in in the field and clearing any white space.
+                if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
+                {
+                    return new AuthResult
+                    { //if the fields are null, i retrun a messsage as feedback.
+                        IsSuccess = false,
+                        ErrorMessage = "Email and password are required"
+                    };
+                }
+
+                if (!IsValidEmail(email)) // checking if the user has typed in an email.
+                {
+                    return new AuthResult
+                    {
+                        IsSuccess = false,
+                        ErrorMessage = "Please enter a valid email address"
+                    };
+                }
+
+
+                // Simulating an API delay ( for data loading purposes)
+                await Task.Delay(1000);
+
+                //check if the account details used by the user are matching in this section as well:
+                var storedAccountJson = Preferences.Get($"account_{email}", string.Empty);
+                var storedPassword = Preferences.Get($"password_{email}", string.Empty);
+
+                System.Diagnostics.Debug.WriteLine($"Retrieved from Preferences - Account: {!string.IsNullOrEmpty(storedAccountJson)}, Password: {!string.IsNullOrEmpty(storedPassword)}");
+
+
+                if (string.IsNullOrEmpty(storedAccountJson) || string.IsNullOrEmpty(storedPassword))
+                {
+                    return new AuthResult
+                    {
+                        IsSuccess = false,
+                        ErrorMessage = "Account not found. Please create an account first."
+                    };
+                }
+
+                if (storedPassword != password) //checking if the password used to create the accoutn and the one used to login mathces 
+                {
+                    return new AuthResult
+                    {
+                        IsSuccess = false,
+                        ErrorMessage = "Invalid email or password. Please try again."
+                    };
+                }
+
+                // Login successful - deserialize user profile
+                var userProfile = JsonSerializer.Deserialize<UserProfile>(storedAccountJson);
+                var token = GenerateToken(userProfile);
+
+                // Store authentication data securely using the (Maui's) platform API
+                await SecureStorage.SetAsync(TOKEN_KEY, token);
+
+                await SecureStorage.SetAsync(USER_KEY, JsonSerializer.Serialize(userProfile));
+
+                // Notify the app's shell.xaml that user is logged in
+                MessagingCenter.Send<object>(this, "UserLoggedIn");
+
+                return new AuthResult
+                {
+                    //once user has logged in using their email address and password, send the notif to the "AppShell's code behind" so that the approrpiate UI shows based on this updated status
+                    IsSuccess = true,
+                    User = userProfile,
+                    Token = token
+                };
+
+            }
+            catch (Exception ex)
+            {
+                return new AuthResult
+                {
+                    //a message to catch when the login authentication has failed.
+                    IsSuccess = false,
+                    ErrorMessage = $"Login failed: {ex.Message}"
+                };
+            }
+        }
 
 
 
