@@ -27,13 +27,14 @@ namespace FinancialLitApp.Views.Pages
         private async void OnCreateAccountClicked(object sender , EventArgs e)
         {
             await RegisterAsync();
+          
         }
 
         private async Task RegisterAsync()
         {
             ErrorLabel.IsVisible = false;
 
-            // Gettinng  input values and trimming  whitespace
+            // Getting  input values and trimming  whitespace
             var firstName = FirstNameEntry.Text?.Trim();
             var lastName = LastNameEntry.Text?.Trim();
             var email = EmailEntry.Text?.Trim();
@@ -107,17 +108,21 @@ namespace FinancialLitApp.Views.Pages
             }
 
             // Show loading state
-            SetLoadingState(true);
+            SetLoadingState(false);
 
             try
             {
                 var inputResult = await _authService.RegisterAsync(email, password, firstName, lastName, IdNumber);
                 if (inputResult.IsSuccess) 
                 {
-                    //App shelllhandles logic here 
+                    // Show success message
+                    await DisplayAlert("Account Created!", $"Welcome {firstName}! Your account has been created successfully. Please log in to continue.", "Continue to Login");
+                    
+                    //go tthe ,lgin page not the main app section
+                    await Shell.Current.GoToAsync("//login");
 
-                    //show a welcome message
-                    await DisplayAlert("Welcome!", $"Welcome to the Financial Savvy platform, {firstName}!", "Get Started");
+                    ////show a welcome message
+                    //await DisplayAlert("Welcome!",$"Welcome to the Financial Savvy platform, {firstName}!", "Get Started");
                 }
                 else
                 {
@@ -137,7 +142,7 @@ namespace FinancialLitApp.Views.Pages
 
         private async void OnSignInTapped(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync("//login");
+            await Shell.Current.GoToAsync("//accountsetuppage");
         }
 
 

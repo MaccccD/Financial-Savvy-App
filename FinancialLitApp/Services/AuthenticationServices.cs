@@ -50,17 +50,31 @@ namespace FinancialLitApp.Services
                 // Simulating an API delay ( for data loading purposes)
                 await Task.Delay(1000);
 
-                //  This is the authentication logic. I'm checking the details the user is typing in the input fields
-                if (await AuthenticateUser(email, password))
-                {
-                    var userProfile = new UserProfile
-                    {
-                       // Id = Guid.NewGuid().ToString(),
-                        Email = email,
-                        CreatedAt = DateTime.Now
-                    };
+                //check if the account details used by the user are matching in this section as well:
+                var storedAccountJson = await SecureStorage.GetAsync($"account_{email}");
+                var storedPassword = await SecureStorage.GetAsync($"password_{email}");
 
-                    var token = GenerateToken(userProfile);
+                if (string.IsNullOrEmpty(storedAccountJson) || string.IsNullOrEmpty(storedPassword))
+                {
+                    return new AuthResult
+                    {
+                        IsSuccess = false,
+                        ErrorMessage = "Account not found. Please create an account first."
+                    };
+                }
+
+                if (storedPassword != password) //checking if the password used to create the accoutn and the one used to login mathces 
+                {
+                    return new AuthResult
+                    {
+                        IsSuccess = false,
+                        ErrorMessage = "Invalid email or password. Please try again."
+                    };
+                }
+
+                // Login successful - deserialize user profile
+                var userProfile = JsonSerializer.Deserialize<UserProfile>(storedAccountJson);
+                var token = GenerateToken(userProfile);
 
                     // Store authentication data securely using the (Maui's) platform API
                     await SecureStorage.SetAsync(TOKEN_KEY, token);
@@ -72,24 +86,14 @@ namespace FinancialLitApp.Services
 
                     return new AuthResult 
                     {
-                        //omce user has logged in using their emial address and password, send the notif to the "AppShell's code behind" so that the approrpiate UI shows based on this updated status
+                        //once user has logged in using their email address and password, send the notif to the "AppShell's code behind" so that the approrpiate UI shows based on this updated status
                         IsSuccess = true,
                         User = userProfile,
                         Token = token
                     };
-                }
-                else 
-                {
-                    return new AuthResult
-                    {
-                        //if details are incorrect typed in, then show error message.
-                        IsSuccess = false,
-                        ErrorMessage = "Invalid email or password.Please try again."
-                    };
 
                 }
-            }
-            catch (Exception ex)
+                catch (Exception ex)
             {
                 return new AuthResult
                 {
@@ -158,20 +162,22 @@ namespace FinancialLitApp.Services
                     CreatedAt = DateTime.Now
                 };
 
-                var token = GenerateToken(userProfile);
+               // var token = GenerateToken(userProfile);
 
                 // Store authentication data securely
-                await SecureStorage.SetAsync(TOKEN_KEY, token);
-                await SecureStorage.SetAsync(USER_KEY, JsonSerializer.Serialize(userProfile));
+              //  await SecureStorage.SetAsync(TOKEN_KEY, token);
+               // await SecureStorage.SetAsync(USER_KEY, JsonSerializer.Serialize(userProfile));
+                await SecureStorage.SetAsync($"user_account_{email}", JsonSerializer.Serialize(userProfile));
+                await SecureStorage.SetAsync($"user_password_{email}", password);
 
                 // Notify the app that user is logged in
-                MessagingCenter.Send<object>(this, "UserLoggedIn");
+                //  MessagingCenter.Send<object>(this, "UserLoggedIn");
 
                 return new AuthResult
                 {
                     IsSuccess = true,
                     User = userProfile,
-                    Token = token
+                    Token = null // not token yet bc the user needs to now login after creating account first
                 };
             }
             catch (Exception ex)
@@ -183,6 +189,10 @@ namespace FinancialLitApp.Services
                 };
             }
         }
+
+
+
+
 
         public async Task<bool> LogoutAsync() // this is the ogic for when the user logouts
         {
@@ -242,8 +252,10 @@ namespace FinancialLitApp.Services
 
         private async Task<bool> UserExists(string email)
         {
-            // Placeholder check
-            return false;
+            //here i'm checking the maui storage api if the user account detai's exist or have been stored before 
+            var existingAccount = await SecureStorage.GetAsync($"account_{email}");
+            return !string.IsNullOrEmpty(existingAccount);
+           
 
             /* Example implementation:
             var httpClient = new HttpClient();
