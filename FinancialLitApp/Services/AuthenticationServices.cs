@@ -17,7 +17,7 @@ namespace FinancialLitApp.Services
         Task<UserProfile> GetCurrentUserAsync();
     }
 
-    public class AuthenticationServices : IAuthenticationServices
+    public class AuthenticationService : IAuthenticationService
     {
         //this are token strings that I will use to check users's login and authentication status
         private const string TOKEN_KEY = "user_token";

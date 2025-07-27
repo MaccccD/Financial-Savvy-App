@@ -11,6 +11,8 @@ namespace FinancialLitApp.Views.Pages
         public AccountSetUpPage1()
         {
             InitializeComponent();
+            Console.WriteLine("XAML Bindings successfuly initilized");
+
         }
     }
 }
