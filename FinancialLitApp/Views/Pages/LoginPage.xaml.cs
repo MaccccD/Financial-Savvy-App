@@ -70,13 +70,35 @@ namespace FinancialLitApp.Views.Pages
 
         private async void OnForgotPasswordTapped(object sender , EventArgs e)
         {
-            await Shell.Current.GoToAsync("ForgotPasswordPage");
+            //  await Shell.Current.GoToAsync("ForgotPasswordPage");
+            await WaitForShellAndNavigate("//forgotpasswordpage");
         }
 
         private async void OnSignUpTapped(object sender ,EventArgs e)
         {
             await Shell.Current.GoToAsync("HomePage");
         }
+        // Common method to handle Shell.Current null checking
+        private async Task WaitForShellAndNavigate(string route)
+        {
+            int attempts = 0;
+            while (Shell.Current == null && attempts < 20) // Increased attempts
+            {
+                await Task.Delay(50); //  the shorter  the delay, the more attempts
+                attempts++; //increment the numbe rof attempts to get the shell content to initilaize as we add a delayer to get it to load or initialize properly
+            }
+
+            if (Shell.Current != null)
+            {
+                await Shell.Current.GoToAsync(route);
+            }
+            else
+            {
+                // Fallback: try using this instance directly as aopposed to waiting for sehll to take you to the actual page
+                await this.GoToAsync(route);
+            }
+        }
+
         private void ShowError(string message)
         {
             ErrorLabel.Text = message;
