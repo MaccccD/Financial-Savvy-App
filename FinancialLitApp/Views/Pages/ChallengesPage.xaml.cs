@@ -15,5 +15,16 @@ namespace FinancialLitApp.Views.Pages
             InitializeComponent();
            
         }
+
+
+        public void OnSavingsChallengeClicked(object sender, EventArgs e)
+        {
+
+        }
+
+        public async Task NavigateToChallenge1()
+        {
+            await NavigateToChallenge1();
+        }
     }
 }

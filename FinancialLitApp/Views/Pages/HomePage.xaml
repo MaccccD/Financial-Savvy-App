@@ -10,6 +10,7 @@
                HorizontalOptions="CenterAndExpand" />
         <Label Text="Hello !"
                 FontAttributes="Bold"
+                HorizontalOptions="Center"
                 TextColor="AntiqueWhite"
                 FontSize="20"/>
     </StackLayout>

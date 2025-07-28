@@ -95,7 +95,7 @@ namespace FinancialLitApp.Views.Pages
             else
             {
                 // Fallback: try using this instance directly as aopposed to waiting for sehll to take you to the actual page
-                await this.GoToAsync(route);
+               // await this.GoToAsync(route);
             }
         }
 

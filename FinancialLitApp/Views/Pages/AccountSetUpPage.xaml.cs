@@ -207,5 +207,10 @@ namespace FinancialLitApp.Views.Pages
             ErrorLabel.IsVisible = false;
             SetLoadingState(false);
         }
+
+        private void CreateAccountButton_Focused(object sender, FocusEventArgs e)
+        {
+
+        }
     }
 }

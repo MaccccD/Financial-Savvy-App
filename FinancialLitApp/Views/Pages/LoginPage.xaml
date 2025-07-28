@@ -13,7 +13,7 @@
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand" />
 				<Label
-					Text ="Financial Literacy"
+					Text ="Financial Savvy"
 					FontSize ="28"
 					FontAttributes ="Bold"
 					HorizontalOptions ="Center"

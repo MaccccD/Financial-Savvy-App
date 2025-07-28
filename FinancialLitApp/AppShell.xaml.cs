@@ -22,9 +22,12 @@ public partial class AppShell : Shell
 	{
 		InitializeComponent(); //loads the XAML Files
 
-		//here i'm registering the routs for the oages that are not part of the main tab
+		//here i'm registering the routs for the oages that are not part of the main tab but are part of the ap:
 		Routing.RegisterRoute("forgotpassword", typeof(ForgotPasswordPage));
 		Routing.RegisterRoute("lessondetailpage", typeof(LessonDetailPage));
+        Routing.RegisterRoute("savingschallenge", typeof(Savings));
+        Routing.RegisterRoute("budgetingpage", typeof(Budgeting));
+
 
 
 		//setting up the initial navigation based on the user's authentinication status

@@ -74,5 +74,11 @@
 
     </TabBar>
 
+    <ShellContent
+            Title="ForgotPasswordPage"
+            ContentTemplate="{DataTemplate local:Views.Pages.ForgotPasswordPage}"
+            Route="forgotpasswordpage"/>
+
+
 
 </Shell>
