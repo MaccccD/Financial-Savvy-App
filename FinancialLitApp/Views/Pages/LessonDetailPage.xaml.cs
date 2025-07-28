@@ -12,5 +12,24 @@ namespace FinancialLitApp.Views.Pages
         { 
             InitializeComponent();
         }
+
+
+        private async Task OnSavingsLessonClicked(object sender, EventArgs e)
+        {
+            await NavigateToSavingsLesson();
+        }
+
+
+        private async new Task NavigateToSavingsLesson()
+        {
+            try
+            {
+                await Shell.Current.GoToAsync("savingslesson");
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Navigation Error", $"{ex.Message}", "Okay");
+            }
+        }
     }
 }
