@@ -31,7 +31,7 @@ Apple Developer account (for device deployment)
 
 🚀 Getting Started:
 Step 1: Clone the Repository
-bashgit clone https://github.com/[your-username]/Financial-Savvy-App.git
+bashgit clone https://github.com/MaccccD/Financial-Savvy-App.git
 cd Financial-Savvy-App
 Step 2: Open the Project
 
@@ -55,7 +55,7 @@ Go to Build menu → "Rebuild Solution"
 Wait for the build to complete successfully
 Check the Output window for any errors.
 
-For now I have not yet set up the Android Emulators and thus Only the Windows Machine works . 
+For now, I have not yet set up the Android Emulators, and thus Only the Windows Machine works. 
 
 Running the App
 Option 1: Windows Machine.
