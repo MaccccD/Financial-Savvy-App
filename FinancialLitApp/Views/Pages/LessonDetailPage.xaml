@@ -32,14 +32,14 @@
                         CornerRadius="20"
                         Padding="0"
                         HasShadow="True">
-                    <Button x:Name="Savings Lesson"
+                    <Button x:Name="SavingsLesson"
                              Text="💰 Savings Challlenge"
                              BackgroundColor="Transparent"
                              TextColor="#FFEBD7"
                              FontSize="18"
                              FontAttributes="Bold"
                              HeightRequest="60"
-                             Clicked="OnClickedSavingsLesson"/>
+                             Clicked="OnSavingsLessonClicked"/>
                 </Frame>
                 
 

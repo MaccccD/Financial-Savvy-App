@@ -5,14 +5,12 @@
              Title="Challenges"
 			 BackgroundColor="#0D1738"
 			 >
-    <StackLayout>
-        <Label Text="Challenges Page" 
-               VerticalOptions="CenterAndExpand" 
-               HorizontalOptions="CenterAndExpand" />
-    </StackLayout>
 	<ScrollView>
 		<StackLayout Padding="20" Spacing="20">
 			<!--- Page header  for the savings =details-->
+			<Label Text="Challenges Page" 
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" />
 			<Label Text="Financial Challenges"
 				   FontSize="28"
 				   FontAttributes="Bold"
@@ -24,7 +22,7 @@
 				   FontSize="16"
 				   TextColor="#FFEBD7"
 				   HorizontalOptions="Center"
-				   Margin="0,0,0,0,30"/>
+				   Margin="0,0,0,30"/>
 			
 			<!---Challenge Crd Containers-->
 
@@ -49,7 +47,7 @@
 				<Frame BackgroundColor="#103D81"
 					   CornerRadius="15"
 					   Padding="0"
-					   Hasshadow="True">
+					   HasShadow="True">
 					<Button x:Name="BudgetingChallenge"
 							Text="📊 Budgeting Challenge"
 							BackgroundColor="Transparent"
