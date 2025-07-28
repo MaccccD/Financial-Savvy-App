@@ -1,4 +1,7 @@
 Hello! Welcome to the Financial Savvy MAUI Platform:
+Figma File:
+https://www.figma.com/design/AhAPGoSz9jgTgvL1qosej6/Financial-Savvy-App-Project?node-id=0-1&t=zXgPn8i8RoMCnORn-1
+
 Prerequisites
 Before you can run this app, you need to install the following software:
 1. Visual Studio 2022
@@ -56,6 +59,7 @@ Wait for the build to complete successfully
 Check the Output window for any errors.
 
 For now, I have not yet set up the Android Emulators, and thus Only the Windows Machine works. 
+
 
 Running the App
 Option 1: Windows Machine.
