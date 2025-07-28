@@ -35,7 +35,7 @@
 
     <ShellContent 
         x:Name="LoginContent"
-        Title=" Login"
+        Title="Login"
         ContentTemplate="{DataTemplate local:Views.Pages.LoginPage}"
         Route="login"
         Shell.FlyoutBehavior="Disabled" />

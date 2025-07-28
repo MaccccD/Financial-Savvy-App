@@ -36,10 +36,10 @@ public partial class AppShell : Shell
 
 	}
 
-	private void RegisterRoutes()
-	{
+	//private void RegisterRoutes()
+	//{
 
-	}
+	//}
 
 	private void SetInitialNavigation()
 	{
@@ -75,7 +75,7 @@ public partial class AppShell : Shell
 	{
 		//The authentication content becomes disbaled once the user has authenticated successfully.
 		AccountSetUpContent.IsVisible = false;
-		LoginContent.IsVisible = false;
+		//LoginContent.IsVisible = false;
 
 		//show the main app tabs:
 		MainTabBar.IsVisible = true;

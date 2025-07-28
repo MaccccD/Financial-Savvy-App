@@ -2,10 +2,15 @@
 <ContentPage x:Class="FinancialLitApp.Views.Pages.HomePage"
              xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             Title="Home Page">
+             Title="Home Page Dashboard"
+             BackgroundColor="#0D1738">
     <StackLayout>
         <Label Text="Home Page" 
                VerticalOptions="CenterAndExpand" 
                HorizontalOptions="CenterAndExpand" />
+        <Label Text="Hello !"
+                FontAttributes="Bold"
+                TextColor="AntiqueWhite"
+                FontSize="20"/>
     </StackLayout>
 </ContentPage>
