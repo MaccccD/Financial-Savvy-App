@@ -27,7 +27,7 @@ namespace FinancialLitApp.Views.Pages
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Navigation Error", $"{ex.Message}", "Okay");
+                await DisplayAlert(" Content coming right up", $"{ex.Message}","Okay");
             }
         }
     }

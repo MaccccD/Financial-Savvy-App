@@ -43,7 +43,6 @@
                        Padding="0">
 					<Entry x:Name="LastNameEntry"
                            TextColor="AntiqueWhite"
-                         
                            Placeholder="Last Name"
                            ReturnType="Next"
                            FontSize="16"

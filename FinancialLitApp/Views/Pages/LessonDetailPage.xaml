@@ -33,7 +33,7 @@
                         Padding="0"
                         HasShadow="True">
                     <Button x:Name="SavingsLesson"
-                             Text="💰 Savings Challlenge"
+                             Text="💰 Savings Lesson"
                              BackgroundColor="Transparent"
                              TextColor="#FFEBD7"
                              FontSize="18"
