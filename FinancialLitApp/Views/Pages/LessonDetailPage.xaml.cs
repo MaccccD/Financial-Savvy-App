@@ -17,6 +17,7 @@ namespace FinancialLitApp.Views.Pages
         private async void OnSavingsLessonClicked(object sender, EventArgs e)
         {
             await NavigateToSavingsLesson();
+            
         }
 
         private async Task NavigateToSavingsLesson()  // Remove 'new' keyword

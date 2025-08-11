@@ -11,6 +11,7 @@ namespace FinancialLitApp.Views.Pages.Challenges
         public Budgeting() 
         {
             InitializeComponent();
+            Console.WriteLine("the budgeting challenge will come in here");
         }
     }
 }

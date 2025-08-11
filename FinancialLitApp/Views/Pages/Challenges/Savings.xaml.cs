@@ -11,6 +11,7 @@ namespace FinancialLitApp.Views.Pages.Challenges
         public Savings() 
         { 
           InitializeComponent();
+            Console.WriteLine("the savimgs challenge will come here");
         }
     }
 }
