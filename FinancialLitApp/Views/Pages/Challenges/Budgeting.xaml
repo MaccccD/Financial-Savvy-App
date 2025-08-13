@@ -7,6 +7,6 @@
         <Label Text="Budgeting Page" 
                VerticalOptions="CenterAndExpand" 
                HorizontalOptions="CenterAndExpand" />
-        <Label Text="Budegt challenge go here "/>
+        <Label Text="Budget challenge goes here "/>
     </StackLayout>
 </ContentPage>
