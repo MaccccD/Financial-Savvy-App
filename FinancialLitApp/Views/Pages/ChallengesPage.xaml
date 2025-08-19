@@ -56,12 +56,25 @@
 							HeightRequest="60"
 							Clicked="OnBudgetingChallengeClicked" />
 				</Frame>
-					
-					   
-					 
-					   
-					   
-			</StackLayout>
+
+                <Frame BackgroundColor="#103D81"
+                       CornerRadius="15"
+                       Padding="0"
+                       HasShadow="True">
+                    <Button x:Name="InvestmentChallenge"
+                               Text="💵 Investment Challenge"
+                               BackgroundColor="Transparent"
+                               TextColor="#FFEBD7"
+                               FontSize="18"
+                               HeightRequest="65"
+                               Clicked="OnInvestmentChallengeClicked" />
+                </Frame>
+
+
+
+
+
+            </StackLayout>
 			
 		</StackLayout>
 	</ScrollView>

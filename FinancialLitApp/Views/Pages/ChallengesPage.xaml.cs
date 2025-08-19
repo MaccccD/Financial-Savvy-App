@@ -28,7 +28,11 @@ namespace FinancialLitApp.Views.Pages
         {
             await NavigateToBudgetingChallenge();
         }
-
+        
+        public async void OnInvestmentChallengeClicked (object sender, EventArgs i)
+        {
+            await NavigateToInvestmentChallenge();
+        }
         private async Task NavigateToSavingsChallenge()
         {
             try
@@ -40,7 +44,8 @@ namespace FinancialLitApp.Views.Pages
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Navigation Error", $"Could not navigate to Savings Challenge: {ex.Message}", "Okayy");
+               
+              await DisplayAlert("Navigation Error", $"Could not navigate to Savings Challenge: {ex.Message}", "Okayy");
             }
 
         }
@@ -57,7 +62,19 @@ namespace FinancialLitApp.Views.Pages
                 await DisplayAlert("Navigate Error", $"Could not navigate to Budgeting Challenge: {ex.Message}", "Okayy");
             }
         }
+        
 
+        private async Task NavigateToInvestmentChallenge()
+        {
+            try
+            {
+                await WaitForShellAndNavigate("//investmentchallenge");
+            }
+            catch(Exception ex)
+            {
+                await DisplayAlert("Challlenge not availabke yet", $"{ex.Message}", "Danko");
+            }
+        }
 
         private async Task WaitForShellAndNavigate(string route)
         {

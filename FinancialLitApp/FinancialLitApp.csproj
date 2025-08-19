@@ -93,6 +93,9 @@
 	  <MauiXaml Update="Views\Pages\Challenges\Budgeting.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\Pages\Challenges\Investment.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Pages\Challenges\Savings.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

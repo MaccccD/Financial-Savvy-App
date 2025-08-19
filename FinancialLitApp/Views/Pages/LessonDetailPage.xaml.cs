@@ -20,7 +20,7 @@ namespace FinancialLitApp.Views.Pages
             
         }
 
-        private async Task NavigateToSavingsLesson()  // Remove 'new' keyword
+        private async Task NavigateToSavingsLesson()  
         {
             try
             {

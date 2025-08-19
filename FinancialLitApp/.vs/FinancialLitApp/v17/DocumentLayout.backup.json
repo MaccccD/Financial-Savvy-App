@@ -54,7 +54,7 @@
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
-      "VerticalTabListWidth": 100,
+      "VerticalTabListWidth": 192,
       "DocumentGroups": [
         {
           "DockedWidth": 200,
