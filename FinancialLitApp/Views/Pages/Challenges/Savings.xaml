@@ -8,7 +8,7 @@
                VerticalOptions="CenterAndExpand" 
                HorizontalOptions="CenterAndExpand" />
 
-        <Label Text="The challenge will come here!"/>
+        <Label Text="The challenge is coming right now !"/>
 
     </StackLayout>
 </ContentPage>
