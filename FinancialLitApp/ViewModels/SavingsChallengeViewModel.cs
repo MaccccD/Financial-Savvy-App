@@ -50,7 +50,7 @@ namespace FinancialLitApp.ViewModels
             InitializeGame();
         }
 
-        private void InitializeGame() // when the game starts , all variables are initilazed zero 
+        private void InitializeGame() // when the game starts , all variables are initialized to  zero 
         {
             currentlySaved = startingAmount;
             moneySpent = 0;
@@ -154,7 +154,7 @@ namespace FinancialLitApp.ViewModels
                 new SavingsItem
                 {
                     Id = 12,
-                    Name = "Fae Beat & Frontal Wig Install",
+                    Name = "Face Beat & Frontal Wig Install",
                     Price = 120m,
                     Category = ItemCategory.Want,
                     Description = "Beauty Customization"

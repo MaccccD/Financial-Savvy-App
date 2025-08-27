@@ -19,7 +19,7 @@ namespace FinancialLitApp.Converters // the namespace that directs where the con
             return Colors.Gray;
         }
 
-        public object ConvertBack(object value, Type target, object parameter, CultureInfo culture)// this is the other moethod that the "IValue Interface" needs.
+        public object ConvertBack(object value, Type target, object parameter, CultureInfo culture)// this is the other method that the "IValue Interface" needs.
         {
             throw new NotImplementedException();
         }
