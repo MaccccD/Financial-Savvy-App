@@ -3,32 +3,72 @@
   "WorkspaceRootPath": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\views\\pages\\challenges\\savings.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:views\\pages\\challenges\\savings.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\viewmodels\\savingschallengeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:viewmodels\\savingschallengeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\views\\pages\\challenges\\savings.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:views\\pages\\challenges\\savings.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\models\\challengeresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:models\\challengeresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\views\\pages\\rewardspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:views\\pages\\rewardspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\models\\savingsitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:models\\savingsitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\views\\pages\\challengespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:views\\pages\\challengespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\views\\pages\\challengespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:views\\pages\\challengespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\views\\pages\\challenges\\budgeting.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:views\\pages\\challenges\\budgeting.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\views\\pages\\challenges\\investment.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:views\\pages\\challenges\\investment.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\converters\\categorytovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:converters\\categorytovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\converters\\booltostringconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:converters\\booltostringconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\converters\\booltocolorconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:converters\\booltocolorconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\views\\pages\\lessondetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:views\\pages\\lessondetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\views\\pages\\challenges\\savings.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:views\\pages\\challenges\\savings.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\views\\pages\\challenges\\savings.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:views\\pages\\challenges\\savings.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\converters\\stringtoboolconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:converters\\stringtoboolconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\financiallitapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:financiallitapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\views\\pages\\challengespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:views\\pages\\challengespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\views\\pages\\rewardspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:views\\pages\\rewardspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\views\\pages\\challengespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:views\\pages\\challengespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\views\\pages\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -47,16 +87,8 @@
       "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\views\\pages\\challenges\\budgeting.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:views\\pages\\challenges\\budgeting.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\views\\pages\\lessondetailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:views\\pages\\lessondetailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\views\\pages\\lessondetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:views\\pages\\lessondetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\views\\pages\\challenges\\budgeting.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,15 +98,118 @@
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
-      "VerticalTabListWidth": 192,
+      "VerticalTabListWidth": 142,
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChallengeResult.cs",
+              "DocumentMoniker": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Models\\ChallengeResult.cs",
+              "RelativeDocumentMoniker": "Models\\ChallengeResult.cs",
+              "ToolTip": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Models\\ChallengeResult.cs",
+              "RelativeToolTip": "Models\\ChallengeResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T19:20:24.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SavingsItem.cs",
+              "DocumentMoniker": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Models\\SavingsItem.cs",
+              "RelativeDocumentMoniker": "Models\\SavingsItem.cs",
+              "ToolTip": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Models\\SavingsItem.cs",
+              "RelativeToolTip": "Models\\SavingsItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T19:12:35.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "CategoryToVisibilityConverter.cs",
+              "DocumentMoniker": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Converters\\CategoryToVisibilityConverter.cs",
+              "RelativeDocumentMoniker": "Converters\\CategoryToVisibilityConverter.cs",
+              "ToolTip": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Converters\\CategoryToVisibilityConverter.cs",
+              "RelativeToolTip": "Converters\\CategoryToVisibilityConverter.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T17:45:15.084Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BoolToStringConverter.cs",
+              "DocumentMoniker": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Converters\\BoolToStringConverter.cs",
+              "RelativeDocumentMoniker": "Converters\\BoolToStringConverter.cs",
+              "ToolTip": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Converters\\BoolToStringConverter.cs",
+              "RelativeToolTip": "Converters\\BoolToStringConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T17:44:38.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BoolToColorConverter.cs",
+              "DocumentMoniker": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Converters\\BoolToColorConverter.cs",
+              "RelativeDocumentMoniker": "Converters\\BoolToColorConverter.cs",
+              "ToolTip": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Converters\\BoolToColorConverter.cs",
+              "RelativeToolTip": "Converters\\BoolToColorConverter.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T17:44:10.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SavingsChallengeViewModel.cs",
+              "DocumentMoniker": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\ViewModels\\SavingsChallengeViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\SavingsChallengeViewModel.cs",
+              "ToolTip": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\ViewModels\\SavingsChallengeViewModel.cs",
+              "RelativeToolTip": "ViewModels\\SavingsChallengeViewModel.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAkwD8AAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T17:41:55.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "StringToBoolConverter.cs",
+              "DocumentMoniker": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Converters\\StringToBoolConverter.cs",
+              "RelativeDocumentMoniker": "Converters\\StringToBoolConverter.cs",
+              "ToolTip": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Converters\\StringToBoolConverter.cs",
+              "RelativeToolTip": "Converters\\StringToBoolConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T17:45:38.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-26T17:34:50.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Investment.xaml.cs",
               "DocumentMoniker": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Views\\Pages\\Challenges\\Investment.xaml.cs",
               "RelativeDocumentMoniker": "Views\\Pages\\Challenges\\Investment.xaml.cs",
@@ -82,24 +217,24 @@
               "RelativeToolTip": "Views\\Pages\\Challenges\\Investment.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T19:06:27.52Z"
+              "WhenOpened": "2025-08-19T19:06:27.52Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 14,
               "Title": "ChallengesPage.xaml.cs",
               "DocumentMoniker": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Views\\Pages\\ChallengesPage.xaml.cs",
               "RelativeDocumentMoniker": "Views\\Pages\\ChallengesPage.xaml.cs",
               "ToolTip": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Views\\Pages\\ChallengesPage.xaml.cs",
               "RelativeToolTip": "Views\\Pages\\ChallengesPage.xaml.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAkwFoAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T18:48:25.655Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-19T18:48:25.655Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 16,
               "Title": "ChallengesPage.xaml",
               "DocumentMoniker": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Views\\Pages\\ChallengesPage.xaml",
               "RelativeDocumentMoniker": "Views\\Pages\\ChallengesPage.xaml",
@@ -111,20 +246,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 10,
               "Title": "Savings.xaml.cs",
               "DocumentMoniker": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Views\\Pages\\Challenges\\Savings.xaml.cs",
               "RelativeDocumentMoniker": "Views\\Pages\\Challenges\\Savings.xaml.cs",
               "ToolTip": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Views\\Pages\\Challenges\\Savings.xaml.cs",
               "RelativeToolTip": "Views\\Pages\\Challenges\\Savings.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-11T19:30:37.73Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 22,
               "Title": "Budgeting.xaml.cs",
               "DocumentMoniker": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Views\\Pages\\Challenges\\Budgeting.xaml.cs",
               "RelativeDocumentMoniker": "Views\\Pages\\Challenges\\Budgeting.xaml.cs",
@@ -136,20 +271,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "Savings.xaml",
               "DocumentMoniker": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Views\\Pages\\Challenges\\Savings.xaml",
               "RelativeDocumentMoniker": "Views\\Pages\\Challenges\\Savings.xaml",
               "ToolTip": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Views\\Pages\\Challenges\\Savings.xaml",
               "RelativeToolTip": "Views\\Pages\\Challenges\\Savings.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-08-11T19:30:06.776Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 3,
               "Title": "Budgeting.xaml",
               "DocumentMoniker": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Views\\Pages\\Challenges\\Budgeting.xaml",
               "RelativeDocumentMoniker": "Views\\Pages\\Challenges\\Budgeting.xaml",
@@ -157,23 +292,24 @@
               "RelativeToolTip": "Views\\Pages\\Challenges\\Budgeting.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-11T19:30:04.925Z"
+              "WhenOpened": "2025-08-11T19:30:04.925Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "FinancialLitApp.csproj",
               "DocumentMoniker": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\FinancialLitApp.csproj",
               "RelativeDocumentMoniker": "FinancialLitApp.csproj",
               "ToolTip": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\FinancialLitApp.csproj",
               "RelativeToolTip": "FinancialLitApp.csproj",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAIwGAAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAD4AAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-08-01T23:53:00.978Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 15,
               "Title": "RewardsPage.xaml",
               "DocumentMoniker": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Views\\Pages\\RewardsPage.xaml",
               "RelativeDocumentMoniker": "Views\\Pages\\RewardsPage.xaml",
@@ -181,24 +317,24 @@
               "RelativeToolTip": "Views\\Pages\\RewardsPage.xaml",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-01T11:15:48.734Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-01T11:15:48.734Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 8,
               "Title": "LessonDetailPage.xaml.cs",
               "DocumentMoniker": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Views\\Pages\\LessonDetailPage.xaml.cs",
               "RelativeDocumentMoniker": "Views\\Pages\\LessonDetailPage.xaml.cs",
               "ToolTip": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Views\\Pages\\LessonDetailPage.xaml.cs",
               "RelativeToolTip": "Views\\Pages\\LessonDetailPage.xaml.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAA0wB0AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA5wBgAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-28T21:01:08.998Z"
+              "WhenOpened": "2025-07-28T21:01:08.998Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 18,
               "Title": "AccountSetUpPage.xaml",
               "DocumentMoniker": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Views\\Pages\\AccountSetUpPage.xaml",
               "RelativeDocumentMoniker": "Views\\Pages\\AccountSetUpPage.xaml",
@@ -210,7 +346,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 17,
               "Title": "LoginPage.xaml",
               "DocumentMoniker": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Views\\Pages\\LoginPage.xaml",
               "RelativeDocumentMoniker": "Views\\Pages\\LoginPage.xaml",
@@ -222,7 +358,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 21,
               "Title": "LessonDetailPage.xaml",
               "DocumentMoniker": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Views\\Pages\\LessonDetailPage.xaml",
               "RelativeDocumentMoniker": "Views\\Pages\\LessonDetailPage.xaml",
@@ -234,7 +370,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 19,
               "Title": "AppShell.xaml.cs",
               "DocumentMoniker": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\AppShell.xaml.cs",
               "RelativeDocumentMoniker": "AppShell.xaml.cs",
@@ -246,7 +382,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 20,
               "Title": "AppShell.xaml",
               "DocumentMoniker": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\AppShell.xaml",
               "RelativeDocumentMoniker": "AppShell.xaml",

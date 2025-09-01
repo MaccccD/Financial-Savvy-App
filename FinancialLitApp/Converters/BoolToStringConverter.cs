@@ -9,7 +9,7 @@ namespace FinancialLitApp.Converters
 {
     public class BoolToStringConverter : IValueConverter
     {
-        // this converter converts the bool value to string pair and return the what's inside the pair from index o or checks the quantity of string pairs(has te be more than 1) before returning an empty string.
+        // this converter converts the bool value to string pair and return the what's inside the pair from index  or checks the quantity of string pairs(has te be more than 1) before returning an empty string.
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture) 
         {
             if(value is bool boolValue && parameter is string strings)

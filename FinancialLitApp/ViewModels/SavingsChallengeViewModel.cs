@@ -15,7 +15,7 @@ namespace FinancialLitApp.ViewModels
     {
         [ObservableProperty]
         private decimal startingAmount = 200m;
-
+         
         [ObservableProperty]
         private decimal currentlySaved;
 
@@ -183,11 +183,11 @@ namespace FinancialLitApp.ViewModels
                 MoneySpent -= item.Price;
             }
 
-            //update the value of the currently saved amoun after spending, directly deonstrating Versl's theory n action:
+            //update the value of the currently saved amount after spending, directly deonstrating Versl's theory n action:
             CurrentlySaved = StartingAmount - MoneySpent;
             Console.WriteLine(CurrentlySaved);
 
-            UpdateRealTimeFeedback(); // the moent where Hot reload works best, uodating UI data innreal time as changes occur.
+            UpdateRealTimeFeedback(); // the moment where Hot reload works best, uodating UI data innreal time as changes occur.
         }
 
 
