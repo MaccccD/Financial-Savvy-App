@@ -18,13 +18,54 @@
                            FontAttributes="Bold"
                            TextColor="AntiqueWhite"
                            HorizontalOptions="Center"/>
-                    <Label Text="{Binding CurrentAttempt, StringFormat='Attempt: {0} of 3"
-                         FontSize="16"
-                        TextColor="#004aa"
-                        HorizontalOptions="Center"
+                    <Label Text="{Binding CurrentAttempt, StringFormat='Attempt: {0} of 3'}"
+                           FontSize="16"
+                           TextColor="#00d4aa"
+                           HorizontalOptions="Center"/>
 
                 </StackLayout>
             </Frame>
+
+            <Grid ColumnDefinitions="*,*" RowDefinitions="*, *" ColumnSpacing="10" RowSpacing="10">
+
+                <Frame Grid.Row="0" Grid.Column="0" BackgroundColor="White" CornerRadius="8" Padding="10">
+                    <StackLayout>
+                        <Label Text="1. Starting Amount: " FontSize="12" TextColor="#ff6b6b" FontAttributes="Bold"/>
+                        <Label Text="{Binding StartingAmount, StringFormat='R{0:F0}'}" FontSize="16" TextColor="Black"/>
+                    </StackLayout>
+                </Frame>
+        
+
+            <Frame Grid.Row="0" Grid.Column="1" BackgroundColor="White" CornerRadius="10">
+                <StackLayout>
+                    <Label Text="2. Currently Saved: " FontSize="12" TextColor="#ff6b6b" FontAttributes="Bold"/>
+                    <Label Text="{Binding CurrentlySaved, StringFormat='R{0:F0}'}" FontSize="16" TextColor="Black" />
+                </StackLayout>
+            </Frame>
+            
+
+            <Frame Grid.Row="1" Grid.Column="0" BackgroundColor="White" CornerRadius="8" Padding="10">
+                <StackLayout>
+                    <Label Text="3. Money Spent: " FontSize="12" TextColor="#ff6b6b" FontAttributes="Bold"/>
+                    <Label Text="{Binding MoneySpent, StringFormat='R{0:F0}'}" FontSize="16" TextColor="Black"/>
+                </StackLayout>
+            </Frame>
+            
+            <Frame Grid.Row="1" Grid.Column="1" BackgroundColor="White" CornerRadius="8" Padding="10">
+                <StackLayout>
+                    <Label Text="4. Target Savings: " FontSize="12" TextColor="#28a745" FontAttributes="Bold"/>
+                    <Label Text="{Binding TargetAmount, StringFormat='R{0:F0}'}" FontSize="16" TextColor="#28a745"/>
+                </StackLayout>
+            </Frame>
+            </Grid>
+            <Frame BackgroundColor="#2c3e50" CornerRadius="8" Padding="15" IsVisible="{Binding FeedbackMessage, Converter={StaticResource StringToBoolConverter}}">
+                <Label Text="{Binding FeedbackMessage}"
+                       FontSize="14"
+                       TextColor="White"
+                       LineBreakMode="WordWrap"/>
+            </Frame>
+
+
         </StackLayout>
     </ScrollView>
 </ContentPage>
