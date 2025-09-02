@@ -9,7 +9,7 @@ namespace FinancialLitApp.Models
 {
     public  class SavingsItem
     {
-        //in here are the variables that relate to the challenge such as the name of the item , its price etc.
+        //in here are the variables that relate to the challenge such as the name of the item , its price, description etc.
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
@@ -21,7 +21,7 @@ namespace FinancialLitApp.Models
 
     }
 
-    public enum ItemCategory // this enum houses the distinction between a what item  users would  categorise as a need or want 
+    public enum ItemCategory // this enum houses the distinction between what item  users would  categorise as a need or want 
     {
         Need,
         Want

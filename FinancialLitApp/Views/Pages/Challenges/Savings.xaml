@@ -2,14 +2,29 @@
 <ContentPage x:Class="FinancialLitApp.Views.Pages.Challenges.Savings"
              xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             Title="Savings Challenge">
-    <StackLayout>
-        <Label Text="Savings Challenge Page" 
-               VerticalOptions="CenterAndExpand" 
-               HorizontalOptions="CenterAndExpand" />
+             xmlns:vm="clr-namespace:FinancialLitApp.ViewModels"
+             Title="Savings Challenge"
+             BackgroundColor="#1a1a2e">
+    <ContentPage.BindingContext>
+        <vm:SavingsChallengeViewModel />
+    </ContentPage.BindingContext>
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
 
-        <Label Text="The challenge is coming right now !"
-               TextColor="AntiqueWhite"/>
+            <Frame BackgroundColor="#16213e" CornerRadius="10" Padding="15">
+                <StackLayout>
+                    <Label Text="Savings Challenge"
+                           FontSize="24"
+                           FontAttributes="Bold"
+                           TextColor="AntiqueWhite"
+                           HorizontalOptions="Center"/>
+                    <Label Text="{Binding CurrentAttempt, StringFormat='Attempt: {0} of 3"
+                         FontSize="16"
+                        TextColor="#004aa"
+                        HorizontalOptions="Center"
 
-    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

@@ -317,9 +317,9 @@ namespace FinancialLitApp.ViewModels
 
         private string AnalyzeSpendingPattern()
         {
-            //below i'm basically calcualting the amont of money spent on items that were categorised as needs or wants
-            var needsSpent = SelectedItems.Where(i => i.Category == ItemCategory.Need).Sum(i => i.Price);
-            var wantsSpent = SelectedItems.Where(i => i.Category == ItemCategory.Want).Sum(i => i.Price);
+            //below i'm basically calculating the amont of money spent on items that were categorised as needs or wants
+            var needsSpent = SelectedItems.Where(i => i.Category == ItemCategory.Need).Sum(i => i.Price);//meant to return a sum of the amount of money that was spent on items categorsed as needs
+            var wantsSpent = SelectedItems.Where(i => i.Category == ItemCategory.Want).Sum(i => i.Price);//meant to return a sum of the amount of money that was spent on items categorised as wants
 
 
             //the similated analysis by tracking the disparirties between the amount of money spent on need vs the money spent on wants:
@@ -334,7 +334,7 @@ namespace FinancialLitApp.ViewModels
             }
             else
             {
-                analysis += " Ayy, very well done on prioritizing needs over wants! Fine-tune your choices to hit the exct target.!";
+                analysis += " Ayy, very well done on prioritizing needs over wants! Fine-tune your choices to hit the exact target.!";
             }
             return analysis ;   
         }
