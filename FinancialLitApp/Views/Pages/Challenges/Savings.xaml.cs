@@ -14,6 +14,10 @@ namespace FinancialLitApp.Views.Pages.Challenges
           Console.WriteLine("the savings challenge will come here");
         }
 
-
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            Console.WriteLine("✅ Savings page appearing");
+        }
     }
 }

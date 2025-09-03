@@ -21,7 +21,8 @@ namespace FinancialLitApp.Views.Pages
 
         private async void OnSavingsChallengeClicked(object sender, EventArgs e)
         {
-             await NavigateToSavingsChallenge();
+            await DisplayAlert("Test", "Button clicked!", "OK");
+            await NavigateToSavingsChallenge();
         }
 
         private async void OnBudgetingChallengeClicked(object sender , EventArgs d)
@@ -37,16 +38,20 @@ namespace FinancialLitApp.Views.Pages
         {
             try
             {
-                // Navigate to specific savings challenge page
-                await WaitForShellAndNavigate("//savings");
-                Console.WriteLine("the savings challenge is currently showing r.n");
-               // await Shell.Current.GoToAsync("//savingschallenge");
-                // Or pass parameters: await Shell.Current.GoToAsync($"//challengedetail?challengeType=savings");
+                Console.WriteLine("🔍 Starting savings challenge navigation...");
+                Console.WriteLine($"🔍 Shell.Current is null: {Shell.Current == null}");
+
+               //i changed the absolute routing to relative navigation ( fro '//savings' to just savings'):
+                await WaitForShellAndNavigate("savings");
+
+                Console.WriteLine("✅ Navigation command completed");
             }
             catch (Exception ex)
             {
-               
-            //  await DisplayAlert("Navigation Error", $"Could not navigate to Savings Challenge: {ex.Message}", "Okayy");
+                Console.WriteLine($"❌ Navigation failed: {ex.Message}");
+                Console.WriteLine($"❌ Stack trace: {ex.StackTrace}");
+
+                await DisplayAlert("Navigation Error", $"Could not navigate to Savings Challenge: {ex.Message}", "Okayy");
             }
 
         }
@@ -55,7 +60,7 @@ namespace FinancialLitApp.Views.Pages
         {
             try
             {
-                await WaitForShellAndNavigate("//budgetingchallenge");
+                await WaitForShellAndNavigate("budgetingchallenge"); // canged from absolute navigation to  relative nav
                 //await Shell.Current.GoToAsync("budgetingchallenge");
             }
             catch (Exception ex) 
@@ -69,32 +74,37 @@ namespace FinancialLitApp.Views.Pages
         {
             try
             {
-                await WaitForShellAndNavigate("//investmentchallenge");
+                await WaitForShellAndNavigate("investmentchallenge");
             }
             catch(Exception ex)
             {
-                await DisplayAlert("Challlenge not availabke yet", $"{ex.Message}", "Danko");
+                await DisplayAlert("Challlenge not available yet", $"{ex.Message}", "Danko");
             }
         }
 
         private async Task WaitForShellAndNavigate(string route)
         {
+            Console.WriteLine($"🔍 Attempting to navigate to: {route}");
             int attempts = 0;
             while (Shell.Current == null && attempts < 20) // Increased attempts
             {
+                Console.WriteLine($"🔍 Waiting for Shell... Attempt {attempts + 1}");
                 await Task.Delay(50); //  the shorter  the delay, the more attempts
                 attempts++; //increment the number of attempts to get the shell content to initilaize as we add a delayer to get it to load or initialize properly
             }
 
             if (Shell.Current != null)
             {
+                Console.WriteLine($"✅ Shell is ready, navigating to: {route}");
                 await Shell.Current.GoToAsync(route);
                 Console.WriteLine("ayyy, shell is ready");
             }
             else
             {
+                Console.WriteLine("❌ Shell.Current is still null after waiting");
+                throw new InvalidOperationException("Shell.Current is not available");
                 // Fallback: try using this instance directly as aopposed to waiting for shell to take you to the actual page
-              //  await this.GoToAsync(route);
+                //  await this.GoToAsync(route);
             }
         }
     }

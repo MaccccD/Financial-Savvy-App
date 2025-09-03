@@ -11,11 +11,63 @@ namespace FinancialLitApp.Converters // the namespace that directs where the con
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture) // data is moving from one source to the next target in one way or two way bindings  
         {
-            if(value is  bool isSelected && parameter is string colors)
+            //if(value is  bool isSelected && parameter is string colors)
+            //{
+            //    var colorPair = colors.Split('|');
+            //    System.Diagnostics.Debug.WriteLine($"   Split result: [{string.Join("', '", colorPair)}]");
+            //    string selectedColor = colorPair[0]?.Trim(); // trimming the write spaces
+            //    string unselectedColor = colorPair.Length > 1 ? colorPair[1]?.Trim() : "#808080";
+            //    return isSelected ? Color.FromArgb(colorPair[0]) : Color.FromArgb(colorPair[1]);
+            //    System.Diagnostics.Debug.WriteLine($"   Selected color: '{selectedColor}'");
+            //    System.Diagnostics.Debug.WriteLine($"   Unselected color: '{unselectedColor}'");
+
+            //}
+            // Add detailed debugging
+            System.Diagnostics.Debug.WriteLine($"🔍 BoolToColorConverter called:");
+            System.Diagnostics.Debug.WriteLine($"   Value: {value} (Type: {value?.GetType()})");
+            System.Diagnostics.Debug.WriteLine($"   Parameter: '{parameter}' (Type: {parameter?.GetType()})");
+            System.Diagnostics.Debug.WriteLine($"   TargetType: {targetType}");
+
+            if (value is bool isSelected && parameter is string colors)
             {
+                System.Diagnostics.Debug.WriteLine($"   IsSelected: {isSelected}");
+                System.Diagnostics.Debug.WriteLine($"   Colors string: '{colors}'");
+
                 var colorPair = colors.Split('|');
-                return isSelected ? Color.FromArgb(colorPair[0]) : Color.FromArgb(colorPair[1]);
+                System.Diagnostics.Debug.WriteLine($"   Split result: [{string.Join("', '", colorPair)}]");
+
+                // Clean the color strings by trimming whitespace
+                string selectedColor = colorPair[0]?.Trim();
+                string unselectedColor = colorPair.Length > 1 ? colorPair[1]?.Trim() : "#808080";
+
+                System.Diagnostics.Debug.WriteLine($"   Selected color: '{selectedColor}'");
+                System.Diagnostics.Debug.WriteLine($"   Unselected color: '{unselectedColor}'");
+
+                try
+                {
+                    // Test each color individually
+                    Color testSelected = Color.FromArgb(selectedColor);
+                    System.Diagnostics.Debug.WriteLine($"   ✅ Selected color parsed successfully: {testSelected}");
+
+                    Color testUnselected = Color.FromArgb(unselectedColor);
+                    System.Diagnostics.Debug.WriteLine($"   ✅ Unselected color parsed successfully: {testUnselected}");
+
+                    var result = isSelected ? testSelected : testUnselected;
+                    System.Diagnostics.Debug.WriteLine($"   🎯 Returning: {result}");
+                    return result;
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine($"   ❌ Color conversion error: {ex.Message}");
+                    System.Diagnostics.Debug.WriteLine($"   ❌ Stack trace: {ex.StackTrace}");
+                    System.Diagnostics.Debug.WriteLine($"   ❌ Attempted colors: '{selectedColor}' | '{unselectedColor}'");
+
+                    // Return default colors on error
+                    return isSelected ? Colors.Blue : Colors.Gray;
+                }
             }
+
+            System.Diagnostics.Debug.WriteLine($"   ⚠️ Fallback to Gray - conditions not met");
             return Colors.Gray;
         }
 

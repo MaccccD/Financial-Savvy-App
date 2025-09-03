@@ -78,7 +78,7 @@
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
                                     <ContentView>
-                                        <Frame Background="{Binding IsSelected, Converter={StaticResource BoolToColorConverter}, ConverterParameter='#3498db | #95a5a6'}"
+                                        <Frame Background="{Binding IsSelected, Converter={StaticResource BoolToColorConverter}, ConverterParameter='#3498db|#95a5a6'}"
                                                CornerRadius="8"
                                                Padding="10"
                                                IsVisible="{Binding Category, Converter={StaticResource CategoryToVisibilityConverter}, ConverterParameter='Need'}">
