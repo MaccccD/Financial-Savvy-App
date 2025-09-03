@@ -38,14 +38,15 @@ namespace FinancialLitApp.Views.Pages
             try
             {
                 // Navigate to specific savings challenge page
-                await WaitForShellAndNavigate("//savingschallenge");
+                await WaitForShellAndNavigate("//savings");
+                Console.WriteLine("the savings challenge is currently showing r.n");
                // await Shell.Current.GoToAsync("//savingschallenge");
                 // Or pass parameters: await Shell.Current.GoToAsync($"//challengedetail?challengeType=savings");
             }
             catch (Exception ex)
             {
                
-              await DisplayAlert("Navigation Error", $"Could not navigate to Savings Challenge: {ex.Message}", "Okayy");
+            //  await DisplayAlert("Navigation Error", $"Could not navigate to Savings Challenge: {ex.Message}", "Okayy");
             }
 
         }
@@ -82,7 +83,7 @@ namespace FinancialLitApp.Views.Pages
             while (Shell.Current == null && attempts < 20) // Increased attempts
             {
                 await Task.Delay(50); //  the shorter  the delay, the more attempts
-                attempts++; //increment the numbe rof attempts to get the shell content to initilaize as we add a delayer to get it to load or initialize properly
+                attempts++; //increment the number of attempts to get the shell content to initilaize as we add a delayer to get it to load or initialize properly
             }
 
             if (Shell.Current != null)
@@ -92,7 +93,7 @@ namespace FinancialLitApp.Views.Pages
             }
             else
             {
-                // Fallback: try using this instance directly as aopposed to waiting for sehll to take you to the actual page
+                // Fallback: try using this instance directly as aopposed to waiting for shell to take you to the actual page
               //  await this.GoToAsync(route);
             }
         }
