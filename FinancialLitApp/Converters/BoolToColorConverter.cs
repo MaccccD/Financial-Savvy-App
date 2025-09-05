@@ -11,6 +11,7 @@ namespace FinancialLitApp.Converters // the namespace that directs where the con
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture) // data is moving from one source to the next target in one way or two way bindings  
         {
+            // i commnted this section out bc there was an issue with how the color strings are converted into colors bc of the need to trim white spaces 
             //if(value is  bool isSelected && parameter is string colors)
             //{
             //    var colorPair = colors.Split('|');
@@ -22,12 +23,7 @@ namespace FinancialLitApp.Converters // the namespace that directs where the con
             //    System.Diagnostics.Debug.WriteLine($"   Unselected color: '{unselectedColor}'");
 
             //}
-            // Add detailed debugging
-            System.Diagnostics.Debug.WriteLine($"🔍 BoolToColorConverter called:");
-            System.Diagnostics.Debug.WriteLine($"   Value: {value} (Type: {value?.GetType()})");
-            System.Diagnostics.Debug.WriteLine($"   Parameter: '{parameter}' (Type: {parameter?.GetType()})");
-            System.Diagnostics.Debug.WriteLine($"   TargetType: {targetType}");
-
+           //wrote a more detiled broken down version of what's going.
             if (value is bool isSelected && parameter is string colors)
             {
                 System.Diagnostics.Debug.WriteLine($"   IsSelected: {isSelected}");
@@ -36,7 +32,7 @@ namespace FinancialLitApp.Converters // the namespace that directs where the con
                 var colorPair = colors.Split('|');
                 System.Diagnostics.Debug.WriteLine($"   Split result: [{string.Join("', '", colorPair)}]");
 
-                // Clean the color strings by trimming whitespace
+                // Clean the color strings by trimming whitespace so the vonersion works well to show the actual color.
                 string selectedColor = colorPair[0]?.Trim();
                 string unselectedColor = colorPair.Length > 1 ? colorPair[1]?.Trim() : "#808080";
 

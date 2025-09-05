@@ -21,7 +21,7 @@ namespace FinancialLitApp.Views.Pages
 
         private async void OnSavingsChallengeClicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Test", "Button clicked!", "OK");
+          //  await DisplayAlert("Test", "Button clicked!", "OK");
             await NavigateToSavingsChallenge();
         }
 

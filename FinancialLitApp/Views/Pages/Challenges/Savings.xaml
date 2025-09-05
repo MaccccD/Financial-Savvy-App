@@ -67,27 +67,27 @@
             <StackLayout>
                 <Label Text="Select items to purchase:" FontSize="18" FontAttributes="Bold" TextColor="AntiqueWhite"  Margin="0,10,0,5"/>
 
-                <Frame BackgroundColor="#34495e" CornerRadius="8" Padding="15" Margin="0,5">
+                <Frame BackgroundColor="#34495e" CornerRadius="8" Padding="8" Margin="0,20,0,0" WidthRequest="450" HeightRequest="450" HorizontalOptions="StartAndExpand">
                     <StackLayout>
-                        <Label Text="NEEDS" FontSize="16" FontAttributes="Bold" TextColor="#ecf0f1" HorizontalOptions="Center"/>
+                        <Label Text="NEEDS" FontSize="16" Margin="0,10,0,0" FontAttributes="Bold" TextColor="AntiqueWhite" HorizontalOptions="Start"/>
                         <CollectionView ItemsSource="{Binding AvailableItems}"
                                         SelectionMode="None">
                             <CollectionView.ItemsLayout>
-                                <GridItemsLayout Orientation="Vertical" Span="2" HorizontalItemSpacing="10" VerticalItemSpacing="10"/>
+                                <GridItemsLayout Orientation="Vertical" Span="2" HorizontalItemSpacing="10" VerticalItemSpacing="15"/>
                              </CollectionView.ItemsLayout>
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
                                     <ContentView>
-                                        <Frame Background="{Binding IsSelected, Converter={StaticResource BoolToColorConverter}, ConverterParameter='#3498db|#95a5a6'}"
+                                        <Frame Background="{Binding IsSelected, Converter={StaticResource BoolToColorConverter}, ConverterParameter='#2c3e50|#2c3e50'}"
                                                CornerRadius="8"
-                                               Padding="10"
+                                               Padding="5"
                                                IsVisible="{Binding Category, Converter={StaticResource CategoryToVisibilityConverter}, ConverterParameter='Need'}">
                                             <Frame.GestureRecognizers>
                                                 <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:SavingsChallengeViewModel}}, Path=SelectItemCommand}"
                                                                       CommandParameter="{Binding .}"/>
                                             </Frame.GestureRecognizers>
                                             <StackLayout Spacing="5">
-                                                <Label Text="{Binding Name}" FontSize="14" FontAttributes="Bold" TextColor="White"/>
+                                                <Label Text="{Binding Name}" FontSize="14" FontAttributes="Bold" TextColor="AntiqueWhite"/>
                                                 <Label Text="{Binding Price, StringFormat='R{0:F0}'}" FontSize="12" TextColor="#ecf0f1"/>
                                                 <Label Text="{Binding Description}" FontSize="10" TextColor="#bdc3c7" LineBreakMode="WordWrap"/>
                                                 <Label Text="{Binding IsSelected, Converter={StaticResource BoolToStringConverter},ConverterParameter='✅ Selected| '}"
@@ -105,7 +105,7 @@
                     </StackLayout>
                 </Frame>
 
-                <Frame BackgroundColor="#7f8c8d" CornerRadius="8" Padding="15" Margin="0.5">
+                <Frame BackgroundColor="#34495e" CornerRadius="8" Padding="8" Margin="0,-400,0,0" WidthRequest="400" HeightRequest="400" HorizontalOptions="EndAndExpand">
                     <StackLayout>
                         <Label Text="WANTS" FontSize="16" FontAttributes="Bold" TextColor="#ecf0f1" HorizontalOptions="Center"/>
                         <CollectionView ItemsSource="{Binding AvailableItems}"
