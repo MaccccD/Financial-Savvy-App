@@ -246,7 +246,7 @@ namespace FinancialLitApp.ViewModels
             else
             {
                 var undersaved = CurrentlySaved - TargetAmount;
-                FeedbackMessage = $"💰 Great work man ! You're R{undersaved:F2} above your target. You can fford to get your self a small treat , just as a token of appreciation:)";
+                FeedbackMessage = $"💰 Great work man ! You're R{undersaved:F2} above your target. You can afford to get your self a small treat , just as a token of appreciation:)";
             }
         }
 

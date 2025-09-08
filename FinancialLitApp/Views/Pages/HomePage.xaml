@@ -5,13 +5,13 @@
              Title="Home Page Dashboard"
              BackgroundColor="#0D1738">
     <StackLayout>
-        <Label Text="Home Page" 
-               VerticalOptions="CenterAndExpand" 
-               HorizontalOptions="CenterAndExpand" />
-        <Label Text="Hello !"
+        <Label  Text="Hello! Welcome to your financial savvyiness journey!"
+                Margin="0,-10,0,0"
                 FontAttributes="Bold"
+                VerticalOptions="CenterAndExpand"
+                FontSize="40"
                 HorizontalOptions="Center"
                 TextColor="AntiqueWhite"
-                FontSize="20"/>
+                />
     </StackLayout>
 </ContentPage>

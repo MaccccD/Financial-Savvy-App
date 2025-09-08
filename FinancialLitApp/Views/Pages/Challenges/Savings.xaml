@@ -90,15 +90,15 @@
                     <Frame BackgroundColor="#34495e" 
                        CornerRadius="8" 
                        Padding="8" 
-                       Margin="0,0,20,0" 
+                       Margin="20,0,20,0" 
                        WidthRequest="450" 
                        FlexLayout.Basis="450"
                        FlexLayout.Shrink="0"
-                       HeightRequest="450" 
-                    <StackLayout>
+                       HeightRequest="450">
+                        <StackLayout>
                         <Label Text="NEEDS" 
                                FontSize="16" 
-                               Margin="0,10,0,0" 
+                               Margin="10,10,0,0" 
                                FontAttributes="Bold" 
                                TextColor="AntiqueWhite" 
                                HorizontalOptions="CenterAndExpand"/>
@@ -143,10 +143,11 @@
 
             <Frame  BackgroundColor="#34495e" 
                         CornerRadius="8" 
+                        Margin="100,0,20,0" 
                         Padding="8"
-                        WidthRequest="480" 
+                        WidthRequest="500" 
                         HeightRequest="490" 
-                        FlexLayout.Basis="480"
+                        FlexLayout.Basis="490"
                         FlexLayout.Shrink="0">
                 <StackLayout>
                     <Label Text="WANTS" 
@@ -157,6 +158,7 @@
                                Margin="0,0,0,0"/>
                     <CollectionView ItemsSource="{Binding AvailableItems}"
                                         SelectionMode="None"
+                                         Margin="15,-130,0,10"
                                         VerticalOptions="FillAndExpand">
                         <CollectionView.ItemsLayout>
                             <GridItemsLayout Orientation="Vertical" 
@@ -171,6 +173,7 @@
                                                CornerRadius="8"
                                                Padding="5"
                                                HeightRequest="85"
+                                               Margin="0,0,10,80"
                                                IsVisible="{Binding Category, Converter={StaticResource CategoryToVisibilityConverter},ConverterParameter='Want'}">
                                         <Frame.GestureRecognizers>
                                             <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:SavingsChallengeViewModel}}, Path=SelectItemCommand}"
@@ -230,7 +233,7 @@
                           HorizontalOptions="Center"/>
 
                    <Label Text="{Binding FeedbackMessage}"
-                          FontSize="14"
+                          FontSize="16"
                           TextColor="AntiqueWhite"
                           LineBreakMode="WordWrap"/>
 
