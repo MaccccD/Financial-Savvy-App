@@ -102,6 +102,15 @@ namespace FinancialLitApp.ViewModels
                     Category = ItemCategory.Need,
                     Description = "Religious Cheerful Giving"
                 },
+                new SavingsItem
+                {
+                    Id = 6,
+                    Name = "Car Insurance",
+                    Price = 100m,
+                    Category = ItemCategory.Need,
+                    Description = "In case of accidents that occur on the road."
+
+                }
                 //wants items- all lifestyle items for a Gen Z :
                 new SavingsItem
                 {
