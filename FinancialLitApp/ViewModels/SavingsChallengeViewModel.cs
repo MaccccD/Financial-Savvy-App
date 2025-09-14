@@ -111,6 +111,16 @@ namespace FinancialLitApp.ViewModels
                     Description = "In case of accidents that occur on the road."
 
                 },
+
+                new SavingsItem 
+                { 
+                    Id = 7,
+                    Name= "Health care Insurance",
+                    Price= 100m,
+                    Category = ItemCategory.Need,   
+                    Description = "In case anyoje in the family suh as kids get sick"
+                
+                }, 
                 //wants items- all lifestyle items for a Gen Z :
                 new SavingsItem
                 {
