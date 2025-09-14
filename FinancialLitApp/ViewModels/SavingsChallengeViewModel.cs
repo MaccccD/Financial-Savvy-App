@@ -110,7 +110,7 @@ namespace FinancialLitApp.ViewModels
                     Category = ItemCategory.Need,
                     Description = "In case of accidents that occur on the road."
 
-                }
+                },
                 //wants items- all lifestyle items for a Gen Z :
                 new SavingsItem
                 {
