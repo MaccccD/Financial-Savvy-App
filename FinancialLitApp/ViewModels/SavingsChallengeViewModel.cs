@@ -108,7 +108,7 @@ namespace FinancialLitApp.ViewModels
                     Name = "Car Insurance",
                     Price = 100m,
                     Category = ItemCategory.Need,
-                    Description = "In case of accidents that occur on the road."
+                    Description = "In case of car accidents that usually occur on the road that are not anticipated."
 
                 },
 

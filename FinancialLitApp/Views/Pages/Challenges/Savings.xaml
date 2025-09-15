@@ -124,10 +124,10 @@
                                             </Frame.GestureRecognizers>
                                             <StackLayout Spacing="5">
                                                 <Label Text="{Binding Name}" FontSize="14" FontAttributes="Bold" TextColor="AntiqueWhite"/>
-                                                <Label Text="{Binding Price, StringFormat='R{0:F0}'}" FontSize="12" TextColor="#ecf0f1"/>
+                                                <Label Text="{Binding Price, StringFormat='R{0:F0}'}" FontSize="14" TextColor="#ecf0f1"/>
                                                 <Label Text="{Binding Description}" FontSize="10" TextColor="#bdc3c7" LineBreakMode="WordWrap"/>
                                                 <Label Text="{Binding IsSelected, Converter={StaticResource BoolToStringConverter},ConverterParameter='✅ Selected| '}"
-                                                       FontSize="12"
+                                                       FontSize="14"
                                                        TextColor="#e74c3c"
                                                        FontAttributes="Bold"
                                                        IsVisible="{Binding IsSelected}"/>
