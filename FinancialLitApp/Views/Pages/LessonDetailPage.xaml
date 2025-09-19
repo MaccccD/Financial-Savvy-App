@@ -8,9 +8,7 @@
     <ScrollView>
         <StackLayout Padding="20" Spacing="20">
             <!--Page Header for the Lesson details-->
-            <Label Text="Lesson Detail Page" 
-                    VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="CenterAndExpand" />
+        
             <Label Text="Financial Concepts Lessons"
                    FontSize="25"
                    FontAttributes="Bold"
@@ -41,7 +39,21 @@
                              HeightRequest="60"
                              Clicked="OnSavingsLessonClicked"/>
                 </Frame>
-                
+                <!--Budeting Challenge Lesson -->
+                <Frame BackgroundColor="#103d81"
+                       CornerRadius="20"
+                       Padding="0"
+                       HasShadow="True">
+                    <Button x:Name="BudgetingLesson"
+                               Text="📊 Budgeting Lesson"
+                               BackgroundColor="Transparent"
+                               TextColor="#FFEBD7"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               HeightRequest="60"
+                               Clicked="OnBudgetingLessonClicked"/>
+                </Frame>
+
 
             </StackLayout>
            

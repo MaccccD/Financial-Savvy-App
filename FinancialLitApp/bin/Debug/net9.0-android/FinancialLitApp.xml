@@ -4,11 +4,128 @@
         <name>FinancialLitApp</name>
     </assembly>
     <members>
+        <member name="T:FinancialLitApp.ViewModels.SavingsChallengeViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.SavingsChallengeViewModel.StartingAmount">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.SavingsChallengeViewModel.startingAmount"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.SavingsChallengeViewModel.CurrentlySaved">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.SavingsChallengeViewModel.currentlySaved"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.SavingsChallengeViewModel.MoneySpent">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.SavingsChallengeViewModel.moneySpent"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.SavingsChallengeViewModel.TargetAmount">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.SavingsChallengeViewModel.targetAmount"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.SavingsChallengeViewModel.CurrentAttempt">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.SavingsChallengeViewModel.currentAttempt"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.SavingsChallengeViewModel.MaxAttempts">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.SavingsChallengeViewModel.maxAttempts"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.SavingsChallengeViewModel.IsGameActive">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.SavingsChallengeViewModel.isGameActive"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.SavingsChallengeViewModel.FeedbackMessage">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.SavingsChallengeViewModel.feedbackMessage"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.SavingsChallengeViewModel.ShowResults">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.SavingsChallengeViewModel.showResults"/>
+        </member>
+        <member name="F:FinancialLitApp.ViewModels.SavingsChallengeViewModel.selectItemCommand">
+            <summary>The backing field for <see cref="P:FinancialLitApp.ViewModels.SavingsChallengeViewModel.SelectItemCommand"/>.</summary>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.SavingsChallengeViewModel.SelectItemCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:FinancialLitApp.ViewModels.SavingsChallengeViewModel.SelectItem(FinancialLitApp.Models.SavingsItem)"/>.</summary>
+        </member>
+        <member name="F:FinancialLitApp.ViewModels.SavingsChallengeViewModel.checkResultCommand">
+            <summary>The backing field for <see cref="P:FinancialLitApp.ViewModels.SavingsChallengeViewModel.CheckResultCommand"/>.</summary>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.SavingsChallengeViewModel.CheckResultCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:FinancialLitApp.ViewModels.SavingsChallengeViewModel.CheckResult"/>.</summary>
+        </member>
+        <member name="F:FinancialLitApp.ViewModels.SavingsChallengeViewModel.resetChallengeCommand">
+            <summary>The backing field for <see cref="P:FinancialLitApp.ViewModels.SavingsChallengeViewModel.ResetChallengeCommand"/>.</summary>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.SavingsChallengeViewModel.ResetChallengeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:FinancialLitApp.ViewModels.SavingsChallengeViewModel.ResetChallenge"/>.</summary>
+        </member>
         <member name="T:FinancialLitApp.Resource">
             <summary>
             Android Resource Designer class.
             Exposes the Android Resource designer assembly into the project Namespace.
             </summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.StartingAmount">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "StartingAmount" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentlySaved">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentlySaved" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MoneySpent">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MoneySpent" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TargetAmount">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TargetAmount" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentAttempt">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentAttempt" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MaxAttempts">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MaxAttempts" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsGameActive">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsGameActive" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.FeedbackMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "FeedbackMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ShowResults">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ShowResults" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.StartingAmount">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "StartingAmount" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentlySaved">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentlySaved" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MoneySpent">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MoneySpent" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TargetAmount">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TargetAmount" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentAttempt">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentAttempt" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MaxAttempts">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MaxAttempts" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsGameActive">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsGameActive" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.FeedbackMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "FeedbackMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ShowResults">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ShowResults" generated properties.</summary>
         </member>
     </members>
 </doc>

@@ -20,7 +20,12 @@ namespace FinancialLitApp.Views.Pages
             
         }
 
-        private async Task NavigateToSavingsLesson()  
+        private  async void OnBudgetingLessonClicked(object senderr, EventArgs e)
+        {
+            await NavigateToBudgetingLesson();
+        }
+
+        private async Task NavigateToSavingsLesson()
         {
             try
             {
@@ -29,6 +34,18 @@ namespace FinancialLitApp.Views.Pages
             catch (Exception ex)
             {
                 await DisplayAlert(" Content coming right up", $"{ex.Message}","Okay");
+            }
+        }
+
+        private async Task NavigateToBudgetingLesson()
+        {
+            try
+            {
+                await Shell.Current.GoToAsync("budgetinglesson");
+            }
+            catch(Exception ex)
+            {
+                await DisplayAlert("Content coming right up!", $"{ex.Message}", "Alrightyy");
             }
         }
     }

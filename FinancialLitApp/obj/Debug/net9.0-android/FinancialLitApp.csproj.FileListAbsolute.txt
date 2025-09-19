@@ -970,7 +970,6 @@ C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\a
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\assets\x86_64\zh-HK\Microsoft.Maui.Controls.resources.dll
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\assets\x86_64\_Microsoft.Android.Resource.Designer.dll
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\typemaps.arm64-v8a.ll
-C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\typemaps.x86_64.ll
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\AndroidManifest.xml
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\AndroidManifest.xml
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\src\mono\MonoRuntimeProvider.java
@@ -980,7 +979,6 @@ C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\b
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\static.flag
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\__environment__.txt
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\environment.arm64-v8a.ll
-C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\environment.x86_64.ll
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\src\androidx\activity\ktx\R.java
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\src\androidx\activity\R.java
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\src\androidx\annotation\experimental\R.java
@@ -1345,19 +1343,12 @@ C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\b
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\src\com\companyname\financiallitapp\R.java
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\_CompileJava.FileList.txt
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\compressed_assemblies.arm64-v8a.ll
-C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\compressed_assemblies.x86_64.ll
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\typemaps.arm64-v8a.o
-C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\typemaps.x86_64.o
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\environment.arm64-v8a.o
-C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\environment.x86_64.o
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\compressed_assemblies.arm64-v8a.o
-C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\compressed_assemblies.x86_64.o
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\marshal_methods.arm64-v8a.o
-C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\marshal_methods.x86_64.o
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\jni_remap.arm64-v8a.o
-C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\jni_remap.x86_64.o
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\app_shared_libraries\arm64-v8a\libxamarin-app.so
-C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\app_shared_libraries\x86_64\libxamarin-app.so
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\bin\classes.dex
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\bin\classes2.dex
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\stamp\_CleanIntermediateIfNeeded.stamp
@@ -1368,3 +1359,10 @@ C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\stamp\_Co
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\stamp\_GenerateJavaStubs.stamp
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\stamp\_ResolveLibraryProjectImports.stamp
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\bin\Debug\net9.0-android\Microsoft.Maui.Controls.HotReload.Forms.dll
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\bin\Debug\net9.0-android\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\bin\Debug\net9.0-android\Microsoft.VisualStudio.DesignTools.TapContract.dll
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\Financia.58CF4504.Up2Date
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\assets\arm64-v8a\Microsoft.Maui.Controls.HotReload.Forms.dll
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\assets\arm64-v8a\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\assets\arm64-v8a\Microsoft.VisualStudio.DesignTools.TapContract.dll
