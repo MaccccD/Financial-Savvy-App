@@ -8,11 +8,7 @@
 		<Grid RowDefinitions="Auto,*,Auto" Padding="30,20">
 			<!--The header section -->
 			<StackLayout Grid.Row="0" Spacing="20" Margin="0,40,0,60">
-				<Label
-					Text="Login Page"
-                    TextColor="AntiqueWhite"
-                    VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="CenterAndExpand" />
+				
 				<Label
 					Text ="Financial Savvy"
 					FontSize ="28"

@@ -9,12 +9,12 @@
 	<ScrollView>
 		<Grid RowDefinitions="Auto,*,Auto" Padding="30,20">
             <StackLayout Grid.Row="0" Spacing="15" Margin="0,20,0,40">
-                <Label Text="Welcome to Financial Savvy : A financial literacy dedicated platform"
+                <Label Text="Welcome to Financial Savvy"
 					   FontSize="24"
 					   FontAttributes="Bold"
 					   HorizontalOptions="Center"
 					   TextColor="AntiqueWhite"/>
-				<Label Text ="Start your journey towards financial freedom"
+				<Label Text ="Start your journey towards financial freedom."
 					   FontSize="15"
 					   HorizontalOptions="Center"
 					   TextColor="AntiqueWhite"/>
