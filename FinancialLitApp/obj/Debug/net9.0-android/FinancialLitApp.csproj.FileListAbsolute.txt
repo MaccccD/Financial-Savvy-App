@@ -1369,3 +1369,8 @@ C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\c
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\marshal_methods.arm64-v8a.o
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\android\jni_remap.arm64-v8a.o
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\app_shared_libraries\arm64-v8a\libxamarin-app.so
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\resizetizer\r\drawable-hdpi\home.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\resizetizer\r\drawable-mdpi\home.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\resizetizer\r\drawable-xhdpi\home.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\resizetizer\r\drawable-xxhdpi\home.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\resizetizer\r\drawable-xxxhdpi\home.png

@@ -45,30 +45,30 @@
     <TabBar x:Name="MainTabBar" IsVisible="False">
         <ShellContent
             Title="Home"
-            Icon="Icons/Home.png"
+            Icon="Home.png"
             ContentTemplate="{DataTemplate local:Views.Pages.HomePage}"
             Route="home"/>
 
         <ShellContent
             Title="Lessons"
-            Icon="Icons/Lessons.png"
+            Icon="lessons.png"
             ContentTemplate="{DataTemplate local:Views.Pages.LessonDetailPage}"
             Route="lessondetailpage" />
         <ShellContent 
             Title="Challenges"
-            Icon="Icons/challenges.png"
+            Icon="challenges.png"
             ContentTemplate="{DataTemplate local:Views.Pages.ChallengesPage}"
             Route="challenges" />
 
         <ShellContent
             Title="Feedback"
-            Icon="Icons/Feedback.png"
+            Icon="feedback.png"
             ContentTemplate="{DataTemplate local:Views.Pages.FeedbackPage}"
             Route="feedback" />
 
         <ShellContent
             Title="Settings"
-            Icon="Icons/Settings.png"
+            Icon="settings.png"
             ContentTemplate="{DataTemplate local:Views.Pages.RewardsPage}"
             Route="rewards"/>
 

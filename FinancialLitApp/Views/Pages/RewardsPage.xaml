@@ -2,10 +2,10 @@
 <ContentPage x:Class="FinancialLitApp.Views.Pages.RewardsPage"
              xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             Title="Rewards"
+             Title="Settings"
 			 BackgroundColor="#0D1738">
     <StackLayout>
-        <Label Text="Rewards Page" 
+        <Label Text="Settings Coming Soon!" 
                VerticalOptions="CenterAndExpand" 
                HorizontalOptions="CenterAndExpand" />
     </StackLayout>

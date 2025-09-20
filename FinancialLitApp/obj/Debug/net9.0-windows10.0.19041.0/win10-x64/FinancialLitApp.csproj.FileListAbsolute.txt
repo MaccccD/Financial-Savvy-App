@@ -468,3 +468,13 @@ C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-windows10.0.19041
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\home.scale-100.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\home.scale-125.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\home.scale-150.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\home.scale-200.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\home.scale-400.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\home.scale-100.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\home.scale-125.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\home.scale-150.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\home.scale-200.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\home.scale-400.png
