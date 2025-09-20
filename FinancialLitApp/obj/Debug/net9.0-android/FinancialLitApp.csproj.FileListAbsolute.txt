@@ -1389,4 +1389,8 @@ C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\resizetiz
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\resizetizer\r\drawable-xxxhdpi\challenges.png
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\resizetizer\r\drawable-xxxhdpi\lessons.png
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\resizetizer\r\drawable-xxxhdpi\settings.png
-C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\resizetizer\r\drawable\feeback.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\resizetizer\r\drawable-hdpi\feedback.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\resizetizer\r\drawable-mdpi\feedback.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\resizetizer\r\drawable-xhdpi\feedback.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\resizetizer\r\drawable-xxhdpi\feedback.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-android\resizetizer\r\drawable-xxxhdpi\feedback.png
