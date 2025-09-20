@@ -45,7 +45,7 @@
     <TabBar x:Name="MainTabBar" IsVisible="False">
         <ShellContent
             Title="Home"
-            Icon="Home.png"
+            Icon="home.png"
             ContentTemplate="{DataTemplate local:Views.Pages.HomePage}"
             Route="home"/>
 
