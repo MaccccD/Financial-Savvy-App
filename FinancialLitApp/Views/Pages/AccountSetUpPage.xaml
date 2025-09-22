@@ -33,7 +33,7 @@
 						   FontSize="16"
 						   Margin="15,10"/>
 				</Frame>
-				<!-- Enter last name input field desin -->
+				<!-- Enter last name input field design -->
 				<Frame BorderColor="Grey"
                        HasShadow="False"
                        CornerRadius="10"
@@ -58,7 +58,7 @@
 						   Margin="15,10"/>
 				</Frame>
 					   
-				<!-- Email Input Designn -->
+				<!-- Email Input Design-->
 				<Frame BorderColor="Grey"
                        HasShadow="False"
                        CornerRadius="10"
