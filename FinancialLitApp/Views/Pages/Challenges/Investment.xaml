@@ -2,11 +2,12 @@
 <ContentPage x:Class="FinancialLitApp.Views.Pages.Challenges.Investment"
              xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             Title="Investment Challenge">
+             Title="Investment Challenge"
+			  BackgroundColor="#0D1738">
     <StackLayout>
         <Label Text="Investment Page" 
                VerticalOptions="CenterAndExpand" 
                HorizontalOptions="CenterAndExpand" />
-        <Label Text="Investment  challenge goes here "/>
+      
     </StackLayout>
 </ContentPage>

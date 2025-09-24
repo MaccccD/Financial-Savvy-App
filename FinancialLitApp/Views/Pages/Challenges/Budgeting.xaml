@@ -2,11 +2,13 @@
 <ContentPage x:Class="FinancialLitApp.Views.Pages.Challenges.Budgeting"
              xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             Title="Budgeting Challenge">
+             Title="Budgeting Challenge"
+              BackgroundColor="#0D1738"
+             >
     <StackLayout>
         <Label Text="Budgeting Page" 
                VerticalOptions="CenterAndExpand" 
                HorizontalOptions="CenterAndExpand" />
-        <Label Text="Budget challenge goes here "/>
+        
     </StackLayout>
 </ContentPage>
