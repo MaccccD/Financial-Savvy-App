@@ -203,7 +203,12 @@ namespace FinancialLitApp.ViewModels
                         "Overspent!",
                         "You have overspent your starting amount",
                         "OK");
+
+                    CheckResult();
+                    return; //end game if player is overspending.
+                    
                 }
+               
             }
             else
             {
@@ -214,7 +219,6 @@ namespace FinancialLitApp.ViewModels
             //update the value of the currently saved amount after spending, directly demonstrating Versl's theory n action:
             CurrentlySaved = StartingAmount - MoneySpent;
             Console.WriteLine(CurrentlySaved);
-
             UpdateRealTimeFeedback(); // the moment where Hot reload works best, uodating UI data innreal time as changes occur.
         }
 
@@ -228,7 +232,7 @@ namespace FinancialLitApp.ViewModels
             if (result.IsSuccess)
             {
                 FeedbackMessage = $"🎉Congratulations! You've managed to successfully save R{currentlySaved:F2}" +
-                                  $"by making conscious spending choices. /n/n" +
+                                  $"by making conscious spending choices. \n\n" +
                                   $"💡Learning Insight : Notice how your active decision to prioritize and " +
                                   $"limit spending activity directly built your saving ability. Each choice you made " +
                                   $"strengthened your financial discipline. This is exactly how real world " +
