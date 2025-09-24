@@ -125,6 +125,24 @@ build_metadata.AdditionalFiles.ManifestResourceName = FinancialLitApp.Views.Page
 build_metadata.AdditionalFiles.TargetPath = Views\Pages\LessonDetailPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Pages\LessonDetailPage.xaml
 
+[C:/GitHub/Financial-Savvy-App/FinancialLitApp/Views/Pages/Lessons/BudgetingLesson.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinancialLitApp.Views.Pages.Lessons.BudgetingLesson.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Pages\Lessons\BudgetingLesson.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Pages\Lessons\BudgetingLesson.xaml
+
+[C:/GitHub/Financial-Savvy-App/FinancialLitApp/Views/Pages/Lessons/FinancialPortfolio.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinancialLitApp.Views.Pages.Lessons.FinancialPortfolio.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Pages\Lessons\FinancialPortfolio.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Pages\Lessons\FinancialPortfolio.xaml
+
+[C:/GitHub/Financial-Savvy-App/FinancialLitApp/Views/Pages/Lessons/SavingsLesson.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinancialLitApp.Views.Pages.Lessons.SavingsLesson.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Pages\Lessons\SavingsLesson.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Pages\Lessons\SavingsLesson.xaml
+
 [C:/GitHub/Financial-Savvy-App/FinancialLitApp/Views/Pages/LoginPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinancialLitApp.Views.Pages.LoginPage.xaml

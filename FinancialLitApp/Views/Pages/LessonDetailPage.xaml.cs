@@ -100,7 +100,7 @@ namespace FinancialLitApp.Views.Pages
             {
                 Console.WriteLine("❌ Shell.Current is still null after waiting");
                 throw new InvalidOperationException("Shell.Current is not available");
-                // Fallback: try using this instance directly as aopposed to waiting for shell to take you to the actual page
+                // Fallback: try using this instance directly as opposed to waiting for shell to take you to the actual page
                 //  await this.GoToAsync(route);
             }
         }

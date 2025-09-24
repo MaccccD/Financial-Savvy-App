@@ -49,13 +49,13 @@
 		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
 
 		<!-- Images -->
-		<MauiImage Include="Resources\Images\*"/>
-		<MauiImage Update="Resources\Images\home.png" Resize="True" BaseSize="300,190"/>
-		<MauiImage Update="Resources\Images\lessons.png" Resize="True" BaseSize="300,190"/>
-		<MauiImage Update="Resources\Images\challenges.png" Resize="True" BaseSize="300,190"/>
-		<MauiImage Update="Resources\Images\feedback.png" Resize="True" BaseSize="500,190"/>
-		<MauiImage Update="Resources\Images\settings.png" Resize="True" BaseSize="300, 180"/>
-		<MauiImage Update="Resources\Images\dotnet_bot.png" Resize="True" BaseSize="300,185"/>
+		<MauiImage Include="Resources\Images\*" />
+		<MauiImage Update="Resources\Images\home.png" Resize="True" BaseSize="300,190" />
+		<MauiImage Update="Resources\Images\lessons.png" Resize="True" BaseSize="300,190" />
+		<MauiImage Update="Resources\Images\challenges.png" Resize="True" BaseSize="300,190" />
+		<MauiImage Update="Resources\Images\feedback.png" Resize="True" BaseSize="500,190" />
+		<MauiImage Update="Resources\Images\settings.png" Resize="True" BaseSize="300, 180" />
+		<MauiImage Update="Resources\Images\dotnet_bot.png" Resize="True" BaseSize="300,185" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -123,6 +123,15 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Pages\FeedbackPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Pages\Lessons\BudgetingLesson.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Pages\Lessons\FinancialPortfolio.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Pages\Lessons\SavingsLesson.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Pages\LoginPage.xaml">

@@ -9,6 +9,7 @@ using CommunityToolkit.Mvvm.Input;
 //using Android.Telephony;
 using System.Linq.Expressions;
 using System.Diagnostics;
+using FinancialLitApp.Views.Pages.Lessons;
 //using Google.Android.Material.AppBar;
 //using Android.App;
 
@@ -22,8 +23,13 @@ public partial class AppShell : Shell
 	{
 		InitializeComponent(); //loads the XAML Files
 
-        //here i'm registering the routes for the pages that are not part of the main tab but are part of the ap:
+        //here i'm registering the routes for the pages that are not part of the main tab but are part of the app architecture:
         Routing.RegisterRoute("savings", typeof(Savings)); //currrently testingg. [this works btw]
+        Routing.RegisterRoute("budgeting", typeof(Budgeting)); //the route to the budgeting challenge
+        Routing.RegisterRoute("investment", typeof(Investment)); //the route to the investment challenge[might change this later tbh)
+        Routing.RegisterRoute("savingslesson", typeof(SavingsLesson)); // the route to the savings lesson
+        Routing.RegisterRoute("budgetinglesson", typeof(BudgetingLesson)); //the route to the bidgeting lesson
+        Routing.RegisterRoute("financialportfolio", typeof(FinancialPortfolio)); //the route to the financial portfolio section lesson
         Routing.RegisterRoute("forgotpassword", typeof(ForgotPasswordPage));
 		Routing.RegisterRoute("lessondetailpage", typeof(LessonDetailPage));
         Routing.RegisterRoute("budgetingchallenge", typeof(Budgeting));
@@ -145,7 +151,7 @@ public partial class AppShell : Shell
 	public async Task NavigateToLogin()
 	{
 
-		await Shell.Current.GoToAsync("//login");
+		await Shell.Current.GoToAsync("//login"); // note the absolute routing
 	}
     public async Task NavigateToHome()
     {
