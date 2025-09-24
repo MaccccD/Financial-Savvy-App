@@ -56,10 +56,11 @@
 
                 <Frame BackgroundColor="#103d81"
                        CornerRadius="20"
-                       HasShadow="TRUE"
-                       Padding="0">
+                       Padding="0"
+                       HasShadow="True">
                     <Button x:Name="FinancialPortfolio"
-                            Text="How to create a financial portfolio as a young professional entering the job market for the first time"
+                            Text="Financial portfolio Lesson"
+                            BackgroundColor="#103d81"
                             TextColor="#FFEBD7"
                             FontSize="18"
                             FontAttributes="Bold"

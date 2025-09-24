@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Windows.Input;
 using FinancialLitApp.Models;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
@@ -183,18 +184,26 @@ namespace FinancialLitApp.ViewModels
         }
 
         [RelayCommand] // this command is used to bind data such as the UI  to methods in the View Models without doreclty refrencing the View from the View Model
-        private void SelectItem(SavingsItem item)
+        private async void SelectItem(SavingsItem item)
         {
             if (!IsGameActive) return; // exit the function when the game is not active !
 
             //toggle selection between selected items :
             item.IsSelected =  !item.IsSelected;
-
+            
             if (item.IsSelected)
             {
                 SelectedItems.Add(item); // add item that has been slected to the list
                 MoneySpent += item.Price; //  take away the amount of money the item costs from the money that you had to spend
                 Console.WriteLine(MoneySpent);
+
+                if (MoneySpent >= 200)
+                {
+                    await Application.Current.MainPage.DisplayAlert(
+                        "Overspent!",
+                        "You have overspent your starting amount",
+                        "OK");
+                }
             }
             else
             {
@@ -202,7 +211,7 @@ namespace FinancialLitApp.ViewModels
                 MoneySpent -= item.Price;
             }
 
-            //update the value of the currently saved amount after spending, directly deonstrating Versl's theory n action:
+            //update the value of the currently saved amount after spending, directly demonstrating Versl's theory n action:
             CurrentlySaved = StartingAmount - MoneySpent;
             Console.WriteLine(CurrentlySaved);
 
