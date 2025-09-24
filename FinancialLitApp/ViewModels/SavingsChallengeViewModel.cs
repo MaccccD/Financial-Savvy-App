@@ -312,19 +312,19 @@ namespace FinancialLitApp.ViewModels
                 if (wantsSelected.Any())
                 {
                     var wantsTotal = wantsSelected.Sum(i => i.Price); // here i'm ca;cumating the su of wants that have been selected that contrbited to not meeting the thategt savings goal to help give users insght on what went wrong or where they need to reduce :
-                    feedback += $"/n/n Strategy Tip: You selected R{wantsTotal:F2} worth of 'wants." +
+                    feedback += $"\n\n Strategy Tip: You selected R{wantsTotal:F2} worth of 'wants." +
                                $"Try reducing these optional purchases while keeping your essential 'needs." +
                                $"Remember: every spending choice you make directly impacts your savings ability. Spending a lot on 'wants' subsequently affects your savings amount drastically.";
                 }
                 else
                 {
-                    feedback += $"/n/n You focused on needs. Which is smart! However, try reducing quantities or " +
+                    feedback += $"\n\n You focused on needs. Which is smart! However, try reducing quantities or " +
                                 $"finding alternatives to reach your savings target.";
 
                 }
             }
 
-            feedback += $"/n/n Attempt {CurrentAttempt} of {MaxAttempts} - You've got this! Let's goo!";
+            feedback += $"\n\n Attempt {CurrentAttempt} of {MaxAttempts} - You've got this! Let's goo!";
             return feedback ;
 
         }
@@ -339,7 +339,7 @@ namespace FinancialLitApp.ViewModels
 
             feedback += $"💡 Key Insight: Notice how actively managing your spending choices made you more" +
                          $"aware of the relationship between consumption and saving. This awareness is a crucial " +
-                         $"financial skill you've just developed through practice./n/n";
+                         $"financial skill you've just developed through practice.\n\n";
 
             var needsVsWants = AnalyzeSpendingPattern();
             feedback += needsVsWants;
@@ -355,9 +355,9 @@ namespace FinancialLitApp.ViewModels
 
 
             //the similated analysis by tracking the disparirties between the amount of money spent on need vs the money spent on wants:
-            var analysis = "📊 Your Spending Pattern: /n";
-            analysis += $"-Needs: R{needsSpent:F2}/n"; // how much spend on items that were categorised as needs
-            analysis += $"-Wants: R{wantsSpent:F2}/n/n";
+            var analysis = "📊 Your Spending Pattern: \n\n";
+            analysis += $"-Needs: R{needsSpent:F2}\n\n"; // how much spend on items that were categorised as needs
+            analysis += $"-Wants: R{wantsSpent:F2}\n\n";
 
             if(wantsSpent > needsSpent)
             {
