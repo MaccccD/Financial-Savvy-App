@@ -5,7 +5,7 @@
              Title="Settings"
 			 BackgroundColor="#0D1738">
     <StackLayout>
-        <Label Text="Settings Coming Soon!" 
+        <Label Text="Coming Soon!" 
                VerticalOptions="CenterAndExpand" 
                HorizontalOptions="CenterAndExpand" />
     </StackLayout>

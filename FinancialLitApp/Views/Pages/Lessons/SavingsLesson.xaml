@@ -2,8 +2,11 @@
 <ContentPage x:Class="FinancialLitApp.Views.Pages.Lessons.SavingsLesson"
              xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             Title="Savings Lesson">
+             Title="Savings Lesson"
+              BackgroundColor="#0D1738">
     <StackLayout>
-        <Label Text="Savings Lesson Deets here..."/>
+        <Label Text="Savings Lesson Deets here..."
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand"/>
     </StackLayout>
 </ContentPage>
