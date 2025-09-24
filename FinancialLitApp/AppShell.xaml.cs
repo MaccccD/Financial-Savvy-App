@@ -22,8 +22,8 @@ public partial class AppShell : Shell
 	{
 		InitializeComponent(); //loads the XAML Files
 
-        //here i'm registering the routes for the oages that are not part of the main tab but are part of the ap:
-        Routing.RegisterRoute("savings", typeof(Savings)); //currrently testingg
+        //here i'm registering the routes for the pages that are not part of the main tab but are part of the ap:
+        Routing.RegisterRoute("savings", typeof(Savings)); //currrently testingg. [this works btw]
         Routing.RegisterRoute("forgotpassword", typeof(ForgotPasswordPage));
 		Routing.RegisterRoute("lessondetailpage", typeof(LessonDetailPage));
         Routing.RegisterRoute("budgetingchallenge", typeof(Budgeting));

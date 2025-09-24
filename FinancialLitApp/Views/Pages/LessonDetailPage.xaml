@@ -54,6 +54,21 @@
                                Clicked="OnBudgetingLessonClicked"/>
                 </Frame>
 
+                <Frame BackgroundColor="#103d81"
+                       CornerRadius="20"
+                       HasShadow="TRUE"
+                       Padding="0">
+                    <Button x:Name="FinancialPortfolio"
+                            Text="How to create a financial portfolio as a young professional entering the job market for the first time"
+                            TextColor="#FFEBD7"
+                            FontSize="18"
+                            FontAttributes="Bold"
+                            HeightRequest="60"
+                            WidthRequest="250"
+                            Clicked="OnFinancialPortfolioClicked"/>
+
+                </Frame>
+
 
             </StackLayout>
            
