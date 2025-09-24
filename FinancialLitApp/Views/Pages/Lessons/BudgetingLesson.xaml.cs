@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace FinancialLitApp.Views.Pages.Lessons
 {
-    internal class BudgetingLesson
+    public partial class BudgetingLesson : ContentPage
     {
+        public BudgetingLesson() 
+        {
+            InitializeComponent();
+            Console.WriteLine("initializing successful");
+        }
     }
 }
