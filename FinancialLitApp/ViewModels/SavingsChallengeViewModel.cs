@@ -216,7 +216,7 @@ namespace FinancialLitApp.ViewModels
                 MoneySpent -= item.Price;
             }
 
-            //update the value of the currently saved amount after spending, directly demonstrating Versl's theory n action:
+            //update the value of the currently saved amount after spending, directly demonstrating Versal's theory n action:
             CurrentlySaved = StartingAmount - MoneySpent;
             Console.WriteLine(CurrentlySaved);
             UpdateRealTimeFeedback(); // the moment where Hot reload works best, uodating UI data innreal time as changes occur.
