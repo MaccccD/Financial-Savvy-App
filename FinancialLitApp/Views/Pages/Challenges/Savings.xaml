@@ -28,7 +28,7 @@
             <Frame BackgroundColor="#34495e" CornerRadius="8" Padding="15" Margin="0,20,0,0">
                 <StackLayout>
                     <Label Text="How it Works" FontSize="20" FontAttributes="Bold" TextColor="AntiqueWhite"/>
-                    <Label Text="In this challenge, players must make strategic spending decisions to reach their savings target goal. By selecting from items categorized as Needs or Wants, player learn to prioritize spending and see how ther choices directly impact their ability to save. Players win  when their remaining funds equal the target savings amount, with 3 attempts avilable to succeed."
+                    <Label Text="In this challenge, players need to  make strategic spending decisions to reach their savings target goal.  They can do this by selecting from items categorized as Needs or Wants. Players win  when their remaining funds equal the target savings amount, with 3 attempts available to succeed."
                  FontSize="16"
                  TextColor="#ecf0f1"
                  LineBreakMode="WordWrap"/>
