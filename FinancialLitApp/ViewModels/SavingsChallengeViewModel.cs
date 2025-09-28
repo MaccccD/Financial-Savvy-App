@@ -243,13 +243,13 @@ namespace FinancialLitApp.ViewModels
 
             else if (CurrentAttempt >= MaxAttempts)
             {
-                //if the user has exeeded the number of attempts they have , reuslting in failure:
+                //if the user has exeeded the number of attempts they have , resulting in failure:
                 FeedbackMessage = GetFailureFeedback(result);
                 IsGameActive = false;
             }
             else
             {
-                //give theuser another opportunity to try the challenge again :
+                //give the user another opportunity to try the challenge again :
                 CurrentAttempt++;
                 FeedbackMessage = GetAttemptFeedback(result);
                 ResetForNewAttempt();

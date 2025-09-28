@@ -41,8 +41,8 @@ namespace FinancialLitApp.Views.Pages
                 Console.WriteLine("🔍 Starting savings challenge navigation...");
                 Console.WriteLine($"🔍 Shell.Current is null: {Shell.Current == null}");
 
-               //i changed the absolute routing to relative navigation ( from '//savings' to just savings'):
-                await WaitForShellAndNavigate("savings");
+                //i changed the absolute routing to relative navigation ( from '//savings' to just savings'):
+                await WaitForShellAndNavigate("savings");//relative routing 
 
                 Console.WriteLine("✅ Navigation command completed");
             }
