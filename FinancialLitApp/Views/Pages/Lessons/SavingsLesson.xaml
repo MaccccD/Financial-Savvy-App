@@ -9,7 +9,7 @@
         <StackLayout Padding="20" Spacing="20">
 
             <!---The header section of the lesson content-->
-            <Frame BackgroundColor="#1a237e" CornerRadius="15" Padding="20">
+            <Frame BackgroundColor="#16213e" CornerRadius="15" Padding="20">
                 <StackLayout Spacing="10">
                     <Label Text="The Savings Superpower!"
                            FontSize="24"
@@ -25,7 +25,7 @@
             </Frame>
             <!---the key insghts section where user actually recieve the underdtanding":-->
 
-            <Frame BackgroundColor="#1a237e" CornerRadius="15" Padding="18">
+            <Frame BackgroundColor="#16213e" CornerRadius="15" Padding="18">
                 <StackLayout Spacing="12">
                     <Label Text=" 🧠 Mind-Blowing Fact:"
                        FontSize="18"
@@ -36,7 +36,7 @@
                        FontAttributes="Italic"
                        LineBreakMode="WordWrap"
                        TextColor="#ffebd7"/>
-                    <Frame BackgroundColor="#34495e" CornerRadius="12" Padding="15">
+                    <Frame BackgroundColor="#103d81" CornerRadius="12" Padding="15">
                         <Label Text="The act of saving itself teaches you about money and makes you financially smarter!"
                                FontSize="14"
                                FontAttributes="Italic"
@@ -48,7 +48,7 @@
             </Frame>
 
             <!---Understanding what FWB (Financial Well-Being means):-->
-            <Frame BackgroundColor="#1a237e" CornerRadius="12" Padding="18">
+            <Frame BackgroundColor="#16213e" CornerRadius="12" Padding="18">
                 <StackLayout Spacing="15">
                     <Label Text=" 🍃 What is Financial Wellbeing ?"
                            FontSize="18"
@@ -93,7 +93,7 @@
 
             <!-- The three drivers of FWB:-->
 
-            <Frame BackgroundColor="#1a237e" CornerRadius="12" Padding="18">
+            <Frame BackgroundColor="#16213e" CornerRadius="12" Padding="18">
                 <StackLayout Padding="15" Spacing="20">
                     <Label Text="🚀 The 3 Financial Wellbeing Superpowers:"
                            FontSize="18"
