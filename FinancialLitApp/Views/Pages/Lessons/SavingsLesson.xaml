@@ -80,7 +80,7 @@
                                        FontAttributes="Bold"
                                        TextColor="#ffebd7"
                                        HorizontalOptions="Center"/>
-                                <Label Text="How you FEEL abot your money situation."
+                                <Label Text="How you FEEL about your money situation."
                                        FontSize="12"
                                        TextColor="#ffebd7"
                                        HorizontalOptions="Center"
