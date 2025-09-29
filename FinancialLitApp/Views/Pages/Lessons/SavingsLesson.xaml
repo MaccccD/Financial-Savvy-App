@@ -242,7 +242,7 @@
                                    LineBreakMode="WordWrap"
                                    HorizontalOptions="Center"/>
 
-                            <Label Text="Remember: Every choice you make in the challenge is building your financial skills, not just testing them!.It's not a test but a pratical way to learn alife-long skill!"
+                            <Label Text="Remember: Every choice you make in the challenge is building your financial skills, not just testing them!.It's not a test but a pratical way to learn a life-long skill!"
                                    FontSize="15"
                                    FontAttributes="Italic"
                                    TextColor="#ecf0f1"
@@ -253,6 +253,7 @@
                             <Button Text="🚀 Try this Savings Challenge!"
                                     BackgroundColor="#2503FD"
                                     TextColor="#ffebd7"
+                                    Margin="8"
                                     CornerRadius="10"
                                     HeightRequest="60"
                                     WidthRequest="270"
