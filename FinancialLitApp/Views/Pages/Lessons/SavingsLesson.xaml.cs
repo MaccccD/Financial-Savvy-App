@@ -14,7 +14,7 @@ namespace FinancialLitApp.Views.Pages.Lessons
             Console.WriteLine("yay, initialization works");
         }
 
-        private async void OnChallengeClicked(object sender, EventArgs e)
+        private async void OnChallengeClicked(object sender, EventArgs e) // this method is to allow seamless navigation to the challenge right after the lesson
         {
             await Shell.Current.GoToAsync("savings");
             Console.WriteLine("the savings challenge page is currently loading");
