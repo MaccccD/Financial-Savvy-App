@@ -7,7 +7,7 @@
 
     <ScrollView>
         <StackLayout Padding="20" Spacing="20">
-            
+
             <!---The header section of the lesson content-->
             <Frame BackgroundColor="#1a237e" CornerRadius="15" Padding="20">
                 <StackLayout Spacing="10">
@@ -22,6 +22,139 @@
                            HorizontalOptions="Center"
                            LineBreakMode= "WordWrap"/>
                 </StackLayout>
+            </Frame>
+            <!---the key insghts section where user actually recieve the underdtanding":-->
+
+            <Frame BackgroundColor="#2c3e50" CornerRadius="15" Padding="18">
+                <StackLayout Spacing="12">
+                    <Label Text=" 🧠 Mind-Blowing Fact:"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       TextColor="LimeGreen"/>
+                    <Label Text="Most people thik you need to underdtand money first, and then you can save it. But research actually shows that the OPPOSITE is also true!"
+                       FontSize="15"
+                       FontAttributes="Italic"
+                       LineBreakMode="WordWrap"
+                       TextColor="#ffebd7"/>
+                    <Frame BackgroundColor="#34495e" CornerRadius="12" Padding="15">
+                        <Label Text="The act of saving itself teaches you about money and makes you financially smarter!"
+                               FontSize="14"
+                               FontAttributes="Italic"
+                               TextColor="#00d4aa"
+                               HorizontalOptions="Center"
+                               LineBreakMode="WordWrap"/>
+                    </Frame>
+                </StackLayout>
+            </Frame>
+
+            <!---Understanding what FWB (Financial Well-Being means):-->
+            <Frame BackgroundColor="#16a085" CornerRadius="12" Padding="18">
+                <StackLayout Spacing="15">
+                    <Label Text=" 🍃 What is Financial Wellbeing ?"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="#ffebd7"
+                           LineBreakMode="WordWrap"/>
+                    <!--- explaining the two dimensions of if it :-->
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <Frame BackgroundColor="#1abc9c" CornerRadius="8" Padding="12" HorizontalOptions="FillAndExpand">
+                            <StackLayout>
+                                <Label Text="📊 Objective"
+                                          FontSize="15"
+                                          FontAttributes="Bold"
+                                          TextColor="#ffebd7"
+                                          HorizontalOptions="Center"
+                                          LineBreakMode="WordWrap"/>
+                                <Label Text="The actual numbers: your income, savings, debts."
+                                       FontSize="12"
+                                       TextColor="#ffebd7"
+                                       HorizontalOptions="Center"
+                                       LineBreakMode="WordWrap"/>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame BackgroundColor="#1abc9c" CornerRadius="8" Padding="14" HorizontalOptions="FillAndExpand">
+                            <StackLayout>
+                                <Label Text="🥹 Subjective"
+                                       FontSize="15"
+                                       FontAttributes="Bold"
+                                       TextColor="#ffebd7"
+                                       HorizontalOptions="Center"/>
+                                <Label Text="How you FEEL abot your money situation."
+                                       FontSize="12"
+                                       TextColor="#ffebd7"
+                                       HorizontalOptions="Center"
+                                       LineBreakMode="WordWrap"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+            <!-- The three drivers of FWB:-->
+
+            <Frame BackgroundColor="#8e44ad" CornerRadius="12" Padding="18">
+                <StackLayout Padding="15">
+                    <Label Text="🚀 The 3 Financial Wellbeing Superpowers:"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="#ffebd7"
+                           HorizontalOptions="Center"/>
+
+
+                    <!--The first driver:-->
+                    <Frame BackgroundColor="#9b59b6" CornerRadius="8" Padding="15">
+                        <StackLayout Padding="12">
+                            <StackLayout Orientation="Horizontal" Spacing="10">
+                                <Label Text="1️⃣" FontSize="20" TextColor="#ffebd7"/>
+                                <Label Text="Active Saving."
+                                       FontSize="16"
+                                       FontAttributes="Bold"
+                                       TextColor="#ffebd7"
+                                       VerticalOptions="Center"/>
+                            </StackLayout>
+                            <Label Text="Regularly putting money aside, even in small amounts. Every time you save, you're building both your bank account AND your financial knowledge!"
+                                   FontSize="14"
+                                   TextColor="#ffebd7"
+                                   LineBreakMode="WordWrap"/>
+                        </StackLayout>
+                    </Frame>
+                    <!--The second driver":-->
+                    <Frame BackgroundColor="#9b59b6" CornerRadius="8" Padding="15">
+                        <StackLayout Padding="12">
+                            <StackLayout Orientation="Horizontal" Spacing="10">
+                                <Label Text="2️⃣" FontSize="20" TextColor="#ffebd7"/>
+                                <Label Text="Smart Spending Choices."
+                                       FontSize="16"
+                                       FontAttributes="Bold"
+                                       TextColor="#ffebd7"
+                                       VerticalOptions="Center"/>
+                            </StackLayout>
+                            <Label Text="Taking the time to think before you buy and choosing between needs vs wants. This isn;t about being boring –– it's about being intentional with your money!"
+                                   FontSize="13"
+                                   TextColor="#ffebd7"
+                                   LineBreakMode="WordWrap"/>
+                        </StackLayout>
+                    </Frame>
+                    <!---The third driver :-->
+                    <Frame BackgroundColor="#9b59b6" CornerRadius="8" Padding="15">
+                        <StackLayout Padding="12">
+                            <StackLayout Orientation="Horizontal" Spacing="10">
+                                <Label Text="3️⃣" FontSize="20" TextColor="#ffebd7"/>
+                                <Label Text="Avoid Daily Debt."
+                                       FontSize="16"
+                                       FontAttributes="Bold"
+                                       TextColor="#ffebd7"
+                                       VerticalOptions="Center"/>
+                            </StackLayout>
+                            <Label Text="This means not borrowing money for everyday things like food, transport, or entertainment. Using your own money gives you more real control over it!"
+                                   FontSize="14"
+                                   TextColor="#ffebd7"
+                                   LineBreakMode="WordWrap"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
             </Frame>
         </StackLayout>
     </ScrollView>

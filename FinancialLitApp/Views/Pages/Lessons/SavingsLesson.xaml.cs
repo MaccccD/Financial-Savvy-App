@@ -6,12 +6,20 @@ using System.Threading.Tasks;
 
 namespace FinancialLitApp.Views.Pages.Lessons
 {
-  public partial class SavingsLesson : ContentPage
+    public partial class SavingsLesson : ContentPage
     {
-       public SavingsLesson() 
+        public SavingsLesson()
         {
             InitializeComponent();
             Console.WriteLine("yay, initialization works");
         }
+
+        private async void OnChallengeClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("savings");
+            Console.WriteLine("the savings challenge page is currently loading");
+        }
     }
 }
+
+
