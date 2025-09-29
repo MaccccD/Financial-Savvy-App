@@ -25,7 +25,7 @@
             </Frame>
             <!---the key insghts section where user actually recieve the underdtanding":-->
 
-            <Frame BackgroundColor="#2c3e50" CornerRadius="15" Padding="18">
+            <Frame BackgroundColor="#1a237e" CornerRadius="15" Padding="18">
                 <StackLayout Spacing="12">
                     <Label Text=" 🧠 Mind-Blowing Fact:"
                        FontSize="18"
@@ -48,7 +48,7 @@
             </Frame>
 
             <!---Understanding what FWB (Financial Well-Being means):-->
-            <Frame BackgroundColor="#16a085" CornerRadius="12" Padding="18">
+            <Frame BackgroundColor="#1a237e" CornerRadius="12" Padding="18">
                 <StackLayout Spacing="15">
                     <Label Text=" 🍃 What is Financial Wellbeing ?"
                            FontSize="18"
@@ -57,7 +57,7 @@
                            LineBreakMode="WordWrap"/>
                     <!--- explaining the two dimensions of if it :-->
                     <StackLayout Orientation="Horizontal" Spacing="10">
-                        <Frame BackgroundColor="#1abc9c" CornerRadius="8" Padding="12" HorizontalOptions="FillAndExpand">
+                        <Frame BackgroundColor="#103d81" CornerRadius="8" Padding="12" HorizontalOptions="FillAndExpand">
                             <StackLayout>
                                 <Label Text="📊 Objective"
                                           FontSize="15"
@@ -73,7 +73,7 @@
                             </StackLayout>
                         </Frame>
 
-                        <Frame BackgroundColor="#1abc9c" CornerRadius="8" Padding="14" HorizontalOptions="FillAndExpand">
+                        <Frame BackgroundColor="#103d81" CornerRadius="8" Padding="14" HorizontalOptions="FillAndExpand">
                             <StackLayout>
                                 <Label Text="🥹 Subjective"
                                        FontSize="15"
@@ -93,8 +93,8 @@
 
             <!-- The three drivers of FWB:-->
 
-            <Frame BackgroundColor="#8e44ad" CornerRadius="12" Padding="18">
-                <StackLayout Padding="15">
+            <Frame BackgroundColor="#1a237e" CornerRadius="12" Padding="18">
+                <StackLayout Padding="15" Spacing="20">
                     <Label Text="🚀 The 3 Financial Wellbeing Superpowers:"
                            FontSize="18"
                            FontAttributes="Bold"
@@ -103,59 +103,59 @@
 
 
                     <!--The first driver:-->
-                    <Frame BackgroundColor="#9b59b6" CornerRadius="8" Padding="15">
+                    <Frame BackgroundColor="#103d81" CornerRadius="8" Padding="15">
                         <StackLayout Padding="12">
-                            <StackLayout Orientation="Horizontal" Spacing="10">
-                                <Label Text="1️⃣" FontSize="20" TextColor="#ffebd7"/>
-                                <Label Text="Active Saving."
-                                       FontSize="16"
+                            <StackLayout Orientation="Horizontal" Spacing="80">
+                                <Label Text="1. Active Saving."
+                                       FontSize="20"
                                        FontAttributes="Bold"
-                                       TextColor="#ffebd7"
+                                       TextColor="LimeGreen"
                                        VerticalOptions="Center"/>
                             </StackLayout>
                             <Label Text="Regularly putting money aside, even in small amounts. Every time you save, you're building both your bank account AND your financial knowledge!"
                                    FontSize="14"
+                                   Margin="10"
                                    TextColor="#ffebd7"
                                    LineBreakMode="WordWrap"/>
                         </StackLayout>
                     </Frame>
                     <!--The second driver":-->
-                    <Frame BackgroundColor="#9b59b6" CornerRadius="8" Padding="15">
+                    <Frame BackgroundColor="#103d81" CornerRadius="8" Padding="15">
                         <StackLayout Padding="12">
                             <StackLayout Orientation="Horizontal" Spacing="10">
-                                <Label Text="2️⃣" FontSize="20" TextColor="#ffebd7"/>
-                                <Label Text="Smart Spending Choices."
-                                       FontSize="16"
+                                <Label Text="2. Smart Spending Choices."
+                                       FontSize="20"
                                        FontAttributes="Bold"
-                                       TextColor="#ffebd7"
+                                       TextColor="LimeGreen"
                                        VerticalOptions="Center"/>
                             </StackLayout>
                             <Label Text="Taking the time to think before you buy and choosing between needs vs wants. This isn;t about being boring –– it's about being intentional with your money!"
-                                   FontSize="13"
+                                   FontSize="14"
+                                   Margin="10"
                                    TextColor="#ffebd7"
                                    LineBreakMode="WordWrap"/>
                         </StackLayout>
                     </Frame>
                     <!---The third driver :-->
-                    <Frame BackgroundColor="#9b59b6" CornerRadius="8" Padding="15">
+                    <Frame BackgroundColor="#103d81" CornerRadius="8" Padding="15">
                         <StackLayout Padding="12">
                             <StackLayout Orientation="Horizontal" Spacing="10">
-                                <Label Text="3️⃣" FontSize="20" TextColor="#ffebd7"/>
-                                <Label Text="Avoid Daily Debt."
-                                       FontSize="16"
+                                <Label Text="3. Avoid Daily Debt."
+                                       FontSize="20"
                                        FontAttributes="Bold"
-                                       TextColor="#ffebd7"
+                                       TextColor="LimeGreen"
                                        VerticalOptions="Center"/>
                             </StackLayout>
                             <Label Text="This means not borrowing money for everyday things like food, transport, or entertainment. Using your own money gives you more real control over it!"
                                    FontSize="14"
+                                   Margin="10"
                                    TextColor="#ffebd7"
                                    LineBreakMode="WordWrap"/>
                         </StackLayout>
                     </Frame>
                     
                     <!---The connection between savings and FWB :-->
-                    <Frame BackgroundColor="#e67e22" CornerRadius="12" Padding="18">
+                    <Frame BackgroundColor="#103d81" CornerRadius="12" Padding="18">
                         <StackLayout Spacing="15">
                             <Label Text="🔁 The Savings Learning Loop."
                                    FontSize="18"
@@ -170,7 +170,7 @@
                             
                             <!--- the learning  pricess-->
                             <StackLayout Spacing="12">
-                                <Frame BackgroundColor="#d35400" CornerRadius="8" Padding="12">
+                                <Frame BackgroundColor="DarkGreen" CornerRadius="8" Padding="12">
                                     <Label Text="💡 Step 1: You start saving (R10)"
                                            FontSize="14"
                                            FontAttributes="Bold"
@@ -178,7 +178,7 @@
                                 </Frame>
                                 <Label Text="⬇️" FontSize="24" TextColor="#ffebd7" HorizontalOptions="Center"/>
 
-                                <Frame BackgroundColor="#d35400" CornerRadius="8" Padding="12">
+                                <Frame BackgroundColor="DarkGreen" CornerRadius="8" Padding="12">
                                     <Label Text="💡 Step 2: You start noticing your spending patterns."
                                            FontSize="14"
                                            FontAttributes="Bold"
@@ -186,14 +186,14 @@
                                 </Frame>
                                 <Label Text="⬇️" FontSize="24" TextColor="#ffebd7" HorizontalOptions="Center"/>
                                 
-                                <Frame BackgroundColor="#d35400" CornerRadius="8" Padding="12">
+                                <Frame BackgroundColor="DarkGreen" CornerRadius="8" Padding="12">
                                     <Label Text="💡 Step 3: You become more aware of your financial decisions"
                                            FontSize="14"
                                            FontAttributes="Bold"
                                            TextColor="#ffebd7"/>
                                 </Frame>
                                 <Label Text="⬇️" FontSize="24" TextColor="#ffebd7" HorizontalOptions="Center"/>
-                                <Frame BackgroundColor="#d35400" CornerRadius="8" Padding="12">
+                                <Frame BackgroundColor="DarkGreen" CornerRadius="8" Padding="12">
                                     <Label Text="🎉 Result: You're now financially smarter!"
                                            FontSize="16"
                                            FontAttributes="Bold"
@@ -205,7 +205,7 @@
                     </Frame>
                     
                     <!-- A real life example:-->
-                    <Frame BackgroundColor="#27ae60" CornerRadius="12" Padding="18">
+                    <Frame BackgroundColor="#103d81" CornerRadius="12" Padding="18">
                         <StackLayout Spacing="12">
                             <Label Text="📱 Real Life Example: The Coffee Challenge"
                                    FontSize="18"
@@ -217,7 +217,7 @@
                                    TextColor="#ffebd7"
                                    LineBreakMode="WordWrap"/>
 
-                            <Frame BackgroundColor="#2ecc71" CornerRadius="8" Padding="12">
+                            <Frame BackgroundColor="#103d85" CornerRadius="8" Padding="12">
                                 <Label Text="What you learned: Small daily choices = big monthly impact. This awareness is financial literacy in action. Literally!"
                                        FontSize="14"
                                        FontAttributes="Italic"
@@ -228,7 +228,7 @@
                     </Frame>
                     
                     <!---Connecting the exmaple to the game challenge:-->
-                    <Frame BackgroundColor="#3498db" CornerRadius="12" Padding="18">
+                    <Frame BackgroundColor="#103d81" CornerRadius="12" Padding="18">
                         <StackLayout Spacing="12">
                             <Label Text="🎮 Ready to Experience This?"
                                    FontSize="18"
@@ -255,7 +255,7 @@
                                     TextColor="#ffebd7"
                                     CornerRadius="10"
                                     HeightRequest="60"
-                                    WidthRequest="70"
+                                    WidthRequest="270"
                                     FontSize="16"
                                     FontAttributes="Bold"
                                     Clicked="OnChallengeClicked"/>
@@ -265,7 +265,7 @@
                     
                     <!--- Some Key Takeaways Recap-->
 
-                    <Frame BackgroundColor="#2c3e50" CornerRadius="12" Padding="18">
+                    <Frame BackgroundColor="#103d81" CornerRadius="12" Padding="18">
                         <StackLayout Spacing="12">
                             <Label Text="🎯 Key Takeaways:"
                                    FontSize="16"
