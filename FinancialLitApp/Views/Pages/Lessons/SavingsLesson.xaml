@@ -4,9 +4,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="Savings Lesson"
               BackgroundColor="#0D1738">
-    <StackLayout>
-        <Label Text="Savings Lesson Deets here..."
-               VerticalOptions="CenterAndExpand"
-               HorizontalOptions="CenterAndExpand"/>
-    </StackLayout>
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20">
+            
+            <!---The header section of the lesson content-->
+            <Frame BackgroundColor="#1a237e" CornerRadius="15" Padding="20">
+                <StackLayout Spacing="10">
+                    <Label Text="The Savings Superpower!"
+                           FontSize="24"
+                           FontAttributes="Bold"
+                           TextColor="#00d4aa"
+                           HorizontalOptions="Center"/>
+                    <Label Text="Discover how saving money actually makes you smarter with money."
+                           FontSize="16"
+                           TextColor="#ffebd7"
+                           HorizontalOptions="Center"
+                           LineBreakMode= "WordWrap"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+   
+    
+    
 </ContentPage>
