@@ -257,7 +257,7 @@
                                     CornerRadius="10"
                                     HeightRequest="60"
                                     WidthRequest="270"
-                                    FontSize="16"
+                                    FontSize="15"
                                     FontAttributes="Bold"
                                     Clicked="OnChallengeClicked"/>
 
