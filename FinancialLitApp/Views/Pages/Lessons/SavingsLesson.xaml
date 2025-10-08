@@ -249,7 +249,7 @@
                                    HorizontalOptions="Center"
                                    LineBreakMode="WordWrap"/>
 
-                            <!--- The challenge btn to navigate user t the actul gameplay challenge:-->
+                            <!--- The challenge btn to navigate user t0 the actual gameplay challenge:-->
                             <Button Text="🚀 Try this Savings Challenge!"
                                     BackgroundColor="#2503FD"
                                     TextColor="#ffebd7"

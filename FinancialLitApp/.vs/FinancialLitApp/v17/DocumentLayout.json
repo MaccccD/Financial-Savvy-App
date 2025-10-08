@@ -161,12 +161,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 23,
@@ -237,8 +233,7 @@
               "RelativeToolTip": "Views\\Pages\\Lessons\\SavingsLesson.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-24T17:01:37.082Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-24T17:01:37.082Z"
             },
             {
               "$type": "Document",
@@ -248,7 +243,7 @@
               "RelativeDocumentMoniker": "Views\\Pages\\Lessons\\SavingsLesson.xaml",
               "ToolTip": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Views\\Pages\\Lessons\\SavingsLesson.xaml",
               "RelativeToolTip": "Views\\Pages\\Lessons\\SavingsLesson.xaml",
-              "ViewState": "AgIAACIAAAAAAAAAAAAAABUAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAOgAAAAAAAAAAAAAAPoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-09-24T17:01:08.382Z",
               "EditorCaption": ""
@@ -311,8 +306,7 @@
               "RelativeToolTip": "Views\\Pages\\Challenges\\Savings.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-11T19:30:06.776Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-11T19:30:06.776Z"
             },
             {
               "$type": "Document",
@@ -396,8 +390,7 @@
               "RelativeToolTip": "Models\\SavingsItem.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAAABoAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T19:12:35.471Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-26T19:12:35.471Z"
             },
             {
               "$type": "Document",
@@ -493,8 +486,7 @@
               "RelativeToolTip": "Views\\Pages\\ChallengesPage.xaml.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAA+wC8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T18:48:25.655Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-19T18:48:25.655Z"
             },
             {
               "$type": "Document",
@@ -506,8 +498,7 @@
               "RelativeToolTip": "Views\\Pages\\ChallengesPage.xaml",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-19T18:48:06.484Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-19T18:48:06.484Z"
             },
             {
               "$type": "Document",
@@ -567,8 +558,7 @@
               "RelativeToolTip": "Views\\Pages\\LessonDetailPage.xaml.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAkwEsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-28T21:01:08.998Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-28T21:01:08.998Z"
             },
             {
               "$type": "Document",
@@ -604,8 +594,7 @@
               "RelativeToolTip": "Views\\Pages\\LessonDetailPage.xaml",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAEcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-28T20:52:56.713Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-28T20:52:56.713Z"
             },
             {
               "$type": "Document",
@@ -629,8 +618,11 @@
               "RelativeToolTip": "AppShell.xaml",
               "ViewState": "AgIAACcAAAAAAAAAAAAAAEIAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-28T20:45:39.188Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-28T20:45:39.188Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }
