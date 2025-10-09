@@ -96,6 +96,54 @@
                            LineBreakMode="WordWrap"/>
                 </StackLayout>
             </Frame>
+
+            <!--The 3 ways to ensure that you spend money wisely during your bdugeting plan process:-->
+			<Frame BackgroundColor="#16213e" CornerRadius="12" Padding="18">
+				<StackLayout Padding="15" Spacing="20">
+					<Label Text="🚀 The 3 Different ways to spemd wisely:"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="#ffebd7"
+                           HorizontalOptions="Center"/>
+				</StackLayout>
+
+
+					<!--The  first way::-->
+					<Frame BackgroundColor="#103d81" CornerRadius="8" Padding="15">
+						<StackLayout Padding="12">
+							<StackLayout Orientation="Horizontal" Spacing="80">
+								<Label Text="1. Starting with mounting up the emergency funds."
+                                       FontSize="20"
+                                       FontAttributes="Bold"
+                                       TextColor="LimeGreen"
+                                       VerticalOptions="Center"/>
+							</StackLayout>
+							<Label Text="This means establishing an emergency fund where you can have a higher return on those savings after they have accumulated interest.
+								   This is bc emergencies can surface at any time."
+                                   FontSize="14"
+                                   Margin="10"
+								   FontAttributes="italic"
+                                   TextColor="#ffebd7"
+                                   LineBreakMode="WordWrap"/>
+						</StackLayout>
+					</Frame>
+
+				<Frame BackgroundColor="#103d81" CornerRadius="8" Padding="16">
+					<StackLayout Padding="12">
+						<StackLayout Orientation="Horizonntal" Spacing="80">
+							<Label Text="2. Establishe a clear list of priorities."
+								   FontSize ="20"
+								   FontAttributes="Bold"
+								   TextColor="#ffebd7"
+								   VerticalOptions="Center"/>
+						</StackLayout>
+					
+					</StackLayout>
+				</Frame>
+				
+				
+			</Frame>
+			
         </StackLayout>
     </ScrollView>
 </ContentPage>
