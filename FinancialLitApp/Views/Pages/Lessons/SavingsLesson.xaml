@@ -31,7 +31,7 @@
                        FontSize="18"
                        FontAttributes="Bold"
                        TextColor="LimeGreen"/>
-                    <Label Text="Most people thik you need to underdtand money first, and then you can save it. But research actually shows that the OPPOSITE is also true!"
+                    <Label Text="Most people think you need to underdtand money first, and then you can save it. But research actually shows that the OPPOSITE is also true!"
                        FontSize="15"
                        FontAttributes="Italic"
                        LineBreakMode="WordWrap"

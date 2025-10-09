@@ -4,9 +4,98 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="Budgeting Lesson"
               BackgroundColor="#0D1738">
-    <StackLayout>
-        <Label Text="Budgeting Lesson Deets here..."
-               VerticalOptions="CenterAndExpand"
-               HorizontalOptions="CenterAndExpand"/>
-    </StackLayout>
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20">
+
+            <!---The header section of the lesson content-->
+            <Frame BackgroundColor="#16213e" CornerRadius="15" Padding="20">
+                <StackLayout Spacing="10">
+                    <Label Text="The Budgeting Superpower!"
+                    FontSize="24"
+                    FontAttributes="Bold"
+                    TextColor="#00d4aa"
+                    HorizontalOptions="Center"/>
+                    <Label Text="Discover the key insights to make you budget wisely."
+                           FontSize="16"
+                           TextColor="#ffebd7"
+                           HorizontalOptions="Center"
+                           LineBreakMode= "WordWrap"/>
+                </StackLayout>
+            </Frame>
+            <!---the key insghts section where user actually receive the understanding":-->
+            <Frame BackgroundColor="#16213e" CornerRadius="15" Padding="18">
+                <StackLayout Spacing="12">
+                    <Label Text=" 🧠 Mind-Blowing Fact:"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               TextColor="LimeGreen"/>
+                    <Label Text="Research shows that the major difficulty with Gen Z is their ability to budget their expenses and save a proportional amount every month for contingent events."
+                               FontSize="15"
+                               FontAttributes="Italic"
+                               LineBreakMode="WordWrap"
+                               TextColor="#ffebd7"/>
+                    <Frame BackgroundColor="#103d81" CornerRadius="12" Padding="15">
+                        <Label Text="The act of achieving key budgeting competency takes times to master and requires practice"
+                                   FontSize="14"
+                                   FontAttributes="Italic"
+                                   TextColor="#00d4aa"
+                                   HorizontalOptions="Center"
+                                   LineBreakMode="WordWrap"/>
+                    </Frame>
+                </StackLayout>
+            </Frame>
+
+               <Frame BackgroundColor="#16213e" CornerRadius="15" Padding="16">
+                <StackLayout Spacing="15">
+                    <Label Text="There are two distinct terms that need to be understood when it comes to responsible spmdng decision:"
+                           FontSize="15"
+                           FontAttributes="Bold"
+                           TextColor="#ffebd7"
+                           LineBreakMode="WordWrap"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Frame BackgroundColor="#103d81" CornerRadius="8" Padding="12" HorizontalOptions="FillAndExpand">
+                        <StackLayout>
+                            <Label Text="📊 Budgeting"
+                                   FontSize ="15"
+                                   FontAttributes="Bold"
+                                   TextColor="#ffebd7"
+                                   HorizontalOptions="Center"
+                                   LineBreakMode="WordWrap"/>
+                            <Label Text="This refers to the process of creating a strategic plan of how to spend your resources, including money, time and personnel. It becomes a critical tool for financial planning and analysis."
+                                   FontSize="12"
+                                   TextColor="#ffebd7"
+                                   HorizontalOptions="Center"
+                                   LineBreakMode="WordWrap"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </Frame>
+            <Frame BackgroundColor="#103d81" CornerRadius="8" Padding="14" HorizontalOptions="FillAndExpand">
+                <StackLayout>
+                    <Label Text="🥹 Purchasing"
+                           FontSize="15"
+                           FontAttributes="Bold"
+                           TextColor="#ffebd7"
+                           HorizontalOptions="Center"/>
+                     <Label Text="The act of buying buying something of a monetary value."
+                            FontSize="12"
+                            TextColor="#ffebd7"
+                            HorizontalOptions="Center"
+                            LineBreakMode="WordWrap"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="#16213e" CornerRadius="18" Padding="12"  HorizontalOptions="FillAndExpand">
+                <StackLayout Spacing="14">
+                    <Label Text="The disparity between the two above terms helps users underdtand the power that purchasing something has on thier ability to spend their money on it in a sustainable way."
+                           FontSize="16"
+                           FontAttributes="Italic"
+                           TextColor="#ffebd7"
+                           LineBreakMode="WordWrap"/>
+                </StackLayout>
+            </Frame>
+        
+
+    </ScrollView>
 </ContentPage>
