@@ -89,7 +89,7 @@
 
             <Frame BackgroundColor="#16213e" CornerRadius="18" Padding="12"  HorizontalOptions="FillAndExpand">
                 <StackLayout Spacing="14">
-                    <Label Text="The disparity between the two above terms helps users underdtand the power that purchasing something has on thier ability to spend their money on it in a sustainable way."
+                    <Label Text="The disparity between the two above terms helps users understand the power that purchasing something has on their ability to spend their money on it in a sustainable way."
                            FontSize="16"
                            FontAttributes="Italic"
                            TextColor="#ffebd7"
