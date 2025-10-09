@@ -45,7 +45,7 @@
                 </StackLayout>
             </Frame>
 
-               <Frame BackgroundColor="#16213e" CornerRadius="15" Padding="16">
+            <Frame BackgroundColor="#16213e" CornerRadius="15" Padding="16">
                 <StackLayout Spacing="15">
                     <Label Text="There are two distinct terms that need to be understood when it comes to responsible spmdng decision:"
                            FontSize="15"
@@ -78,7 +78,7 @@
                            FontAttributes="Bold"
                            TextColor="#ffebd7"
                            HorizontalOptions="Center"/>
-                     <Label Text="The act of buying buying something of a monetary value."
+                    <Label Text="The act of buying buying something of a monetary value."
                             FontSize="12"
                             TextColor="#ffebd7"
                             HorizontalOptions="Center"
@@ -95,7 +95,7 @@
                            LineBreakMode="WordWrap"/>
                 </StackLayout>
             </Frame>
-        
 
+        </StackLayout>
     </ScrollView>
 </ContentPage>

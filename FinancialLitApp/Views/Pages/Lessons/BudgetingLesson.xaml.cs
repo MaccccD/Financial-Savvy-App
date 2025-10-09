@@ -13,5 +13,14 @@ namespace FinancialLitApp.Views.Pages.Lessons
             InitializeComponent();
             Console.WriteLine("initializing successful");
         }
+
+        private async void OnBudgetingChallengeClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("Budgeting");
+            Console.WriteLine("navigation successful");
+        }
     }
+
+
+
 }
