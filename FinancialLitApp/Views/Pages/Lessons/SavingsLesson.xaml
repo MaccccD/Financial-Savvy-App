@@ -23,7 +23,7 @@
                            LineBreakMode= "WordWrap"/>
                 </StackLayout>
             </Frame>
-            <!---the key insghts section where user actually recieve the underdtanding":-->
+            <!---the key insghts section where user actually receive the understanding":-->
 
             <Frame BackgroundColor="#16213e" CornerRadius="15" Padding="18">
                 <StackLayout Spacing="12">
