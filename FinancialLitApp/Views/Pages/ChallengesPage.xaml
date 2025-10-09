@@ -64,7 +64,7 @@
                                TextColor="#FFEBD7"
                                FontSize="18"
                                HeightRequest="65"
-                               Clicked="OnInvestmentChallengeClicked" />
+                               Clicked="OnFileTaxReturnsChallengeClicked" />
                 </Frame>
 
 
