@@ -30,9 +30,9 @@ namespace FinancialLitApp.Views.Pages
             await NavigateToBudgetingChallenge();
         }
         
-        public async void OnInvestmentChallengeClicked (object sender, EventArgs i)
+        public async void OnFileTaxReturnsChallengeClicked (object sender, EventArgs i)
         {
-            await NavigateToInvestmentChallenge();
+            await NavigateToFileTaxReturnsChallenge();
         }
         private async Task NavigateToSavingsChallenge()
         {
@@ -70,7 +70,7 @@ namespace FinancialLitApp.Views.Pages
         }
         
 
-        private async Task NavigateToInvestmentChallenge()
+        private async Task NavigateToFileTaxReturnsChallenge()
         {
             try
             {

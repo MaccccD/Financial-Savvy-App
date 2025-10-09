@@ -25,7 +25,7 @@
     </Shell.Resources>
 
 
-    <!--Authentication Flow: This is the content that wil show before the user has autheticated-->
+    <!--Authentication Flow: This is the content that wil show before the user has authenticated-->
     <ShellContent
        x:Name="AccountSetUpContent"
         Title="Create Account"

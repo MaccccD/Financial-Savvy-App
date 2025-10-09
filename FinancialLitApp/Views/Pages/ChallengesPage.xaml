@@ -58,8 +58,8 @@
                        CornerRadius="15"
                        Padding="0"
                        HasShadow="True">
-                    <Button x:Name="InvestmentChallenge"
-                               Text="💵 Investment Challenge"
+                    <Button x:Name="TaxReturnsChallenge"
+                               Text="💵 Tax Returns Challenge"
                                BackgroundColor="Transparent"
                                TextColor="#FFEBD7"
                                FontSize="18"
