@@ -83,17 +83,17 @@
                 <FlexLayout Direction="Row"
                             JustifyContent="Start"
                             AlignItems="Start"
-                            Wrap="NoWrap"
+                            Wrap="Wrap"
                             Margin="0,20,0,0">
 
 
                     <Frame BackgroundColor="#34495e" 
                        CornerRadius="8" 
                        Padding="8" 
-                       Margin="20,0,20,0" 
-                       WidthRequest="450" 
-                       FlexLayout.Basis="450"
-                       FlexLayout.Shrink="0"
+                       Margin="10,0,10,0" 
+                       MinimumWidthRequest="300" 
+                       FlexLayout.Grow="1"
+                       FlexLayout.Basis="45%"
                        HeightRequest="450">
                         <StackLayout>
                         <Label Text="NEEDS" 
@@ -143,12 +143,12 @@
 
             <Frame  BackgroundColor="#34495e" 
                         CornerRadius="8" 
-                        Margin="100,0,20,0" 
+                        Margin="10,0,10,10" 
                         Padding="8"
-                        WidthRequest="500" 
-                        HeightRequest="490" 
-                        FlexLayout.Basis="490"
-                        FlexLayout.Shrink="0">
+                        MinimumWidthRequest="500" 
+                        HeightRequest="450" 
+                        FlexLayout.Grow="1"
+                        FlexLayout.Basis="45%">
                 <StackLayout>
                     <Label Text="WANTS" 
                                FontSize="16" 

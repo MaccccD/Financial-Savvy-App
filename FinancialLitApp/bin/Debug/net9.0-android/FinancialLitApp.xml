@@ -4,6 +4,33 @@
         <name>FinancialLitApp</name>
     </assembly>
     <members>
+        <member name="T:FinancialLitApp.ViewModels.BudgetingChallengeViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.StartingAmount">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.startingAmount"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.CurrentCost">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.currentCost"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.TargetAmount">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.targetAmount"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.CurrentAttempt">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.currentAttempt"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.MaxAttempts">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.maxAttempts"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.IsGameActive">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.isGameActive"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.FeedbackMessage">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.feedbackMessage"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.ShowResults">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.showResults"/>
+        </member>
         <member name="T:FinancialLitApp.ViewModels.SavingsChallengeViewModel">
             <inheritdoc/>
             <inheritdoc/>
@@ -70,11 +97,8 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.StartingAmount">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "StartingAmount" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentlySaved">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentlySaved" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MoneySpent">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MoneySpent" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentCost">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentCost" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TargetAmount">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TargetAmount" generated properties.</summary>
@@ -94,6 +118,12 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ShowResults">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ShowResults" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentlySaved">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentlySaved" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MoneySpent">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MoneySpent" generated properties.</summary>
+        </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
@@ -103,11 +133,8 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.StartingAmount">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "StartingAmount" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentlySaved">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentlySaved" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MoneySpent">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MoneySpent" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentCost">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentCost" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TargetAmount">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TargetAmount" generated properties.</summary>
@@ -126,6 +153,12 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ShowResults">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ShowResults" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentlySaved">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentlySaved" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MoneySpent">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MoneySpent" generated properties.</summary>
         </member>
     </members>
 </doc>
