@@ -74,7 +74,7 @@
             
             <Frame BackgroundColor="#103d81" CornerRadius="8" Padding="14" HorizontalOptions="FillAndExpand">
                 <StackLayout>
-                    <Label  Text="🥹 Purchasing"
+                    <Label  Text="🫰 Purchasing"
                             FontSize="15"
                             FontAttributes="Bold"
                             TextColor="#ffebd7"
