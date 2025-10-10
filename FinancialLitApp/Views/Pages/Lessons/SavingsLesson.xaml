@@ -227,7 +227,7 @@
                         </StackLayout>
                     </Frame>
                     
-                    <!---Connecting the exmaple to the game challenge:-->
+                    <!---Connecting the example to the game challenge:-->
                     <Frame BackgroundColor="#103d81" CornerRadius="12" Padding="18">
                         <StackLayout Spacing="12">
                             <Label Text="🎮 Ready to Experience This?"
@@ -249,7 +249,7 @@
                                    HorizontalOptions="Center"
                                    LineBreakMode="WordWrap"/>
 
-                            <!--- The challenge btn to navigate user t0 the actual gameplay challenge:-->
+                            <!--- The challenge btn to navigate user to the actual gameplay challenge:-->
                             <Button Text="🚀 Try this Savings Challenge!"
                                     BackgroundColor="#2503FD"
                                     TextColor="#ffebd7"

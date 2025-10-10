@@ -110,7 +110,7 @@
 
 
 
-			<!--The  first way::-->
+			<!--The  first way:-->
 					<Frame BackgroundColor="#103d81" CornerRadius="8" Padding="15">
 						<StackLayout Padding="12">
 							<StackLayout Orientation="Horizontal" Spacing="80">
@@ -129,6 +129,7 @@
 						</StackLayout>
 					</Frame>
 
+			<!--!The second way:-->
 				<Frame BackgroundColor="#103d81" CornerRadius="8" Padding="16">
 					<StackLayout Padding="12">
 						<StackLayout Orientation="Horizontal" Spacing="80">
@@ -138,16 +139,69 @@
 								   TextColor="LimeGreen"
 								   VerticalOptions="Center"/>
 						</StackLayout>
-						<Label Text="This means creating a list of items that are of importance and putting strict boundaries to fulfill the payements of those expense items. Once they have been paid up, you can then set aside some money for fun. This includes some funs dedicated towards earning a reward or luxuriating a bit."
+						<Label Text="This means creating a list of items that are of importance and putting strict boundaries to fulfill the payments of those expense items. Once they have been paid up, you can then set aside some money for fun. This includes some funs dedicated towards earning a reward or luxuriating a bit."
 							   FontSize="14"
 							   Margin="10"
 							   FontAttributes="Italic"
 							   TextColor="#ffebd7"
 							   LineBreakMode="WordWrap"/>
-					
 					</StackLayout>
 				</Frame>
-				
+			
+			<!---The third way:-->
+			   <Frame BackgroundColor="#103d81" CornerRadius="9" Padding="15">
+				<StackLayout Padding="12">
+					<StackLayout Orientation="Horizontal" Spacing="80">
+						<Label Text="3. Discipline yourself to act on the priorities set."
+							   FontSize="20"
+							   FontAttributes="Bold"
+							   TextColor="LimeGreen"
+							   VerticalOptions="Center"/>
+					</StackLayout>
+					<Label Text="This means developing a behavior of not compromising on the priorities made by making impulse purchases."
+						   FontSize="13"
+						   FontAttributes="Bold"
+						   TextColor="LimeGreen"
+						   VerticalOption="Center"/>
+				</StackLayout>
+			</Frame>
+
+			<!---Connecting the example to the game challenge:-->
+			<Frame BackgroundColor="#103d81" CornerRadius="12" Padding="18">
+				<StackLayout Spacing="12">
+					<Label Text="🎮 Ready to Experience This?"
+						   FontSize="18"
+						   FontAttributes="Bold"
+						   TextColor="#ffebd7"
+						   HorizontalOptions="Center"/>
+
+					<Label Text="The Budgeting Challenge puts this theory into practice. You'll make real spending decisions and see instantly how they affect your ability to budget effectively."
+						   FontSize="15"
+						   TextColor="#ffebd7"
+						   LineBreakMode="WordWrap"
+						   HorizontalOptions="Center"/>
+
+					<Label Text="Remember: Every choice you make in the challenge is building your financial skills, not just testing them!.It's not a test but a pratical way to learn a life-long skill!"
+						   FontSize="15"
+						   FontAttributes="Italic"
+						   TextColor="#ecf0f1"
+						   HorizontalOptions="Center"
+						   LineBreakMode="WordWrap"/>
+
+					<!--- The challenge btn to navigate user to the actual gameplay challenge:-->
+					<Button Text="🚀 Try this Budgeting Challenge!"
+							BackgroundColor="#2503FD"
+							TextColor="#ffebd7"
+							Margin="8"
+							CornerRadius="10"
+							HeightRequest="60"
+							WidthRequest="270"
+							FontSize="15"
+							FontAttributes="Bold"
+							Clicked="OnBudgetingChallengeClicked"/>
+
+				</StackLayout>
+			</Frame>
 				
 			
         </StackLayout>
