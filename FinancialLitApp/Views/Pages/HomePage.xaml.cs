@@ -11,6 +11,7 @@ namespace FinancialLitApp.Views.Pages
         public HomePage()
         {
             InitializeComponent();
+            
             Console.WriteLine("The home page is now working");
             
         }
