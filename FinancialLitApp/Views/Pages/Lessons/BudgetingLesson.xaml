@@ -115,33 +115,28 @@
 
 			<!--The  first way:-->
 					<Frame BackgroundColor="#103d81" CornerRadius="8" Padding="15">
-						<StackLayout Padding="12">
-                    <FlexLayout Direction="Row"
-                                     JustifyContent="Start"
-                                     AlignItems="Start"
-                                     Wrap="Wrap"
-                                     Margin="0,20,0,0">
-                        <StackLayout Orientation="Horizontal" Spacing="80">
+                <StackLayout Padding="12">
+                    <StackLayout Orientation="Vertical" Spacing="90">
                             <Label Text="1. Starting with mounting up the emergency funds."
-                                       FontSize="20"
+                                    LineBreakMode="WordWrap"
+                                      FontSize="Medium"
                                        FontAttributes="Bold"
                                        TextColor="LimeGreen"
 							           VerticalOptions="Center"/>
                         </StackLayout>
-                        <Label Text="This means establishing an emergency fund where you can have a higher return on those savings after they have accumulated interest.This is because emergencies can surface at any time."
-                                   FontSize="14"
-                                   Margin="10"
-								   FontAttributes="Italic"
-                                   TextColor="#ffebd7"
-                                   LineBreakMode="WordWrap"/>
-                    </FlexLayout>
+                    <Label Text="This means establishing an emergency fund where you can have a higher return on those savings after they have accumulated interest.This is because emergencies can surface at any time."
+                               FontSize="14"
+                               Margin="10"
+							   FontAttributes="Italic"
+                               TextColor="#ffebd7"
+                               LineBreakMode="WordWrap"/>
                 </StackLayout>
 					</Frame>
 
 			<!--!The second way:-->
 				<Frame BackgroundColor="#103d81" CornerRadius="8" Padding="16">
 					<StackLayout Padding="12">
-						<StackLayout Orientation="Horizontal" Spacing="80">
+						<StackLayout Orientation="Vertical" Spacing="80">
 							<Label Text="2. Establish a clear list of priorities."
 								   FontSize="20"
 								   FontAttributes="Bold"
@@ -160,7 +155,7 @@
 			<!---The third way:-->
 			   <Frame BackgroundColor="#103d81" CornerRadius="9" Padding="15">
 				<StackLayout Padding="12">
-					<StackLayout Orientation="Horizontal" Spacing="80">
+					<StackLayout Orientation="Vertical" Spacing="80">
 						<Label Text="3. Discipline yourself to act on the priorities set."
 							   FontSize="20"
 							   FontAttributes="Bold"
