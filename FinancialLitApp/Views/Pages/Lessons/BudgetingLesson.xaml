@@ -3,7 +3,7 @@
              xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="Budgeting Lesson"
-              BackgroundColor="#0D1738">
+             BackgroundColor="#0D1738">
     <ScrollView>
         <StackLayout Padding="20" Spacing="20">
 
@@ -20,12 +20,13 @@
                            TextColor="#ffebd7"
                            HorizontalOptions="Center"
                            LineBreakMode= "WordWrap"/>
+					
                 </StackLayout>
             </Frame>
             <!---the key insghts section where user actually receive the understanding":-->
             <Frame BackgroundColor="#16213e" CornerRadius="15" Padding="18">
                 <StackLayout Spacing="12">
-                    <Label Text=" 🧠 Mind-Blowing Fact:"
+                    <Label Text="🧠 Mind-Blowing Fact:"
                                FontSize="18"
                                FontAttributes="Bold"
                                TextColor="LimeGreen"/>
@@ -52,23 +53,23 @@
                            FontAttributes="Bold"
                            TextColor="#ffebd7"
                            LineBreakMode="WordWrap"/>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal" Spacing="10">
-                    <Frame BackgroundColor="#103d81" CornerRadius="8" Padding="12" HorizontalOptions="FillAndExpand">
-                        <StackLayout>
-                            <Label Text="📊 Budgeting"
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <Frame BackgroundColor="#103d81" CornerRadius="8" Padding="12" HorizontalOptions="FillAndExpand">
+                            <StackLayout>
+                                <Label Text="📊 Budgeting"
                                    FontSize ="15"
                                    FontAttributes="Bold"
                                    TextColor="#ffebd7"
                                    HorizontalOptions="Center"
                                    LineBreakMode="WordWrap"/>
-                            <Label Text="This refers to the process of creating a strategic plan of how to spend your resources, including money, time and personnel. It becomes a critical tool for financial planning and analysis."
+                                <Label Text="This refers to the process of creating a strategic plan of how to spend your resources, including money, time and personnel. It becomes a critical tool for financial planning and analysis."
                                    FontSize="12"
                                    TextColor="#ffebd7"
                                    HorizontalOptions="Center"
                                    LineBreakMode="WordWrap"/>
-                        </StackLayout>
-                    </Frame>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
                 </StackLayout>
             </Frame>
             
