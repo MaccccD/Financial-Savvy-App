@@ -72,20 +72,22 @@
                     </StackLayout>
                 </StackLayout>
             </Frame>
-            
-            <Frame BackgroundColor="#103d81" CornerRadius="8" Padding="14" HorizontalOptions="FillAndExpand">
-                <StackLayout>
-                    <Label  Text="🫰 Purchasing"
+
+            <Frame BackgroundColor="#16213e" CornerRadius="15" Padding="16">
+                <Frame BackgroundColor="#103d81" CornerRadius="8" Padding="14" HorizontalOptions="FillAndExpand">
+                    <StackLayout>
+                        <Label  Text="🫰 Purchasing"
                             FontSize="15"
                             FontAttributes="Bold"
                             TextColor="#ffebd7"
                             HorizontalOptions="Center"/>
-                    <Label  Text="The act of buying buying something of a monetary value."
+                        <Label  Text="The act of buying buying something of a monetary value."
                             FontSize="12"
                             TextColor="#ffebd7"
                             HorizontalOptions="Center"
                             LineBreakMode="WordWrap"/>
-                </StackLayout>
+                    </StackLayout>
+                </Frame>
             </Frame>
 
             <Frame BackgroundColor="#16213e" CornerRadius="18" Padding="12"  HorizontalOptions="FillAndExpand">
@@ -114,7 +116,12 @@
 			<!--The  first way:-->
 					<Frame BackgroundColor="#103d81" CornerRadius="8" Padding="15">
 						<StackLayout Padding="12">
-							<StackLayout Orientation="Horizontal" Spacing="80">
+                         <FlexLayout Direction="Row"
+                                     JustifyContent="Start"
+                                     AlignItems="Start"
+                                     Wrap="Wrap"
+                                     Margin="0,20,0,0">
+                        <StackLayout Orientation="Horizontal" Spacing="80">
 								<Label Text="1. Starting with mounting up the emergency funds."
                                        FontSize="20"
                                        FontAttributes="Bold"
@@ -135,7 +142,7 @@
 					<StackLayout Padding="12">
 						<StackLayout Orientation="Horizontal" Spacing="80">
 							<Label Text="2. Establish a clear list of priorities."
-								   FontSize ="20"
+								   FontSize="20"
 								   FontAttributes="Bold"
 								   TextColor="LimeGreen"
 							       VerticalOptions="Center"/>
@@ -161,8 +168,9 @@
 					</StackLayout>
 					<Label Text="This means developing a behavior of not compromising on the priorities made by making impulse purchases."
 						   FontSize="13"
-						   FontAttributes="Bold"
-						   TextColor="LimeGreen"
+                           Margin="10"
+						   FontAttributes="Italic"
+						   TextColor="#ffebd7"
 						   VerticalOptions="Center"/>
 				</StackLayout>
 			</Frame>
@@ -178,6 +186,7 @@
 
 					<Label Text="The Budgeting Challenge puts this theory into practice. You'll make real spending decisions and see instantly how they affect your ability to budget effectively."
 						   FontSize="15"
+                           FontAttributes="Italic"
 						   TextColor="#ffebd7"
 						   LineBreakMode="WordWrap"
 						   HorizontalOptions="Center"/>
