@@ -91,14 +91,14 @@
                        CornerRadius="8" 
                        Padding="8" 
                        Margin="10,0,10,0" 
-                       MinimumWidthRequest="300" 
+                       MinimumWidthRequest="380" 
                        FlexLayout.Grow="1"
-                       FlexLayout.Basis="45%"
+                       FlexLayout.Basis="80%"
                        HeightRequest="450">
                         <StackLayout>
-                        <Label Text="NEEDS" 
+                        <Label Text="NEEDS"
                                FontSize="16" 
-                               Margin="10,10,0,0" 
+                               Margin="10,10,15,0" 
                                FontAttributes="Bold" 
                                TextColor="AntiqueWhite" 
                                HorizontalOptions="CenterAndExpand"/>
@@ -143,7 +143,7 @@
 
             <Frame  BackgroundColor="#34495e" 
                         CornerRadius="8" 
-                        Margin="10,0,10,10" 
+                        Margin="10,20,10,10" 
                         Padding="8"
                         MinimumWidthRequest="500" 
                         HeightRequest="450" 
@@ -171,9 +171,9 @@
                                 <ContentView>
                                     <Frame BackgroundColor="{Binding IsSelected, Converter={StaticResource BoolToColorConverter}, ConverterParameter='#2c3e50|#2c3e50'}"
                                                CornerRadius="8"
-                                               Padding="5"
-                                               HeightRequest="85"
-                                               Margin="0,0,10,80"
+                                               Padding="3"
+                                               HeightRequest="98"
+                                               Margin="0,0,10,40"
                                                IsVisible="{Binding Category, Converter={StaticResource CategoryToVisibilityConverter},ConverterParameter='Want'}">
                                         <Frame.GestureRecognizers>
                                             <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:SavingsChallengeViewModel}}, Path=SelectItemCommand}"

@@ -19,7 +19,7 @@
 				   FontSize="16"
 				   TextColor="#FFEBD7"
 				   HorizontalOptions="Center"
-				   Margin="0,0,0,30"/>
+				   Margin="10,10,10,10"/>
 			
 			<!---Challenge Crd Containers-->
 
@@ -31,10 +31,10 @@
 					   Padding="0"
 					   HasShadow="True">
 					<Button x:Name="SavingsChallenge"
-							Text="💰 Savings Challenge"
+							Text="💰Savings Challenge"
+                            FontSize="Medium"
 							BackgroundColor="Transparent"
 							TextColor="#FFEBD7"
-							FontAttributes="Bold"
 							HeightRequest="60"
 							Clicked ="OnSavingsChallengeClicked"/>
 					
@@ -47,9 +47,9 @@
 					   HasShadow="True">
 					<Button x:Name="BudgetingChallenge"
 							Text="📊 Budgeting Challenge"
+                            FontSize="Medium"
 							BackgroundColor="Transparent"
 							TextColor="#FFEBD7"
-							FontSize="18"
 							HeightRequest="60"
 							Clicked="OnBudgetingChallengeClicked" />
 				</Frame>
