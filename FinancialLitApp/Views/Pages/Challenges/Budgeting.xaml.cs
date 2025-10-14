@@ -13,5 +13,11 @@ namespace FinancialLitApp.Views.Pages.Challenges
             InitializeComponent();
             Console.WriteLine("the budgeting challenge will come in here");
         }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            Console.WriteLine("✅ Budgeting page appearing");
+        }
     }
 }

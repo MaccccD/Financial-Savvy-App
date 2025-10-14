@@ -16,9 +16,13 @@ namespace FinancialLitApp.ViewModels
         private decimal startingAmount = 500m;
 
         [ObservableProperty]
-        private decimal currentCost;
+        private decimal currentCostsSpent = 0m;
+
         [ObservableProperty]
-        private decimal targetAmount = 250m;
+        private decimal remainingBudget;
+ 
+        [ObservableProperty]
+        private decimal targetSavings = 250m;
 
         [ObservableProperty]
         private int currentAttempt = 1;
@@ -35,24 +39,54 @@ namespace FinancialLitApp.ViewModels
         [ObservableProperty]
         private bool showResults = false;
 
+        [ObservableProperty]
+        private string warningMessage = "";
 
-        public ObservableCollection<BudgetingItem> SelectedItems { get; set; }
+
+        public ObservableCollection<BudgetingItem> AvailableExpenses { get; set; }
+        public ObservableCollection<BudgetingItem> SelectedExpenses { get; set; }
+
+        //tracking the spending of the user by category so they can get feedbakc on the quality of their budgeting skill being honed:
+        private Dictionary<itemCategory, decimal> categorySpending = new Dictionary<itemCategory, decimal>();
 
 
         public BudgetingChallengeViewModel()
 
         {
             InitializeGame();
-
+            return;
         }
 
 
         public void InitializeGame()
         {
-            if (!IsGameActive)
+            CurrentCostsSpent = 0m;
+            RemainingBudget = StartingAmount - TargetSavings; // R250 available to spend
+            CurrentAttempt = 1;
+            IsGameActive = true;
+            ShowResults = false;
+            FeedbackMessage = "";
+            WarningMessage = "";
+
+            //initialize the category spending:
+            categorySpending = new Dictionary<itemCategory, decimal>
             {
-                return;
-            }
+                {itemCategory.Need, 0 },
+                {itemCategory.Want, 0},
+                {itemCategory.ImpulsePurchase, 0},
+                {itemCategory.Investment, 0},
+            };
+
+            // a realistic Gen Z expense list with their categories:
+
+            AvailableExpenses = new ObservableCollection<BudgetingItem>
+            {
+                // THE NEED items 
+                new BudgetingItem {Id = 1, Name = "Groceries", Price = 80, category = itemCategory.Need},
+                new BudgetingItem {Id = 2, Name = "Transport Pass", Price = 50, category = itemCategory.Need},
+                new BudgetingItem {Id = 3, Name = "iPhone Bill", Price = 30, category = itemCategory.Need},
+                new BudgetingItem {Id = 4, Name = "Toiletries", Price = 25, category = itemCategory.Need},  
+            };
 
         }
     }
