@@ -117,7 +117,36 @@ namespace FinancialLitApp.ViewModels
                 new BudgetingItem {Id = 17, Name = "Skills Worships", Price = 110, category = itemCategory.Investment},
             };
 
-            SelectedExpenses = new ObservableCollection<BudgetingItem>(); // so each time an available item is slected, it gets added to the selected expense collection.
+            SelectedExpenses = new ObservableCollection<BudgetingItem>(); // so each time an available item is selected, it gets added to the selected expense collection.
+
+            // appending the separate item category collection to the budget item:
+            NeedItems = new ObservableCollection<BudgetingItem>();
+            WantItems = new ObservableCollection<BudgetingItem>();
+            ImpulsePurchaseItems = new ObservableCollection<BudgetingItem>();
+            InvestmentItems = new ObservableCollection<BudgetingItem>();
+
+            // and then populate each category into the available items by using switch case that add each item according to its category in available expenses.
+
+            foreach ( var item in AvailableExpenses)
+            {
+                switch (item.category)
+                {
+                    case itemCategory.Need:
+                        NeedItems.Add(item);
+                        break;
+
+                    case itemCategory.Want:
+                        WantItems.Add(item);
+                        break;
+                    case itemCategory.ImpulsePurchase:
+                        ImpulsePurchaseItems.Add(item);
+                        break;
+
+                    case itemCategory.Investment:
+                        InvestmentItems.Add(item);
+                        break;
+                }
+            }
 
             
         }
@@ -260,7 +289,7 @@ namespace FinancialLitApp.ViewModels
 
             if (categorySpending[itemCategory.Need] > categorySpending[itemCategory.Want])
             {
-                analysis += $"🫰 Very great spending decisions here! You prioritized what you NEED over what you WANT. - smart budgeting!"
+                analysis += $"🫰 Very great spending decisions here! You prioritized what you NEED over what you WANT. - smart budgeting!";
             }
             if (categorySpending[itemCategory.ImpulsePurchase] > 50)
             {
