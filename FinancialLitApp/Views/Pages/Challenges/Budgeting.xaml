@@ -246,7 +246,7 @@
                                                FontAttributes="Bold"
                                                TextColor="#ffebd7"
                                                LineBreakMode="WordWrap"/>
-                                        <Label Text="{Binding Price, StringFormat='R{0}'"
+                                        <Label Text="{Binding Price, StringFormat='R{0}'}"
                                                FontSize="13"
                                                TextColor="#ffebd7"/>
                                         <Button Text="{Binding Name}"
@@ -276,8 +276,8 @@
                            HorizontalOptions="Center"/>
 
                     <CollectionView ItemsSource="{Binding AvailableExpenses}"
-                                    SelectionMode="None"
-                                    <CollectionView.ItemsLayout>
+                                    SelectionMode="None">
+                        <CollectionView.ItemsLayout>
                         <GridItemsLayout Orientation="Vertical" Span="2" HorizontalItemSpacing="10" VerticalItemSpacing="10"/>
                         </CollectionView.ItemsLayout>
                         <CollectionView.ItemTemplate>
