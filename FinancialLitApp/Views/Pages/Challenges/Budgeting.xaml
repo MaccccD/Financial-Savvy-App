@@ -3,18 +3,12 @@
              xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:FinancialLitApp.ViewModels"
+              xmlns:converters="clr-namespace:FinancialLitApp.Converters"
              Title="Budgeting Challenge"
              BackgroundColor="#0D1738">
     <ContentPage.BindingContext>
         <vm:BudgetingChallengeViewModel />
     </ContentPage.BindingContext>
-
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <converters:InverseBoolConverter x:Key="InverseBoolConverter" />
-            <converters:CategoryToColorConverter x:Key="CategoryToColorConverter" />
-        </ResourceDictionary>
-    </ContentPage.Resources>
 
     <ScrollView>
         <StackLayout Padding="20" Spacing="20">
@@ -26,8 +20,133 @@
                            TextColor="#ffebd7"
                            HorizontalOptions="Center"/>
                     <Label Text="{Binding CurrentAttempt, StringFormat='Attempt: {0} of 3'}"
+                           FontSize="16"
+                           TextColor="#00d4aa"
+                           HorizontalOptions="Center"
+                           Margin="0,5,0,0"/>
                 </StackLayout>
             </Frame>
+            
+            
+            <!---The 3 metrics dashboard layout:-->
+            <Grid ColumnDefinitions="*,*,*" ColumnSpacing="10">
+                
+                <!---Starting Amount-->
+                <Frame Grid.Column="0" BackgroundColor="AntiqueWhite" CornerRadius="10" Padding="12" HasShadow="True">
+                    <StackLayout Spacing="5">
+                        <Label Text="1️⃣" FontSize="18" HorizontalOptions="Center"/>
+                        <Label Text="Starting Allowance:" FontSize="12" TextColor="Limegreen" FontAttributes="Bold" HorizontalOptions="Center"/>
+                        <Label Text="{Binding StartingAmount, StringFormat='R{0:F0'}"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               TextColor="Black"
+                               HorizontalOptions="Center"/>
+                    </StackLayout>
+                </Frame>
+
+                <!---Current Cost spent on expenses layout-->
+                    <Frame Grid.Column="1" BackgroundColor="AntiqueWhite" Padding="12" CornerRadius="10" HasShadow="True">
+                        <StackLayout Spacing="5">
+                            <Label Text="2️⃣" FontSize="18" HorizontalOptions="Center"/>
+                            <Label Text="{Binding CurrentCostsSpent, StringFormat='R{0:F0'}"
+                                   FontSize="18"
+                                   FontAttributes="Bold"
+                                   TextColor="Black"
+                                   HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </Frame>
+                
+                <!--TargetSavinngs-->
+                <Frame Grid.Column="2" BackgroundColor="AntiqueWhite" CornerRadius="10" Padding="12" HasShadow="True">
+                    <StackLayout Spacing="5">
+                        <Label Text="3️⃣" FontSize="18" HorizontalOptions="Center"/>
+                        <Label Text="{Binding TargetSavings, StringFormat='R{0:F0'}"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               TextColor="Black"
+                               HorizontalOptions="Center"/>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+            
+            <!---Warning Messages visuals -->
+            <Frame BackgroundColor="#34495e"
+                   CornerRadius="10"
+                   Padding="15"
+                   IsVisible="{Binding WarningMessage, Converter={StaticResource StringIsNotEmptyConverter}}">
+                <Label Text="{Binding WarningMessage}"
+                    FontSize="14"
+                    TextColor="#ffebd7"
+                    HorizontalOptions="Center"
+                    LineBreakMode="WordWrap"/>
+            </Frame>
+
+            <Frame BackgroundColor="#2c3e50"
+                   CornerRadius="10"
+                   Padding="15"
+                   IsVisible="{Binding FeedbackMessage, Converter={StaticResource StringIsNotEmptyConverter}}">
+                <Label Text="{Binding FeedbackMessage}"
+                       FontSize="14"
+                       TextColor="#00d4aa"
+                       LineBreakMode="WordWrap"/>
+            </Frame>
+            
+            <!--Expenses section :-->
+            <Label Text="Choose your expenses wisely!"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   TextColor="#ffebd7"
+                   HorizontalOptions="Center"/>
+            
+            <!--The impulse purchases-->
+            <Frame BackgroundColor="#e74c3c" CornerRadius="13" Padding="15">
+                <StackLayout Spacing="10">
+                    <Label Text="💸 Impulse Purchases"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="#ffebd7"
+                           HorizontalOptions="Center"/>
+                    <FlexLayout Direction="Row"
+                                Wrap="Wrap"
+                                JustifyContent="SpaceEvenly"
+                                AlignItems="Start">
+                        <CollectionView ItemsSource="{Binding AvailableExpenses}"
+                                        SelectionMode="None">
+                            <CollectionView.ItemsLayout>
+                                <GridItemsLayout Orientation="Vertical" Span="2" HorizontalItemSpacing="10" VerticalItemSpacing="10"/>
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Frame BackgroundColor="#c0392b"
+                                           CornerRadius="8"
+                                           Padding="12"
+                                           IsVisible="{Binding isSelected, Converter={StaticResource InverseBoolConverter}}"
+                                           Margin="5">
+                                        <StackLayout Spacing="8">
+                                            <!---So only show  the item has not been spend on yet , but after hide it:-->
+                                            <StackLayout.IsVisible>
+                                                <Binding Path="category">
+                                                    <Binding.Converter>
+                                                        <converters:CategoryFilterConverter CategoryFilter="ImpulsePurchase"/>
+                                                    </Binding.Converter>
+                                                </Binding>
+                                            </StackLayout.IsVisible>
+                                            <Label Text="{Binding Name}"
+                                                   FontSize="14"
+                                                   FontAttributes="Bold"
+                                                   TextColor="#ffebd7"
+                                                   LineBreakMode="WordWrap"/>
+                                            
+                                        </StackLayout>
+                                    </Frame>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </FlexLayout>
+                </StackLayout>
+                             
+            </Frame>
+
         </StackLayout>
     </ScrollView>
 </ContentPage>
