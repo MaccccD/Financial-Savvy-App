@@ -136,7 +136,18 @@
                                                    FontAttributes="Bold"
                                                    TextColor="#ffebd7"
                                                    LineBreakMode="WordWrap"/>
-                                            
+                                            <Label Text="{Binding Price, StringFormat='R{0}'}"
+                                                   FontSize="13"
+                                                   TextColor="#ffebd7"/>
+                                            <Button Text="Spend"
+                                                    Command="{Binding Source={RelativeSource AncestorType={x:Type vm:BudgetingChallengeViewModel}}, Path=SpendOnItemCommand}"
+                                                    CommandParameter="{Binding .}"
+                                                    BackgroundColor="#219DC6"
+                                                    TextColor="#ffebd7"
+                                                    CornerRadius="6"
+                                                    FontSize="12"
+                                                    HeightRequest="35"
+                                                    FontAttributes="Bold"/>
                                         </StackLayout>
                                     </Frame>
                                 </DataTemplate>
@@ -144,9 +155,175 @@
                         </CollectionView>
                     </FlexLayout>
                 </StackLayout>
-                             
             </Frame>
+            
+            <!--Needs-->
+            <Frame BackgroundColor="#27ae60" CornerRadius="12" Padding="15">
+                <StackLayout Spacing="10">
+                    <Label Text="✅ NEEDS"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="#ffebd7"
+                           HorizontalOptions="Center"/>
 
+                    <CollectionView ItemsSource="{Binding AvailableExpenses}"
+                                    SelectionMode="None">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical" Span="2" HorizontalItemSpacing="10" VerticalItemSpacing="10"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame BackgroundColor="#229954"
+                                       CornerRadius="8"
+                                       Padding="12"
+                                       IsVisible="{Binding isSelected, Converter={StaticResource InverseBoolConverter}}"
+                                       Margin="5">
+                                    <StackLayout Spacing="8">
+                                        <StackLayout.IsVisible>
+                                            <Binding Path="category">
+                                                <Binding.Converter>
+                                                    <converters:CategoryFilterConverter CategoryFilter="Need"/>
+                                                </Binding.Converter>
+                                            </Binding>
+                                        </StackLayout.IsVisible>
+                                        <Label Text="{Binding Name}"
+                                               FontSize="14"
+                                               FontAttributes="Bold"
+                                               TextColor="#ffebd7"
+                                               LineBreakMode="WordWrap"/>
+                                        <Label Text="{Binding Price, StringFormat='R{0}'}"
+                                               FontSize="13"
+                                               TextColor="#ffebd7"/>
+
+                                        <Button Text="Spend"
+                                                Command="{Binding Source={RelativeSource AncestorType={x:Type vm:BudgetingChallengeViewModel}}, Path=SpendOnItemCommand}"
+                                                CommandParameter="{Binding .}"
+                                                BackgroundColor="#219DC6"
+                                                TextColor="#ffebd7"
+                                                CornerRadius="6"
+                                                FontSize="12"
+                                                HeightRequest="35"
+                                                FontAttributes="Bold"/>
+                                    </StackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </StackLayout>
+            </Frame>
+            
+            <!---Wants-->
+            <Frame  BackgroundColor="#f39c12" CornerRadius="12" Padding="15">
+                <StackLayout Spacing="10">
+                    <Label Text="🎯 WANTS"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           TextColor="#ffebd7"
+                           HorizontalOptions="Center"/>
+                    <CollectionView ItemsSource="{Binding AvailableExpenses}"
+                                    SelectionMode="None">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical" Span="2" HorizontalItemSpacing="10" VerticalItemSpacing="10"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame BackgroundColor="#e67e22"
+                                       CornerRadius="8"
+                                       Padding="12"
+                                       IsVisible="{Binding isSelected, Converter={StaticResource InverseBoolConverter}}"
+                                       Margin="5">
+                                    <StackLayout Spacing="8">
+                                        <StackLayout.IsVisible>
+                                            <Binding Path="category">
+                                                <Binding.Converter>
+                                                    <converters:CategoryFilterConverter CategoryFilter="Want" />
+                                                </Binding.Converter>
+                                            </Binding>
+                                        </StackLayout.IsVisible>
+
+                                        <Label Text="{Binding Name}"
+                                               FontSize="14"
+                                               FontAttributes="Bold"
+                                               TextColor="#ffebd7"
+                                               LineBreakMode="WordWrap"/>
+                                        <Label Text="{Binding Price, StringFormat='R{0}'"
+                                               FontSize="13"
+                                               TextColor="#ffebd7"/>
+                                        <Button Text="{Binding Name}"
+                                                Command="{Binding Source={RelativeSource AncestorType={x:Type vm:BudgetingChallengeViewModel}}, Path=SpendOnItemCommand}"
+                                                CommandParameter="{Binding .}"
+                                                BackgroundColor="#219DC6"
+                                                TextColor="#f39c12"
+                                                CornerRadius="6"
+                                                FontSize="12"
+                                                HeightRequest="35"
+                                                FontAttributes="Bold"/>
+                                    </StackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </StackLayout>
+            </Frame>
+            
+            <!---Investments-->
+            <Frame BackgroundColor="#9b59b6" CornerRadius="12" Padding="15">
+                <StackLayout Spacing="10">
+                    <Label Text="📈 INVESTMENTS"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           TextColor="#ffebd7"
+                           HorizontalOptions="Center"/>
+
+                    <CollectionView ItemsSource="{Binding AvailableExpenses}"
+                                    SelectionMode="None"
+                                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical" Span="2" HorizontalItemSpacing="10" VerticalItemSpacing="10"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame BackgroundColor="#8e44ad"
+                                       CornerRadius="8"
+                                       Padding="12"
+                                       IsVisible="{Binding isSelected, Converter={StaticResource InverseBoolConverter}}"
+                                       Margin="5">
+                                    <StackLayout Spacing="8">
+                                        <StackLayout.IsVisible>
+                                            <Binding Path="category">
+                                                <Binding.Converter>
+                                                    <converters:CategoryFilterConverter CategoryFilter="Investment"/>
+                                                </Binding.Converter>
+                                            </Binding>
+                                        </StackLayout.IsVisible>
+
+                                        <Label Text="{Binding Name}"
+                                               FontSize="14"
+                                               FontAttributes="Bold"
+                                               TextColor="#ffebd7"
+                                               LineBreakMode="WordWrap"/>
+                                        <Label Text="{Binding Price, StringFormat='R{0}'}"
+                                               FontSize="13"
+                                               TextColor="#ffebd7"/>
+
+                                        <Button Text="Spend"
+                                                Command="{Binding Source={RelativeSource AncestorType={x:Type vm:BudgetingChallengeViewModel}}, Path=SpendOnItemCommand}"
+                                                CommandParameter="{Binding .}"
+                                                BackgroundColor="#219DC6"
+                                                TextColor="#ffebd7"
+                                                CornerRadius="6"
+                                                FontSize="12"
+                                                HeightRequest="35"
+                                                FontAttributes="Bold"/>
+                                    </StackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </StackLayout>
+            </Frame>
+            
+            <!-- the actions btns->
+            
         </StackLayout>
     </ScrollView>
 </ContentPage>
