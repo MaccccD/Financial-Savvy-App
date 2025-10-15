@@ -104,9 +104,9 @@
             <Frame BackgroundColor="#34495e" CornerRadius="13" Padding="15">
                 <StackLayout Spacing="10">
                     <Label Text="💸 Impulse Purchases"
-                           FontSize="16"
+                           FontSize="18"
                            FontAttributes="Bold"
-                           TextColor="#ffebd7"
+                           TextColor="PeachPuff"
                            HorizontalOptions="Center"/>
                     <FlexLayout Direction="Row"
                                 Wrap="Wrap"
@@ -131,15 +131,15 @@
                                                    TextColor="#ffebd7"
                                                    LineBreakMode="WordWrap"/>
                                             <Label Text="{Binding Price, StringFormat='R{0}'}"
-                                                   FontSize="13"
+                                                   FontSize="15"
                                                    TextColor="#ffebd7"/>
                                             <Button Text="Spend"
                                                     Command="{Binding Source={RelativeSource AncestorType={x:Type vm:BudgetingChallengeViewModel}}, Path=SpendOnItemCommand}"
                                                     CommandParameter="{Binding .}"
-                                                    BackgroundColor="#219DC6"
+                                                    BackgroundColor="#103D81"
                                                     TextColor="#ffebd7"
                                                     CornerRadius="6"
-                                                    FontSize="12"
+                                                    FontSize="14"
                                                     HeightRequest="35"
                                                     FontAttributes="Bold"/>
                                         </StackLayout>
@@ -152,12 +152,12 @@
             </Frame>
             
             <!--Needs-->
-            <Frame BackgroundColor="#27ae60" CornerRadius="12" Padding="15">
+            <Frame BackgroundColor="#34495E" CornerRadius="13" Padding="15">
                 <StackLayout Spacing="10">
                     <Label Text="✅ NEEDS"
                            FontSize="18"
                            FontAttributes="Bold"
-                           TextColor="#ffebd7"
+                           TextColor="PeachPuff"
                            HorizontalOptions="Center"/>
 
                     <CollectionView ItemsSource="{Binding NeedItems}"
@@ -167,7 +167,7 @@
                         </CollectionView.ItemsLayout>
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <Frame BackgroundColor="#229954"
+                                <Frame BackgroundColor="#2c3e50"
                                        CornerRadius="8"
                                        Padding="12"
                                        Margin="5">
@@ -179,16 +179,16 @@
                                                TextColor="#ffebd7"
                                                LineBreakMode="WordWrap"/>
                                         <Label Text="{Binding Price, StringFormat='R{0}'}"
-                                               FontSize="13"
+                                               FontSize="15"
                                                TextColor="#ffebd7"/>
 
                                         <Button Text="Spend"
                                                 Command="{Binding Source={RelativeSource AncestorType={x:Type vm:BudgetingChallengeViewModel}}, Path=SpendOnItemCommand}"
                                                 CommandParameter="{Binding .}"
-                                                BackgroundColor="#219DC6"
+                                                BackgroundColor="#103d81"
                                                 TextColor="#ffebd7"
                                                 CornerRadius="6"
-                                                FontSize="12"
+                                                FontSize="14"
                                                 HeightRequest="35"
                                                 FontAttributes="Bold"/>
                                     </StackLayout>
@@ -200,12 +200,12 @@
             </Frame>
             
             <!---Wants-->
-            <Frame  BackgroundColor="#f39c12" CornerRadius="12" Padding="15">
+            <Frame  BackgroundColor="#34495e" CornerRadius="12" Padding="15">
                 <StackLayout Spacing="10">
                     <Label Text="🎯 WANTS"
                            FontSize="16"
                            FontAttributes="Bold"
-                           TextColor="#ffebd7"
+                           TextColor="PeachPuff"
                            HorizontalOptions="Center"/>
                     <CollectionView ItemsSource="{Binding WantItems}"
                                     SelectionMode="None">
@@ -214,7 +214,7 @@
                         </CollectionView.ItemsLayout>
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <Frame BackgroundColor="#e67e22"
+                                <Frame BackgroundColor="#2c3e50"
                                        CornerRadius="8"
                                        Padding="12"
                                        Margin="5">
@@ -226,15 +226,15 @@
                                                TextColor="#ffebd7"
                                                LineBreakMode="WordWrap"/>
                                         <Label Text="{Binding Price, StringFormat='R{0}'}"
-                                               FontSize="13"
+                                               FontSize="15"
                                                TextColor="#ffebd7"/>
-                                        <Button Text="{Binding Name}"
+                                        <Button Text="Spend"
                                                 Command="{Binding Source={RelativeSource AncestorType={x:Type vm:BudgetingChallengeViewModel}}, Path=SpendOnItemCommand}"
                                                 CommandParameter="{Binding .}"
-                                                BackgroundColor="#219DC6"
-                                                TextColor="#f39c12"
+                                                BackgroundColor="#103d81"
+                                                TextColor="#ffebd7"
                                                 CornerRadius="6"
-                                                FontSize="12"
+                                                FontSize="15"
                                                 HeightRequest="35"
                                                 FontAttributes="Bold"/>
                                     </StackLayout>
@@ -246,12 +246,12 @@
             </Frame>
             
             <!---Investments-->
-            <Frame BackgroundColor="#9b59b6" CornerRadius="12" Padding="15">
+            <Frame BackgroundColor="#34495e" CornerRadius="12" Padding="15">
                 <StackLayout Spacing="10">
                     <Label Text="📈 INVESTMENTS"
                            FontSize="16"
                            FontAttributes="Bold"
-                           TextColor="#ffebd7"
+                           TextColor="PeachPuff"
                            HorizontalOptions="Center"/>
 
                     <CollectionView ItemsSource="{Binding InvestmentItems}"
@@ -261,7 +261,7 @@
                         </CollectionView.ItemsLayout>
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <Frame BackgroundColor="#8e44ad"
+                                <Frame BackgroundColor="#2c3e50"
                                        CornerRadius="8"
                                        Padding="12"
                                        Margin="5">
@@ -273,16 +273,16 @@
                                                TextColor="#ffebd7"
                                                LineBreakMode="WordWrap"/>
                                         <Label Text="{Binding Price, StringFormat='R{0}'}"
-                                               FontSize="13"
+                                               FontSize="15"
                                                TextColor="#ffebd7"/>
 
                                         <Button Text="Spend"
                                                 Command="{Binding Source={RelativeSource AncestorType={x:Type vm:BudgetingChallengeViewModel}}, Path=SpendOnItemCommand}"
                                                 CommandParameter="{Binding .}"
-                                                BackgroundColor="#219DC6"
+                                                BackgroundColor="#103d81"
                                                 TextColor="#ffebd7"
                                                 CornerRadius="6"
-                                                FontSize="12"
+                                                FontSize="15"
                                                 HeightRequest="35"
                                                 FontAttributes="Bold"/>
                                     </StackLayout>
@@ -297,7 +297,7 @@
             <StackLayout Orientation="Horizontal" Spacing="10" Margin="0,10,0,0">
                 <Button Text="Check Budget"
                         Command="{Binding CheckBudgetCommand}"
-                        BackgroundColor="LimeGreen"
+                        BackgroundColor="Green"
                         TextColor="#ffebd7"
                         CornerRadius="10"
                         HeightRequest="50"
@@ -308,7 +308,7 @@
 
                 <Button Text="Reset"
                         Command="{Binding ResetChallengeCommand}"
-                        BackgroundColor="DeepSkyBlue"
+                        BackgroundColor="#2503FD"
                         TextColor="#ffebd7"
                         CornerRadius="10"
                         HeightRequest="50"
@@ -335,7 +335,7 @@
 
                     <Button Text="Try Another Challenge"
                             Command="{Binding ResetChallengeCommand}"
-                            BackgroundColor="#00d4aa"
+                            BackgroundColor="#103d81"
                             TextColor="#ffebd7"
                             CornerRadius="10"
                             HeightRequest="50"
