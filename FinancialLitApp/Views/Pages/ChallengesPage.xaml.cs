@@ -61,7 +61,7 @@ namespace FinancialLitApp.Views.Pages
             try
             {
                 await WaitForShellAndNavigate("budgeting"); // changed from absolute navigation to  relative nav
-                //await Shell.Current.GoToAsync("budgetingchallenge");
+                //await Shell.Current.GoToAsync("budgeting challenge");
             }
             catch (Exception ex) 
             {
