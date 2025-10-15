@@ -7,7 +7,6 @@ using FinancialLitApp.Models;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System.Threading.Tasks;
-using System.Linq.Expressions;
 
 namespace FinancialLitApp.ViewModels
 {
@@ -47,7 +46,13 @@ namespace FinancialLitApp.ViewModels
         public ObservableCollection<BudgetingItem> AvailableExpenses { get; set; }
         public ObservableCollection<BudgetingItem> SelectedExpenses { get; set; }
 
-        //tracking the spending of the user by category so they can get feedbakc on the quality of their budgeting skill being honed:
+        // So i separated the collections for each category - these will only contain items for that category
+        public ObservableCollection<BudgetingItem> NeedItems { get; set; }
+        public ObservableCollection<BudgetingItem> WantItems { get; set; }
+        public ObservableCollection<BudgetingItem> ImpulsePurchaseItems { get; set; }
+        public ObservableCollection<BudgetingItem> InvestmentItems { get; set; }
+
+        //tracking the spending of the user by category so they can get feedback on the quality of their budgeting skill being honed:
         private Dictionary<itemCategory, decimal> categorySpending = new Dictionary<itemCategory, decimal>();
 
 
@@ -87,38 +92,32 @@ namespace FinancialLitApp.ViewModels
                 new BudgetingItem {Id = 2, Name = "Transport Pass", Price = 50, category = itemCategory.Need},
                 new BudgetingItem {Id = 3, Name = "iPhone Bill", Price = 30, category = itemCategory.Need},
                 new BudgetingItem {Id = 4, Name = "Toiletries", Price = 25, category = itemCategory.Need},  
+
+
+
+                //the WANTS - nice to haves :
+                new BudgetingItem {Id = 5, Name = "Streaming Services", Price = 20, category = itemCategory.Want},
+                new BudgetingItem {Id = 6, Name = "Restaurant Meal", Price = 60, category = itemCategory.Want},
+                new BudgetingItem {Id = 7, Name = "New OOTD", Price = 100, category = itemCategory.Want},
+                new BudgetingItem {Id = 8, Name = "Concert Tickets", Price = 150, category = itemCategory.Want},
+                new BudgetingItem {Id = 9, Name = "Gaming", Price = 45, category = itemCategory.Want},
+
+
+                // the IMPULSE purchases:
+                new BudgetingItem {Id = 10, Name = "Late Night Snacks", Price = 35, category = itemCategory.ImpulsePurchase},
+                new BudgetingItem {Id = 11, Name = "50% of Shades", Price = 70, category = itemCategory.ImpulsePurchase},
+                new BudgetingItem {Id = 12, Name = "In-App Purchases", Price = 40, category = itemCategory.ImpulsePurchase},
+                new BudgetingItem {Id = 13, Name = "Coffee & Treats", Price = 110, category = itemCategory.ImpulsePurchase},
+
+
+                // the INVESTEMENTS :
+                new BudgetingItem {Id = 14, Name = "Online Course", Price = 120, category = itemCategory.Investment},
+                new BudgetingItem {Id = 15, Name = "Books", Price = 90, category = itemCategory.Investment},
+                new BudgetingItem {Id = 16, Name = "Gym Membership", Price = 80, category = itemCategory.Investment},
+                new BudgetingItem {Id = 17, Name = "Skills Worships", Price = 110, category = itemCategory.Investment},
             };
 
-            AvailableExpenses = new ObservableCollection<BudgetingItem>
-            {
-             //the WANTS - nice to haves :
-                new BudgetingItem {Id = 1, Name = "Streaming Services", Price = 20, category = itemCategory.Want},
-                new BudgetingItem {Id = 2, Name = "Restaurant Meal", Price = 60, category = itemCategory.Want},
-                new BudgetingItem {Id = 3, Name = "New OOTD", Price = 100, category = itemCategory.Want},
-                new BudgetingItem {Id = 4, Name = "Concert Tickets", Price = 150, category = itemCategory.Want},
-                new BudgetingItem {Id = 5, Name = "Gaming", Price = 45, category = itemCategory.Want},
-
-            };
-
-            AvailableExpenses = new ObservableCollection<BudgetingItem>
-            {
-                 // the IMPULSE purchases:
-               new BudgetingItem {Id = 1, Name = "Late Night Snacks", Price = 35, category = itemCategory.ImpulsePurchase},
-               new BudgetingItem {Id = 2, Name = "50% of Shades", Price = 70, category = itemCategory.ImpulsePurchase},
-               new BudgetingItem {Id = 3, Name = "In-App Purchases", Price = 40, category = itemCategory.ImpulsePurchase},
-               new BudgetingItem {Id = 4, Name = "Coffee & Treats", Price = 110, category = itemCategory.ImpulsePurchase},
-            };
-
-            AvailableExpenses = new ObservableCollection<BudgetingItem>
-            {
-               // the INVESTEMENTS :
-               new BudgetingItem {Id = 1, Name = "Online Course", Price = 120, category = itemCategory.Investment},
-               new BudgetingItem {Id = 2, Name = "Books", Price = 90, category = itemCategory.Investment},
-               new BudgetingItem {Id = 3, Name = "Gym Membership", Price = 80, category = itemCategory.Investment},
-               new BudgetingItem {Id = 4, Name = "Skills Worships", Price = 110, category = itemCategory.Investment},
-            };
-
-            SelectedExpenses = new ObservableCollection<BudgetingItem>(); // so each time an available  item is slected, it gets added to the selected expense collection.
+            SelectedExpenses = new ObservableCollection<BudgetingItem>(); // so each time an available item is slected, it gets added to the selected expense collection.
 
             
         }
@@ -204,7 +203,7 @@ namespace FinancialLitApp.ViewModels
 
             if (result.IsSuccess)
             {
-                //shoew the user feedback that they stayed within budget and the target goal.!
+                //show the user feedback that they stayed within budget and the target goal.!
 
                 FeedbackMessage = $"Yayy!! 🥳🥳 Excellent Budgeting Skill!\n\n" +
                                   $"You spent R{CurrentCostsSpent:F0} and saved R{actualSavings:F0}," +
@@ -223,9 +222,10 @@ namespace FinancialLitApp.ViewModels
                 }
             else
                 {//going for another attempt :
-                    currentAttempt++;
+                    CurrentAttempt++;
                     FeedbackMessage = GetAttemptFeedback(actualSavings);
                     ResetForNewAttempt();
+
 
                 }
         }
@@ -260,7 +260,7 @@ namespace FinancialLitApp.ViewModels
 
             if (categorySpending[itemCategory.Need] > categorySpending[itemCategory.Want])
             {
-                analysis += $"🫰 Very great spending decisions here! You prioritized what you NEED over what you WANT. - smart budgeting!";
+                analysis += $"🫰 Very great spending decisions here! You prioritized what you NEED over what you WANT. - smart budgeting!"
             }
             if (categorySpending[itemCategory.ImpulsePurchase] > 50)
             {
@@ -348,6 +348,16 @@ namespace FinancialLitApp.ViewModels
             }
         }
         
+
+
+
+
+
+
+
+
+
+
 
         ///helper lass for results:
         public class BudgetResult
