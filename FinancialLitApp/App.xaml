@@ -10,10 +10,10 @@
             <converters:BoolToStringConverter x:Key="BoolToStringConverter"/>
             <converters:CategoryToVisibilityConverter x:Key="CategoryToVisibilityConverter"/>
             <converters:StringToBoolConverter x:Key="StringToBoolConverter"/>
-            <converters:CategoryFilterConverter x:Key="CategoryFilterConverter"/>
-            <converters:CategoryToColorConverter x:Key="CategoryToColorConverter"/>
-            <converters:InverseBoolConvertor x:Key="InverseBoolConverter"/>
-            <converters:StringIsNotEmptyConverter x:Key="StringIsNotemptyCOnverter"/>
+            <converters:CategoryToColorConverter x:Key="CategoryToColorConverter" />
+            <converters:StringIsNotEmptyConverter x:Key="StringIsNotEmptyConverter" />
+            <converters:InverseBoolConverter x:Key="InverseBoolConverter"/>
+            <converters:StringIsNotEmptyConverter x:Key="StringIsNotEmptyConverter"/>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />

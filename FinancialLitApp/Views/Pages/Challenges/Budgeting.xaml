@@ -2,13 +2,32 @@
 <ContentPage x:Class="FinancialLitApp.Views.Pages.Challenges.Budgeting"
              xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:FinancialLitApp.ViewModels"
              Title="Budgeting Challenge"
-              BackgroundColor="#0D1738"
-             >
-    <StackLayout>
-        <Label Text="Budgeting Page" 
-               VerticalOptions="CenterAndExpand" 
-               HorizontalOptions="CenterAndExpand" />
-        
-    </StackLayout>
+             BackgroundColor="#0D1738">
+    <ContentPage.BindingContext>
+        <vm:BudgetingChallengeViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:InverseBoolConverter x:Key="InverseBoolConverter" />
+            <converters:CategoryToColorConverter x:Key="CategoryToColorConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20">
+            <Frame BackgroundColor="#1a237e" CornerRadius="15" Padding="20">
+                <StackLayout>
+                    <Label Text="Budgeting Challenge"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           TextColor="#ffebd7"
+                           HorizontalOptions="Center"/>
+                    <Label Text="{Binding CurrentAttempt, StringFormat='Attempt: {0} of 3'}"
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

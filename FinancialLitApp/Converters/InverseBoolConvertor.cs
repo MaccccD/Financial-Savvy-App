@@ -9,7 +9,7 @@ using System.Globalization;
 namespace FinancialLitApp.Converters
 {
     // this converter is to hide the selected expense items  after they are selected by the player
-    public class InverseBoolConvertor : IValueConverter
+    public class InverseBoolConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
