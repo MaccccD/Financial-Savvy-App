@@ -160,29 +160,34 @@
                            TextColor="PeachPuff"
                            HorizontalOptions="Center"/>
 
-                    <CollectionView ItemsSource="{Binding NeedItems}"
+                    <FlexLayout Wrap="Wrap"
+                                Direction="Row"
+                                JustifyContent="Start"
+                                AlignItems="Start">
+                        <CollectionView ItemsSource="{Binding NeedItems}"
                                     SelectionMode="None">
-                        <CollectionView.ItemsLayout>
-                            <GridItemsLayout Orientation="Vertical" Span="2" HorizontalItemSpacing="10" VerticalItemSpacing="10"/>
-                        </CollectionView.ItemsLayout>
-                        <CollectionView.ItemTemplate>
-                            <DataTemplate>
-                                <Frame BackgroundColor="#2c3e50"
+                            <CollectionView.ItemsLayout>
+
+                                <GridItemsLayout Orientation="Vertical" Span="2" HorizontalItemSpacing="10" VerticalItemSpacing="10"/>
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Frame BackgroundColor="#2c3e50"
                                        CornerRadius="8"
                                        Padding="12"
                                        Margin="5">
-                                    <StackLayout Spacing="8">
-                                       
-                                        <Label Text="{Binding Name}"
+                                        <StackLayout Spacing="8">
+
+                                            <Label Text="{Binding Name}"
                                                FontSize="14"
                                                FontAttributes="Bold"
                                                TextColor="#ffebd7"
                                                LineBreakMode="WordWrap"/>
-                                        <Label Text="{Binding Price, StringFormat='R{0}'}"
+                                            <Label Text="{Binding Price, StringFormat='R{0}'}"
                                                FontSize="15"
                                                TextColor="#ffebd7"/>
 
-                                        <Button Text="Spend"
+                                            <Button Text="Spend"
                                                 Command="{Binding Source={RelativeSource AncestorType={x:Type vm:BudgetingChallengeViewModel}}, Path=SpendOnItemCommand}"
                                                 CommandParameter="{Binding .}"
                                                 BackgroundColor="#103d81"
@@ -191,11 +196,12 @@
                                                 FontSize="14"
                                                 HeightRequest="35"
                                                 FontAttributes="Bold"/>
-                                    </StackLayout>
-                                </Frame>
-                            </DataTemplate>
-                        </CollectionView.ItemTemplate>
-                    </CollectionView>
+                                        </StackLayout>
+                                    </Frame>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </FlexLayout>
                 </StackLayout>
             </Frame>
             
@@ -207,28 +213,32 @@
                            FontAttributes="Bold"
                            TextColor="PeachPuff"
                            HorizontalOptions="Center"/>
-                    <CollectionView ItemsSource="{Binding WantItems}"
+                    <FlexLayout Direction="Row"
+                                Wrap="Wrap"
+                                JustifyContent="Start"
+                                AlignItems="Start">
+                        <CollectionView ItemsSource="{Binding WantItems}"
                                     SelectionMode="None">
-                        <CollectionView.ItemsLayout>
-                            <GridItemsLayout Orientation="Vertical" Span="2" HorizontalItemSpacing="10" VerticalItemSpacing="10"/>
-                        </CollectionView.ItemsLayout>
-                        <CollectionView.ItemTemplate>
-                            <DataTemplate>
-                                <Frame BackgroundColor="#2c3e50"
+                            <CollectionView.ItemsLayout>
+                                <GridItemsLayout Orientation="Vertical" Span="2" HorizontalItemSpacing="10" VerticalItemSpacing="10"/>
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Frame BackgroundColor="#2c3e50"
                                        CornerRadius="8"
                                        Padding="12"
                                        Margin="5">
-                                    <StackLayout Spacing="8">
-                                        
-                                        <Label Text="{Binding Name}"
+                                        <StackLayout Spacing="8">
+
+                                            <Label Text="{Binding Name}"
                                                FontSize="14"
                                                FontAttributes="Bold"
                                                TextColor="#ffebd7"
                                                LineBreakMode="WordWrap"/>
-                                        <Label Text="{Binding Price, StringFormat='R{0}'}"
+                                            <Label Text="{Binding Price, StringFormat='R{0}'}"
                                                FontSize="15"
                                                TextColor="#ffebd7"/>
-                                        <Button Text="Spend"
+                                            <Button Text="Spend"
                                                 Command="{Binding Source={RelativeSource AncestorType={x:Type vm:BudgetingChallengeViewModel}}, Path=SpendOnItemCommand}"
                                                 CommandParameter="{Binding .}"
                                                 BackgroundColor="#103d81"
@@ -237,11 +247,12 @@
                                                 FontSize="15"
                                                 HeightRequest="35"
                                                 FontAttributes="Bold"/>
-                                    </StackLayout>
-                                </Frame>
-                            </DataTemplate>
-                        </CollectionView.ItemTemplate>
-                    </CollectionView>
+                                        </StackLayout>
+                                    </Frame>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </FlexLayout>
                 </StackLayout>
             </Frame>
             
@@ -254,29 +265,33 @@
                            TextColor="PeachPuff"
                            HorizontalOptions="Center"/>
 
-                    <CollectionView ItemsSource="{Binding InvestmentItems}"
+                    <FlexLayout Direction="Row"
+                                Wrap="Wrap"
+                                JustifyContent="Start"
+                                AlignItems="Start">
+                        <CollectionView ItemsSource="{Binding InvestmentItems}"
                                     SelectionMode="None">
-                        <CollectionView.ItemsLayout>
-                        <GridItemsLayout Orientation="Vertical" Span="2" HorizontalItemSpacing="10" VerticalItemSpacing="10"/>
-                        </CollectionView.ItemsLayout>
-                        <CollectionView.ItemTemplate>
-                            <DataTemplate>
-                                <Frame BackgroundColor="#2c3e50"
+                            <CollectionView.ItemsLayout>
+                                <GridItemsLayout Orientation="Vertical" Span="2" HorizontalItemSpacing="10" VerticalItemSpacing="10"/>
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Frame BackgroundColor="#2c3e50"
                                        CornerRadius="8"
                                        Padding="12"
                                        Margin="5">
-                                    <StackLayout Spacing="8">
+                                        <StackLayout Spacing="8">
 
-                                        <Label Text="{Binding Name}"
+                                            <Label Text="{Binding Name}"
                                                FontSize="14"
                                                FontAttributes="Bold"
                                                TextColor="#ffebd7"
                                                LineBreakMode="WordWrap"/>
-                                        <Label Text="{Binding Price, StringFormat='R{0}'}"
+                                            <Label Text="{Binding Price, StringFormat='R{0}'}"
                                                FontSize="15"
                                                TextColor="#ffebd7"/>
 
-                                        <Button Text="Spend"
+                                            <Button Text="Spend"
                                                 Command="{Binding Source={RelativeSource AncestorType={x:Type vm:BudgetingChallengeViewModel}}, Path=SpendOnItemCommand}"
                                                 CommandParameter="{Binding .}"
                                                 BackgroundColor="#103d81"
@@ -285,11 +300,12 @@
                                                 FontSize="15"
                                                 HeightRequest="35"
                                                 FontAttributes="Bold"/>
-                                    </StackLayout>
-                                </Frame>
-                            </DataTemplate>
-                        </CollectionView.ItemTemplate>
-                    </CollectionView>
+                                        </StackLayout>
+                                    </Frame>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </FlexLayout>
                 </StackLayout>
             </Frame>
             
