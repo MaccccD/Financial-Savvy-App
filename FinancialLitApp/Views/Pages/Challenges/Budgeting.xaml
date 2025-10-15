@@ -32,38 +32,40 @@
             <Grid ColumnDefinitions="*,*,*" ColumnSpacing="10">
                 
                 <!---Starting Amount-->
-                <Frame Grid.Column="0" BackgroundColor="AntiqueWhite" CornerRadius="10" Padding="12" HasShadow="True">
+                <Frame Grid.Column="0" BackgroundColor="#2c3e50" CornerRadius="10" Padding="12" HasShadow="True">
                     <StackLayout Spacing="5">
-                        <Label Text="1️⃣" FontSize="18" HorizontalOptions="Center"/>
-                        <Label Text="Starting Allowance:" FontSize="12" TextColor="Limegreen" FontAttributes="Bold" HorizontalOptions="Center"/>
+                        <Label Text="1️" FontSize="18" HorizontalOptions="Center"/>
+                        <Label Text="Starting Allowance:" FontSize="16" TextColor="Limegreen" FontAttributes="Bold" HorizontalOptions="Center"/>
                         <Label Text="{Binding StartingAmount, StringFormat='R{0:F0'}"
                                FontSize="18"
                                FontAttributes="Bold"
-                               TextColor="Black"
+                               TextColor="#ffebd7"
                                HorizontalOptions="Center"/>
                     </StackLayout>
                 </Frame>
 
                 <!---Current Cost spent on expenses layout-->
-                    <Frame Grid.Column="1" BackgroundColor="AntiqueWhite" Padding="12" CornerRadius="10" HasShadow="True">
+                <Frame Grid.Column="1" BackgroundColor="#2c3e50" Padding="12" CornerRadius="10" HasShadow="True">
                         <StackLayout Spacing="5">
-                            <Label Text="2️⃣" FontSize="18" HorizontalOptions="Center"/>
-                            <Label Text="{Binding CurrentCostsSpent, StringFormat='R{0:F0'}"
+                            <Label Text="2️" FontSize="18" HorizontalOptions="Center"/>
+                        <Label Text="Current Costs Spent: " FontSize="16" TextColor="LimeGreen" FontAttributes="Bold" HorizontalOptions="Center"/>
+                        <Label Text="{Binding CurrentCostsSpent, StringFormat='R{0:F0'}"
                                    FontSize="18"
                                    FontAttributes="Bold"
-                                   TextColor="Black"
+                                   TextColor="#ffebd7"
                                    HorizontalOptions="Center"/>
                         </StackLayout>
                     </Frame>
                 
                 <!--TargetSavinngs-->
-                <Frame Grid.Column="2" BackgroundColor="AntiqueWhite" CornerRadius="10" Padding="12" HasShadow="True">
+                <Frame Grid.Column="2" BackgroundColor="#2c3e50" CornerRadius="10" Padding="12" HasShadow="True">
                     <StackLayout Spacing="5">
-                        <Label Text="3️⃣" FontSize="18" HorizontalOptions="Center"/>
+                        <Label Text="3️" FontSize="18" HorizontalOptions="Center"/>
+                        <Label Text="Target Saving Amount" FontSize="16" TextColor="LimeGreen" FontAttributes="Bold" HorizontalOptions="Center"/>
                         <Label Text="{Binding TargetSavings, StringFormat='R{0:F0'}"
                                FontSize="18"
                                FontAttributes="Bold"
-                               TextColor="Black"
+                               TextColor="#ffebd7"
                                HorizontalOptions="Center"/>
                     </StackLayout>
                 </Frame>
@@ -99,7 +101,7 @@
                    HorizontalOptions="Center"/>
             
             <!--The impulse purchases-->
-            <Frame BackgroundColor="#e74c3c" CornerRadius="13" Padding="15">
+            <Frame BackgroundColor="#34495e" CornerRadius="13" Padding="15">
                 <StackLayout Spacing="10">
                     <Label Text="💸 Impulse Purchases"
                            FontSize="18"
@@ -117,11 +119,11 @@
                             </CollectionView.ItemsLayout>
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
-                                    <Frame BackgroundColor="#c0392b"
+                                    <Frame BackgroundColor="#2c3e50"
                                            CornerRadius="8"
                                            Padding="12"
                                            IsVisible="{Binding isSelected, Converter={StaticResource InverseBoolConverter}}"
-                                           Margin="5">
+                                           Margin="2">
                                         <StackLayout Spacing="8">
                                             <!---So only show  the item has not been spend on yet , but after hide it:-->
                                             <StackLayout.IsVisible>

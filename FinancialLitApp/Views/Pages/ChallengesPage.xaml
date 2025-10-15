@@ -62,7 +62,7 @@
                                Text="💵 Tax Returns Challenge"
                                BackgroundColor="Transparent"
                                TextColor="#FFEBD7"
-                               FontSize="18"
+                               FontSize="Medium"
                                HeightRequest="65"
                                Clicked="OnFileTaxReturnsChallengeClicked" />
                 </Frame>
