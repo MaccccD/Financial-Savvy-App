@@ -112,10 +112,10 @@ namespace FinancialLitApp.ViewModels
             AvailableExpenses = new ObservableCollection<BudgetingItem>
             {
                // the INVESTEMENTS :
-               new BudgetingItem {Id = 14, Name = "Online Course", Price = 120, category = itemCategory.Investment},
-               new BudgetingItem {Id = 15, Name = "Books", Price = 90, category = itemCategory.Investment},
-               new BudgetingItem {Id = 16, Name = "Gym Membership", Price = 80, category = itemCategory.Investment},
-               new BudgetingItem {Id = 17, Name = "Skills Worships", Price = 110, category = itemCategory.Investment},
+               new BudgetingItem {Id = 1, Name = "Online Course", Price = 120, category = itemCategory.Investment},
+               new BudgetingItem {Id = 2, Name = "Books", Price = 90, category = itemCategory.Investment},
+               new BudgetingItem {Id = 3, Name = "Gym Membership", Price = 80, category = itemCategory.Investment},
+               new BudgetingItem {Id = 4, Name = "Skills Worships", Price = 110, category = itemCategory.Investment},
             };
 
             SelectedExpenses = new ObservableCollection<BudgetingItem>(); // so each time an available  item is slected, it gets added to the selected expense collection.
