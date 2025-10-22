@@ -21,7 +21,7 @@
 				   HorizontalOptions="Center"
 				   Margin="10,10,10,10"/>
 			
-			<!---Challenge Crd Containers-->
+			<!---Challenge Card Containers-->
 
 			<StackLayout Spacing="15">
 				<!--Savings challenge Containers-->

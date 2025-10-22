@@ -58,15 +58,15 @@
                        CornerRadius="20"
                        Padding="0"
                        HasShadow="True">
-                    <Button x:Name="FinancialPortfolio"
-                            Text="Financial portfolio Lesson"
+                    <Button x:Name="FilingTaxReturns"
+                            Text="Filing Tax Returns Lesson"
                             BackgroundColor="#103d81"
                             TextColor="#FFEBD7"
                             FontSize="18"
                             FontAttributes="Bold"
                             HeightRequest="60"
                             WidthRequest="250"
-                            Clicked="OnFinancialPortfolioClicked"/>
+                            Clicked="OnFilingTaxReturnsClicked"/>
 
                 </Frame>
 

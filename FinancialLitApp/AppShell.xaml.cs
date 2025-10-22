@@ -28,8 +28,8 @@ public partial class AppShell : Shell
         Routing.RegisterRoute("budgeting", typeof(Budgeting)); //the route to the budgeting challenge
         Routing.RegisterRoute("investment", typeof(Investment)); //the route to the investment challenge[might change this later tbh)
         Routing.RegisterRoute("savingslesson", typeof(SavingsLesson)); // the route to the savings lesson
-        Routing.RegisterRoute("budgetinglesson", typeof(BudgetingLesson)); //the route to the bidgeting lesson
-        Routing.RegisterRoute("financialportfolio", typeof(FinancialPortfolio)); //the route to the financial portfolio section lesson
+        Routing.RegisterRoute("budgetinglesson", typeof(BudgetingLesson)); //the route to the budgeting lesson
+        Routing.RegisterRoute("filingtaxreturns", typeof(FinancialPortfolio)); //the route to the financial portfolio section lesson
         Routing.RegisterRoute("forgotpassword", typeof(ForgotPasswordPage));
 		Routing.RegisterRoute("lessondetailpage", typeof(LessonDetailPage));
         Routing.RegisterRoute("budgetingchallenge", typeof(Budgeting));
@@ -134,7 +134,7 @@ public partial class AppShell : Shell
         while (Shell.Current == null && attempts < 20) // Increased attempts
         {
             await Task.Delay(50); //  the shorter  the delay, the more attempts
-            attempts++; //increment the numbe rof attempts to get the shell content to initilaize as we add a delayer to get it to load or initialize properly
+            attempts++; //increment the number of attempts to get the shell content to initialize as we add a delayer to get it to load or initialize properly
         }
 
         if (Shell.Current != null)
@@ -143,7 +143,7 @@ public partial class AppShell : Shell
         }
         else
         {
-            // Fallback: try using this instance directly as aopposed to waiting for sehll to take you to the actual page
+            // Fallback: try using this instance directly as opposed to waiting for shell to take you to the actual page
             await this.GoToAsync(route);
         }
     }
@@ -158,16 +158,16 @@ public partial class AppShell : Shell
         await Shell.Current.GoToAsync("//home");
     }
 	
-	//this method below is a nvaigation helper method that checks if the page click has a route as well as paramaters and makes navigatiuon easier
+	//this method below is a navigation helper method that checks if the page click has a route as well as parameters and makes navigation easier
     public async Task NavigateToPage(string route, IDictionary<string, object> parameters = null)
     {
         if (parameters != null)
         {
-            await Shell.Current.GoToAsync(route, parameters); //navogates to the specifc page based on the parameters passin 
+            await Shell.Current.GoToAsync(route, parameters); //navigates to the specific page based on the parameters passing 
         }
         else
         {
-            await Shell.Current.GoToAsync(route); //still takes you to the pasoecifc page even withut parameters.
+            await Shell.Current.GoToAsync(route); //still takes you to the specific page even without parameters.
 
         }
     }

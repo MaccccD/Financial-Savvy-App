@@ -25,9 +25,9 @@ namespace FinancialLitApp.Views.Pages
             await NavigateToBudgetingLesson();
         }
 
-        private async void OnFinancialPortfolioClicked(object sender, EventArgs e)
+        private async void OnFilingTaxReturnsClicked(object sender, EventArgs e)
         {
-            await NavigateToFinancialPortfolio();
+            await NavigateToFilingTaxReturns();
         }
 
         private async Task NavigateToSavingsLesson()
@@ -62,19 +62,19 @@ namespace FinancialLitApp.Views.Pages
             }
             catch(Exception ex)
             {
-                await DisplayAlert("Navigation Error", $"Could not navigate to the Budgdeting lesson: {ex.Message}", "Alrightyyy");
+                await DisplayAlert("Navigation Error", $"Could not navigate to the budgeting lesson: {ex.Message}", "Alrightyyy");
             }
         }
 
-        private async Task NavigateToFinancialPortfolio()
+        private async Task NavigateToFilingTaxReturns()
         {
             try
             {
-                await WaitForShellAndNavigate("financialportfolio");
+                await WaitForShellAndNavigate("filingtaxreturns");
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Navigation Error", $"Could not navigate to the Financial Portfolio Section: {ex.Message}", "Okayy");
+                await DisplayAlert("Navigation Error", $"Could not navigate to the Filing Tax returns Section: {ex.Message}", "Okayy");
             }
         }
 
@@ -87,13 +87,13 @@ namespace FinancialLitApp.Views.Pages
                 Console.WriteLine($"🔍 Waiting for Shell... Attempt {attempts + 1}");
                 await Task.Delay(50); //  the shorter  the delay, the more attempts
                 
-                attempts++; //increment the number of attempts to get the shell content to initilaize as we add a delayer to get it to load or initialize properly
+                attempts++; //increment the number of attempts to get the shell content to initialize as we add a delayer to get it to load or initialize properly
             }
 
             if (Shell.Current != null)
             {
                 Console.WriteLine($"✅ Shell is ready, navigating to: {route}");
-                await Shell.Current.GoToAsync(route);//so go where the page that needs to be lpaded or navigated to is 
+                await Shell.Current.GoToAsync(route);//so go where the page that needs to be loaded or navigated to is 
                 Console.WriteLine("ayyy, shell is ready");
             }
             else
