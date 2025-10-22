@@ -11,7 +11,7 @@ namespace FinancialLitApp.Views.Pages.Lessons
         public FinancialPortfolio() 
         {
             InitializeComponent();
-            Console.WriteLine("initialize successful, yay!");
+            Console.WriteLine("Initialize successful, yay!");
         }
     }
 }
