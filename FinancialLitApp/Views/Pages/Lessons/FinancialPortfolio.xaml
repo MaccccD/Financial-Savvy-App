@@ -6,7 +6,7 @@
              BackgroundColor="#0D1738">
 
     <StackLayout>
-        <Label Text="Portfolio build up  deets here..."
+        <Label Text="Portfolio build up  deets, coming right up! here..."
                VerticalOptions="CenterAndExpand"
                HorizontalOptions="CenterAndExpand"/> 
     </StackLayout>
