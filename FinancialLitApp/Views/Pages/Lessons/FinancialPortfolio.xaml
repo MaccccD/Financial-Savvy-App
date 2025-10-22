@@ -2,9 +2,9 @@
 <ContentPage x:Class="FinancialLitApp.Views.Pages.Lessons.FinancialPortfolio"
              xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             Title="Filing tax returns Section"
-              BackgroundColor="#0D1738"
-             >
+             Title="Filing Tax Returns Section"
+             BackgroundColor="#0D1738">
+    
     <StackLayout>
         <Label Text="Portfolio buld up  Deets here..."
                VerticalOptions="CenterAndExpand"
