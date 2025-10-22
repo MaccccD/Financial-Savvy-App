@@ -194,7 +194,15 @@
 						   HorizontalOptions="Center"
 						   LineBreakMode="WordWrap"/>
 
-					<!--- The challenge btn to navigate user to the actual gameplay challenge:-->
+                    <Label Text="This financial information is grrounded  within Nicky Lalmuanpuia's research paper – A Study on Student Budgeting and Spending 
+                                Behaviour among the Collenge Students"
+                           FontSize="25"
+                           FontAttributes="Bold"
+                           TextColor="#FFEBD7"
+                           LineBreakMode="WordWrap"
+                           HorizontalOptions="Center"/>
+
+                    <!--- The challenge btn to navigate user to the actual gameplay challenge:-->
 					<Button Text="🚀 Try this Budgeting Challenge!"
 							BackgroundColor="#2503FD"
 							TextColor="#ffebd7"
