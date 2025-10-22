@@ -333,7 +333,7 @@
                         HorizontalOptions="FillAndExpand"/>
             </StackLayout>
             
-            <!--- the results layout display-->
+            <!--- The results layout display-->
             <Frame BackgroundColor="#2c3e50"
                    CornerRadius="12"
                    IsVisible="{Binding ShowResults}"
