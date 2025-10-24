@@ -87,7 +87,7 @@
                               </StackLayout>
                         </Frame>
 
-                        <Frame BackgroundColor="#103d81"CornerRadius="8" Padding="12" HorizontalOptions="FillAndExpand">
+                        <Frame BackgroundColor="#103d81" CornerRadius="8" Padding="12" HorizontalOptions="FillAndExpand">
                             <StackLayout Spacing="5">
                                 <Label Text="The document/form that is then submitted to SARS in South Africa is called an Income Tax Return 12(ITR12)."
                                        TextColor="LimeGreen"
@@ -97,13 +97,23 @@
                                        LineBreakMode="WordWrap"/>
                             </StackLayout>
                         </Frame>
+         
+                        <Frame BackgroundColor="#103d81" CornerRadius="8" Padding="12" HorizontalOptions="FillAndExpand">
+                            <StackLayout Spacing="5">
+                                <Label Text="The ITR12 form can found on the SARS eFiling System and it is a form that SARS requires fo all employed individuals to complete and submit to SARS once every year."
+                                       TextColor="#ffebd7"
+                                       FontSize="18"
+                                       HorizontalOptions="CenterAndExpand"
+                                       LineBreakMode="WordWrap"/>
+                            </StackLayout>
+                        </Frame>
 
-                    
+
                     </StackLayout>
                 </StackLayout>
             </Frame>
 
-            <!-- The three drivers of FWB:-->
+            <!-- The steps to take when completing an ITR12 form in order to file the tax return :-->
 
             <Frame BackgroundColor="#16213e" CornerRadius="12" Padding="18">
                 <StackLayout Padding="15" Spacing="20">
