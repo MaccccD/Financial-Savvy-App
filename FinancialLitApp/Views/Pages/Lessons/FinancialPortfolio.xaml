@@ -60,22 +60,16 @@
             <!---Understanding what tax returns are and why they are important to understand.:-->
             <Frame BackgroundColor="#16213e" CornerRadius="12" Padding="18">
                 <StackLayout Spacing="15">
-                    <Label Text=" 🍃 What is Financial Wellbeing ?"
+                    <Label Text=" 🍃 What are Tax Returns ?"
                          FontSize="18"
                          FontAttributes="Bold"
                          TextColor="#ffebd7"
                          LineBreakMode="WordWrap"/>
-                    <!--- explaining the two dimensions of if it :-->
+                    <!--- explaining the meaning of it :-->
                     <StackLayout Orientation="Horizontal" Spacing="10">
                         <Frame BackgroundColor="#103d81" CornerRadius="8" Padding="12" HorizontalOptions="FillAndExpand">
                             <StackLayout>
-                                <Label Text="📊 Objective"
-                                        FontSize="15"
-                                        FontAttributes="Bold"
-                                        TextColor="#ffebd7"
-                                        HorizontalOptions="Center"
-                                        LineBreakMode="WordWrap"/>
-                                <Label Text="The actual numbers: your income, savings, debts."
+                                <Label Text="Tax Returns are official documents/forms that you submitted to the government (SARS in South Africa) to report your income, expenses and other financial information you have."
                                      FontSize="12"
                                      TextColor="#ffebd7"
                                      HorizontalOptions="Center"
@@ -83,20 +77,28 @@
                             </StackLayout>
                         </Frame>
 
-                        <Frame BackgroundColor="#103d81" CornerRadius="8" Padding="14" HorizontalOptions="FillAndExpand">
+                        <Frame BackgroundColor="#103d81" CornerRadius="8" Padding="12" HorizontalOptions="FillAndExpand">
                             <StackLayout>
-                                <Label Text="🥹 Subjective"
-                                     FontSize="15"
-                                     FontAttributes="Bold"
-                                     TextColor="#ffebd7"
-                                     HorizontalOptions="Center"/>
-                                <Label Text="How you FEEL about your money situation."
-                                     FontSize="12"
-                                     TextColor="#ffebd7"
-                                     HorizontalOptions="Center"
-                                     LineBreakMode="WordWrap"/>
+                                <Label Text="They are important for every employed citizen in SA to pay because they act as a way for all citizens to collectively fund the society we all live in. This includes funding public services , infrastructure, future safety and security as well as redistribution."
+                                   FontSize="16"
+                                   TextColor="#ffebd7"
+                                   HorizontalOptions="CenterAndExpand"
+                                   LineBreakMode="WordWrap"/>
+                              </StackLayout>
+                        </Frame>
+
+                        <Frame BackgroundColor="#103d81"CornerRadius="8" Padding="12" HorizontalOptions="FillAndExpand">
+                            <StackLayout Spacing="5">
+                                <Label Text="The document/form that is then submitted to SARS in South Africa is called an Income Tax Return 12(ITR12)."
+                                       TextColor="LimeGreen"
+                                       TextDecorations="Underline"
+                                       FontSize="18"
+                                       HorizontalOptions="CenterAndExpand"
+                                       LineBreakMode="WordWrap"/>
                             </StackLayout>
                         </Frame>
+
+                    
                     </StackLayout>
                 </StackLayout>
             </Frame>
