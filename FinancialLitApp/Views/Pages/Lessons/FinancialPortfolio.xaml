@@ -5,9 +5,328 @@
              Title="Filing Tax Returns Section"
              BackgroundColor="#0D1738">
 
-    <StackLayout>
-        <Label Text="Portfolio build up  deets, coming right up! here..."
-               VerticalOptions="CenterAndExpand"
-               HorizontalOptions="CenterAndExpand"/> 
-    </StackLayout>
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20">
+
+            <!---The header section of the lesson content-->
+            <Frame BackgroundColor="#16213e" CornerRadius="15" Padding="20">
+                <StackLayout Spacing="10">
+                    <Label Text="Let's get you tax return savvy!"
+                         FontSize="24"
+                         FontAttributes="Bold"
+                         TextColor="#00d4aa"
+                         HorizontalOptions="Center"/>
+                    <Label Text="Discover the importance of filing your taxes and the financial value it has !"
+                         FontSize="16"
+                         TextColor="#ffebd7"
+                         HorizontalOptions="Center"
+                         LineBreakMode= "WordWrap"/>
+                </StackLayout>
+            </Frame>
+            <!---the key insights section where user actually receive the understanding":-->
+
+            <Frame BackgroundColor="#16213e" CornerRadius="15" Padding="18">
+                <StackLayout Spacing="12">
+                    <Label Text=" 🧠 Mind-Blowing Fact:"
+                     FontSize="18"
+                     FontAttributes="Bold"
+                     TextColor="LimeGreen"/>
+                    <Label Text="Most young people have NO IDEA how to file tax returns untill they are forced to!"
+                     FontSize="15"
+                     FontAttributes="Italic"
+                     LineBreakMode="WordWrap"
+                     TextColor="#ffebd7"/>
+                    <Frame BackgroundColor="#103d81" CornerRadius="12" Padding="15">
+                        <Label Text="Infact, filing tax returns is one of the most intimidating financial tasks for Gen Z."
+                             FontSize="14"
+                             FontAttributes="Italic"
+                             TextColor="#00d4aa"
+                             HorizontalOptions="Center"
+                             LineBreakMode="WordWrap"/>
+                    </Frame>
+
+                    <Frame BackgroundColor="#103D81" CornerRadius="12" Padding="15">
+                        <Label Text="So how can we bridge the gap between this intimidating fear and such financial tasks?"
+                               FontSize="15"
+                               FontAttributes="Bold"
+                               TextColor="Orange"
+                               HorizontalOptions="CenterAndExpand"
+                               LineBreakMode="WordWrap"/>
+                    </Frame>
+                </StackLayout>
+            </Frame>
+
+            <!---Understanding what tax returns are and why they are important to understand.:-->
+            <Frame BackgroundColor="#16213e" CornerRadius="12" Padding="18">
+                <StackLayout Spacing="15">
+                    <Label Text=" 🍃 What is Financial Wellbeing ?"
+                         FontSize="18"
+                         FontAttributes="Bold"
+                         TextColor="#ffebd7"
+                         LineBreakMode="WordWrap"/>
+                    <!--- explaining the two dimensions of if it :-->
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <Frame BackgroundColor="#103d81" CornerRadius="8" Padding="12" HorizontalOptions="FillAndExpand">
+                            <StackLayout>
+                                <Label Text="📊 Objective"
+                                        FontSize="15"
+                                        FontAttributes="Bold"
+                                        TextColor="#ffebd7"
+                                        HorizontalOptions="Center"
+                                        LineBreakMode="WordWrap"/>
+                                <Label Text="The actual numbers: your income, savings, debts."
+                                     FontSize="12"
+                                     TextColor="#ffebd7"
+                                     HorizontalOptions="Center"
+                                     LineBreakMode="WordWrap"/>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame BackgroundColor="#103d81" CornerRadius="8" Padding="14" HorizontalOptions="FillAndExpand">
+                            <StackLayout>
+                                <Label Text="🥹 Subjective"
+                                     FontSize="15"
+                                     FontAttributes="Bold"
+                                     TextColor="#ffebd7"
+                                     HorizontalOptions="Center"/>
+                                <Label Text="How you FEEL about your money situation."
+                                     FontSize="12"
+                                     TextColor="#ffebd7"
+                                     HorizontalOptions="Center"
+                                     LineBreakMode="WordWrap"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+            <!-- The three drivers of FWB:-->
+
+            <Frame BackgroundColor="#16213e" CornerRadius="12" Padding="18">
+                <StackLayout Padding="15" Spacing="20">
+                    <Label Text="🚀 The 3 Financial Wellbeing Superpowers:"
+                         FontSize="18"
+                         FontAttributes="Bold"
+                         TextColor="#ffebd7"
+                         HorizontalOptions="Center"/>
+
+
+                    <!--The first driver:-->
+                    <Frame BackgroundColor="#103d81" CornerRadius="8" Padding="15">
+                        <StackLayout Padding="12">
+                            <StackLayout Orientation="Horizontal" Spacing="80">
+                                <Label Text="1. Active Saving."
+                                     FontSize="20"
+                                     FontAttributes="Bold"
+                                     TextColor="LimeGreen"
+                                     VerticalOptions="Center"/>
+                            </StackLayout>
+                            <Label Text="Regularly putting money aside, even in small amounts. Every time you save, you're building both your bank account AND your financial knowledge!"
+                                 FontSize="14"
+                                 Margin="10"
+                                 TextColor="#ffebd7"
+                                 LineBreakMode="WordWrap"/>
+                        </StackLayout>
+                    </Frame>
+                    <!--The second driver":-->
+                    <Frame BackgroundColor="#103d81" CornerRadius="8" Padding="15">
+                        <StackLayout Padding="12">
+                            <StackLayout Orientation="Horizontal" Spacing="10">
+                                <Label Text="2. Smart Spending Choices."
+                                     FontSize="20"
+                                     FontAttributes="Bold"
+                                     TextColor="LimeGreen"
+                                     VerticalOptions="Center"/>
+                            </StackLayout>
+                            <Label Text="Taking the time to think before you buy and choosing between needs vs wants. This isn't about being boring –– it's about being intentional with your money!"
+                                 FontSize="14"
+                                 Margin="10"
+                                 TextColor="#ffebd7"
+                                 LineBreakMode="WordWrap"/>
+                        </StackLayout>
+                    </Frame>
+                    <!---The third driver :-->
+                    <Frame BackgroundColor="#103d81" CornerRadius="8" Padding="15">
+                        <StackLayout Padding="12">
+                            <StackLayout Orientation="Horizontal" Spacing="10">
+                                <Label Text="3. Avoid Daily Debt."
+                                     FontSize="20"
+                                     FontAttributes="Bold"
+                                     TextColor="LimeGreen"
+                                     VerticalOptions="Center"/>
+                            </StackLayout>
+                            <Label Text="This means not borrowing money for everyday things like food, transport, or entertainment. Using your own money gives you more real control over it!"
+                                 FontSize="14"
+                                 Margin="10"
+                                 TextColor="#ffebd7"
+                                 LineBreakMode="WordWrap"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <!---The connection between savings and FWB :-->
+                    <Frame BackgroundColor="#103d81" CornerRadius="12" Padding="18">
+                        <StackLayout Spacing="15">
+                            <Label Text="🔁 The Savings Learning Loop."
+                                 FontSize="18"
+                                 FontAttributes="Bold"
+                                 TextColor="#ffebd7"
+                                 HorizontalOptions="Center"/>
+
+                            <Label Text="Here's how saving actually teaches you about money:"
+                                 FontSize="15"
+                                 TextColor="#ffebd7"
+                                 HorizontalOptions="Center"/>
+
+                            <!--- the learning  pricess-->
+                            <StackLayout Spacing="12">
+                                <Frame BackgroundColor="DarkGreen" CornerRadius="8" Padding="12">
+                                    <Label Text="💡 Step 1: You start saving (R10)"
+                                         FontSize="14"
+                                         FontAttributes="Bold"
+                                         TextColor="#ffebd7"/>
+                                </Frame>
+                                <Label Text="⬇️" FontSize="24" TextColor="#ffebd7" HorizontalOptions="Center"/>
+
+                                <Frame BackgroundColor="DarkGreen" CornerRadius="8" Padding="12">
+                                    <Label Text="💡 Step 2: You start noticing your spending patterns."
+                                         FontSize="14"
+                                         FontAttributes="Bold"
+                                         TextColor="#ffebd7"/>
+                                </Frame>
+                                <Label Text="⬇️" FontSize="24" TextColor="#ffebd7" HorizontalOptions="Center"/>
+
+                                <Frame BackgroundColor="DarkGreen" CornerRadius="8" Padding="12">
+                                    <Label Text="💡 Step 3: You become more aware of your financial decisions"
+                                         FontSize="14"
+                                         FontAttributes="Bold"
+                                         TextColor="#ffebd7"/>
+                                </Frame>
+                                <Label Text="⬇️" FontSize="24" TextColor="#ffebd7" HorizontalOptions="Center"/>
+                                <Frame BackgroundColor="DarkGreen" CornerRadius="8" Padding="12">
+                                    <Label Text="🎉 Result: You're now financially smarter!"
+                                         FontSize="16"
+                                         FontAttributes="Bold"
+                                         TextColor="#ffebd7"/>
+                                </Frame>
+                            </StackLayout>
+
+                        </StackLayout>
+                    </Frame>
+
+                    <!-- A real life example:-->
+                    <Frame BackgroundColor="#103d81" CornerRadius="12" Padding="18">
+                        <StackLayout Spacing="12">
+                            <Label Text="📱 Real Life Example: The Coffee Challenge"
+                                 FontSize="18"
+                                 FontAttributes="Bold"
+                                 TextColor="#ffebd7"/>
+
+                            <Label Text="Imagine youy decided to save R100 this month. You realize you spend R15 on coffee daily (R420/ month). By choosing to make coffee at home 3 days a week instead of buying it, you cut your spending to R240/month – that's R180 saved!"
+                                 FontSize="14"
+                                 TextColor="#ffebd7"
+                                 LineBreakMode="WordWrap"/>
+
+                            <Frame BackgroundColor="#103d85" CornerRadius="8" Padding="12">
+                                <Label Text="What you learned: Small daily choices = big monthly impact. This awareness is financial literacy in action. Literally!"
+                                     FontSize="14"
+                                     FontAttributes="Italic"
+                                     TextColor="#ffebd7"
+                                     LineBreakMode="WordWrap"/>
+                            </Frame>
+                        </StackLayout>
+                    </Frame>
+
+                    <!---Connecting the example to the game challenge:-->
+                    <Frame BackgroundColor="#103d81" CornerRadius="12" Padding="18">
+                        <StackLayout Spacing="12">
+                            <Label Text="🎮 Ready to Experience This?"
+                                 FontSize="18"
+                                 FontAttributes="Bold"
+                                 TextColor="#ffebd7"
+                                 HorizontalOptions="Center"/>
+
+                            <Label Text="The Savings Challenge puts this theory into practice. You'll make real spending decisions and see instantly how they affect your ability to save."
+                                 FontSize="15"
+                                 TextColor="#ffebd7"
+                                 LineBreakMode="WordWrap"
+                                 HorizontalOptions="Center"/>
+
+                            <Label Text="Remember: Every choice you make in the challenge is building your financial skills, not just testing them!.It's not a test but a pratical way to learn a life-long skill!"
+                                 FontSize="15"
+                                 FontAttributes="Italic"
+                                 TextColor="#ecf0f1"
+                                 HorizontalOptions="Center"
+                                 LineBreakMode="WordWrap"/>
+
+                            <!--- The challenge btn to navigate user to the actual gameplay challenge:-->
+                            <Button Text="🚀 Try this Savings Challenge!"
+                                  BackgroundColor="#2503FD"
+                                  TextColor="#ffebd7"
+                                  Margin="8"
+                                  CornerRadius="10"
+                                  HeightRequest="60"
+                                  WidthRequest="270"
+                                  FontSize="15"
+                                  FontAttributes="Bold"
+                                  Clicked="OnChallengeClicked"/>
+
+                        </StackLayout>
+                    </Frame>
+
+                    <!--- Some Key Takeaways Recap-->
+
+                    <Frame BackgroundColor="#103d81" CornerRadius="12" Padding="18">
+                        <StackLayout Spacing="12">
+                            <Label Text="🎯 Key Takeaways:"
+                                 FontSize="16"
+                                 FontAttributes="Bold"
+                                 TextColor="#00d4aa"/>
+
+                            <StackLayout Spacing="8">
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Label Text="✅" FontSize="16" TextColor="#00d4aa"/>
+                                    <Label Text="Saving money teaches you about money."
+                                         FontSize="14"
+                                         TextColor="#ffebd7"
+                                         HorizontalOptions="FillAndExpand"
+                                         LineBreakMode="WordWrap"/>
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Label Text="✅" FontSize="15" TextColor="#00d4aa"/>
+                                    <Label Text="Financial wellbeing has objective AND subjective parts."
+                                         FontSize="14"
+                                         TextColor="#ffedb7"
+                                         HorizontalOptions="FillAndExpand"
+                                         LineBreakMode="WordWrap"/>
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Label Text="✅" FontSize="15" TextColor="#00d4aa"/>
+                                    <Label Text="Small, consistent actions build big financial confidence"
+                                         FontSize="14"
+                                         TextColor="#ffebd7"
+                                         HorizontalOptions="FillAndExpand"
+                                         LineBreakMode="WordWrap"/>
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Label Text="✅" FontSize="15" TextColor="#00d4aa"/>
+                                    <Label Text="Practice makes you financially smarter, not perfect!"
+                                         FontSize="15"
+                                         TextColor="#ffebd7"
+                                         HorizontalOptions="FillAndExpand"
+                                         LineBreakMode="WordWrap"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                </StackLayout>
+
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+
 </ContentPage>
