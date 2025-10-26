@@ -10,6 +10,7 @@
         <StackLayout Padding="20" Spacing="20">
 
             <!---The header section of the lesson content-->
+            
             <Frame BackgroundColor="#16213e" CornerRadius="15" Padding="20">
                 <StackLayout Spacing="10">
                     <Label Text="Let's get you tax return savvy!"
@@ -38,7 +39,7 @@
                      LineBreakMode="WordWrap"
                      TextColor="#ffebd7"/>
                     <Frame BackgroundColor="#103d81" CornerRadius="12" Padding="15">
-                        <Label Text="Infact, filing tax returns is one of the most intimidating financial tasks for Gen Z."
+                       <Label Text="Infact, filing tax returns is one of the most intimidating financial tasks for Gen Z."
                              FontSize="14"
                              FontAttributes="Italic"
                              TextColor="#00d4aa"
@@ -222,7 +223,6 @@
                                          TextColor="#ffebd7"/>
                                 </Frame>
                             </StackLayout>
-
                         </StackLayout>
                     </Frame>
 
