@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "XiVDNm1nU5o=",
+  "dgSpecHash": "CIveE2IsLoU=",
   "success": true,
   "projectFilePath": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\FinancialLitApp.csproj",
   "expectedPackageFiles": [
@@ -30,6 +30,8 @@
     "C:\\Users\\Dumis\\.nuget\\packages\\microsoft.web.webview2\\1.0.2903.40\\microsoft.web.webview2.1.0.2903.40.nupkg.sha512",
     "C:\\Users\\Dumis\\.nuget\\packages\\microsoft.windows.sdk.buildtools\\10.0.22621.756\\microsoft.windows.sdk.buildtools.10.0.22621.756.nupkg.sha512",
     "C:\\Users\\Dumis\\.nuget\\packages\\microsoft.windowsappsdk\\1.6.250205002\\microsoft.windowsappsdk.1.6.250205002.nupkg.sha512",
+    "C:\\Users\\Dumis\\.nuget\\packages\\plugin.fingerprint\\3.0.0-beta.1\\plugin.fingerprint.3.0.0-beta.1.nupkg.sha512",
+    "C:\\Users\\Dumis\\.nuget\\packages\\system.runtime.interopservices.nfloat.internal\\6.0.1\\system.runtime.interopservices.nfloat.internal.6.0.1.nupkg.sha512",
     "C:\\Users\\Dumis\\.nuget\\packages\\xamarin.android.glide\\4.16.0.11\\xamarin.android.glide.4.16.0.11.nupkg.sha512",
     "C:\\Users\\Dumis\\.nuget\\packages\\xamarin.android.glide.annotations\\4.16.0.11\\xamarin.android.glide.annotations.4.16.0.11.nupkg.sha512",
     "C:\\Users\\Dumis\\.nuget\\packages\\xamarin.android.glide.disklrucache\\4.16.0.11\\xamarin.android.glide.disklrucache.4.16.0.11.nupkg.sha512",
@@ -43,6 +45,7 @@
     "C:\\Users\\Dumis\\.nuget\\packages\\xamarin.androidx.appcompat.appcompatresources\\1.7.0.5\\xamarin.androidx.appcompat.appcompatresources.1.7.0.5.nupkg.sha512",
     "C:\\Users\\Dumis\\.nuget\\packages\\xamarin.androidx.arch.core.common\\2.2.0.15\\xamarin.androidx.arch.core.common.2.2.0.15.nupkg.sha512",
     "C:\\Users\\Dumis\\.nuget\\packages\\xamarin.androidx.arch.core.runtime\\2.2.0.15\\xamarin.androidx.arch.core.runtime.2.2.0.15.nupkg.sha512",
+    "C:\\Users\\Dumis\\.nuget\\packages\\xamarin.androidx.biometric\\1.1.0.9\\xamarin.androidx.biometric.1.1.0.9.nupkg.sha512",
     "C:\\Users\\Dumis\\.nuget\\packages\\xamarin.androidx.browser\\1.8.0.8\\xamarin.androidx.browser.1.8.0.8.nupkg.sha512",
     "C:\\Users\\Dumis\\.nuget\\packages\\xamarin.androidx.cardview\\1.0.0.33\\xamarin.androidx.cardview.1.0.0.33.nupkg.sha512",
     "C:\\Users\\Dumis\\.nuget\\packages\\xamarin.androidx.collection\\1.4.5.2\\xamarin.androidx.collection.1.4.5.2.nupkg.sha512",
