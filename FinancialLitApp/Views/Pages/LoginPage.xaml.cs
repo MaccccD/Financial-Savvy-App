@@ -1,4 +1,5 @@
 ﻿using FinancialLitApp.Services;
+using FinancialLitApp.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,19 +10,24 @@ namespace FinancialLitApp.Views.Pages
 {
     public partial class LoginPage : ContentPage
     {
+        private LoginViewModel _viewModel;
         //private readonly IAuthenticationService _authService;
         //private IBiometricAuthService _biometricAuthService;
-        //public LoginPage() 
-        //{
-        //    InitializeComponent();
-        //    _authService = new AuthenticationService();
-        //    _biometricAuthService = new BiometricAuthService();
-        //    Console.WriteLine("the login page xaml bindings have initialized");
+        public LoginPage()
+        {
+            InitializeComponent();
+            _viewModel = new LoginViewModel();  
+            BindingContext = _viewModel;
+           
+        }
 
-        //    //setting up return key behavior so the when a person is done filling n one entry, it highlights the next:
-        //    EmailEntry.Completed += (s, e) => PasswordEntry.Focus();
-        //    PasswordEntry.Completed += async (s, e) => await LoginAsync();
-        //}
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+
+            //show biometric UI when page appears:
+            await _viewModel.InitializeAsync();
+        }
 
         //private async void OnLoginClicked (object sender, EventArgs e)
         //{
