@@ -156,7 +156,7 @@ namespace FinancialLitApp.Services
             }
             catch(Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine($"Enrollment cleared successfully. :{ex.Message}");
+                System.Diagnostics.Debug.WriteLine($"Enrollment cleared out  successfully. :{ex.Message}");
             }
         }
 

@@ -10,6 +10,7 @@ using CommunityToolkit.Mvvm.Input;
 using System.Linq.Expressions;
 using System.Diagnostics;
 using FinancialLitApp.Views.Pages.Lessons;
+using FinancialLitApp.Services;
 //using Google.Android.Material.AppBar;
 //using Android.App;
 
@@ -19,9 +20,12 @@ namespace FinancialLitApp;
 public partial class AppShell : Shell
 {
 	public bool _isAuthenticated = false;
+    private IBiometricAuthService _biometricAuth;
 	public AppShell()
 	{
 		InitializeComponent(); //loads the XAML Files
+
+        _biometricAuth = new BiometricAuthService();
 
         //here i'm registering the routes for the pages that are not part of the main tab but are part of the app architecture:
         Routing.RegisterRoute("savings", typeof(Savings)); //currrently testingg. [this works btw]
@@ -35,7 +39,7 @@ public partial class AppShell : Shell
         Routing.RegisterRoute("budgetingchallenge", typeof(Budgeting));
 
 
-
+        
 		//setting up the initial navigation based on the user's authentinication status
 		SetInitialNavigation();
 
@@ -50,27 +54,139 @@ public partial class AppShell : Shell
 
 	//}
 
-	private void SetInitialNavigation()
+	private async void SetInitialNavigation()
 	{
-		if (_isAuthenticated)
-		{
-			ShowMainApp();
-		}
-		else
-		{
-			ShowAuthenticationFlow();
-		}
-	}
+        var isEnrolled = await _biometricAuth.IsUserEnrolled();
+
+        if (isEnrolled)
+        {
+            var username = await _biometricAuth.GetStoredUsername();
+
+            var authenticated = await _biometricAuth.AuthenticateUser($"Heyy, Welcome Back! {username ?? "User"}!");
+
+            if (authenticated)
+            {
+                _isAuthenticated = true;
+                ShowMainApp();
+                return;
+            }
+            else
+            {
+                await DisplayBiometricFailureOptions();
+                //ShowAuthenticationFlow();
+            }
+           
+        }
+
+        //if user is not enrolled nor authenticated , showtyhe normal way to authenticate that i had initially set up:
+        ShowAuthenticationFlow();
+    }
+
+
+    private  async Task DisplayBiometricFailureOptions()
+    {
+        var retry = await DisplayAlert(
+            "Authentication Failed",
+            "Would you like to try again? or Login with your account ?",
+            "Try Again",
+            "Login");
+
+        if (retry)
+        {
+            //do the authentication again:
+            var authenticate = await _biometricAuth.AuthenticateUser();
+
+            if (authenticate)
+            {
+                _isAuthenticated = true;
+                ShowMainApp();
+                
+            }
+            else
+            {
+                _isAuthenticated = false;
+                ShowAuthenticationFlow();
+            }
+        }
+        else
+        {
+            ShowAuthenticationFlow();
+        }
+    }
     private void OnUserLoggedIn(object sender)
     {
+        //this is the login without the enrollment:
         _isAuthenticated = true;
         ShowMainApp();
 
     }
 
-    private void OnUserLoggedOut(object sender)
+    private async void OnUserLoggedInWithId(object sender, string userId)
+    {
+        ///after successful traditional login, offer to set up the biometric access:
+        var isBiometricAvailable = await _biometricAuth.IsBiometricAvailable();
+
+        if (isBiometricAvailable)
+        {
+            var setupBiometric = await DisplayAlert(
+                "Quick Login Set Up",
+                "Would you like to use your fingerprint or face recognition for faster login next time? You won't need to remember your password!",
+                "Yes, Set It Up",
+                "No Thanks");
+
+            if (setupBiometric)
+            {
+                //get username from auth system:
+                var username = userId;
+
+                var enrolled = await _biometricAuth.EnrollUser(userId, username);
+
+                if (enrolled)
+                {
+                    await DisplayAlert(
+                        "Success!",
+                        "Biometric login is now enabled. Next time just can your finger print or face!",
+                        "Got It");
+                }
+                else
+                {
+                    await DisplayAlert(
+                        "Set Up Cancelled",
+                        "You can set up biometric login later in the settings page!",
+                        "Okay!");
+                }
+            }
+        }
+
+        _isAuthenticated = true;
+        ShowMainApp();
+
+    }      
+
+    private async void OnUserLoggedOut(object sender)
     {
         _isAuthenticated = false;
+
+        var isEnrolled = await _biometricAuth.IsUserEnrolled();
+
+        if (isEnrolled)
+        {
+            var removeBiometricData = await DisplayAlert(
+                "Logout",
+                "Do you want to remove biometric login from this device?",
+                "Yes, remove it",
+                "No, keep it!");
+
+            if (removeBiometricData)
+            {
+                 await _biometricAuth.ClearEnrollment();
+                await DisplayAlert(
+                    "Removed!",
+                    "Biometric login has been successfully removed. You'll need to login with your credentials next time.",
+                    "Okay");
+
+            }
+        }
         ShowAuthenticationFlow();
 
         //clear any stored authentication data:
@@ -82,7 +198,7 @@ public partial class AppShell : Shell
 
     private async void ShowMainApp()
 	{
-		//The authentication content becomes disbaled once the user has authenticated successfully.
+		//The authentication content becomes disabled once the user has authenticated successfully.
 		AccountSetUpContent.IsVisible = false;
 		//LoginContent.IsVisible = false;
 
@@ -185,10 +301,42 @@ public partial class AppShell : Shell
 		if (authenticatedRoutes.Any(route => targetRoute.Contains(route)) && !_isAuthenticated) {
 			// so if the user is trying to access content that is supposed to be for users that are authenticated:
 			args.Cancel();
-			Device.BeginInvokeOnMainThread(async () =>
-			{
-				await NavigateToLogin();
-			});
+
+            //checking if the user has biometric enrolled:
+            var isEnrolled = await _biometricAuth.IsUserEnrolled();
+
+            if (isEnrolled)
+            {
+                //try biometric auth:
+                Device.BeginInvokeOnMainThread(async () =>
+                {
+                    var authenticated = await _biometricAuth.AuthenticateUser(
+                        "Authenticate to access this account");
+
+                    if (authenticated)
+                    {
+                        _isAuthenticated = true;
+                        await Shell.Current.GoToAsync(targetRoute);
+                    }
+                    else
+                    {
+                        await DisplayAlert(
+                            "Authentication Required",
+                            "You must authenticate to access this account",
+                            "Okay");
+                        await NavigateToLogin();
+                    }
+                });
+
+            }
+            else
+            {
+                Device.BeginInvokeOnMainThread(async () =>
+                {
+                    await NavigateToLogin();
+                });
+            }
+			
 		}
     }
 
@@ -198,6 +346,7 @@ public partial class AppShell : Shell
     {
         base.OnDisappearing();
 		MessagingCenter.Unsubscribe<object>(this, "UserLoggedIn");
+        MessagingCenter.Unsubscribe<object>(this, "UserLoggedInWithId");
 		MessagingCenter.Unsubscribe<object>(this, "UserLoggedOut");
 
     }
