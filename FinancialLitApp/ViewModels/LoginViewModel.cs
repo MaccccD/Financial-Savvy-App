@@ -12,7 +12,7 @@ namespace FinancialLitApp.ViewModels
 {
     public partial class LoginViewModel : ObservableObject
     {
-        private readonly IBiometricAuthService _biomtricAuth;
+        private readonly IBiometricAuthService _biometricAuth;
 
         [ObservableProperty]
         private string username;
@@ -34,28 +34,29 @@ namespace FinancialLitApp.ViewModels
 
         public LoginViewModel()
         {
-            _biomtricAuth = new BiometricAuthService();
+            _biometricAuth = new BiometricAuthService();
         }
 
         public async Task InitializeAsync()
         {
-            var isEnrolled = await _biomtricAuth.IsUserEnrolled();
-            var isAvailable = await _biomtricAuth.IsBiometricAvailable();
+           var isEnrolled = await _biometricAuth.IsUserEnrolled();
+           // var authenticateUser = await _biomtricAuth.AuthenticateUser("Login to Financial Savvy App");
+            var isAvailable = await _biometricAuth.IsBiometricAvailable();
 
             if (isEnrolled && isAvailable)
             {
                 ShowBiometricBtn = true;
 
-                var username = await _biomtricAuth.GetStoredUsername();
+                var username = await _biometricAuth.GetStoredUsername();
                 BiometricBtnTxt = $"Login as:{username ?? "User"}";
 
-                ShowTraditionalLogin = true;
+                ShowTraditionalLogin = false;
 
             }
             else
             {
                 ShowBiometricBtn = true;
-                ShowTraditionalLogin = true;
+                ShowTraditionalLogin = false;
             }
         }
 
@@ -69,13 +70,13 @@ namespace FinancialLitApp.ViewModels
                 IsBusy = true;
                 ShowBiometricBtn = true;
 
-                var authenticated = await _biomtricAuth.AuthenticateUser(
+                var authenticated = await _biometricAuth.AuthenticateUser(
                     "Login to Financial Savvy App");
                
 
-                if (authenticated)
+                if (!authenticated)
                 {
-                    var userId = await _biomtricAuth.GetStoredUserId();
+                    var userId = await _biometricAuth.GetStoredUserId();
                     //tell shell that user has authenticated:
                     MessagingCenter.Send<object>(this, "UserLoggedIn");
 
