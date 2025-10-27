@@ -10,13 +10,15 @@ namespace FinancialLitApp.Views.Pages
     public partial class LoginPage : ContentPage
     {
         private readonly IAuthenticationService _authService;
+        private IBiometricAuthService _biometricAuthService;
         public LoginPage() 
         {
             InitializeComponent();
             _authService = new AuthenticationService();
+            _biometricAuthService = new BiometricAuthService();
             Console.WriteLine("the login page xaml bindings have initialized");
 
-            //setting up return key behavior so the when a person is done filling n one entry, it highhlightes the next:
+            //setting up return key behavior so the when a person is done filling n one entry, it highlights the next:
             EmailEntry.Completed += (s, e) => PasswordEntry.Focus();
             PasswordEntry.Completed += async (s, e) => await LoginAsync();
         }
@@ -28,7 +30,7 @@ namespace FinancialLitApp.Views.Pages
 
         private async Task LoginAsync()
         {
-            //ensure that any error messages are hiden first
+            //ensure that any error messages are hidden first
             ErrorLabel.IsVisible = false;
 
             //input values as they are typed in:
