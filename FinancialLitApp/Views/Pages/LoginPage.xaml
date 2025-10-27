@@ -100,7 +100,7 @@
 
                     <!---Login Btn Design-->
                     <Button x:Name="LogInBtn"
-						Text="Set Up Biometric Access"
+						Text="Log In"
                         Command="{Binding BiometricLoginCommand}"
 						BackgroundColor ="#103D81"
 						TextColor="Antiquewhite"

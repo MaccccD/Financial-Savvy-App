@@ -199,7 +199,7 @@ public partial class AppShell : Shell
     private async void ShowMainApp()
 	{
 		//The authentication content becomes disabled once the user has authenticated successfully.
-		AccountSetUpContent.IsVisible = false;
+		//AccountSetUpContent.IsVisible = false;
 		//LoginContent.IsVisible = false;
 
 		//show the main app tabs:
@@ -217,12 +217,12 @@ public partial class AppShell : Shell
 		MainTabBar.IsVisible = false;
 
 		//show the authentication content:
-		AccountSetUpContent.IsVisible = true;
+		//AccountSetUpContent.IsVisible = true;
 		LoginContent.IsVisible = true;
 
 		//navigate the user to the login page once they have created an account :
 		//Shell.Current.GoToAsync("//LoginPage");
-		await NavigateToAccountSetUp();
+	//	await NavigateToAccountSetUp();
 	}
 
 
@@ -231,11 +231,11 @@ public partial class AppShell : Shell
     {
         await WaitForShellAndNavigate("//home");
     }
-    public async Task NavigateToAccountSetUp()
-    {
-        //await Shell.Current.GoToAsync("//accountsetuppage");
-        await WaitForShellAndNavigate("//accountsetuppage");
-    }
+    //public async Task NavigateToAccountSetUp()
+    //{
+    //    //await Shell.Current.GoToAsync("//accountsetuppage");
+    //    await WaitForShellAndNavigate("//accountsetuppage");
+    //}
     private async Task NavigateToLoginAsync()
     {
         await WaitForShellAndNavigate("//login");

@@ -27,6 +27,7 @@ namespace FinancialLitApp.Views.Pages
 
             //show biometric UI when page appears:
             await _viewModel.InitializeAsync();
+           
         }
 
         //private async void OnLoginClicked (object sender, EventArgs e)

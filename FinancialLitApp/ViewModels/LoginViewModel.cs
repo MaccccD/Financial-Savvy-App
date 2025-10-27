@@ -49,12 +49,12 @@ namespace FinancialLitApp.ViewModels
                 var username = await _biomtricAuth.GetStoredUsername();
                 BiometricBtnTxt = $"Login as:{username ?? "User"}";
 
-                ShowTraditionalLogin = false;
+                ShowTraditionalLogin = true;
 
             }
             else
             {
-                ShowBiometricBtn = false;
+                ShowBiometricBtn = true;
                 ShowTraditionalLogin = true;
             }
         }
@@ -67,6 +67,7 @@ namespace FinancialLitApp.ViewModels
             try
             {
                 IsBusy = true;
+                ShowBiometricBtn = true;
 
                 var authenticated = await _biomtricAuth.AuthenticateUser(
                     "Login to Financial Savvy App");
@@ -160,7 +161,7 @@ namespace FinancialLitApp.ViewModels
         [RelayCommand]
         public async Task ForgotPassword()
         {
-            await Shell.Current.GoToAsync("forgotpassword");
+            await Shell.Current.GoToAsync("//forgotpassword");
         }
 
 
