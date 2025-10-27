@@ -26,12 +26,12 @@
 
 
     <!--Authentication Flow: This is the content that wil show before the user has authenticated-->
-    <ShellContent
+  <!-- <ShellContent
        x:Name="AccountSetUpContent"
         Title="Create Account"
         ContentTemplate="{DataTemplate local:Views.Pages.AccountSetUpPage}"
         Route="accountsetuppage"
-        Shell.FlyoutBehavior="Disabled"/>
+        Shell.FlyoutBehavior="Disabled"/> -->
 
     <ShellContent 
         x:Name="LoginContent"

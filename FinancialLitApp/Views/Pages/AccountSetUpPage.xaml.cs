@@ -14,7 +14,7 @@ namespace FinancialLitApp.Views.Pages
         {
             InitializeComponent();
             _authService = new AuthenticationService();
-            Console.WriteLine("XAML Bindings successfuly initilized");
+            Console.WriteLine("XAML Bindings successfully initialized");
             // Setting up return key behaviors , just as in the login page  for smooth form navigation
             FirstNameEntry.Completed += (s, e) => LastNameEntry.Focus();
             LastNameEntry.Completed += (s, e) => EmailEntry.Focus();
