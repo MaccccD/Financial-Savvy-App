@@ -110,7 +110,7 @@ public partial class AppShell : Shell
 	}
 
 
-    //navigation helper methodds:
+    //navigation helper methods:
     private async Task NavigateToHomeAsync()
     {
         await WaitForShellAndNavigate("//home");
@@ -180,7 +180,7 @@ public partial class AppShell : Shell
 
 		//checking if the user is trying to access authenticated pages while they are not logged in:
 		var targetRoute = args.Target.Location.OriginalString;
-		var authenticatedRoutes = new[] { "home", "lessondetail", "challenges", "feedback", "rewards" };
+		var authenticatedRoutes = new[] { "home", "lessondetail", "challenges", "feedback"};
 
 		if (authenticatedRoutes.Any(route => targetRoute.Contains(route)) && !_isAuthenticated) {
 			// so if the user is trying to access content that is supposed to be for users that are authenticated:
@@ -193,7 +193,7 @@ public partial class AppShell : Shell
     }
 
 
-    //cleaming up the subcriptions:
+    //cleaning up the subscriptions:
     protected override void OnDisappearing()
     {
         base.OnDisappearing();
