@@ -7,6 +7,7 @@ using Plugin.Fingerprint;
 using Plugin.Fingerprint.Abstractions;
 using System.Text.Json;
 using System.Reflection.Metadata;
+using System.Security.Cryptography.X509Certificates;
 
 namespace FinancialLitApp.Services
 {
@@ -16,12 +17,12 @@ namespace FinancialLitApp.Services
         Task<bool> IsBiometricAvailable();
         Task<bool> AuthenticateUser(string reason = "Authenticate to continue");
         Task<bool> EnrollUser(string userId, string username);
-        Task<bool> GetStoredUserId();
-        Task<bool> GetStoredUsername();
+        Task<string> GetStoredUserId();
+        Task<string> GetStoredUsername();
         Task<bool> IsUserEnrolled();
         Task ClearEnrollment();
     }
-  public   class BiometricAuthService : IBiometricAuthService
+  public class BiometricAuthService : IBiometricAuthService
     {
         private const string USER_ID_KEY = "biometric_user_id";
         private const string USERNAME_KEY = "biometric_username";
@@ -80,6 +81,84 @@ namespace FinancialLitApp.Services
                 System.Diagnostics.Debug.WriteLine($"Authentication error: {ex.Message}");
                 return false;
             }
+
+           
         }
+        public async Task <bool> EnrollUser(string userId, string username)
+        {
+            try
+            {
+                //start by authenticating the users to ensure it is really them setting the login for their account:
+                var authenticated = await AuthenticateUser("Set up biometric login for your account");
+
+                if (!authenticated)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Enrollment cancelled bc authentication failed");
+                    return false;
+                }
+
+                // in here i will the stores the user details in the secure storage:
+                await SecureStorage.SetAsync(USER_ID_KEY, userId);
+                await SecureStorage.SetAsync(USERNAME_KEY, username);
+                await SecureStorage.SetAsync(ENROLLMENT_DATE_KEY, DateTime.UtcNow.ToString("o"));
+
+                System.Diagnostics.Debug.WriteLine($"Enrollment successful!! {username}");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Enrollment failed@ : {ex.Message}");
+                return false;
+            }
+        }
+
+        public async Task <string> GetStoredUserId()
+        {
+            try
+            {
+                return await SecureStorage.GetAsync(USER_ID_KEY);
+            }
+            catch (Exception ex) 
+            {
+                System.Diagnostics.Debug.WriteLine($"Failed to retrieve user Id:{ex.Message}");
+                return null;
+            }
+        }
+
+        public async Task <string> GetStoredUsername()
+        {
+            try
+            {
+                return await SecureStorage.GetAsync(USERNAME_KEY);    
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Failed to retrieve username: {ex.Message}");
+                return null;
+            }
+        }
+
+        public async Task <bool> IsUserEnrolled()
+        {
+            var userId = await GetStoredUserId();//so if user has been enrolled, i will return the user id key here
+            return !string.IsNullOrEmpty( userId );
+        }
+
+
+        public async Task ClearEnrollment()
+        {
+            try
+            {
+                SecureStorage.Remove(USER_ID_KEY);
+                SecureStorage.Remove(USERNAME_KEY);
+                SecureStorage.Remove(ENROLLMENT_DATE_KEY);
+                System.Diagnostics.Debug.WriteLine("All enrollment has been cleared!");
+            }
+            catch(Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Enrollment cleared successfully. :{ex.Message}");
+            }
+        }
+
     }
 }
