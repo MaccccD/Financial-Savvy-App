@@ -38,7 +38,7 @@ namespace FinancialLitApp.Views.Pages
             var firstName = FirstNameEntry.Text?.Trim();
             var lastName = LastNameEntry.Text?.Trim();
             var email = EmailEntry.Text?.Trim();
-            var IdNumber = IdNumberEntry.Text?.Trim();
+           // var IdNumber = IdNumberEntry.Text?.Trim();
             var password = PasswordEntry.Text;
             var confirmPassword = ConfirmPasswordEntry.Text;
 
@@ -56,12 +56,12 @@ namespace FinancialLitApp.Views.Pages
                 LastNameEntry.Focus();
                 return;
             }
-            if(string.IsNullOrWhiteSpace(IdNumber))
-            {
-                ShowError("Please enter your ID Number");
-                IdNumberEntry.Focus();
-                return;
-            }
+            //if(string.IsNullOrWhiteSpace(IdNumber))
+            //{
+            //    ShowError("Please enter your ID Number");
+            //    IdNumberEntry.Focus();
+            //    return;
+            //}
             if (string.IsNullOrWhiteSpace(email))
             {
                 ShowError("Please enter your email address");
@@ -112,7 +112,7 @@ namespace FinancialLitApp.Views.Pages
 
             try
             {
-                var inputResult = await _authService.RegisterAsync(email, password, firstName, lastName, IdNumber);
+                var inputResult = await _authService.RegisterAsync(email, password, firstName, lastName);
                 if (inputResult.IsSuccess) 
                 {
                     // Show success message
@@ -163,7 +163,7 @@ namespace FinancialLitApp.Views.Pages
             LastNameEntry.IsEnabled = !isLoading;
             EmailEntry.IsEnabled = !isLoading;
             PasswordEntry.IsEnabled = !isLoading;
-            IdNumberEntry.IsEnabled = !isLoading;   
+            //IdNumberEntry.IsEnabled = !isLoading;   
             ConfirmPasswordEntry.IsEnabled = !isLoading;
            
 
@@ -202,7 +202,7 @@ namespace FinancialLitApp.Views.Pages
             LastNameEntry.Text = string.Empty;
             EmailEntry.Text = string.Empty;
             PasswordEntry.Text = string.Empty;
-            IdNumberEntry.Text = string.Empty;
+          //  IdNumberEntry.Text = string.Empty;
             ConfirmPasswordEntry.Text = string.Empty;
             ErrorLabel.IsVisible = false;
             SetLoadingState(false);

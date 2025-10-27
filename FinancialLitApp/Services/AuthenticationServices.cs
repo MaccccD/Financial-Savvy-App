@@ -10,7 +10,7 @@ namespace FinancialLitApp.Services
     public interface IAuthenticationService
     {
         //in here I'm perfoming different task that relate to the account creation set up, login as well as the authication status.
-         Task<AuthResult> RegisterAsync(string email, string password, string firstName, string lastName, string idNumber);
+         Task<AuthResult> RegisterAsync(string email, string password, string firstName, string lastName);
         Task<AuthResult> LoginAsync(string email, string password);
         Task<bool> LogoutAsync();
         Task<bool> IsAuthenticatedAsync();
@@ -24,13 +24,13 @@ namespace FinancialLitApp.Services
         private const string USER_KEY = "user_profile";
 
 
-        public async Task<AuthResult> RegisterAsync(string email, string password, string firstName, string lastName, string idNumber)
+        public async Task<AuthResult> RegisterAsync(string email, string password, string firstName, string lastName)
         { // this method is meant to register or record the user details as they are typed in
             try
             {
                 //checking the create account details as they user types them in
                 if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password) ||
-                    string.IsNullOrWhiteSpace(firstName) || string.IsNullOrWhiteSpace(lastName) || string.IsNullOrWhiteSpace(idNumber))
+                    string.IsNullOrWhiteSpace(firstName) || string.IsNullOrWhiteSpace(lastName))
                 {
                     return new AuthResult
                     {
@@ -78,7 +78,7 @@ namespace FinancialLitApp.Services
                     Email = email,
                     FirstName = firstName,
                     LastName = lastName,
-                    IDNumber = idNumber,
+                    //IDNumber = idNumber,
                     CreatedAt = DateTime.Now
                 };
 

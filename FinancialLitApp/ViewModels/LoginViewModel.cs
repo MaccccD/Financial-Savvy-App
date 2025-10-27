@@ -70,6 +70,7 @@ namespace FinancialLitApp.ViewModels
 
                 var authenticated = await _biomtricAuth.AuthenticateUser(
                     "Login to Financial Savvy App");
+               
 
                 if (authenticated)
                 {
