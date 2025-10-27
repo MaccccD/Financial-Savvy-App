@@ -101,7 +101,7 @@
                     <!---Login Btn Design-->
                     <Button x:Name="LogInBtn"
 						Text="Log In"
-                        Command="{Binding BiometricLoginCommand}"
+                        Command="{Binding LoginCommand}"
 						BackgroundColor ="#103D81"
 						TextColor="Antiquewhite"
 						FontSize="18"

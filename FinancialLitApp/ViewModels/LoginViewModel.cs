@@ -106,53 +106,53 @@ namespace FinancialLitApp.ViewModels
             }
         }
 
-        //[RelayCommand]
-        //public async Task Login()
-        //{
-        //    if (IsBusy) return;
+        [RelayCommand]
+        public async Task Login()
+        {
+            if (IsBusy) return;
 
-        //    if(string.IsNullOrWhiteSpace(Username) || string.IsNullOrWhiteSpace(Password))
-        //    {
-        //        await Shell.Current.DisplayAlert(
-        //            "Validation Error",
-        //            "Please enter both your username and password",
-        //            "Okay");
-        //        return;
-        //    }
+            if (string.IsNullOrWhiteSpace(Username) || string.IsNullOrWhiteSpace(Password))
+            {
+                await Shell.Current.DisplayAlert(
+                    "Validation Error",
+                    "Please enter/fill both your username and password",
+                    "Okay");
+                return;
+            }
 
-        //    try
-        //    {
-        //        IsBusy = true;
+            try
+            {
+                IsBusy = true;
 
-        //        var loginSuccess = await AuthenticateWithServer(Username, Password);
-        //        if (loginSuccess)
-        //        {
-        //            //notify app shell of the successful login:
-        //            MessagingCenter.Send<object, string>(this, "UserLoggedInWithId", Username);
+                var loginSuccess = await AuthenticateWithServer(Username, Password);
+                if (loginSuccess)
+                {
+                    //notify app shell of the successful login:
+                    MessagingCenter.Send<object, string>(this, "UserLoggedInWithId", Username);
 
-        //            Password = string.Empty;
-        //        }
-        //        else
-        //        {
-        //            await Shell.Current.DisplayAlert(
-        //                "Login Failed!",
-        //                "Invalid Username or password",
-        //                "Okay");
-        //        }
-        //    }
-        //    catch( Exception ex)
-        //    {
-        //        System.Diagnostics.Debug.WriteLine($"The login failed! {ex.Message}", ex);
-        //        await Shell.Current.DisplayAlert(
-        //            "Error!!",
-        //            "An error occurred during the login process. Please try again",
-        //            "Okay");
-        //    }
-        //    finally
-        //    {
-        //        IsBusy = false;
-        //    }
-        //}
+                    Password = string.Empty;
+                }
+                else
+                {
+                    await Shell.Current.DisplayAlert(
+                        "Login Failed!",
+                        "Invalid Username or password",
+                        "Okay");
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"The login failed! {ex.Message}", ex);
+                await Shell.Current.DisplayAlert(
+                    "Error!!",
+                    "An error occurred during the login process. Please try again",
+                    "Okay");
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+        }
 
         [RelayCommand]
         public void ShowTraditionalLoginForm()
