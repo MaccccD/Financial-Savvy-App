@@ -59,10 +59,10 @@
                            CornerRadius="10"
                            Padding="0">
                         <Entry x:Name="Username"
-                                Placeholder="Username"
+                                Placeholder="Enter username"
                                 Text="{Binding Username}"
                                 FontSize="16"
-                                Margin="10,5"/>
+                                Margin="5,5"/>
                     </Frame>
 
                     <!--- password entryy-->
@@ -71,7 +71,7 @@
                            Padding="0"
                            HasShadow="False">
                         <Entry x:Name="Password"
-                               Placeholder="Pls enter your password"
+                               Placeholder="Enter password"
                                Text="{Binding Password}"
                                IsPassword="True"
                                FontSize="16"
@@ -81,8 +81,8 @@
                     <!--- forgot password entry link:-->
                     <Label Text="Forgot Password?"
                            FontSize="15"
-                           TextColor="#ffebd7"
-                           HorizontalOptions="End"
+                           TextColor="LightBlue"
+                           HorizontalOptions="Center"
                            Margin="0,5,0,0">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding ForgotPasswordCommand}"/>
@@ -94,7 +94,7 @@
                     <!---Login Btn Design-->
                     <Button x:Name="LogInBtn"
 						Text="Log In"
-                        Command="{Binding LoginCommand}"
+                        Command="{Binding BiometricLoginCommand}"
 						BackgroundColor ="#103D81"
 						TextColor="Antiquewhite"
 						FontSize="18"

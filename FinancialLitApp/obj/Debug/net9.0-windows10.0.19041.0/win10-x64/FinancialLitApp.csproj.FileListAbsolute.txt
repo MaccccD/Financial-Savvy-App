@@ -518,3 +518,14 @@ C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-windows10.0.19041
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\settings.scale-150.png
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\settings.scale-200.png
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\settings.scale-400.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\fingerprint.scale-100.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\fingerprint.scale-125.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\fingerprint.scale-150.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\fingerprint.scale-200.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\fingerprint.scale-400.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\fingerprint.scale-100.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\fingerprint.scale-125.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\fingerprint.scale-150.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\fingerprint.scale-200.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\fingerprint.scale-400.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Plugin.Fingerprint.dll

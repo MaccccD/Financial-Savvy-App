@@ -118,7 +118,7 @@ namespace FinancialLitApp.Views.Pages
                     // Show success message
                     await DisplayAlert("Account Created!", $"Welcome {firstName}! Your account has been created successfully. Please log in to continue.", "Continue to Login");
                     
-                    //go tthe ,lgin page not the main app section
+                    //go to the ,login page not the main app section
                     await Shell.Current.GoToAsync("//login");
 
                     ////show a welcome message
