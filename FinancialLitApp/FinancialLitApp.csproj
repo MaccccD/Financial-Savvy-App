@@ -57,6 +57,7 @@
 		<MauiImage Update="Resources\Images\feedback.png" Resize="True" BaseSize="500,190" />
 		<MauiImage Update="Resources\Images\settings.png" Resize="True" BaseSize="300, 180" />
 		<MauiImage Update="Resources\Images\dotnet_bot.png" Resize="True" BaseSize="300,185" />
+		<MauiImage Update="Resources\Images\fingerprint.png" Resize="True" BaseSize="500,150"/>
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />

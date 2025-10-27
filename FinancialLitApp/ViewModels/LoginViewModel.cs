@@ -90,7 +90,7 @@ namespace FinancialLitApp.ViewModels
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine($"Authentication Failed: {ex.Message}";
+                System.Diagnostics.Debug.WriteLine($"Authentication Failed: {ex.Message}");
                 await Shell.Current.DisplayAlert(
                     "Error",
                     "An error has occurred during the biometric login. Please try the traditional login.",
@@ -166,7 +166,7 @@ namespace FinancialLitApp.ViewModels
         {
             await Task.Delay(1220);
 
-            return username == "dumziii" && password == "1234";
+            return username == "Dumzi" && password == "1234";
         }
 
 

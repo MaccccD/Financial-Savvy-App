@@ -1,6 +1,7 @@
 File=Resources\Images\challenges.png;Link=;BaseSize=300,190;Resize=True;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=
 File=Resources\Images\dotnet_bot.png;Link=;BaseSize=300,185;Resize=True;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=
 File=Resources\Images\feedback.png;Link=;BaseSize=500,190;Resize=True;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=
+File=Resources\Images\fingerprint.png;Link=;BaseSize=500,150;Resize=True;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=
 File=Resources\Images\home.png;Link=;BaseSize=300,190;Resize=True;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=
 File=Resources\Images\lessons.png;Link=;BaseSize=300,190;Resize=True;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=
 File=Resources\Images\settings.png;Link=;BaseSize=300, 180;Resize=True;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=

@@ -311,3 +311,6 @@ C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-maccatalyst\macca
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\settings@3x.png
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\settings@2x.png
 C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\settings.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\fingerprint@3x.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\fingerprint@2x.png
+C:\GitHub\Financial-Savvy-App\FinancialLitApp\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\fingerprint.png

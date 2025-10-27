@@ -2,95 +2,126 @@
 <ContentPage x:Class="FinancialLitApp.Views.Pages.LoginPage"
              xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             Title="Welcome Back!"
+             xmlns:viewmodel="clr-namespace:FinancialLitApp.ViewModels"
+             x:DataType="viewmodel:LoginViewModel"
+             Title="Login!"
+             Shell.NavBarIsVisible="False"
 			 BackgroundColor="#0D1738">
-	<ScrollView>
-		<Grid RowDefinitions="Auto,*,Auto" Padding="30,20">
-			<!--The header section -->
-			<StackLayout Grid.Row="0" Spacing="20" Margin="0,40,0,60">
-				
-				<Label
+    <ScrollView>
+        <!--The header section -->
+            <VerticalStackLayout Grid.Row="0" Spacing="20" Margin="0,40,0,60">
+
+                <Label
 					Text ="Financial Savvy"
 					FontSize ="28"
 					FontAttributes ="Bold"
 					HorizontalOptions ="Center"
 					TextColor ="Antiquewhite"/>
-				<Label
-                    Text="Please sign in to continue your learning journey"
-					FontSize="16"
-					HorizontalOptions ="Center"
-					TextColor="Antiquewhite"/>
-			</StackLayout>
 
-			<!-- The login form-->
-			<StackLayout Grid.Row ="1" Spacing="20">
-				<!---Email Input Design-->
-				<Frame BorderColor ="Grey"
-					   HasShadow="False"
-					   CornerRadius="10"
-					 
-					   Padding="0">
-					<Entry x:Name ="EmailEntry"
-						   Placeholder ="Email Address"
-						   Keyboard ="Email"
-						   ReturnType="Next"
-						   FontSize="16"
-						   Margin="15,10"/>
-				</Frame>
-				<!---Password Input Design-->
-				<Frame BorderColor="Grey"
-					   HasShadow ="False"
-					   CornerRadius ="10"
-					   Padding="2">
-					<Entry x:Name ="PasswordEntry"
-						   Placeholder="Password"
-						   IsPassword="True"
-						   ReturnType="Go"
-						   FontSize="16"
-						   Margin="15, 10"/>
-				</Frame>
-				<!---Error Label Designn-->
 
-				<Label
-					x:Name="ErrorLabel"
-					IsVisible="False"
-					TextColor="Red"
-					FontSize="15"
-					HorizontalOptions="Center"/>
+                <!--Show Biometric btn if user is enrolled-->
+                <Button Text="{Binding BiometricBtnTxt}"
+                            Command="{Binding BiometricLoginCommand}"
+                            IsVisible="{Binding ShowBiometricBtn}"
+                            BackgroundColor="#103d81"
+                            TextColor="#ffebd7"
+                            HeightRequest="60"
+                            FontSize="18"
+                            CornerRadius="10"
+                            ImageSource="fingerprint.png"
+                            Margin="0,0,0,20">
+                </Button>
 
-				<!---Login Btn Design-->
-				<Button x:Name="LogInBtn"
-						Text="Sign In"
+                <!---If biometric is available-->
+
+                <Grid IsVisible="{Binding ShowBiometricBtn}"
+                      ColumnDefinitions="*,Auto,*"
+                      Margin="0,10">
+                    <BoxView Grid.Column="0"
+                             HeightRequest="1"
+                             Color="Grey"
+                             VerticalOptions="Center"/>
+                    <Label   Grid.Column="1"
+                             Text=" or "
+                             VerticalOptions="Center"
+                             TextColor="Grey"/>
+                    <BoxView Grid.Column="2"
+                             HeightRequest="1"
+                             Color="Grey"
+                             VerticalOptions="Center"/>
+                </Grid>
+
+                <!---Traditional login method -->
+                <VerticalStackLayout Spacing="15" IsVisible="{Binding ShowTraditionalLogin}">
+                    <!--username entry -->
+                    <Frame BorderColor="Grey"
+                           HasShadow="False"
+                           CornerRadius="10"
+                           Padding="0">
+                        <Entry x:Name="Username"
+                                Placeholder="Username"
+                                Text="{Binding Username}"
+                                FontSize="16"
+                                Margin="10,5"/>
+                    </Frame>
+
+                    <!--- password entryy-->
+                    <Frame BorderColor="Grey"
+                           CornerRadius="10"
+                           Padding="0"
+                           HasShadow="False">
+                        <Entry x:Name="Password"
+                               Placeholder="Pls enter your password"
+                               Text="{Binding Password}"
+                               IsPassword="True"
+                               FontSize="16"
+                               Margin="10,5"/>
+                    </Frame>
+
+                    <!--- forgot password entry link:-->
+                    <Label Text="Forgot Password?"
+                           FontSize="15"
+                           TextColor="#ffebd7"
+                           HorizontalOptions="End"
+                           Margin="0,5,0,0">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ForgotPasswordCommand}"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+
+
+
+                    <!---Login Btn Design-->
+                    <Button x:Name="LogInBtn"
+						Text="Log In"
+                        Command="{Binding LoginCommand}"
 						BackgroundColor ="#103D81"
 						TextColor="Antiquewhite"
 						FontSize="18"
 						FontAttributes="Bold"
 						CornerRadius="10"
-						HeightRequest="50"
-						Clicked="OnLoginClicked"/>
+						HeightRequest="50"/>
 
-				<!---Loading Indicator-->
-				<ActivityIndicator x:Name="LoadingIndicator"
-								   IsVisible="False"
-								   IsRunning="False"
+                    <!---Loading Indicator-->
+                    <ActivityIndicator IsRunning="{Binding IsBusy}"
+								   IsVisible="{Binding IsBusy}"
 								   Color="#103D81"
-								   VerticalOptions="Center"/>
+                                   HorizontalOptions="Center"
+								   VerticalOptions="Center"
+                                   Margin="0,10,0,0"/>
+                </VerticalStackLayout>
 
-				<!---Forgot Password Section-->
-				<Label
-					Text="Forgot Password?"
-					FontSize="14"
-					TextColor="Antiquewhite"
-					HorizontalOptions="Center"
-					Margin="0,10,0,0">
-					<Label.GestureRecognizers>
-						<TapGestureRecognizer Tapped="OnForgotPasswordTapped"/>
-					</Label.GestureRecognizers>
-				</Label>
-			</StackLayout>
-			
-			
-		</Grid>
-		
-	</ScrollView>
+                <!---Show Traditinal Login Link if Biometric Btn is show but form is hidden-->
+                <Label Text="Use password instead."
+                       TextColor="#ffebd7"
+                       FontSize="15"
+                       HorizontalOptions="Center"
+                       IsVisible="{Binding ShowBiometricBtn}"
+                       Margin="0,10,0,0">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ShowTraditionalLoginFormCommand}"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
