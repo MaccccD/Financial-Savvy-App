@@ -18,8 +18,14 @@
 					HorizontalOptions ="Center"
 					TextColor ="Antiquewhite"/>
 
+            <Label Text="Let's get you signed in seamlessly!"
+                       FontSize="15"
+                       FontAttributes="Italic"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
 
-                <!--Show Biometric btn if user is enrolled-->
+
+            <!--Show Biometric btn if user is enrolled-->
                 <Button Text="{Binding BiometricBtnTxt}"
                             Command="{Binding BiometricLoginCommand}"
                             IsVisible="{Binding ShowBiometricBtn}"
@@ -93,7 +99,7 @@
 
                     <!---Login Btn Design-->
                     <Button x:Name="LogInBtn"
-						Text="Log In"
+						Text="Set Up Biometric Access"
                         Command="{Binding BiometricLoginCommand}"
 						BackgroundColor ="#103D81"
 						TextColor="Antiquewhite"

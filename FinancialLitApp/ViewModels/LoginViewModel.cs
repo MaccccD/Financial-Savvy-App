@@ -78,6 +78,7 @@ namespace FinancialLitApp.ViewModels
                     MessagingCenter.Send<object>(this, "UserLoggedIn");
 
                     //then take user to home page :
+                  
                     await Shell.Current.GoToAsync("//home");
                 }
                 else

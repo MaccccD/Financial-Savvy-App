@@ -45,18 +45,7 @@
                            FontSize="16"
                            Margin="15,10"/>
 				</Frame>
-				<!---Id Number Input Design-->
-				<Frame BorderColor="Grey"
-					   HasShadow="False"
-					   CornerRadius="10"
-					   
-					   Padding="0">
-					<Entry x:Name="IdNumberEntry"
-						   Placeholder="Id Number"
-						  
-						   ReturnType="Next"
-						   Margin="15,10"/>
-				</Frame>
+				
 					   
 				<!-- Email Input Design-->
 				<Frame BorderColor="Grey"
