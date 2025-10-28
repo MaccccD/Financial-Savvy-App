@@ -8,6 +8,7 @@ using Plugin.Fingerprint.Abstractions;
 using System.Text.Json;
 using System.Reflection.Metadata;
 using System.Security.Cryptography.X509Certificates;
+using System.Diagnostics;
 
 namespace FinancialLitApp.Services
 {
@@ -47,9 +48,14 @@ namespace FinancialLitApp.Services
             try
             {
                 var availability = await CrossFingerprint.Current.GetAvailabilityAsync();
+                Debug.WriteLine($"Fingerprint found {availability}");
+                Console.WriteLine(availability);
+
+
                 if(availability != FingerprintAvailability.Available)
                 {
                     //so if the finger print is not found in the storage collection :
+                    
                     System.Diagnostics.Debug.WriteLine($"Biometric is not available: {availability}");
                     return false;
                 }
