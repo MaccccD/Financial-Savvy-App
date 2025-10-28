@@ -35,6 +35,7 @@ namespace FinancialLitApp.Services
             {
                 var availability = await CrossFingerprint.Current.GetAvailabilityAsync();
                 return availability == FingerprintAvailability.Available;
+                
             }
             catch (Exception ex)
             {

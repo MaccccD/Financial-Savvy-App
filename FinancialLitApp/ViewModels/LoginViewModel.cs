@@ -70,22 +70,25 @@ namespace FinancialLitApp.ViewModels
                 IsBusy = true;
                 ShowBiometricBtn = true;
 
-                var authenticated = await _biometricAuth.AuthenticateUser(
-                    "Login to Financial Savvy App");
-               
+                //var authenticated = await _biometricAuth.AuthenticateUser(
+                // "Login to Financial Savvy App");
+                var authenticate = await _biometricAuth.IsBiometricAvailable();
 
-                if (!authenticated)
+                if (authenticate)
                 {
                     var userId = await _biometricAuth.GetStoredUserId();
                     //tell shell that user has authenticated:
                     MessagingCenter.Send<object>(this, "UserLoggedIn");
 
-                    //then take user to home page :
-                  
+                    //then take user to home page 
+
                     await Shell.Current.GoToAsync("//home");
+
+                  
                 }
                 else
                 {
+
                     await Shell.Current.DisplayAlert(
                         "Authentication Failed",
                         "Biometric authentication failed! Please try again or use your password.",
