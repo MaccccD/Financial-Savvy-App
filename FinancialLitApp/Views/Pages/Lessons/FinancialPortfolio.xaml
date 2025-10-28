@@ -67,7 +67,7 @@
                          TextColor="#ffebd7"
                          LineBreakMode="WordWrap"/>
                     <!--- explaining the meaning of it :-->
-                    <StackLayout Orientation="Horizontal" Spacing="10">
+                    <StackLayout Orientation="Horizontal" Spacing="12">
                         <Frame BackgroundColor="#103d81" CornerRadius="8" Padding="12" HorizontalOptions="FillAndExpand">
                             <StackLayout>
                                 <Label Text="Tax Returns are official documents/forms that you submitted to the government (SARS in South Africa) to report your income, expenses and other financial information you have."

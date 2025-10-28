@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\services\\biometricauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:services\\biometricauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\views\\pages\\rewardspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -212,7 +212,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
@@ -272,26 +272,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\ViewModels\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\LoginViewModel.cs",
               "ToolTip": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\ViewModels\\LoginViewModel.cs",
               "RelativeToolTip": "ViewModels\\LoginViewModel.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAAAFEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-27T19:18:13.989Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "BiometricAuthService.cs",
               "DocumentMoniker": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Services\\BiometricAuthService.cs",
               "RelativeDocumentMoniker": "Services\\BiometricAuthService.cs",
               "ToolTip": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Services\\BiometricAuthService.cs",
               "RelativeToolTip": "Services\\BiometricAuthService.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAA+wCQAAABJAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAIA8wCQAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-27T14:21:27.677Z",
               "EditorCaption": ""
