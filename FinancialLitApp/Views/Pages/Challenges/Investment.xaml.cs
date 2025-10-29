@@ -11,6 +11,7 @@ namespace FinancialLitApp.Views.Pages.Challenges
         public Investment()
         {
             InitializeComponent();
+            Console.WriteLine("Okay this works!");
         }
     }
 }
