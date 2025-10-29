@@ -107,12 +107,42 @@
             <!-- The steps to take when completing an ITR12 form in order to file the tax return :-->
             <Frame BackgroundColor="#16213e" CornerRadius="12" Padding="8">
                 <StackLayout Spacing="15">
-                <Label Text="🪜 The following are the the steps that a non-provisional tax payer (individual) takes to commplete their ITR12 form:"
+                    <Label Text="🪜 The following are the the steps that a non-provisional tax payer (individual) takes to commplete their ITR12 form:"
                            FontSize="15"
                            TextColor="LimeGreen"
                            FontAttributes="Bold"
                            LineBreakMode="WordWrap"/>
-               </StackLayout>
+                    <!---The actual steps:-->
+                    <Frame BackgroundColor="#103d81" CornerRadius="8" Padding="12" HorizontalOptions="StartAndExpand">
+                        <StackLayout>
+                            <Label Text="1. Register for eFiling as a new user(Individal) (or tax practitioner) on their website : go to www.sarsefiling.co.za "
+                                   FontSize="15"
+                                   TextColor="#ffebd7"
+                                   VerticalOptions="Center"
+                                   LineBreakMode="WordWrap"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame BackgroundColor="#103d81" CornerRadius="8" Padding="12" HorizontalOptions="StartAndExpand">
+                        <StackLayout>
+                            <Label Text="2. Read through the eFiling terms and conditions and accept them to proceed."
+                                   FontSize="15"
+                                   TextColor="#ffebd7"
+                                   VerticalOptions="Center"
+                                   LineBreakMode="WordWrap"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame BackgroundColor="#103d81" CornerRadius="12" Padding="8" HorizontalOptions="StartAndExpand">
+                        <StackLayout>
+                            <Label Text="3. For an indidivual tax payer, complete all individual personal details such as tax refrence number, Id number etc. "
+                                   FontSize="15"
+                                   TextColor="#ffebd7"
+                                   VerticalOptions="Center"
+                                   LineBreakMode="WordWrap"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
             </Frame>
         </StackLayout>
     </ScrollView>
