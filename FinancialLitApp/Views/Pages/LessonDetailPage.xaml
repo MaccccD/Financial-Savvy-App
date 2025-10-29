@@ -59,7 +59,8 @@
                        Padding="0"
                        HasShadow="True">
                     <Button x:Name="FilingTaxReturns"
-                            Text="Filing Tax Returns Lesson"
+                            Text="🗃️ Filing Tax Returns Lesson"
+                            LineBreakMode="WordWrap"
                             BackgroundColor="#103d81"
                             TextColor="#FFEBD7"
                             FontSize="18"
