@@ -194,7 +194,7 @@
 						   HorizontalOptions="Center"
 						   LineBreakMode="WordWrap"/>
 
-                    <Label Text="This financial information is grrounded  within Nicky Lalmuanpuia's research paper – A Study on Student Budgeting and Spending 
+                    <Label Text="This financial information is grounded  within Nicky Lalmuanpuia's research paper – A Study on Student Budgeting and Spending 
                                 Behaviour among the Collenge Students"
                            FontSize="25"
                            FontAttributes="Bold"

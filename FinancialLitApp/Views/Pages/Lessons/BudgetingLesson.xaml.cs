@@ -16,7 +16,7 @@ namespace FinancialLitApp.Views.Pages.Lessons
 
         private async void OnBudgetingChallengeClicked(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync("Budgeting");
+            await Shell.Current.GoToAsync("budgeting");
             Console.WriteLine("navigation successful");
         }
     }

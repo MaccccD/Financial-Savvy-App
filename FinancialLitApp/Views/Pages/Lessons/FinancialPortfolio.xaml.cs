@@ -13,5 +13,11 @@ namespace FinancialLitApp.Views.Pages.Lessons
             InitializeComponent();
             Console.WriteLine("Initialize successful, yay!");
         }
+
+        private async void OnTaxReturnChallengeClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("filingtaxreturns");
+            Console.WriteLine("Yayy, the tex return challenge has loaded !");
+        }
     }
 }

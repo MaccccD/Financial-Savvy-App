@@ -28,7 +28,7 @@ public partial class AppShell : Shell
         _biometricAuth = new BiometricAuthService();
 
         //here i'm registering the routes for the pages that are not part of the main tab but are part of the app architecture:
-        Routing.RegisterRoute("savings", typeof(Savings)); //currrently testingg. [this works btw]
+        Routing.RegisterRoute("savings", typeof(Savings)); //currently testing. [this works btw]
         Routing.RegisterRoute("budgeting", typeof(Budgeting)); //the route to the budgeting challenge
         Routing.RegisterRoute("investment", typeof(Investment)); //the route to the investment challenge[might change this later tbh)
         Routing.RegisterRoute("savingslesson", typeof(SavingsLesson)); // the route to the savings lesson
@@ -40,10 +40,10 @@ public partial class AppShell : Shell
 
 
         
-		//setting up the initial navigation based on the user's authentinication status
+		//setting up the initial navigation based on the user's authentication status
 		SetInitialNavigation();
 
-		//creating a connection between the iAuthenticator Service and the App Shell to check the lgoicn status of the user throught the app:
+		//creating a connection between the iAuthenticator Service and the App Shell to check the login status of the user throught the app:
 		MessagingCenter.Subscribe<object>(this, "UserLoggedIn", OnUserLoggedIn);
 		MessagingCenter.Subscribe<object>(this, "UserLoggedOut", OnUserLoggedOut);
 
@@ -78,7 +78,7 @@ public partial class AppShell : Shell
            
         }
 
-        //if user is not enrolled nor authenticated , showtyhe normal way to authenticate that i had initially set up:
+        //if user is not enrolled nor authenticated , show the normal way to authenticate that i had initially set up:
         ShowAuthenticationFlow();
     }
 

@@ -178,6 +178,25 @@
                             <Label Text="7. Once you have captured all the information on your ITR12 return and are ready to submit to SARS, simply click File Return."                                   FontSize="15"                                   LineBreakMode="WordWrap"                                   TextColor="#ffebd7"                                   VerticalOptions="Center"/>
                         </StackLayout>
                     </Frame>
+
+                    <Label Text="This financial information is brought to you by SARS eFiling(2025). (https://share.google/NFYZPMG7x1j66dyE6)"
+                           FontSize="25"
+                           FontAttributes="Bold"
+                           TextColor="#FFEBD7"
+                           LineBreakMode="WordWrap"
+                           HorizontalOptions="Center"/>
+
+                         <!--- The challenge btn to navigate user to the actual gameplay challenge:-->
+                    <Button Text="🚀 Try this Tax Return Challenge!"
+					        BackgroundColor="#2503FD"
+					        TextColor="#ffebd7"
+					        Margin="8"
+					        CornerRadius="10"
+					        HeightRequest="60"
+					        WidthRequest="270"
+					        FontSize="15"
+					        FontAttributes="Bold"
+					        Clicked="OnTaxReturnChallengeClicked"/>
                 </StackLayout>
             </Frame>
         </StackLayout>
