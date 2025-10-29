@@ -30,7 +30,6 @@ public partial class AppShell : Shell
         //here i'm registering the routes for the pages that are not part of the main tab but are part of the app architecture:
         Routing.RegisterRoute("savings", typeof(Savings)); //currently testing. [this works btw]
         Routing.RegisterRoute("budgeting", typeof(Budgeting)); //the route to the budgeting challenge
-        Routing.RegisterRoute("investment", typeof(Investment)); //the route to the investment challenge[might change this later tbh)
         Routing.RegisterRoute("savingslesson", typeof(SavingsLesson)); // the route to the savings lesson
         Routing.RegisterRoute("budgetinglesson", typeof(BudgetingLesson)); //the route to the budgeting lesson
         Routing.RegisterRoute("filingtaxreturns", typeof(FinancialPortfolio)); //the route to the financial portfolio section lesson
