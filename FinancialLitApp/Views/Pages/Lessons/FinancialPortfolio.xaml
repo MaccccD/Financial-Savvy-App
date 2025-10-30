@@ -181,7 +181,11 @@
 
                     <Frame BackgroundColor="#103d81" CornerRadius="12" Padding="8" HorizontalOptions="StartAndExpand">
                         <StackLayout>
-                            <Label Text="7. Once you have captured all the information on your ITR12 return and are ready to submit to SARS, simply click File Return."                                   FontSize="15"                                   LineBreakMode="WordWrap"                                   TextColor="#ffebd7"                                   VerticalOptions="Center"/>
+                            <Label Text="7. Once you have captured all the information on your ITR12 return and are ready to submit to SARS, simply click File Return."
+                                   FontSize="15"
+                                   LineBreakMode="WordWrap"
+                                   TextColor="#ffebd7"
+                                   VerticalOptions="Center"/>
                         </StackLayout>
                     </Frame>
                 </StackLayout>

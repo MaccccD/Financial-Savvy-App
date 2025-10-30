@@ -32,17 +32,18 @@ public partial class AppShell : Shell
         Routing.RegisterRoute("budgeting", typeof(Budgeting)); //the route to the budgeting challenge
         Routing.RegisterRoute("savingslesson", typeof(SavingsLesson)); // the route to the savings lesson
         Routing.RegisterRoute("budgetinglesson", typeof(BudgetingLesson)); //the route to the budgeting lesson
-        Routing.RegisterRoute("filingtaxreturns", typeof(FilingTaxReturns)); //the route to the financial portfolio section lesson
+        Routing.RegisterRoute("filingtaxreturnslesson", typeof(FinancialPortfolio)); // the route to the filing tax returns lesson
+        Routing.RegisterRoute("filingtaxreturns", typeof(FilingTaxReturns)); //the route to the filing tax returns challenge
         Routing.RegisterRoute("forgotpassword", typeof(ForgotPasswordPage));
 		Routing.RegisterRoute("lessondetailpage", typeof(LessonDetailPage));
-        Routing.RegisterRoute("budgetingchallenge", typeof(Budgeting));
+       
 
 
         
 		//setting up the initial navigation based on the user's authentication status
 		SetInitialNavigation();
 
-		//creating a connection between the iAuthenticator Service and the App Shell to check the login status of the user throught the app:
+		//creating a connection between the iAuthenticator Service and the App Shell to check the login status of the user throughout the app:
 		MessagingCenter.Subscribe<object>(this, "UserLoggedIn", OnUserLoggedIn);
 		MessagingCenter.Subscribe<object>(this, "UserLoggedOut", OnUserLoggedOut);
 

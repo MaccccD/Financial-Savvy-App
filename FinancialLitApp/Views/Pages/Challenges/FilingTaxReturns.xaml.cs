@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace FinancialLitApp.Views.Pages.Challenges
 {
-   public partial class Investment : ContentPage
+    public partial class FilingTaxReturns : ContentPage
     {
-        public Investment()
+        public FilingTaxReturns() 
         {
             InitializeComponent();
-            Console.WriteLine("Okay this works!");
         }
     }
 }

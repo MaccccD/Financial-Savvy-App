@@ -70,7 +70,7 @@ namespace FinancialLitApp.Views.Pages
         {
             try
             {
-                await WaitForShellAndNavigate("filingtaxreturns");
+                await WaitForShellAndNavigate("filingtaxreturnslesson");
             }
             catch (Exception ex)
             {

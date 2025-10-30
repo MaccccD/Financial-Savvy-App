@@ -86,9 +86,6 @@
 	  <Compile Update="Views\Pages\AccountSetUpPage.xaml.cs">
 	    <DependentUpon>AccountSetUpPage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\Pages\Challenges\FilingTaxReturns.xaml.cs">
-	    <DependentUpon>FilingTaxReturns.xaml</DependentUpon>
-	  </Compile>
 	  <Compile Update="Views\Pages\FeedbackPage.xaml.cs">
 	    <DependentUpon>FeedbackPage.xaml</DependentUpon>
 	  </Compile>
