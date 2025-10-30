@@ -32,7 +32,7 @@ public partial class AppShell : Shell
         Routing.RegisterRoute("budgeting", typeof(Budgeting)); //the route to the budgeting challenge
         Routing.RegisterRoute("savingslesson", typeof(SavingsLesson)); // the route to the savings lesson
         Routing.RegisterRoute("budgetinglesson", typeof(BudgetingLesson)); //the route to the budgeting lesson
-        Routing.RegisterRoute("filingtaxreturns", typeof(FinancialPortfolio)); //the route to the financial portfolio section lesson
+        Routing.RegisterRoute("filingtaxreturns", typeof(FilingTaxReturns)); //the route to the financial portfolio section lesson
         Routing.RegisterRoute("forgotpassword", typeof(ForgotPasswordPage));
 		Routing.RegisterRoute("lessondetailpage", typeof(LessonDetailPage));
         Routing.RegisterRoute("budgetingchallenge", typeof(Budgeting));

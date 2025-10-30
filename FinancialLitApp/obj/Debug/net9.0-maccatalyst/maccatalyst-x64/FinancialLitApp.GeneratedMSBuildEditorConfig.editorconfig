@@ -89,11 +89,11 @@ build_metadata.AdditionalFiles.ManifestResourceName = FinancialLitApp.Views.Page
 build_metadata.AdditionalFiles.TargetPath = Views\Pages\Challenges\Budgeting.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Pages\Challenges\Budgeting.xaml
 
-[C:/GitHub/Financial-Savvy-App/FinancialLitApp/Views/Pages/Challenges/Investment.xaml]
+[C:/GitHub/Financial-Savvy-App/FinancialLitApp/Views/Pages/Challenges/FilingTaxReturns.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = FinancialLitApp.Views.Pages.Challenges.Investment.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\Pages\Challenges\Investment.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\Pages\Challenges\Investment.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinancialLitApp.Views.Pages.Challenges.FilingTaxReturns.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Pages\Challenges\FilingTaxReturns.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Pages\Challenges\FilingTaxReturns.xaml
 
 [C:/GitHub/Financial-Savvy-App/FinancialLitApp/Views/Pages/Challenges/Savings.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

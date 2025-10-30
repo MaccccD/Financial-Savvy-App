@@ -57,7 +57,7 @@
 		<MauiImage Update="Resources\Images\feedback.png" Resize="True" BaseSize="500,190" />
 		<MauiImage Update="Resources\Images\settings.png" Resize="True" BaseSize="300, 180" />
 		<MauiImage Update="Resources\Images\dotnet_bot.png" Resize="True" BaseSize="300,185" />
-		<MauiImage Update="Resources\Images\fingerprint.png" Resize="True" BaseSize="500,150"/>
+		<MauiImage Update="Resources\Images\fingerprint.png" Resize="True" BaseSize="500,150" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -86,6 +86,9 @@
 	  <Compile Update="Views\Pages\AccountSetUpPage.xaml.cs">
 	    <DependentUpon>AccountSetUpPage.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Views\Pages\Challenges\FilingTaxReturns.xaml.cs">
+	    <DependentUpon>FilingTaxReturns.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\Pages\FeedbackPage.xaml.cs">
 	    <DependentUpon>FeedbackPage.xaml</DependentUpon>
 	  </Compile>
@@ -110,7 +113,7 @@
 	  <MauiXaml Update="Views\Pages\Challenges\Budgeting.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Pages\Challenges\Investment.xaml">
+	  <MauiXaml Update="Views\Pages\Challenges\FilingTaxReturns.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Pages\Challenges\Savings.xaml">
