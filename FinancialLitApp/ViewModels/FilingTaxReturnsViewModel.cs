@@ -264,6 +264,22 @@ namespace FinancialLitApp.ViewModels
         }
 
 
+        private void ShowSuccessMessage()
+        {
+            OverallMessage = "Congratulations! Your tax return is filed correctly , YAYYYYYYYYY\n\n" +
+                            $"Summary:\n" +
+                            $"Gross Salary: R{grossSalaryMonthly:F2}\n" +
+                            $"Total Deductions: R{correctTotalDeductions:F2}\n" +
+                            $"Net Take-Home: R{netTakeHomePay:F2}\n\n" +
+                            $"Key Challenge Take-Aways: Understanding how to calculate your tax deductions helps you: \n" +
+                            $"- Verify your pay slip is correct\n" +
+                            $"- Plan your finances accurately\n" +
+                            $"- Maximize tax-deductible contributions (like pension)\n" +
+                            $"- Avoid penalties from SARS\n\n" +
+                            "You're now equipped to handle real tax filing with CONFIDENCE!";
+        }
+
+        
 
 
 
