@@ -147,10 +147,28 @@ namespace FinancialLitApp.ViewModels
 
         private bool IsWithinMargin(decimal userValue, decimal correctValue, decimal margin)
         {
-            return Math.Abs(userValue - correctValue) <= margin; // here i'm checkng if the value the users input is within the margin even when rounded of in relation to the correct value
+            return Math.Abs(userValue - correctValue) <= margin; // here i'm checking if the value the users input is within the margin even when rounded of in relation to the correct value
         }
 
 
+
+        //the PAYE feedback :
+
+        private void GeneratePAYEFeedback(decimal userPAYE)
+        {
+            if (IsPAYECorrect)
+            {
+                PayeFeedback = "Great Job! Your PAYE calculation is spot on!";
+            }
+            else
+            {
+                var difference = userPAYE - correctPAYE;
+                var explanation = $"Not quite :(You calculated R{userPAYE:F2}, but the correct amount is R{correctPAYE:F2}\n";
+
+                explanation += "Here's a step-by-step guide on how you calculate PAYE correctly:\n";
+
+            }
+        }
 
 
 
