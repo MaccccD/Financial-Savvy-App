@@ -58,6 +58,9 @@ namespace FinancialLitApp.ViewModels
         private string pensionFundFeedback = "";
 
         [ObservableProperty]
+        private string totalFeedback = "";
+
+        [ObservableProperty]
         private string overallMessage = "";
 
 
@@ -67,7 +70,7 @@ namespace FinancialLitApp.ViewModels
         private bool isPAYECorrect = false;
 
         [ObservableProperty]
-        private bool isUIForrect = false;
+        private bool isUIFCorrect = false;
 
         [ObservableProperty]
         private bool isPensionFundCorrect = false;
@@ -169,6 +172,94 @@ namespace FinancialLitApp.ViewModels
                 explanation += $"1. Annual Salary: R{grossSalaryMonthly:F2} x 12 = R{GrossSalaryAnnual:F2}\n";
                 explanation += $"2. This annual salary falls within the tax bracket: R237,101 - R370,500\n";
                 explanation += $"3. Tax calculation: R42,678 + (26% x (R{grossSalaryAnnual} - R237,100))\n";
+                explanation += $"4. Tax before rebate: R42, 678 + (0.26 x R{grossSalaryAnnual - 237,100:F2}) = R68,773\n";
+                explanation += $"5. Subtract primary rebate : R68,773 - R17,235 = R51,538\n";
+                explanation += $"6. Monthly PAYE : R51,538/12 = R{correctPAYE:F2}\n\n";
+
+
+                if( difference > 0 )
+                {
+                    explanation += $" You were R{Math.Abs(difference):F2} too high. Did you forget to subtract the rebate?";
+                }
+                else
+                {
+                    explanation += $"You were R{Math.Abs(difference):F2} too low. Make sure you're using the correct tax bracket.";
+                }
+                
+                PayeFeedback = explanation;  //appending the explanations as part of the feedback for the PAYE aspect of the feedback to the user.
+            }
+        }
+
+        private void GenerateUIFFeedback(decimal userUIF)
+        {
+            if (IsUIFCorrect)
+            {
+                UifFeedback = " Great Job! Your calculation is very accurate!";
+            }
+            else
+            {
+                var explanation = $"Not quite. You calculated R{userUIF}, but the correct UIF amount is R{correctUIF:F2}.\n\n";
+
+                explanation += $"Here's a step-by-step guide on how to calculate  UIF:\n";
+                explanation += $"1. Calculate 1% of gross salary: R{GrossSalaryMonthly:F2} x 0.01 = R{GrossSalaryMonthly * 0.01m:F2}\n";
+                explanation += $"2. UIF has a monthly cap of R177.12\n";
+                explanation += $"3. Take the lower amount: min(R{grossSalaryMonthly * 0.01m:F2}, R177.12) = R{correctUIF:F2}\n\n";
+
+
+                if(userUIF > correctUIF)
+                {
+                    explanation += "Remember: UIF is capped at R177.12 per month, even if 1% of your salary is higher!";
+                }
+                else
+                {
+                    explanation += " Make sure you're calculating 1% of your gross monthly salary correctly.";
+                }
+
+                UifFeedback = explanation;
+            }
+        }
+
+        private void GeneratePensionFeedback(decimal userPension)
+        {
+            if (IsPensionFundCorrect)
+            {
+                pensionFundFeedback = "Yayy, Great Job ! Your calculation is very spot on!";
+            }
+            else
+            {
+                var difference = userPension - correctPensionFund;
+                var explanation = $"Not quite. You calculated R{userPension}, but the correct pension fund is: R{correctPensionFund:F2}\n\n";
+
+                explanation += "Here's the correct way to calculate your pension fund correctly:\n";
+                explanation += $"1. Calculate 4.7% of your gross monthly salary: R{grossSalaryMonthly:F2} x 0.047 = R{correctPensionFund:F2}\n\n";
+
+                if(Math.Abs(difference) < 50)
+                {
+                    explanation += "You're so close!! Double-check your percentage calculation( 4.7% not 5% or 10%).";
+
+                }
+                else
+                {
+                    explanation += "Make sure you're multiplying the gross salary with the percentage value(0.047) – which is 4.7%";
+                }
+
+                pensionFundFeedback = explanation;
+            }
+        }
+
+        private void  GenerateTotalFeedback()
+        {
+            var userTotal = CalculatedTotal;
+            var isCorrect = IsWithinMargin(userTotal, correctTotalDeductions, 15m);
+
+            if (isCorrect)
+            {
+                TotalFeedback = $"Total Deductions: R{userTotal:F2} - Great Job!";
+            }
+            else
+            {
+                TotalFeedback = $"Total Deductions: R{userTotal:F2} (Should be R{correctTotalDeductions:F2})\n" +
+                                $"Difference: R{Math.Abs(userTotal - correctTotalDeductions):F2}";
             }
         }
 
@@ -176,11 +267,14 @@ namespace FinancialLitApp.ViewModels
 
 
 
+
+
         private void ClearFeedback()
         {
-            payeFeedback = "";
-            uifFeedback = "";
-            pensionFundFeedback = "";
+            PayeFeedback = "";
+            UifFeedback = "";
+            PensionFundFeedback = "";
+            TotalFeedback = "";
             
         }
     }
