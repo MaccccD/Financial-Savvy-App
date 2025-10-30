@@ -127,7 +127,41 @@ namespace FinancialLitApp.ViewModels
             calculatedTotal = paye + uif + pensionFund;
         }
 
+        [RelayCommand]
+        private void FileReturn()
+        {
+            ClearFeedback();
+
+            
+        }
 
 
+        private bool ValidateInputs()
+        {
+            decimal temp;
+            return !string.IsNullOrWhiteSpace(PayeInput) && decimal.TryParse(PayeInput, out temp) &&
+            !string.IsNullOrWhiteSpace(UifInput) && decimal.TryParse(UifInput, out temp) &&
+            !string.IsNullOrWhiteSpace(pensionFundInput) && decimal.TryParse(pensionFundInput, out temp);
+
+        }
+
+        private bool IsWithinMargin(decimal userValue, decimal correctValue, decimal margin)
+        {
+            return Math.Abs(userValue - correctValue) <= margin; // here i'm checkng if the value the users input is within the margin even when rounded of in relation to the correct value
+        }
+
+
+
+
+
+
+
+        private void ClearFeedback()
+        {
+            payeFeedback = "";
+            uifFeedback = "";
+            pensionFundFeedback = "";
+            
+        }
     }
 }
