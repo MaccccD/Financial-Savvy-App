@@ -166,7 +166,9 @@ namespace FinancialLitApp.ViewModels
                 var explanation = $"Not quite :(You calculated R{userPAYE:F2}, but the correct amount is R{correctPAYE:F2}\n";
 
                 explanation += "Here's a step-by-step guide on how you calculate PAYE correctly:\n";
-
+                explanation += $"1. Annual Salary: R{grossSalaryMonthly:F2} x 12 = R{GrossSalaryAnnual:F2}\n";
+                explanation += $"2. This annual salary falls within the tax bracket: R237,101 - R370,500\n";
+                explanation += $"3. Tax calculation: R42,678 + (26% x (R{grossSalaryAnnual} - R237,100))\n";
             }
         }
 
