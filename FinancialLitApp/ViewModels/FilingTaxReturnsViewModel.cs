@@ -4,11 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.Collections;
+using CommunityToolkit.Mvvm.Input;
+using System.Diagnostics;
+using FinancialLitApp.Services;
+using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 
 namespace FinancialLitApp.ViewModels
 {
-    internal class FilingTaxReturnsViewModel
+    public partial class FilingTaxReturnsViewModel : ObservableObject
     {
+        [ObservableProperty]
+        private int grossSalary;
     }
 }
