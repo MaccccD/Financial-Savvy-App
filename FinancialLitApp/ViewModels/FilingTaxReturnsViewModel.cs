@@ -123,11 +123,11 @@ namespace FinancialLitApp.ViewModels
         {
             decimal paye = 0, uif = 0, pensionFund = 0;
 
-            decimal.TryParse(payeInput, out paye); // try parse in here converts the string typed into a decimal value
-            decimal.TryParse(uifInput, out uif);
-            decimal.TryParse(pensionFundInput, out pensionFund);
+            decimal.TryParse(PayeInput, out paye); // try parse in here converts the string typed into a decimal value
+            decimal.TryParse(UifInput, out uif);
+            decimal.TryParse(PensionFundInput, out pensionFund);
 
-            calculatedTotal = paye + uif + pensionFund;
+            CalculatedTotal = paye + uif + pensionFund;
         }
 
         [RelayCommand]
@@ -144,7 +144,7 @@ namespace FinancialLitApp.ViewModels
             decimal temp;
             return !string.IsNullOrWhiteSpace(PayeInput) && decimal.TryParse(PayeInput, out temp) &&
             !string.IsNullOrWhiteSpace(UifInput) && decimal.TryParse(UifInput, out temp) &&
-            !string.IsNullOrWhiteSpace(pensionFundInput) && decimal.TryParse(pensionFundInput, out temp);
+            !string.IsNullOrWhiteSpace(PensionFundInput) && decimal.TryParse(PensionFundInput, out temp);
 
         }
 
@@ -169,10 +169,10 @@ namespace FinancialLitApp.ViewModels
                 var explanation = $"Not quite :(You calculated R{userPAYE:F2}, but the correct amount is R{correctPAYE:F2}\n";
 
                 explanation += "Here's a step-by-step guide on how you calculate PAYE correctly:\n";
-                explanation += $"1. Annual Salary: R{grossSalaryMonthly:F2} x 12 = R{GrossSalaryAnnual:F2}\n";
+                explanation += $"1. Annual Salary: R{GrossSalaryMonthly:F2} x 12 = R{GrossSalaryAnnual:F2}\n";
                 explanation += $"2. This annual salary falls within the tax bracket: R237,101 - R370,500\n";
-                explanation += $"3. Tax calculation: R42,678 + (26% x (R{grossSalaryAnnual} - R237,100))\n";
-                explanation += $"4. Tax before rebate: R42, 678 + (0.26 x R{grossSalaryAnnual - 237,100:F2}) = R68,773\n";
+                explanation += $"3. Tax calculation: R42,678 + (26% x (R{GrossSalaryAnnual} - R237,100))\n";
+                explanation += $"4. Tax before rebate: R42, 678 + (0.26 x R{GrossSalaryAnnual - 237,100:F2}) = R68,773\n";
                 explanation += $"5. Subtract primary rebate : R68,773 - R17,235 = R51,538\n";
                 explanation += $"6. Monthly PAYE : R51,538/12 = R{correctPAYE:F2}\n\n";
 
@@ -223,7 +223,7 @@ namespace FinancialLitApp.ViewModels
         {
             if (IsPensionFundCorrect)
             {
-                pensionFundFeedback = "Yayy, Great Job ! Your calculation is very spot on!";
+                PensionFundFeedback = "Yayy, Great Job ! Your calculation is very spot on!";
             }
             else
             {
@@ -231,7 +231,7 @@ namespace FinancialLitApp.ViewModels
                 var explanation = $"Not quite. You calculated R{userPension}, but the correct pension fund is: R{correctPensionFund:F2}\n\n";
 
                 explanation += "Here's the correct way to calculate your pension fund correctly:\n";
-                explanation += $"1. Calculate 4.7% of your gross monthly salary: R{grossSalaryMonthly:F2} x 0.047 = R{correctPensionFund:F2}\n\n";
+                explanation += $"1. Calculate 4.7% of your gross monthly salary: R{GrossSalaryMonthly:F2} x 0.047 = R{correctPensionFund:F2}\n\n";
 
                 if(Math.Abs(difference) < 50)
                 {
@@ -243,7 +243,7 @@ namespace FinancialLitApp.ViewModels
                     explanation += "Make sure you're multiplying the gross salary with the percentage value(0.047) – which is 4.7%";
                 }
 
-                pensionFundFeedback = explanation;
+                PensionFundFeedback = explanation;
             }
         }
 
@@ -268,9 +268,9 @@ namespace FinancialLitApp.ViewModels
         {
             OverallMessage = "Congratulations! Your tax return is filed correctly , YAYYYYYYYYY\n\n" +
                             $"Summary:\n" +
-                            $"Gross Salary: R{grossSalaryMonthly:F2}\n" +
+                            $"Gross Salary: R{GrossSalaryMonthly:F2}\n" +
                             $"Total Deductions: R{correctTotalDeductions:F2}\n" +
-                            $"Net Take-Home: R{netTakeHomePay:F2}\n\n" +
+                            $"Net Take-Home: R{NetTakeHomePay:F2}\n\n" +
                             $"Key Challenge Take-Aways: Understanding how to calculate your tax deductions helps you: \n" +
                             $"- Verify your pay slip is correct\n" +
                             $"- Plan your finances accurately\n" +
@@ -281,7 +281,7 @@ namespace FinancialLitApp.ViewModels
 
         private void ShowTryAgainMessage()
         {
-            var correctCount = (IsPAYECorrect ? 1 : 0) + (IsUIFCorrect ? 1 : 0) + (isPensionFundCorrect ? 1 : 0);// this is to keep track of the correct calculation of each deduction that the user has got correct.
+            var correctCount = (IsPAYECorrect ? 1 : 0) + (IsUIFCorrect ? 1 : 0) + (IsPensionFundCorrect ? 1 : 0);// this is to keep track of the correct calculation of each deduction that the user has got correct.
 
             OverallMessage = $" Attempt {currentAttempt} of {MaxAttempts}\n\n" +
                              $"You got {correctCount} out of 3 deductions correct.\n\n" +
@@ -292,12 +292,50 @@ namespace FinancialLitApp.ViewModels
         private void ShowFinalAttemptMessage()
         {
             OverallMessage = "Challenge Completed!\n\n" +
-                             "While you didn't get everything correct this time, you've learned valuable lessons about tax calculations. \n\n ";
+                             "While you didn't get everything correct this time, you've learned valuable lessons about tax calculations. \n\n " +
+                             "The correct answers:\n" +
+                             $"PAYE: R{correctPAYE:F2}\n" +
+                             $"UIF: R{correctUIF:F2}\n" +
+                             $"Pension Fund: R{correctPensionFund:F2}\n" +
+                             $"Total deductions: R{correctTotalDeductions:F2}\n\n" +
+                             "💡 Remember : Tax Filing seems complex, but breaking it down step-by-step makes it manageable. " +
+                             "Review the explanations above and try attempt the challenge again to reinforce your learning!";
+
         }
 
-        
 
+        [RelayCommand]
+        private void ShowCorrectReturn()
+        {
+            payeInput = correctPAYE.ToString("F2");
+            uifInput = correctUIF.ToString("F2");
+            pensionFundInput = correctPensionFund.ToString("F2");
 
+            UpdateCalculatedTotal();
+
+            OverallMessage = " Correct Return Displayed!\n\n" +
+                            "This is what a correctly filed return looks like. Study  these values and the formulas to understand the calculations/\n\n" +
+                            "💡 Tip: Try clearing these values and calculating the for yourself for practice.";
+        }
+
+        [RelayCommand]
+        private void Reset()
+        {
+            payeInput = "";
+            uifInput = "";
+            pensionFundInput = "";
+            calculatedTotal = 0m;
+
+            ClearFeedback();
+
+            ShowResults = false;
+            CurrentAttempt = 1;
+            IsPAYECorrect = false;
+            IsUIFCorrect = false;
+            IsPensionFundCorrect = false;
+            IsAllCorrect = false;
+            OverallMessage = "";
+        }
 
 
 
