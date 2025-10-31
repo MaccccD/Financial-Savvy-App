@@ -279,6 +279,22 @@ namespace FinancialLitApp.ViewModels
                             "You're now equipped to handle real tax filing with CONFIDENCE!";
         }
 
+        private void ShowTryAgainMessage()
+        {
+            var correctCount = (IsPAYECorrect ? 1 : 0) + (IsUIFCorrect ? 1 : 0) + (isPensionFundCorrect ? 1 : 0);// this is to keep track of the correct calculation of each deduction that the user has got correct.
+
+            OverallMessage = $" Attempt {currentAttempt} of {MaxAttempts}\n\n" +
+                             $"You got {correctCount} out of 3 deductions correct.\n\n" +
+                             "Review the feedback above for each deduction and try again. " +
+                             "Understanding these calculations is crucial for managing your finances!";
+        }
+
+        private void ShowFinalAttemptMessage()
+        {
+            OverallMessage = "Challenge Completed!\n\n" +
+                             "While you didn't get everything correct this time, you've learned valuable lessons about tax calculations. \n\n ";
+        }
+
         
 
 
