@@ -45,8 +45,6 @@ namespace FinancialLitApp.ViewModels
 
         [ObservableProperty]
         private decimal calculatedTotal = 0m;
-
-
         //the feedback :
         [ObservableProperty]
         private string payeFeedback = "";
@@ -62,7 +60,6 @@ namespace FinancialLitApp.ViewModels
 
         [ObservableProperty]
         private string overallMessage = "";
-
 
         //Tracking correctness:
 

@@ -212,7 +212,7 @@
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
-      "VerticalTabListWidth": 226,
+      "VerticalTabListWidth": 100,
       "DocumentGroups": [
         {
           "DockedWidth": 200,
@@ -239,7 +239,7 @@
               "RelativeDocumentMoniker": "ViewModels\\FilingTaxReturnsViewModel.cs",
               "ToolTip": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\ViewModels\\FilingTaxReturnsViewModel.cs",
               "RelativeToolTip": "ViewModels\\FilingTaxReturnsViewModel.cs",
-              "ViewState": "AgIAAA0BAAAAAAAAAAAUwCQBAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAkwDkAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-30T13:21:56.406Z",
               "EditorCaption": ""
@@ -254,8 +254,7 @@
               "RelativeToolTip": "Views\\Pages\\Challenges\\FilingTaxReturns.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADgvwwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T13:21:09.662Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T13:21:09.662Z"
             },
             {
               "$type": "Document",
@@ -267,8 +266,7 @@
               "RelativeToolTip": "Views\\Pages\\Challenges\\FilingTaxReturns.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-30T13:20:39.821Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T13:20:39.821Z"
             },
             {
               "$type": "Document",
@@ -292,8 +290,7 @@
               "RelativeToolTip": "Views\\Pages\\LoginPage.xaml",
               "ViewState": "AgIAAFwAAAAAAAAAAAAAwGgAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-27T21:31:01.849Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-27T21:31:01.849Z"
             },
             {
               "$type": "Document",
@@ -317,8 +314,7 @@
               "RelativeToolTip": "ViewModels\\LoginViewModel.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T19:18:13.989Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-27T19:18:13.989Z"
             },
             {
               "$type": "Document",
@@ -330,8 +326,7 @@
               "RelativeToolTip": "Views\\Pages\\Challenges\\Budgeting.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-11T19:30:09.944Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-11T19:30:09.944Z"
             },
             {
               "$type": "Document",
@@ -378,8 +373,7 @@
               "RelativeToolTip": "Views\\Pages\\Challenges\\Budgeting.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-15T14:46:48.663Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T14:46:48.663Z"
             },
             {
               "$type": "Document",
@@ -439,8 +433,7 @@
               "RelativeToolTip": "ViewModels\\BudgetingChallengeViewModel.cs",
               "ViewState": "AgIAAC4AAAAAAAAAAAAkwD4AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T13:43:23.03Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-09T13:43:23.03Z"
             },
             {
               "$type": "Document",
@@ -464,8 +457,7 @@
               "RelativeToolTip": "App.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-15T12:57:40.261Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T12:57:40.261Z"
             },
             {
               "$type": "Document",
@@ -477,8 +469,7 @@
               "RelativeToolTip": "Views\\Pages\\Lessons\\FinancialPortfolio.xaml",
               "ViewState": "AgIAABIAAAAAAAAAAAAAACQAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-14T11:41:40.364Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-14T11:41:40.364Z"
             },
             {
               "$type": "Document",
@@ -490,8 +481,7 @@
               "RelativeToolTip": "Views\\Pages\\Lessons\\BudgetingLesson.xaml",
               "ViewState": "AgIAAIAAAAAAAAAAAAAxwMQAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-14T11:32:43.588Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-14T11:32:43.588Z"
             },
             {
               "$type": "Document",
@@ -552,8 +542,7 @@
               "RelativeToolTip": "FinancialLitApp.csproj",
               "ViewState": "AgIAAFQAAAAAAAAAAAAAAHEAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-09-24T17:13:58.715Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-24T17:13:58.715Z"
             },
             {
               "$type": "Document",
@@ -565,8 +554,7 @@
               "RelativeToolTip": "Views\\Pages\\Lessons\\FinancialPortfolio.xaml.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-24T17:08:37.178Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-24T17:08:37.178Z"
             },
             {
               "$type": "Document",
@@ -602,8 +590,7 @@
               "RelativeToolTip": "Views\\Pages\\Challenges\\Savings.xaml",
               "ViewState": "AgIAALEAAAAAAAAAAAAAAN4AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-11T19:30:06.776Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-11T19:30:06.776Z"
             },
             {
               "$type": "Document",
@@ -627,8 +614,7 @@
               "RelativeToolTip": "Views\\Pages\\FeedbackPage.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-09-19T14:10:59.849Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T14:10:59.849Z"
             },
             {
               "$type": "Document",
@@ -760,8 +746,7 @@
               "RelativeToolTip": "Views\\Pages\\ChallengesPage.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T18:48:25.655Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-19T18:48:25.655Z"
             },
             {
               "$type": "Document",
@@ -785,8 +770,7 @@
               "RelativeToolTip": "Views\\Pages\\Challenges\\Savings.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-11T19:30:37.73Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-11T19:30:37.73Z"
             },
             {
               "$type": "Document",
@@ -810,8 +794,7 @@
               "RelativeToolTip": "Views\\Pages\\LessonDetailPage.xaml.cs",
               "ViewState": "AgIAADUAAAAAAAAAAAAUwEgAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-28T21:01:08.998Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-28T21:01:08.998Z"
             },
             {
               "$type": "Document",
@@ -835,8 +818,7 @@
               "RelativeToolTip": "Views\\Pages\\LessonDetailPage.xaml",
               "ViewState": "AgIAACoAAAAAAAAAAAAawEUAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-28T20:52:56.713Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-28T20:52:56.713Z"
             },
             {
               "$type": "Document",
@@ -848,8 +830,7 @@
               "RelativeToolTip": "AppShell.xaml.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-28T20:45:45.413Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-28T20:45:45.413Z"
             },
             {
               "$type": "Document",
@@ -861,8 +842,7 @@
               "RelativeToolTip": "AppShell.xaml",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAADwAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-28T20:45:39.188Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-28T20:45:39.188Z"
             },
             {
               "$type": "Bookmark",
