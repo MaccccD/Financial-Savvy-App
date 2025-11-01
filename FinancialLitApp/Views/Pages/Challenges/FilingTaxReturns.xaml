@@ -20,9 +20,35 @@
                            FontAttributes="Bold"
                            TextColor="#ffebd7"
                            HorizontalOptions="Center"/>
-
-
+                    <Label Text="{Binding CurrentAttempt, StringFormat='Attempt:{0} of 3'}"
+                           FontSize="15"
+                           TextColor="#00d4aa"
+                           HorizontalOptions="Center"
+                           Margin="0,5,0,0"/>
                 </StackLayout>
             </Frame>
+            
+            <!--- The ITR12-->
+            <Frame BackgroundColor="WhiteSmoke" CornerRadius="12" Padding="20" HasShadow="True">
+                <StackLayout Spacing="15">
+                    
+                    <!---the title-->
+                    <Label Text="ITR12 Form"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="Black"
+                           HorizontalOptions="Center"/>
+                    
+                    <!--- Gross & net Info-->
+
+                    <Grid ColumnDefinitions="*,*" ColumnSpacing="20" Margin="0,10">
+                        <StackLayout Grid.Column="0">
+                            <Label Text="Gross Salary Amount: " FontSize="12" TextColor="Gray"/>
+                            
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+            </Frame>
+            
         </StackLayout>
     </ScrollView>
