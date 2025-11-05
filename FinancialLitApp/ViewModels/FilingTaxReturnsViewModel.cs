@@ -86,13 +86,13 @@ namespace FinancialLitApp.ViewModels
 
         //the formulas that users are given ( for UI binding):
 
-        private string PAYEFormulae => "Based on annual income:\n" +
+        public  string PAYEFormulae => "Based on annual income:\n" +
                                        "Use Tax Bracket Formula: (R42,678 + 26% x (annual salary - R237,100)\n" +
                                        "Then subtract rebate value : R17,235 & divide by 12";
 
-        private string UIFFormulae => "1% of gross monthly salary. (The maximum UIF is : R177.12 per month)";
+        public string UIFFormulae => "1% of gross monthly salary. (The maximum UIF is : R177.12 per month)";
 
-        private string PensionFundFormulae => "4.7% of gross monthly salary";
+        public string PensionFundFormulae => "4.7% of gross monthly salary";
 
 
 
