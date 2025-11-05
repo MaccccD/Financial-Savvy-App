@@ -40,13 +40,46 @@
                            HorizontalOptions="Center"/>
                     
                     <!--- Gross & net Info-->
-
                     <Grid ColumnDefinitions="*,*" ColumnSpacing="20" Margin="0,10">
                         <StackLayout Grid.Column="0">
                             <Label Text="Gross Salary Amount: " FontSize="12" TextColor="Gray"/>
-                            
+                            <Label Text="{Binding GrossSalaryMonthly, StringFormat='R{0:N2}'}"
+                                   FontSize="16"
+                                   FontAttributes="Bold"
+                                   TextColor="Black"/>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1">
+                            <Label Text="Nett-take home pay:" FontSize="12"TextColor="Gray"/>
+                            <Label Text="{Binding NetTakeHomePay, StringFormat='R{0:N2}'}"
+                                   FontSize="16"
+                                   FontAttributes="Bold"
+                                   TextColor="Black"/>
                         </StackLayout>
                     </Grid>
+
+                    <BoxView HeightRequest="2" Color="LightGray" Margin="0,10"/>
+                    
+                    <!---Table Headers-->
+
+                    <Grid ColumnDefinitions="2*,2*,*" ColumnSpacing="5">
+                        <Label Grid.Column="0"
+                               Text="Type of deduction"
+                               FontSize="15"
+                               FontAttributes="Bold"
+                               TextColor="Black"/>
+                        <Label Grid.Column="1"
+                               Text="Tax Bracket Formula"
+                               FontSize="12"
+                               FontAttributes="Bold"
+                               TextColor="Black"/>
+                        <Label Grid.Column="2"
+                               Text="Amount Taxable"
+                               FontSize="12"
+                               FontAttributes="Bold"
+                               TextColor="Black"/>
+                    </Grid>
+
+                    <BoxView HeightRequest="1" Color="Gray"/>
                 </StackLayout>
             </Frame>
             
