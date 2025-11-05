@@ -54,7 +54,19 @@
                 </StackLayout>
             </Frame>
 
-			<!--- The ITR12-->
+
+            <Frame Background="#34495e" CornerRadius="8" Padding="12">
+                <StackLayout Spacing="12">
+                    <Label Text="{Binding OverallMessage}"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       TextColor="Yellow"
+                       HorizontalOptions="Center" />
+                </StackLayout>
+            </Frame>
+            
+            
+            <!--- The ITR12-->
 			<Frame BackgroundColor="#34495e" CornerRadius="12" Padding="20" HasShadow="True">
 				<StackLayout Spacing="15">
 
@@ -241,6 +253,7 @@
                     
                     <!-- Actions Bns-->
                     <Grid ColumnDefinitions="*" ColumnSpacing="10">
+                        
                         <Button Grid.Column="1"
                                 Text="File Return"
                                 Command="{Binding FileReturnCommand}"
@@ -249,6 +262,7 @@
                                 CornerRadius="10"
                                 HeightRequest="50"
                                 FontSize="16"
+                      
                                 FontAttributes="Bold"/>
                     </Grid>
                     

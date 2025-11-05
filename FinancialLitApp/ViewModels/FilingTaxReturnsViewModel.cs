@@ -129,6 +129,11 @@ namespace FinancialLitApp.ViewModels
             decimal.TryParse(PensionFundInput, out pensionFund);
 
             CalculatedTotal = paye + uif + pensionFund;
+
+            //if (IsAllCorrect)
+            //{
+            //    ShowSuccessMessage();
+            //}
         }
 
         [RelayCommand]
@@ -151,6 +156,7 @@ namespace FinancialLitApp.ViewModels
             IsPAYECorrect = IsWithinMargin(userPAYE, correctPAYE, 10m);
             IsUIFCorrect = IsWithinMargin(userUIF, correctUIF, 10m);
             IsPensionFundCorrect = IsWithinMargin(userPension, correctPensionFund, 10m);
+            IsAllCorrect = true;
 
             //show the total:
             UpdateCalculatedTotal();
@@ -333,6 +339,7 @@ namespace FinancialLitApp.ViewModels
             payeInput = correctPAYE.ToString("F2");
             uifInput = correctUIF.ToString("F2");
             pensionFundInput = correctPensionFund.ToString("F2");
+
 
             UpdateCalculatedTotal();
 
