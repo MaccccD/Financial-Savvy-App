@@ -106,15 +106,19 @@ namespace FinancialLitApp.ViewModels
         partial void OnPayeInputChanged(string value)
         {
             UpdateCalculatedTotal();
+            
+            
         }
 
         partial void OnUifInputChanged(string value)
         {
             UpdateCalculatedTotal();
+            
         }
         partial void OnPensionFundInputChanged(string value)
         {
             UpdateCalculatedTotal();
+          
         }
         private void UpdateCalculatedTotal()
         {
@@ -131,8 +135,28 @@ namespace FinancialLitApp.ViewModels
         private void FileReturn()
         {
             ClearFeedback();
+            // Validate inputs
+            if (!ValidateInputs())
+            {
+                OverallMessage = "⚠️ Please enter all deduction amounts...";
+                return;
+            }
 
-            
+            // Parse user inputs (convert string to decimal)
+            decimal userPAYE = decimal.Parse(PayeInput);      
+            decimal userUIF = decimal.Parse(UifInput);    
+            decimal userPension = decimal.Parse(PensionFundInput); 
+
+            // Check correctness
+            IsPAYECorrect = IsWithinMargin(userPAYE, correctPAYE, 10m);
+            IsUIFCorrect = IsWithinMargin(userUIF, correctUIF, 10m);
+            IsPensionFundCorrect = IsWithinMargin(userPension, correctPensionFund, 10m);
+
+            // ⭐ THIS IS WHERE FEEDBACK IS TRIGGERED ⭐
+            GeneratePAYEFeedback(userPAYE);      
+            GenerateUIFFeedback(userUIF);        
+            GeneratePensionFeedback(userPension); 
+            GenerateTotalFeedback();             
         }
 
 
