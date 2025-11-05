@@ -32,24 +32,24 @@
 
             <Frame BackgroundColor="#34495e" CornerRadius="12" Padding="18">
                 <StackLayout Spacing="10">
-                    <Label Text="How It Works"
-                           FontSize="16"
+                    <Label Text="How It Works:"
+                           FontSize="18"
                            FontAttributes="Bold"
-                           TextColor="#ffebd7"/>
-                    <Label Text="In this challenge, you'll learn how to file your tax returns by comoleting this mock ITR12 Form. Use the formualas given to calculate each amount. The aim is to understand how the tax calculator works and what deductions are applied to your salary."
+                           TextColor="#00d4aa"/>
+                    <Label Text="In this challenge, you'll learn how to file your tax returns by completing this mock ITR12 Form. Use the formulas given to calculate each amount. The aim is to understand how the tax calculator works and what deductions are applied to your salary."
                            FontSize="14"
-                           TextColor="#ffedb7"
+                           TextColor="#ffebd7"
                            LineBreakMode="WordWrap"/>
 
 
                     <Label Text="💡 Why This Matters?"
-                           FontSize="13"
+                           FontSize="18"
                            FontAttributes="Bold"
                            TextColor="#00d4aa"
                            Margin="0,10,0,0"/>
-                    <Label Text="-Every South African earning above R91, 250/year must file tax returns. Understandng deductions helps you verify your payslip. You can maximize tax benefits (like pension contributions) and avoid penalties for incorrect or late filing"
+                    <Label Text="-Every South African earning above R91,250 per year must file tax returns. Understanding deductions helps you verify your payslip. You can maximize tax benefits (like pension contributions) and avoid penalties for incorrect or late filing."
                            FontSize="15"
-                           TextColor="#ffebd7"
+                           TextColor="#ffebd7" 
                            LineBreakMode="WordWrap"/>
                 </StackLayout>
             </Frame>
