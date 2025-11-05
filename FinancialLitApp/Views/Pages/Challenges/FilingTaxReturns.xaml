@@ -55,33 +55,42 @@
             </Frame>
 
 			<!--- The ITR12-->
-			<Frame BackgroundColor="WhiteSmoke" CornerRadius="12" Padding="20" HasShadow="True">
+			<Frame BackgroundColor="#34495e" CornerRadius="12" Padding="20" HasShadow="True">
 				<StackLayout Spacing="15">
 
 					<!---the title-->
 					<Label Text="ITR12 Form"
                            FontSize="20"
                            FontAttributes="Bold"
-                           TextColor="Black"
+                           TextColor="#ffebd7"
                            HorizontalOptions="Center"/>
 
 					<!--- Gross & net Info-->
-					<Grid ColumnDefinitions="*,*" ColumnSpacing="20" Margin="0,10">
+					<Grid ColumnDefinitions="*,*,*" ColumnSpacing="20" Margin="0,10">
 						<StackLayout Grid.Column="0">
-							<Label Text="Gross Salary Amount: " FontSize="12" TextColor="Gray"/>
+							<Label Text="Annual Gross Salary: " FontSize="16" TextColor="Gray"/>
+							<Label Text="{Binding GrossSalaryAnnual, StringFormat='R{0:N2}'}"
+                                   FontSize="16"
+                                   FontAttributes="Bold"
+                                   TextColor="#00d4aa"/>
+						</StackLayout>
+						<StackLayout Grid.Column="1">
+							<Label Text="Monthly Gross Salary:" FontSize="16" TextColor="Gray"/>
 							<Label Text="{Binding GrossSalaryMonthly, StringFormat='R{0:N2}'}"
                                    FontSize="16"
                                    FontAttributes="Bold"
-                                   TextColor="Black"/>
+                                   TextColor="#00d4aa"/>
 						</StackLayout>
-						<StackLayout Grid.Column="1">
-							<Label Text="Nett-take home pay:" FontSize="12" TextColor="Gray"/>
-							<Label Text="{Binding NetTakeHomePay, StringFormat='R{0:N2}'}"
+                        <StackLayout Grid.Column="2">
+                            <Label Text="Nett-take home pay:" FontSize="16" TextColor="Gray"/>
+                            <Label Text="{Binding NetTakeHomePay, StringFormat='R{0:N2}'}"
                                    FontSize="16"
                                    FontAttributes="Bold"
-                                   TextColor="Black"/>
-						</StackLayout>
-					</Grid>
+                                   TextColor="#00d4aa"/>
+                        </StackLayout>
+
+
+                    </Grid>
 
 					<BoxView HeightRequest="2" Color="LightGray" Margin="0,10"/>
 
@@ -90,19 +99,19 @@
 					<Grid ColumnDefinitions="2*,2*,*" ColumnSpacing="5">
 						<Label Grid.Column="0"
                                Text="Type of deduction"
-                               FontSize="15"
+                               FontSize="16"
                                FontAttributes="Bold"
-                               TextColor="Black"/>
+                               TextColor="PeachPuff"/>
 						<Label Grid.Column="1"
                                Text="Tax Bracket Formula"
-                               FontSize="12"
+                               FontSize="16"
                                FontAttributes="Bold"
-                               TextColor="Black"/>
+                               TextColor="PeachPuff"/>
 						<Label Grid.Column="2"
-                               Text="Monhtly Amount Taxable"
-                               FontSize="12"
+                               Text="Monthly Amount Taxable"
+                               FontSize="16"
                                FontAttributes="Bold"
-                               TextColor="Black"/>
+                               TextColor="PeachPuff"/>
 					</Grid>
 
 					<BoxView HeightRequest="1" Color="Gray"/>
@@ -110,23 +119,24 @@
 					<!--- Paye ROW-->
 					<Grid ColumnDefinitions="2*,2*,*" ColumnSpacing="5">
 						<StackLayout Grid.Column="0">
-							<Label Text="PAYE" FontSize="13" FontAttributes="Bold" TextColor="Black"/>
+							<Label Text="PAYE" FontSize="15" FontAttributes="Bold" TextColor="#00d4aa"/>
 							<Label Text="(Pay As You Earn) - income deducted from your salary"
-								   FontSize="10"
-						           TextColor="Gray"
+								   FontSize="13"
+						           TextColor="#ffebd7"
 						           LineBreakMode="WordWrap"/>
 						</StackLayout>
                         <Label Grid.Column="1"
                                Text="{Binding PAYEFormulae}"
-                               FontSize="10"
-                               TextColor="DarkBlue"
+                               FontSize="13"
+                               TextColor="#ffebd7"
                                LineBreakMode="WordWrap"/>
                         <Entry Grid.Column="2"
                                Text="{Binding PayeInput}"
+                               TextColor="#ffebd7"
                                Keyboard="Numeric"
                                Placeholder="0.00"
-                               FontSize="14"
-                               BackgroundColor="#f0f0f0"/>
+                               FontSize="13"
+                               BackgroundColor="#2c3e50"/>
                     </Grid>
                     
                     <!---Paye Feedback-->
@@ -144,23 +154,24 @@
                     <!---UIF Row -->
                     <Grid ColumnDefinitions="2*,2*,*" ColumnSpacing="5">
                         <StackLayout Grid.Column="0">
-                            <Label Text="UIF" FontSize="13" FontAttributes="Bold" TextColor="Black"/>
+                            <Label Text="UIF" FontSize="16" FontAttributes="Bold" TextColor="#00d4aa"/>
                             <Label Text="(Unemployment Insurance Fund Contribution)"
-                                   FontSize="10"
-                                   TextColor="Gray"
+                                   FontSize="13"
+                                   TextColor="#ffebd7"
                                    LineBreakMode="WordWrap"/>
                         </StackLayout>
                         <Label Grid.Column="1"
                                Text="{Binding UIFFormulae}"
-                               FontSize="10"
-                               TextColor="DarkBlue"
+                               FontSize="13"
+                               TextColor="#ffebd7"
                                LineBreakMode="WordWrap"/>
                         <Entry Grid.Column="2"
                                Text="{Binding UifInput}"
                                Keyboard="Numeric"
+                               TextColor="#ffebd7"
                                Placeholder="0.00"
                                FontSize="14"
-                               BackgroundColor="#f0f0f0"/>
+                               BackgroundColor="#2c3e50"/>
                     </Grid>
                     
                     <!--- UIF feedback-->
@@ -179,23 +190,24 @@
  
                     <Grid ColumnDefinitions="2*,2*,*" ColumnSpacing="5">
                         <StackLayout Grid.Column="0">
-                            <Label Text="Pension Fund" FontSize="13" FontAttributes="Bold" TextColor="Black"/>
+                            <Label Text="Pension Fund" FontSize="16" FontAttributes="Bold" TextColor="#00d4aa"/>
                             <Label Text="(Retirement savings - tax deductible)"
-                                   FontSize="10"
-                                   TextColor="Gray"
+                                   FontSize="13"
+                                   TextColor="#ffebd7"
                                    LineBreakMode="WordWrap"/>
                         </StackLayout>
                         <Label Grid.Column="1"
                                Text="{Binding PensionFundFormulae}"
-                               FontSize="10"
-                               TextColor="DarkBlue"
+                               FontSize="13"
+                               TextColor="#ffebd7"
                                LineBreakMode="WordWrap"/>
                         <Entry Grid.Column="2"
                                Text="{Binding PensionFundInput}"
                                Keyboard="Numeric"
+                               TextColor="#ffebd7"
                                Placeholder="0.00"
                                FontSize="14"
-                               BackgroundColor="#f0f0f0"/>
+                               BackgroundColor="#2c3e50"/>
                     </Grid>
 
                     <!--- Pension fund feedback-->
@@ -214,24 +226,25 @@
                     <Grid ColumnDefinitions="4*,*" ColumnSpacing="5">
                         <Label Grid.Column="0"
                                Text="Total Deductions"
-                               FontSize="14"
+                               FontSize="16"
                                FontAttributes="Bold"
-                               TextColor="Black"/>
+                               TextColor="#00d4aa"/>
                         <Label Grid.Column="1"
                                Text="{Binding CalculatedTotal, StringFormat='R{0:F2}'}"
-                               FontSize="14"
+                               FontSize="16"
                                FontAttributes="Bold"
-                               TextColor="Green"
+                               TextColor="#ffebd7"
                                HorizontalOptions="End"/>
                     </Grid>
                     
                     <!---Totall's feedback:-->
+                    
                     <!-- Actions Bns-->
                     <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
                         <Button Grid.Column="0"
                                 Text="Show Correct Return"
                                 Command="{Binding ShowCorrectReturnCommand}"
-                                BackgroundColor="#103d81"
+                                BackgroundColor="Green"
                                 TextColor="#ffebd7"
                                 CornerRadius="10"
                                 HeightRequest="50"
