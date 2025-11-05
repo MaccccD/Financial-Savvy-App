@@ -132,8 +132,8 @@
                     <!---Paye Feedback-->
                     <Frame BackgroundColor="#e3f2fd"
                            CornerRadius="8"
-                           IsVisible="{Binding PayeFeedback, Converter={StaticResource, StringIsNotEmptyConverter}}"
-                           <Label Text="{Binding PayeFeedback}"
+                           IsVisible="{Binding PayeFeedback, Converter={StaticResource StringIsNotEmptyConverter}}">
+                        <Label Text="{Binding PayeFeedback}"
                                   FontSize="13"
                                   TextColor="#0d47a1"
                                   LineBreakMode="WordWrap"/>
@@ -166,8 +166,8 @@
                     <!--- UIF feedback-->
                     <Frame BackgroundColor="#e3f2fd"
                            CornerRadius="8"
-                           IsVisible="{Binding UifFeedback, Converter={StaticResource StringIsNotEmptyConverter}}"
-                           <Label Text="{Binding UifFeedback}"
+                           IsVisible="{Binding UifFeedback, Converter={StaticResource StringIsNotEmptyConverter}}">
+                        <Label Text="{Binding UifFeedback}"
                                   FontSize="13"
                                   TextColor="#0d47a1"
                                   LineBreakMode="WordWrap"/>
@@ -201,8 +201,8 @@
                     <!--- Pension fund feedback-->
                     <Frame BackgroundColor="#e3f2fd"
                            CornerRadius="8"
-                           IsVisible="{Binding PensionFundFeedback, Converter={StaticResource StringIsNotEmptyConverter}}"
-                     <Label Text="{Binding PensionFundFeedback}"
+                           IsVisible="{Binding PensionFundFeedback, Converter={StaticResource StringIsNotEmptyConverter}}">
+                        <Label Text="{Binding PensionFundFeedback}"
                             FontSize="13"
                             TextColor="#0d47a1"
                             LineBreakMode="WordWrap"/>

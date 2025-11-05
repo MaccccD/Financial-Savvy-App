@@ -74,11 +74,11 @@ namespace FinancialLitApp.Views.Pages
         {
             try
             {
-                await WaitForShellAndNavigate("investment");
+                await WaitForShellAndNavigate("filingtaxreturns");
             }
             catch(Exception ex)
             {
-                await DisplayAlert("Challlenge not available yet", $"{ex.Message}", "Danko");
+                await DisplayAlert("Challenge not available yet", $"{ex.Message}", "Danko");
             }
         }
 
