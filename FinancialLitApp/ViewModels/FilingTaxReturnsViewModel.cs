@@ -28,7 +28,7 @@ namespace FinancialLitApp.ViewModels
 
         private decimal correctPAYE = 4294.83m;
         private decimal correctUIF = 177.12m;
-        private decimal correctPensionFund = 1321.73m;
+        private decimal correctPensionFund = 1321.74m;
         private decimal correctTotalDeductions = 5793.68m;
 
 
@@ -152,6 +152,8 @@ namespace FinancialLitApp.ViewModels
             IsUIFCorrect = IsWithinMargin(userUIF, correctUIF, 10m);
             IsPensionFundCorrect = IsWithinMargin(userPension, correctPensionFund, 10m);
 
+            //show the total:
+            UpdateCalculatedTotal();
             // ⭐ THIS IS WHERE FEEDBACK IS TRIGGERED ⭐
             GeneratePAYEFeedback(userPAYE);      
             GenerateUIFFeedback(userUIF);        

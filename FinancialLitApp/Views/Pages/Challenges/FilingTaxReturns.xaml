@@ -240,15 +240,7 @@
                     <!---Totall's feedback:-->
                     
                     <!-- Actions Bns-->
-                    <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
-                        <Button Grid.Column="0"
-                                Text="Show Correct Return"
-                                Command="{Binding ShowCorrectReturnCommand}"
-                                BackgroundColor="Green"
-                                TextColor="#ffebd7"
-                                CornerRadius="10"
-                                HeightRequest="50"
-                                FontSize="14"/>
+                    <Grid ColumnDefinitions="*" ColumnSpacing="10">
                         <Button Grid.Column="1"
                                 Text="File Return"
                                 Command="{Binding FileReturnCommand}"
