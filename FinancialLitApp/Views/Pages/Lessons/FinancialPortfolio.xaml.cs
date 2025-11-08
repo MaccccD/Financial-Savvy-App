@@ -17,7 +17,7 @@ namespace FinancialLitApp.Views.Pages.Lessons
         private async void OnTaxReturnChallengeClicked(object sender, EventArgs e)
         {
             await Shell.Current.GoToAsync("filingtaxreturns");
-            Console.WriteLine("Yayy, the tex return challenge has loaded !");
+            Console.WriteLine("Yay, the tex return challenge has loaded !");
         }
     }
 }

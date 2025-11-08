@@ -216,12 +216,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 48,
@@ -243,7 +239,7 @@
               "RelativeDocumentMoniker": "Views\\Pages\\Challenges\\FilingTaxReturns.xaml",
               "ToolTip": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Views\\Pages\\Challenges\\FilingTaxReturns.xaml",
               "RelativeToolTip": "Views\\Pages\\Challenges\\FilingTaxReturns.xaml",
-              "ViewState": "AgIAAPQAAAAAAAAAAAAIwAQBAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAgBAAAAAAAAAAAAAB4BAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-11-05T14:57:30.55Z",
               "EditorCaption": ""
@@ -258,8 +254,7 @@
               "RelativeToolTip": "ViewModels\\FilingTaxReturnsViewModel.cs",
               "ViewState": "AgIAAB0BAAAAAAAAAAAuwAsBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T13:21:56.406Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T13:21:56.406Z"
             },
             {
               "$type": "Document",
@@ -271,8 +266,7 @@
               "RelativeToolTip": "Views\\Pages\\Challenges\\FilingTaxReturns.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADgvwwAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T13:21:09.662Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T13:21:09.662Z"
             },
             {
               "$type": "Document",
@@ -548,8 +542,7 @@
               "RelativeToolTip": "FinancialLitApp.csproj",
               "ViewState": "AgIAAF0AAAAAAAAAAAAAAHMAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-09-24T17:13:58.715Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-24T17:13:58.715Z"
             },
             {
               "$type": "Document",
@@ -597,8 +590,7 @@
               "RelativeToolTip": "Views\\Pages\\Challenges\\Savings.xaml",
               "ViewState": "AgIAADgAAAAAAAAAAAAIwKsAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-11T19:30:06.776Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-11T19:30:06.776Z"
             },
             {
               "$type": "Document",
@@ -622,8 +614,7 @@
               "RelativeToolTip": "Views\\Pages\\FeedbackPage.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-09-19T14:10:59.849Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T14:10:59.849Z"
             },
             {
               "$type": "Document",
@@ -731,8 +722,7 @@
               "RelativeToolTip": "ViewModels\\SavingsChallengeViewModel.cs",
               "ViewState": "AgIAAIYAAAAAAAAAAAAUwJMAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T17:41:55.068Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-26T17:41:55.068Z"
             },
             {
               "$type": "Document",
@@ -780,8 +770,7 @@
               "RelativeToolTip": "Views\\Pages\\Challenges\\Savings.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-11T19:30:37.73Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-11T19:30:37.73Z"
             },
             {
               "$type": "Document",
@@ -854,6 +843,10 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-07-28T20:45:39.188Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

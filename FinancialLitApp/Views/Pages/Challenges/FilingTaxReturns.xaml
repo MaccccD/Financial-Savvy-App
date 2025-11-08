@@ -262,7 +262,6 @@
                                 CornerRadius="10"
                                 HeightRequest="50"
                                 FontSize="16"
-                      
                                 FontAttributes="Bold"/>
                     </Grid>
                     
@@ -278,10 +277,10 @@
                                    TextColor="#00d4aa"
                                    HorizontalOptions="Center"/>
 
-                            <Label Text="{Binding OverallMessage}"
-                                   FontSize="15"
-                                   TextColor="#ffebd7"
-                                   LineBreakMode="WordWrap"/>
+                             <Label Text="{Binding OverallMessage}"
+                                    FontSize="15"
+                                    TextColor="#ffebd7"
+                                    LineBreakMode="WordWrap"/>
 
                             <Button Text="Try Again"
                                     Command="{Binding ResetCommand}"

@@ -232,7 +232,7 @@ namespace FinancialLitApp.ViewModels
                 explanation += $"Here's a step-by-step guide on how to calculate  UIF:\n";
                 explanation += $"1. Calculate 1% of gross salary: R{GrossSalaryMonthly:F2} x 0.01 = R{GrossSalaryMonthly * 0.01m:F2}\n";
                 explanation += $"2. UIF has a monthly cap of R177.12\n";
-                explanation += $"3. Take the lower amount: min(R{grossSalaryMonthly * 0.01m:F2}, R177.12) = R{correctUIF:F2}\n\n";
+                explanation += $"3. Take the lower amount: min(R{GrossSalaryMonthly * 0.01m:F2}, R177.12) = R{correctUIF:F2}\n\n";
 
 
                 if(userUIF > correctUIF)
@@ -291,6 +291,8 @@ namespace FinancialLitApp.ViewModels
                                 $"Difference: R{Math.Abs(userTotal - correctTotalDeductions):F2}";
             }
         }
+
+
 
 
         private void ShowSuccessMessage()
