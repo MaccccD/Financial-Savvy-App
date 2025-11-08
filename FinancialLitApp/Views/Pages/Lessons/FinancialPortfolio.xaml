@@ -34,7 +34,7 @@
                      FontAttributes="Bold"
                      TextColor="LimeGreen"/>
                     <Frame BackgroundColor="#103D81" CornerRadius="12" Padding="8" HorizontalOptions="StartAndExpand">
-                        <Label Text="Most young people have NO IDEA how to file tax returns untill they are forced to!"
+                        <Label Text="Most young people have NO IDEA how to file tax returns until they are forced to!"
                                FontSize="18"
                                FontAttributes="Bold"
                                LineBreakMode="WordWrap"
