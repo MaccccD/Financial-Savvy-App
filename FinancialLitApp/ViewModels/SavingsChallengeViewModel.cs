@@ -9,11 +9,23 @@ using CommunityToolkit.Mvvm.Input;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FinancialLitApp.Handlers;
+using System.Diagnostics;
+//using Google.Android.Material.Color.Utilities;
 
 namespace FinancialLitApp.ViewModels
 {
     public partial class SavingsChallengeViewModel : ObservableObject
     {
+        private readonly ChallengeCompletionHandler _completionHandler;
+
+        //token display:
+        [ObservableProperty]
+        private decimal tokenBalance = 0m;
+
+        [ObservableProperty]
+        private bool showTokenBalance = false;
+
         [ObservableProperty]
         private decimal startingAmount = 200m;
          
@@ -48,9 +60,22 @@ namespace FinancialLitApp.ViewModels
 
         public SavingsChallengeViewModel()
         {
+            _completionHandler = new ChallengeCompletionHandler();  
             InitializeGame();
+            _ = LoadTokenBalance();
         }
-
+        public async Task LoadTokenBalance()
+        {
+            try
+            {
+                TokenBalance = await _completionHandler.GetTokenBalance();
+                ShowTokenBalance = TokenBalance > 0;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Failed to load token balance: {ex.Message}");
+            }
+        }
         private void InitializeGame() // when the game starts , all variables are initialized to  zero 
         {
             CurrentlySaved = StartingAmount;
@@ -119,7 +144,7 @@ namespace FinancialLitApp.ViewModels
                     Name= "Health care Insurance",
                     Price= 100m,
                     Category = ItemCategory.Need,   
-                    Description = "In case anyone in the family suh as kids get sick"
+                    Description = "In case anyone in the family such as kids get sick"
                 
                 }, 
                 //wants items- all lifestyle items for a Gen Z :
@@ -184,7 +209,7 @@ namespace FinancialLitApp.ViewModels
         }
 
         [RelayCommand] // this command is used to bind data such as the UI  to methods in the View Models without doreclty refrencing the View from the View Model
-        private async void SelectItem(SavingsItem item)
+        private async Task SelectItem(SavingsItem item)
         {
             if (!IsGameActive) return; // exit the function when the game is not active !
 
@@ -224,13 +249,17 @@ namespace FinancialLitApp.ViewModels
 
 
         [RelayCommand]
-        private void CheckResult()
+        private async Task CheckResult()
         {
             var result = EvaluateChallenge();
             ShowResults = true;
 
             if (result.IsSuccess)
             {
+               await  SaveProgressLocally(result);
+
+                int score = CalculateScore(result);
+                //show the user feedback that they stayed within budget and the target goal.!
                 FeedbackMessage = $"🎉Congratulations! You've managed to successfully save R{currentlySaved:F2}" +
                                   $"by making conscious spending choices. \n\n" +
                                   $"💡Learning Insight : Notice how your active decision to prioritize and " +
@@ -239,13 +268,17 @@ namespace FinancialLitApp.ViewModels
                                   $"savings enhances financial literacy through practice!";
                 IsGameActive = false;
 
+                //now handle the blockchain recording of the wallet creation and earning tokens:
+               await  HandleBlockchainCompletion(score);
             }
 
             else if (CurrentAttempt >= MaxAttempts)
             {
-                //if the user has exeeded the number of attempts they have , resulting in failure:
+                //if the user has exceeded the number of attempts they have , resulting in failure:
                 FeedbackMessage = GetFailureFeedback(result);
                 IsGameActive = false;
+                //save progress locally as well:
+                 await SaveProgressLocally(result);
             }
             else
             {
@@ -261,6 +294,58 @@ namespace FinancialLitApp.ViewModels
         {
             InitializeGame();
 
+        }
+
+        [RelayCommand]
+        private async Task ViewAchievements()
+        {
+            try
+            {
+                var achievements = await _completionHandler.GetUserAchievements();
+
+                if (achievements == null || !achievements.Any())
+                {
+                    await Application.Current.MainPage.DisplayAlert(
+                        "No Achievements Yet",
+                        "Complete challenges to earn blockchain-verified achievements!",
+                        "OK");
+                    return;
+                }
+
+                var achievementList = string.Join("\n\n", achievements.Select(a =>
+                    $"✓ {a.ChallengeName}\n" +
+                    $"   Score: {a.Score}\n" +
+                    $"   Date: {a.CompletionDate:d}"));
+
+                await Application.Current.MainPage.DisplayAlert(
+                    "🏆 Your Achievements",
+                    achievementList,
+                    "OK");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"View achievements error: {ex.Message}");
+            }
+        }
+
+        [RelayCommand]
+        private async Task ViewTokenBalance()
+        {
+            try
+            {
+                var balance = await _completionHandler.GetTokenBalance();
+                TokenBalance = balance;
+
+                await Application.Current.MainPage.DisplayAlert(
+                    "💰 Your Token Balance",
+                    $"{balance} Tokens\n\n" +
+                    "Earn more by completing challenges!",
+                    "OK");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"View balance error: {ex.Message}");
+            }
         }
         private void UpdateRealTimeFeedback() // show the messages needed to display based on the user prgress towards their target savings goals vs what they currently saved based on their spending habits
         {
@@ -282,13 +367,59 @@ namespace FinancialLitApp.ViewModels
             }
         }
 
+        private async Task HandleBlockchainCompletion(int score)
+        {
+            try
+            {
+                var result = await _completionHandler.HandleChallengeCompletion(
+                    challengeId: "savings_challenge_1",
+                    challengeName: "Savings Challenge",
+                    score: score,
+                    challengeType: "savings"); 
+
+                if (result.NeedsWalletSetup)
+                {
+                    var setupWallet = await Application.Current.MainPage.DisplayAlert(
+                        "🎁 Earn 50 Tokens!",
+                        "Create a blockchain wallet to:\n" +
+                        "✓ Earn 50 tokens for this challenge\n" +
+                        "✓ Get a permanent achievement certificate\n" +
+                        "✓ Prove your savings planning skills",
+                        "Set Up Wallet",
+                        "Maybe Later");
+
+                    if (setupWallet)
+                    {
+                        await Shell.Current.GoToAsync("walletsetup");
+                    }
+                }
+                else if (result.Success && result.BlockchainRecorded)
+                {
+                    TokenBalance = await _completionHandler.GetTokenBalance();
+                    ShowTokenBalance = true;
+
+                    await Application.Current.MainPage.DisplayAlert(
+                        "🎉 Achievement Unlocked!",
+                        $"Congratulations! You earned {result.TokensEarned} tokens!\n\n" +
+                        $"✓ Savings challenge recorded on blockchain\n" +
+                        $"✓ Certificate available for verification\n\n" +
+                        $"💰 Total Tokens: {TokenBalance}",
+                        "Awesome!");
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Blockchain completion error: {ex.Message}");
+            }
+        }
+
         private ChallengeResult EvaluateChallenge()
         {
             var result = new ChallengeResult
             {
-                //here i'm defining what constitutes a good savings challenge game or a successfull game:
+                //here i'm defining what constitutes a good savings challenge game or a successful game:
 
-                IsSuccess = CurrentlySaved >= TargetAmount, // the mney the user has saved has to exceed what was the target savings goal
+                IsSuccess = CurrentlySaved >= TargetAmount, // the money the user has saved has to exceed what was the target savings goal
                 AmountSaved = TargetAmount,
                 TargetAmount = TargetAmount,
                 AttemptsUsed = CurrentAttempt,
@@ -298,12 +429,45 @@ namespace FinancialLitApp.ViewModels
             return result;
         }
 
+        private int CalculateScore(ChallengeResult result)
+        {//in here i am creating score points based on tbe user's performance in the challenge and decisions made 
+            int score = 0;
+
+            // Base score for completing challenge (40 points)
+            score += 40;
+
+            // Bonus for staying within budget (20 points)
+            if (result.AmountSaved >= result.TargetAmount)
+                score += 20;
+
+            // Bonus for good spending priorities (20 points)
+            if (result.AmountSaved == result.TargetAmount)
+                score += 10;
+
+            // Bonus for prioritizing needs over wants (20 points)
+            var needsSpent = SelectedItems
+                .Where(i => i.Category == ItemCategory.Need)
+                .Sum(i => i.Price);
+            var wantsSpent = SelectedItems
+                .Where(i => i.Category == ItemCategory.Want)
+                .Sum(i => i.Price);
+
+            if (needsSpent > wantsSpent)
+                score += 20;
+
+
+            // Bonus for completing on first attempt (10 points)
+            if (result.AttemptsUsed == 1)
+                score += 10;
+
+            return Math.Min(score, 100); // Cap at 100
+        }
         private string GetAttemptFeedback(ChallengeResult result)
         {
             var needSelected = SelectedItems.Where(i => i.Category == ItemCategory.Need).ToList();
             var wantsSelected = SelectedItems.Where(i => i.Category == ItemCategory.Want).ToList();
 
-            var feedback = $"Attempt {CurrentAttempt - 1} Complete!/n/n";
+            var feedback = $"Attempt {CurrentAttempt - 1} Complete!\n\n";
 
             if(CurrentlySaved < TargetAmount)
             {
@@ -370,6 +534,22 @@ namespace FinancialLitApp.ViewModels
             }
             return analysis ;   
         }
+        private async Task SaveProgressLocally(ChallengeResult result)
+        {
+            try
+            {
+                await SecureStorage.SetAsync("savings_challenge_completed", "true");
+                await SecureStorage.SetAsync("savings_challenge_score", CalculateScore(result).ToString());
+                await SecureStorage.SetAsync("savings_challenge_date", DateTime.UtcNow.ToString());
+
+                Debug.WriteLine($"Savings challenge saved locally: {CalculateScore(result)}");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Failed to save locally: {ex.Message}");
+            }
+        }
+
 
         private void ResetForNewAttempt()
         {

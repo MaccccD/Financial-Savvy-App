@@ -166,7 +166,7 @@ namespace FinancialLitApp.ViewModels
 
 
         [RelayCommand]
-        private async void FileReturn()
+        private async Task FileReturn()
         {
             ClearFeedback();
             // Validate inputs
@@ -185,7 +185,7 @@ namespace FinancialLitApp.ViewModels
             IsPAYECorrect = IsWithinMargin(userPAYE, correctPAYE, 10m);
             IsUIFCorrect = IsWithinMargin(userUIF, correctUIF, 10m);
             IsPensionFundCorrect = IsWithinMargin(userPension, correctPensionFund, 10m);
-            IsAllCorrect = true;
+            IsAllCorrect = IsPAYECorrect && IsUIFCorrect && IsPensionFundCorrect;
 
             //show the total:
             UpdateCalculatedTotal();
@@ -193,8 +193,8 @@ namespace FinancialLitApp.ViewModels
             GeneratePAYEFeedback(userPAYE);      
             GenerateUIFFeedback(userUIF);        
             GeneratePensionFeedback(userPension); 
-            GenerateTotalFeedback();   
-            
+            GenerateTotalFeedback();
+            ShowResults = true;
             // calculate score:
 
             try
@@ -249,18 +249,19 @@ namespace FinancialLitApp.ViewModels
             int score = 0;
             // Base score for completing challenge (40 points)
             score += 40;
-            
-            if (correctPAYE >= 4300)
+
+            // Bonus for each correct calculation
+            if (IsPAYECorrect)
                 score += 30;
 
-            if(correctPensionFund >= 1400)
+            if (IsPensionFundCorrect)
                 score += 20;
 
-            if (correctUIF >= 178)
+            if (IsUIFCorrect)
                 score += 10;
 
             // Bonus for completing on first attempt (10 points)
-            if (currentAttempt == 1)
+            if (CurrentAttempt == 1)
                 score += 10;
 
             return Math.Min(score, 100);
@@ -415,15 +416,15 @@ namespace FinancialLitApp.ViewModels
                     challengeId: "Filing_Tax_Returns_3", 
                     challengeName: "Tax Returns Challenge", 
                     score: score,
-                    challengeType: "tax");
+                    challengeType: "taxreturns");
 
                 if (result.NeedsWalletSetup)
                 {
                     // so if user doesn't have wallet - offer setup
                     var setupWallet = await Application.Current.MainPage.DisplayAlert(
-                        "🎁 Earn Tokens & Certificates!",
+                        "🎁 Earn 100 Tokens!",
                         $"Create a blockchain wallet to:\n" +
-                        $"✓ Earn tokens for this challenge\n" +
+                        $"✓ Earn  100 tokens for this challenge\n" +
                         $"✓ Get a permanent achievement certificate\n" +
                         $"✓ Build your verifiable skill portfolio",
                         "Set Up Wallet",

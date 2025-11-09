@@ -136,7 +136,7 @@ namespace FinancialLitApp.ViewModels
                 new BudgetingItem {Id = 14, Name = "Online Course", Price = 120, category = itemCategory.Investment},
                 new BudgetingItem {Id = 15, Name = "Books", Price = 90, category = itemCategory.Investment},
                 new BudgetingItem {Id = 16, Name = "Gym Membership", Price = 80, category = itemCategory.Investment},
-                new BudgetingItem {Id = 17, Name = "Skills Worships", Price = 110, category = itemCategory.Investment},
+                new BudgetingItem {Id = 17, Name = "Skills Workshops", Price = 110, category = itemCategory.Investment},
             };
 
             SelectedExpenses = new ObservableCollection<BudgetingItem>(); // so each time an available item is selected, it gets added to the selected expense collection.
@@ -245,7 +245,7 @@ namespace FinancialLitApp.ViewModels
             }
         }
         [RelayCommand]
-        private async void CheckBudget()
+        private async Task CheckBudget()
         {
             var result = EvaluateBudget();
             ShowResults = true;
@@ -277,7 +277,7 @@ namespace FinancialLitApp.ViewModels
                     FeedbackMessage = GetAttemptFinalAttempt(actualSavings);
                     isGameActive = false;
 
-                //save progress loclally as well:
+                //save progress locally as well:
                  await SaveProgressLocally(result);
                 }
             else
@@ -346,7 +346,7 @@ namespace FinancialLitApp.ViewModels
         }
 
         private int CalculateScore(BudgetResult result)
-        {//in here i am creatimg score points based on tbe user's performance in the challenge and decisions made 
+        {//in here i am creating score points based on tbe user's performance in the challenge and decisions made 
             int score = 0;
 
             // Base score for completing challenge (40 points)
