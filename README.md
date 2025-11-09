@@ -5,6 +5,7 @@ For macOS users:
 3. Run via command line:
    dotnet build
    dotnet run --framework net9.0-maccatalyst
+   
 Figma File:
 https://www.figma.com/design/AhAPGoSz9jgTgvL1qosej6/Financial-Savvy-App-Project?node-id=0-1&t=zXgPn8i8RoMCnORn-1
 
