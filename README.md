@@ -11,7 +11,7 @@ Figma File:
 https://www.figma.com/design/AhAPGoSz9jgTgvL1qosej6/Financial-Savvy-App-Project?node-id=0-1&t=zXgPn8i8RoMCnORn-1
 
 Prerequisites
-Before you can run this app, you need to install the following software:
+Before you can run this app, you need to install the following software(Android Users):
 1. Visual Studio 2022
 
 Download and install Visual Studio 2022 (Community, Professional, or Enterprise)
