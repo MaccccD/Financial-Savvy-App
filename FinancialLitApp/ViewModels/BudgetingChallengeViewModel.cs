@@ -7,11 +7,14 @@ using FinancialLitApp.Models;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System.Threading.Tasks;
+using FinancialLitApp.Handlers;
+using System.Diagnostics;
 
 namespace FinancialLitApp.ViewModels
 {
     public partial class BudgetingChallengeViewModel : ObservableObject
     {
+        private readonly ChallengeCompletionHandler _completionHandler;
         [ObservableProperty]
         private decimal startingAmount = 500m;
 
@@ -42,6 +45,11 @@ namespace FinancialLitApp.ViewModels
         [ObservableProperty]
         private string warningMessage = "";
 
+        [ObservableProperty]
+        private decimal tokenBalance = 0m;
+
+        [ObservableProperty]
+        private bool showTokenBalance = false;
 
         public ObservableCollection<BudgetingItem> AvailableExpenses { get; set; }
         public ObservableCollection<BudgetingItem> SelectedExpenses { get; set; }
@@ -59,8 +67,22 @@ namespace FinancialLitApp.ViewModels
         public BudgetingChallengeViewModel()
 
         {
+            _completionHandler = new ChallengeCompletionHandler();
             InitializeGame();
-            return;
+            
+        }
+
+        public async Task LoadTokenBalance()
+        {
+            try
+            {
+                TokenBalance = await _completionHandler.GetTokenBalance();
+                ShowTokenBalance = tokenBalance > 0;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Failed to load token balance{ex.Message}");
+            }
         }
 
 
@@ -253,11 +275,112 @@ namespace FinancialLitApp.ViewModels
                 {//going for another attempt :
                     CurrentAttempt++;
                     FeedbackMessage = GetAttemptFeedback(actualSavings);
-                    ResetForNewAttempt();
-
-
+                ResetForNewAttempt();
                 }
         }
+        private async Task HandleBlockchainCompletion(int score)
+        {
+            try
+            {
+                // Handle blockchain recording with biometric authentication
+                var completionResult = await _completionHandler.HandleChallengeCompletion(
+                    challengeId: "budgeting_challenge_1",
+                    challengeName: "Budgeting Basics",
+                    score: score,
+                    challengeType: "budgeting");
+
+                if (completionResult.NeedsWalletSetup)
+                {
+                    // User doesn't have a wallet - offer to set one up
+                    var setupWallet = await Application.Current.MainPage.DisplayAlert(
+                        "🎁 Earn Tokens & Certificates!",
+                        "Create a blockchain wallet to:\n" +
+                        "✓ Earn 50 tokens for this challenge\n" +
+                        "✓ Get a permanent achievement certificate\n" +
+                        "✓ Build your verifiable skill portfolio",
+                        "Set Up Wallet",
+                        "Maybe Later");
+
+                    if (setupWallet)
+                    {
+                        await Shell.Current.GoToAsync("walletsetup");
+                    }
+                }
+                else if (completionResult.Success && completionResult.BlockchainRecorded)
+                {
+                    // SUCCESS - Achievement recorded on blockchain!
+                    TokenBalance = await _completionHandler.GetTokenBalance();
+                    ShowTokenBalance = true;
+
+                    await Application.Current.MainPage.DisplayAlert(
+                        "🎉 Achievement Unlocked!",
+                        $"Congratulations! You earned {completionResult.TokensEarned} tokens!\n\n" +
+                        $"✓ Achievement permanently recorded on blockchain\n" +
+                        $"✓ You can now verify this completion anytime\n\n" +
+                        $"💰 Total Tokens: {TokenBalance}",
+                        "Awesome!");
+                }
+                else if (completionResult.SavedLocally)
+                {
+                    // User chose to save locally only
+                    await Application.Current.MainPage.DisplayAlert(
+                        "✓ Progress Saved",
+                        "Your achievement has been saved locally.",
+                        "OK");
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Blockchain completion error: {ex.Message}");
+              
+            }
+        }
+
+        private int CalculateScore(BudgetResult result)
+        {
+            int score = 0;
+
+            // Base score for completing challenge (40 points)
+            score += 40;
+
+            // Bonus for staying within budget (20 points)
+            if (result.AmountSaved >= result.TargetSavings)
+                score += 20;
+
+            // Bonus for good spending priorities (20 points)
+            if (categorySpending[itemCategory.Need] > categorySpending[itemCategory.Want])
+                score += 10;
+
+            if (categorySpending[itemCategory.ImpulsePurchase] < 50)
+                score += 10;
+
+            // Bonus for investment spending (10 points)
+            if (categorySpending[itemCategory.Investment] > 0)
+                score += 10;
+
+            // Bonus for completing on first attempt (10 points)
+            if (result.AttemptsUsed == 1)
+                score += 10;
+
+            return Math.Min(score, 100); // Cap at 100
+        }
+        private async Task SaveProgressLocally(BudgetResult result)
+        {
+            try
+            {
+                await SecureStorage.SetAsync("budgeting_challenge_completed", "true");
+                await SecureStorage.SetAsync("budgeting_challenge_score", CalculateScore(result).ToString());
+                await SecureStorage.SetAsync("budgeting_challenge_date", DateTime.UtcNow.ToString());
+                await SecureStorage.SetAsync("budgeting_challenge_attempts", result.AttemptsUsed.ToString());
+
+                Debug.WriteLine($"Challenge progress saved locally");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Failed to save locally: {ex.Message}");
+            }
+        }
+
 
 
         private BudgetResult EvaluateBudget()
@@ -376,7 +499,65 @@ namespace FinancialLitApp.ViewModels
                 categorySpending[key] = 0; // resetting the items that belong in each category
             }
         }
-        
+
+        [RelayCommand]
+        private async Task ViewAchievements()
+        {
+            try
+            {
+                var achievements = await _completionHandler.GetUserAchievements();
+
+                if (achievements == null || !achievements.Any())
+                {
+                    await Application.Current.MainPage.DisplayAlert(
+                        "No Achievements Yet",
+                        "Complete challenges to earn blockchain-verified achievements!",
+                        "OK");
+                    return;
+                }
+
+                var achievementList = string.Join("\n\n", achievements.Select(a =>
+                    $"✓ {a.ChallengeName}\n" +
+                    $"   Score: {a.Score}\n" +
+                    $"   Date: {a.CompletionDate:d}"));
+
+                await Application.Current.MainPage.DisplayAlert(
+                    "🏆 Your Achievements",
+                    achievementList,
+                    "OK");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"View achievements error: {ex.Message}");
+            }
+        }
+
+        [RelayCommand]
+        private async Task ViewTokenBalance()
+        {
+            try
+            {
+                var balance = await _completionHandler.GetTokenBalance();
+                TokenBalance = balance;
+
+                await Application.Current.MainPage.DisplayAlert(
+                    "💰 Your Token Balance",
+                    $"{balance} Tokens\n\n" +
+                    "Earn more by completing challenges!\n\n" +
+                    "Token Value:\n" +
+                    "• Basic Challenge: 25 tokens\n" +
+                    "• Savings: 50 tokens\n" +
+                    "• Budgeting: 50 tokens\n" +
+                    "• Investment: 100 tokens\n" +
+                    "• Advanced: 150 tokens",
+                    "OK");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"View balance error: {ex.Message}");
+            }
+        }
+
 
 
 
