@@ -154,3 +154,9 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinancialLitApp.Views.Pages.RewardsPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\Pages\RewardsPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Pages\RewardsPage.xaml
+
+[C:/GitHub/Financial-Savvy-App/FinancialLitApp/Views/Pages/WalletSetUpPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinancialLitApp.Views.Pages.WalletSetUpPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Pages\WalletSetUpPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Pages\WalletSetUpPage.xaml

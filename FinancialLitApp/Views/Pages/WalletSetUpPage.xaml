@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="FinancialLitApp.Views.Pages.WalletSetUpPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:FinancialLitApp.ViewModels"
+             Title="Savings Challenge"
+             BackgroundColor="#1a1a2e">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <!-- Header -->
+            <Label Text="Create Your Blockchain Wallet"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Margin="0,20,0,10"/>
+
+            <Label Text="Secure your achievements permanently"
+                   FontSize="16"
+                   TextColor="Gray"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,20"/>
+
+            <!-- Benefits Section -->
+            <Frame BackgroundColor="#F5F5F5"
+                   BorderColor="Transparent"
+                   CornerRadius="10"
+                   Padding="15">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Why Create a Wallet?"
+                           FontSize="18"
+                           FontAttributes="Bold"/>
+
+                    <HorizontalStackLayout Spacing="10">
+                        <Label Text="✓" 
+                               FontSize="20" 
+                               TextColor="Green"
+                               VerticalOptions="Start"/>
+                        <Label Text="Permanent record of all achievements"
+                               FontSize="14"
+                               VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Spacing="10">
+                        <Label Text="✓" 
+                               FontSize="20" 
+                               TextColor="Green"
+                               VerticalOptions="Start"/>
+                        <Label Text="Earn tokens for completing challenges"
+                               FontSize="14"
+                               VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Spacing="10">
+                        <Label Text="✓" 
+                               FontSize="20" 
+                               TextColor="Green"
+                               VerticalOptions="Start"/>
+                        <Label Text="Verifiable certificates for portfolios"
+                               FontSize="14"
+                               VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Spacing="10">
+                        <Label Text="✓" 
+                               FontSize="20" 
+                               TextColor="Green"
+                               VerticalOptions="Start"/>
+                        <Label Text="Learn about blockchain technology"
+                               FontSize="14"
+                               VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Security Info -->
+            <Frame BackgroundColor="#E3F2FD"
+                   BorderColor="#2196F3"
+                   CornerRadius="10"
+                   Padding="15"
+                   Margin="0,10,0,0">
+                <VerticalStackLayout Spacing="5">
+                    <HorizontalStackLayout Spacing="10">
+                        <Label Text="🔒"
+                               FontSize="24"/>
+                        <Label Text="Your wallet is protected"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+                    <Label Text="Access requires your fingerprint or face recognition"
+                           FontSize="13"
+                           TextColor="#555"
+                           Margin="34,0,0,0"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Wallet Address Display (after creation) -->
+            <Frame x:Name="WalletAddressFrame"
+                   IsVisible="False"
+                   BackgroundColor="#F0F0F0"
+                   BorderColor="Gray"
+                   CornerRadius="10"
+                   Padding="15"
+                   Margin="0,20,0,0">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Your Wallet Address"
+                           FontSize="16"
+                           FontAttributes="Bold"/>
+                    <Label x:Name="WalletAddressLabel"
+                           FontSize="12"
+                           TextColor="Gray"
+                           LineBreakMode="CharacterWrap"/>
+                    <Button Text="Copy Address"
+                            Clicked="OnCopyAddressClicked"
+                            BackgroundColor="#2196F3"
+                            TextColor="White"
+                            CornerRadius="5"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Recovery Phrase Display (after creation) -->
+            <Frame x:Name="RecoveryPhraseFrame"
+                   IsVisible="False"
+                   BackgroundColor="#FFF3E0"
+                   BorderColor="#FF9800"
+                   CornerRadius="10"
+                   Padding="15"
+                   Margin="0,10,0,0">
+                <VerticalStackLayout Spacing="10">
+                    <HorizontalStackLayout Spacing="10">
+                        <Label Text="⚠️"
+                               FontSize="24"/>
+                        <Label Text="SAVE YOUR RECOVERY PHRASE"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="#FF6F00"
+                               VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+
+                    <Label Text="Write this down and keep it safe. You'll need it to recover your wallet if you lose access."
+                           FontSize="12"
+                           TextColor="#D84315"/>
+
+                    <Frame BackgroundColor="White"
+                           BorderColor="Gray"
+                           CornerRadius="5"
+                           Padding="10">
+                        <Label x:Name="RecoveryPhraseLabel"
+                               FontSize="14"
+                               FontAttributes="Bold"
+                               LineBreakMode="WordWrap"/>
+                    </Frame>
+
+                    <Button Text="Copy Recovery Phrase"
+                            Clicked="OnCopyRecoveryClicked"
+                            BackgroundColor="#FF9800"
+                            TextColor="White"
+                            CornerRadius="5"/>
+
+                    <CheckBox x:Name="RecoveryConfirmCheckbox"
+                              Color="#FF9800"/>
+                    <Label Text="I have written down my recovery phrase"
+                           FontSize="12"
+                           Margin="-30,0,0,0"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Action Buttons -->
+            <Button x:Name="CreateWalletButton"
+                    Text="Create Wallet"
+                    Clicked="OnCreateWalletClicked"
+                    BackgroundColor="#4CAF50"
+                    TextColor="White"
+                    HeightRequest="50"
+                    FontSize="18"
+                    CornerRadius="10"
+                    Margin="0,20,0,0"/>
+
+            <Button x:Name="ConfirmButton"
+                    Text="I'm All Set!"
+                    Clicked="OnConfirmClicked"
+                    IsVisible="False"
+                    IsEnabled="False"
+                    BackgroundColor="#2196F3"
+                    TextColor="White"
+                    HeightRequest="50"
+                    FontSize="18"
+                    CornerRadius="10"/>
+
+            <Button Text="Skip for Now"
+                    Clicked="OnSkipClicked"
+                    BackgroundColor="Transparent"
+                    TextColor="Gray"
+                    Margin="0,10,0,20"/>
+
+            <!-- Loading Indicator -->
+            <ActivityIndicator x:Name="LoadingIndicator"
+                             IsRunning="False"
+                             IsVisible="False"
+                             Color="#2196F3"
+                             HeightRequest="50"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
