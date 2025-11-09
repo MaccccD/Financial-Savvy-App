@@ -1,4 +1,5 @@
 Hello! Welcome to the Financial Savvy MAUI Platform:
+
 For macOS users:
 1. Install Visual Studio Code (not Visual Studio 2022)
 2. Install .NET 9.0 SDK for macOS
