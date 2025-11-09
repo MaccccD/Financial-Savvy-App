@@ -85,6 +85,14 @@
               "version": "[9.0.2, )",
               "autoReferenced": true
             },
+            "Nethereum.Accounts": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Nethereum.Web3": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
             "Plugin.Fingerprint": {
               "target": "Package",
               "version": "[3.0.0-beta.1, )"
@@ -141,6 +149,14 @@
               "target": "Package",
               "version": "[9.0.2, )",
               "autoReferenced": true
+            },
+            "Nethereum.Accounts": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Nethereum.Web3": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             },
             "Plugin.Fingerprint": {
               "target": "Package",
@@ -199,6 +215,14 @@
               "version": "[9.0.2, )",
               "autoReferenced": true
             },
+            "Nethereum.Accounts": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Nethereum.Web3": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
             "Plugin.Fingerprint": {
               "target": "Package",
               "version": "[3.0.0-beta.1, )"
@@ -250,6 +274,14 @@
             "Microsoft.Maui.Controls": {
               "target": "Package",
               "version": "[9.0.51, )"
+            },
+            "Nethereum.Accounts": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Nethereum.Web3": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             },
             "Plugin.Fingerprint": {
               "target": "Package",
