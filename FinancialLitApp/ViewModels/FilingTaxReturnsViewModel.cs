@@ -9,12 +9,15 @@ using System.Diagnostics;
 using FinancialLitApp.Services;
 using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
+using FinancialLitApp.Handlers;
+using System.Diagnostics;
 
 
 namespace FinancialLitApp.ViewModels
 {
     public partial class FilingTaxReturnsViewModel : ObservableObject
     {
+        private readonly ChallengeCompletionHandler _completionHandler;
         //these are the given values:
         [ObservableProperty]
         private decimal grossSalaryMonthly = 28122.01m;
@@ -23,7 +26,17 @@ namespace FinancialLitApp.ViewModels
         [ObservableProperty]
         private decimal netTakeHomePay = 22328.33m;
 
+        [ObservableProperty]
+        private decimal tokenBalance = 0m;
 
+        [ObservableProperty]
+        private bool showTokenBalance = false;
+
+        [ObservableProperty]
+        private int score = 0;
+
+        [ObservableProperty]
+        private bool isChallengeComplete = false;
         //the correct answers (calculated internally after the user inputs their answer):
 
         private decimal correctPAYE = 4294.83m;
@@ -98,8 +111,22 @@ namespace FinancialLitApp.ViewModels
 
         public FilingTaxReturnsViewModel()
         {
-            
+            _completionHandler = new ChallengeCompletionHandler();
+            _ = LoadTokenBalance();
             // return;
+        }
+
+        public async Task LoadTokenBalance()
+        {
+            try
+            {
+                TokenBalance = await  _completionHandler.GetTokenBalance();
+                ShowTokenBalance = TokenBalance > 0;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Tokens failed to load. {ex.Message}");
+            }
         }
 
         //the auto calculation as the user types:
@@ -136,8 +163,10 @@ namespace FinancialLitApp.ViewModels
             //}
         }
 
+
+
         [RelayCommand]
-        private void FileReturn()
+        private async void FileReturn()
         {
             ClearFeedback();
             // Validate inputs
@@ -164,8 +193,41 @@ namespace FinancialLitApp.ViewModels
             GeneratePAYEFeedback(userPAYE);      
             GenerateUIFFeedback(userUIF);        
             GeneratePensionFeedback(userPension); 
-            GenerateTotalFeedback();             
+            GenerateTotalFeedback();   
+            
+            // calculate score:
+
+            try
+            {
+                var finalScore = CalculateFinalScore();
+
+                if(finalScore < 50)
+                {
+                    await Application.Current.MainPage.DisplayAlert(
+                        "Challenge Incomplete:(",
+                        $"Score too low: {finalScore}. Please Try Again to earn tokens",
+                        "Okay");
+                    return;
+                }
+
+
+                isChallengeComplete = true;
+
+                await SaveProgressLocally(finalScore);
+
+                await HandleBlockchainCompletion(finalScore);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Challenge completion error!:{ex.Message}");
+                await Application.Current.MainPage.DisplayAlert(
+                    "Error",
+                    "An error occurred while completing the challenge!",
+                    "Okay");
+            }
         }
+
+        
 
 
         private bool ValidateInputs()
@@ -181,7 +243,28 @@ namespace FinancialLitApp.ViewModels
         {
             return Math.Abs(userValue - correctValue) <= margin; // here i'm checking if the value the users input is within the margin even when rounded of in relation to the correct value
         }
+        private int CalculateFinalScore()
+        {
+            // Your existing logic to calculate score based on challenge performance
+            int score = 0;
+            // Base score for completing challenge (40 points)
+            score += 40;
+            
+            if (correctPAYE >= 4300)
+                score += 30;
 
+            if(correctPensionFund >= 1400)
+                score += 20;
+
+            if (correctUIF >= 178)
+                score += 10;
+
+            // Bonus for completing on first attempt (10 points)
+            if (currentAttempt == 1)
+                score += 10;
+
+            return Math.Min(score, 100);
+        }
 
 
         //the PAYE feedback :
@@ -291,10 +374,23 @@ namespace FinancialLitApp.ViewModels
                                 $"Difference: R{Math.Abs(userTotal - correctTotalDeductions):F2}";
             }
         }
+        private async Task SaveProgressLocally(int score)
+        {
+            try
+            {
+                var challengeKey = "Filing_Tax_Returns_Challenge"; 
 
+                await SecureStorage.SetAsync($"{challengeKey}_completed", "true");
+                await SecureStorage.SetAsync($"{challengeKey}_score", score.ToString());
+                await SecureStorage.SetAsync($"{challengeKey}_date", DateTime.UtcNow.ToString());
 
-
-
+                Debug.WriteLine($"Challenge progress saved locally: {score}");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Failed to save locally: {ex.Message}");
+            }
+        }
         private void ShowSuccessMessage()
         {
             OverallMessage = "Congratulations! Your tax return is filed correctly , YAYYYYYYYYY\n\n" +
@@ -308,6 +404,64 @@ namespace FinancialLitApp.ViewModels
                             $"- Maximize tax-deductible contributions (like pension)\n" +
                             $"- Avoid penalties from SARS\n\n" +
                             "You're now equipped to handle real tax filing with CONFIDENCE!";
+        }
+
+        private async Task HandleBlockchainCompletion(int score)
+        {
+            try
+            {
+                // THIS IS THE MAGIC - Handles biometric auth + blockchain recording
+                var result = await _completionHandler.HandleChallengeCompletion(
+                    challengeId: "Filing_Tax_Returns_3", 
+                    challengeName: "Tax Returns Challenge", 
+                    score: score,
+                    challengeType: "tax");
+
+                if (result.NeedsWalletSetup)
+                {
+                    // so if user doesn't have wallet - offer setup
+                    var setupWallet = await Application.Current.MainPage.DisplayAlert(
+                        "🎁 Earn Tokens & Certificates!",
+                        $"Create a blockchain wallet to:\n" +
+                        $"✓ Earn tokens for this challenge\n" +
+                        $"✓ Get a permanent achievement certificate\n" +
+                        $"✓ Build your verifiable skill portfolio",
+                        "Set Up Wallet",
+                        "Maybe Later");
+
+                    if (setupWallet)
+                    {
+                        await Shell.Current.GoToAsync("walletsetup");
+                    }
+                }
+                else if (result.Success && result.BlockchainRecorded)
+                {
+                    // SUCCESS! Achievement recorded on blockchain
+                    TokenBalance = await _completionHandler.GetTokenBalance();
+                    ShowTokenBalance = true;
+
+                    await Application.Current.MainPage.DisplayAlert(
+                        "🎉 Achievement Unlocked!",
+                        $"Congratulations! You earned {result.TokensEarned} tokens!\n\n" +
+                        $"✓ Achievement permanently recorded on blockchain\n" +
+                        $"✓ You can verify this completion anytime\n\n" +
+                        $"💰 Total Tokens: {TokenBalance}",
+                        "Awesome!");
+                }
+                else if (result.SavedLocally)
+                {
+                    // User chose local save only
+                    await Application.Current.MainPage.DisplayAlert(
+                        "✓ Progress Saved",
+                        "Your achievement has been saved locally.",
+                        "OK");
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Blockchain completion error: {ex.Message}");
+                // Don't show error - challenge still completed locally
+            }
         }
 
         private void ShowTryAgainMessage()
@@ -368,7 +522,62 @@ namespace FinancialLitApp.ViewModels
             IsAllCorrect = false;
             OverallMessage = "";
         }
+        [RelayCommand]
+        private async Task ViewAchievements()
+        {
+            try
+            {
+                var achievements = await _completionHandler.GetUserAchievements();
 
+                if (achievements == null || !achievements.Any())
+                {
+                    await Application.Current.MainPage.DisplayAlert(
+                        "No Achievements Yet",
+                        "Complete challenges to earn blockchain-verified achievements!",
+                        "OK");
+                    return;
+                }
+
+                var achievementList = string.Join("\n\n", achievements.Select(a =>
+                    $"✓ {a.ChallengeName}\n" +
+                    $"   Score: {a.Score}\n" +
+                    $"   Date: {a.CompletionDate:d}"));
+
+                await Application.Current.MainPage.DisplayAlert(
+                    "🏆 Your Achievements",
+                    achievementList,
+                    "OK");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"View achievements error: {ex.Message}");
+            }
+        }
+
+        [RelayCommand]
+        private async Task ViewTokenBalance()
+        {
+            try
+            {
+                var balance = await _completionHandler.GetTokenBalance();
+                TokenBalance = balance;
+
+                await Application.Current.MainPage.DisplayAlert(
+                    "💰 Your Token Balance",
+                    $"{balance} Tokens\n\n" +
+                    "Earn more by completing challenges!\n\n" +
+                    "Token Value:\n" +
+                    "• Savings: 40 tokens\n" +
+                    "• Budgeting: 50 tokens\n" +
+                    "• Filing Tax Returns: 100 tokens\n" +
+                    "• Advanced: 150 tokens",
+                    "OK");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"View balance error: {ex.Message}");
+            }
+        }
 
 
         private void ClearFeedback()

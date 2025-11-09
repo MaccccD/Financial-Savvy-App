@@ -69,7 +69,7 @@ namespace FinancialLitApp.ViewModels
         {
             _completionHandler = new ChallengeCompletionHandler();
             InitializeGame();
-            
+            _ = LoadTokenBalance();
         }
 
         public async Task LoadTokenBalance()
@@ -77,7 +77,7 @@ namespace FinancialLitApp.ViewModels
             try
             {
                 TokenBalance = await _completionHandler.GetTokenBalance();
-                ShowTokenBalance = tokenBalance > 0;
+                ShowTokenBalance = TokenBalance > 0;
             }
             catch (Exception ex)
             {
@@ -245,7 +245,7 @@ namespace FinancialLitApp.ViewModels
             }
         }
         [RelayCommand]
-        private void CheckBudget()
+        private async void CheckBudget()
         {
             var result = EvaluateBudget();
             ShowResults = true;
@@ -254,6 +254,9 @@ namespace FinancialLitApp.ViewModels
 
             if (result.IsSuccess)
             {
+                await SaveProgressLocally(result);
+
+                int score = CalculateScore(result);
                 //show the user feedback that they stayed within budget and the target goal.!
 
                 FeedbackMessage = $"Yayy!! 🥳🥳 Excellent Budgeting Skill!\n\n" +
@@ -265,17 +268,23 @@ namespace FinancialLitApp.ViewModels
                                 
 
                 IsGameActive = false;
+
+                //now handle the blockchain recording of the wallet creation and earning tokens:
+                await HandleBlockchainCompletion(score);
             }
             else if(CurrentAttempt >= MaxAttempts)
                 { // when the player has exceeded the available attempts:
                     FeedbackMessage = GetAttemptFinalAttempt(actualSavings);
                     isGameActive = false;
+
+                //save progress loclally as well:
+                 await SaveProgressLocally(result);
                 }
             else
                 {//going for another attempt :
                     CurrentAttempt++;
                     FeedbackMessage = GetAttemptFeedback(actualSavings);
-                ResetForNewAttempt();
+                    ResetForNewAttempt();
                 }
         }
         private async Task HandleBlockchainCompletion(int score)
@@ -337,7 +346,7 @@ namespace FinancialLitApp.ViewModels
         }
 
         private int CalculateScore(BudgetResult result)
-        {
+        {//in here i am creatimg score points based on tbe user's performance in the challenge and decisions made 
             int score = 0;
 
             // Base score for completing challenge (40 points)
@@ -545,10 +554,9 @@ namespace FinancialLitApp.ViewModels
                     $"{balance} Tokens\n\n" +
                     "Earn more by completing challenges!\n\n" +
                     "Token Value:\n" +
-                    "• Basic Challenge: 25 tokens\n" +
-                    "• Savings: 50 tokens\n" +
+                    "• Savings: 40 tokens\n" +
                     "• Budgeting: 50 tokens\n" +
-                    "• Investment: 100 tokens\n" +
+                    "• Filing Tax Returns: 100 tokens\n" +
                     "• Advanced: 150 tokens",
                     "OK");
             }
@@ -557,12 +565,6 @@ namespace FinancialLitApp.ViewModels
                 Debug.WriteLine($"View balance error: {ex.Message}");
             }
         }
-
-
-
-
-
-
 
 
 
