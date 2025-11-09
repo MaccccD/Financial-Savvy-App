@@ -302,9 +302,9 @@ namespace FinancialLitApp.ViewModels
                 {
                     // User doesn't have a wallet - offer to set one up
                     var setupWallet = await Application.Current.MainPage.DisplayAlert(
-                        "🎁 Earn Tokens & Certificates!",
+                        "🎁 Earn 100 Tokens & Certificates!",
                         "Create a blockchain wallet to:\n" +
-                        "✓ Earn 50 tokens for this challenge\n" +
+                        "✓ Earn 100 tokens for this challenge\n" +
                         "✓ Get a permanent achievement certificate\n" +
                         "✓ Build your verifiable skill portfolio",
                         "Set Up Wallet",
@@ -312,7 +312,8 @@ namespace FinancialLitApp.ViewModels
 
                     if (setupWallet)
                     {
-                        await Shell.Current.GoToAsync("walletsetup");
+                        //await Shell.Current.GoToAsync("walletsetup");
+                        await Shell.Current.DisplayAlert("Wallet Set Up successfully!","Okay", "");
                     }
                 }
                 else if (completionResult.Success && completionResult.BlockchainRecorded)

@@ -390,7 +390,8 @@ namespace FinancialLitApp.ViewModels
 
                     if (setupWallet)
                     {
-                        await Shell.Current.GoToAsync("walletsetup");
+                        //await Shell.Current.GoToAsync("walletsetup");
+                        await Shell.Current.DisplayAlert("Wallet Set Up successfully!", "Okay", "");
                     }
                 }
                 else if (result.Success && result.BlockchainRecorded)
