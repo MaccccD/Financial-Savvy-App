@@ -46,13 +46,14 @@ public partial class AppShell : Shell
 		//creating a connection between the iAuthenticator Service and the App Shell to check the login status of the user throughout the app:
 		MessagingCenter.Subscribe<object>(this, "UserLoggedIn", OnUserLoggedIn);
 		MessagingCenter.Subscribe<object>(this, "UserLoggedOut", OnUserLoggedOut);
-
-	}
+        MessagingCenter.Subscribe<object, string>(this, "UserLoggedInWithId", OnUserLoggedInWithId);
+        //  MessagingCenter.Subscribe<object>(this, "UserLoggedInWithId",OnUserLoggedInWithId)
+    }
 
 	//private void RegisterRoutes()
 	//{
 
-	//}
+	//
 
 	private async void SetInitialNavigation()
 	{
@@ -213,7 +214,7 @@ public partial class AppShell : Shell
 
 	private async void ShowAuthenticationFlow()
 	{
-		//the app content will become disabled untill the user has authenticated:
+		//the app content will become disabled until the user has authenticated:
 		MainTabBar.IsVisible = false;
 
 		//show the authentication content:
@@ -346,7 +347,7 @@ public partial class AppShell : Shell
     {
         base.OnDisappearing();
 		MessagingCenter.Unsubscribe<object>(this, "UserLoggedIn");
-        MessagingCenter.Unsubscribe<object>(this, "UserLoggedInWithId");
+        MessagingCenter.Unsubscribe<object, string>(this, "UserLoggedInWithId");
 		MessagingCenter.Unsubscribe<object>(this, "UserLoggedOut");
 
     }
