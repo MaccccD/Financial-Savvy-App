@@ -9,6 +9,8 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="T:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.BudgetResult">
             helper lass for results:
@@ -43,6 +45,12 @@
         <member name="P:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.WarningMessage">
             <inheritdoc cref="F:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.warningMessage"/>
         </member>
+        <member name="P:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.TokenBalance">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.tokenBalance"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.ShowTokenBalance">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.showTokenBalance"/>
+        </member>
         <member name="F:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.spendOnItemCommand">
             <summary>The backing field for <see cref="P:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.SpendOnItemCommand"/>.</summary>
         </member>
@@ -53,13 +61,133 @@
             <summary>The backing field for <see cref="P:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.CheckBudgetCommand"/>.</summary>
         </member>
         <member name="P:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.CheckBudgetCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.CheckBudget"/>.</summary>
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.CheckBudget"/>.</summary>
         </member>
         <member name="F:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.resetChallengeCommand">
             <summary>The backing field for <see cref="P:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.ResetChallengeCommand"/>.</summary>
         </member>
         <member name="P:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.ResetChallengeCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.ResetChallenge"/>.</summary>
+        </member>
+        <member name="F:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.viewAchievementsCommand">
+            <summary>The backing field for <see cref="P:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.ViewAchievementsCommand"/>.</summary>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.ViewAchievementsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.ViewAchievements"/>.</summary>
+        </member>
+        <member name="F:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.viewTokenBalanceCommand">
+            <summary>The backing field for <see cref="P:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.ViewTokenBalanceCommand"/>.</summary>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.ViewTokenBalanceCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FinancialLitApp.ViewModels.BudgetingChallengeViewModel.ViewTokenBalance"/>.</summary>
+        </member>
+        <member name="T:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.GrossSalaryMonthly">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.grossSalaryMonthly"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.GrossSalaryAnnual">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.grossSalaryAnnual"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.NetTakeHomePay">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.netTakeHomePay"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.TokenBalance">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.tokenBalance"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.ShowTokenBalance">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.showTokenBalance"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.Score">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.score"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.IsChallengeComplete">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.isChallengeComplete"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.PayeInput">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.payeInput"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.UifInput">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.uifInput"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.PensionFundInput">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.pensionFundInput"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.CalculatedTotal">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.calculatedTotal"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.PayeFeedback">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.payeFeedback"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.UifFeedback">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.uifFeedback"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.PensionFundFeedback">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.pensionFundFeedback"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.TotalFeedback">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.totalFeedback"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.OverallMessage">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.overallMessage"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.IsPAYECorrect">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.isPAYECorrect"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.IsUIFCorrect">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.isUIFCorrect"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.IsPensionFundCorrect">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.isPensionFundCorrect"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.IsAllCorrect">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.isAllCorrect"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.ShowResults">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.showResults"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.CurrentAttempt">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.currentAttempt"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.MaxAttempts">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.maxAttempts"/>
+        </member>
+        <member name="M:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.OnPayeInputChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.PayeInput"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.PayeInput"/> is changed.</remarks>
+        </member>
+        <member name="M:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.OnUifInputChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.UifInput"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.UifInput"/> is changed.</remarks>
+        </member>
+        <member name="M:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.OnPensionFundInputChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.PensionFundInput"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.PensionFundInput"/> is changed.</remarks>
+        </member>
+        <member name="F:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.fileReturnCommand">
+            <summary>The backing field for <see cref="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.FileReturnCommand"/>.</summary>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.FileReturnCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.FileReturn"/>.</summary>
+        </member>
+        <member name="F:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.showCorrectReturnCommand">
+            <summary>The backing field for <see cref="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.ShowCorrectReturnCommand"/>.</summary>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.ShowCorrectReturnCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.ShowCorrectReturn"/>.</summary>
+        </member>
+        <member name="F:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.resetCommand">
+            <summary>The backing field for <see cref="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.ResetCommand"/>.</summary>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.ResetCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:FinancialLitApp.ViewModels.FilingTaxReturnsViewModel.Reset"/>.</summary>
         </member>
         <member name="T:FinancialLitApp.ViewModels.LoginViewModel">
             <inheritdoc/>
@@ -108,6 +236,14 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.SavingsChallengeViewModel.TokenBalance">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.SavingsChallengeViewModel.tokenBalance"/>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.SavingsChallengeViewModel.ShowTokenBalance">
+            <inheritdoc cref="F:FinancialLitApp.ViewModels.SavingsChallengeViewModel.showTokenBalance"/>
         </member>
         <member name="P:FinancialLitApp.ViewModels.SavingsChallengeViewModel.StartingAmount">
             <inheritdoc cref="F:FinancialLitApp.ViewModels.SavingsChallengeViewModel.startingAmount"/>
@@ -140,19 +276,31 @@
             <summary>The backing field for <see cref="P:FinancialLitApp.ViewModels.SavingsChallengeViewModel.SelectItemCommand"/>.</summary>
         </member>
         <member name="P:FinancialLitApp.ViewModels.SavingsChallengeViewModel.SelectItemCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:FinancialLitApp.ViewModels.SavingsChallengeViewModel.SelectItem(FinancialLitApp.Models.SavingsItem)"/>.</summary>
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:FinancialLitApp.ViewModels.SavingsChallengeViewModel.SelectItem(FinancialLitApp.Models.SavingsItem)"/>.</summary>
         </member>
         <member name="F:FinancialLitApp.ViewModels.SavingsChallengeViewModel.checkResultCommand">
             <summary>The backing field for <see cref="P:FinancialLitApp.ViewModels.SavingsChallengeViewModel.CheckResultCommand"/>.</summary>
         </member>
         <member name="P:FinancialLitApp.ViewModels.SavingsChallengeViewModel.CheckResultCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:FinancialLitApp.ViewModels.SavingsChallengeViewModel.CheckResult"/>.</summary>
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FinancialLitApp.ViewModels.SavingsChallengeViewModel.CheckResult"/>.</summary>
         </member>
         <member name="F:FinancialLitApp.ViewModels.SavingsChallengeViewModel.resetChallengeCommand">
             <summary>The backing field for <see cref="P:FinancialLitApp.ViewModels.SavingsChallengeViewModel.ResetChallengeCommand"/>.</summary>
         </member>
         <member name="P:FinancialLitApp.ViewModels.SavingsChallengeViewModel.ResetChallengeCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:FinancialLitApp.ViewModels.SavingsChallengeViewModel.ResetChallenge"/>.</summary>
+        </member>
+        <member name="F:FinancialLitApp.ViewModels.SavingsChallengeViewModel.viewAchievementsCommand">
+            <summary>The backing field for <see cref="P:FinancialLitApp.ViewModels.SavingsChallengeViewModel.ViewAchievementsCommand"/>.</summary>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.SavingsChallengeViewModel.ViewAchievementsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FinancialLitApp.ViewModels.SavingsChallengeViewModel.ViewAchievements"/>.</summary>
+        </member>
+        <member name="F:FinancialLitApp.ViewModels.SavingsChallengeViewModel.viewTokenBalanceCommand">
+            <summary>The backing field for <see cref="P:FinancialLitApp.ViewModels.SavingsChallengeViewModel.ViewTokenBalanceCommand"/>.</summary>
+        </member>
+        <member name="P:FinancialLitApp.ViewModels.SavingsChallengeViewModel.ViewTokenBalanceCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FinancialLitApp.ViewModels.SavingsChallengeViewModel.ViewTokenBalance"/>.</summary>
         </member>
         <member name="T:FinancialLitApp.Resource">
             <summary>
@@ -195,6 +343,66 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.WarningMessage">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "WarningMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TokenBalance">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TokenBalance" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ShowTokenBalance">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ShowTokenBalance" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.GrossSalaryMonthly">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "GrossSalaryMonthly" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.GrossSalaryAnnual">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "GrossSalaryAnnual" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NetTakeHomePay">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NetTakeHomePay" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Score">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Score" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsChallengeComplete">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsChallengeComplete" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PayeInput">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PayeInput" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UifInput">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UifInput" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PensionFundInput">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PensionFundInput" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CalculatedTotal">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CalculatedTotal" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PayeFeedback">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PayeFeedback" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UifFeedback">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UifFeedback" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PensionFundFeedback">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PensionFundFeedback" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TotalFeedback">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TotalFeedback" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.OverallMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "OverallMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsPAYECorrect">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsPAYECorrect" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsUIFCorrect">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsUIFCorrect" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsPensionFundCorrect">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsPensionFundCorrect" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsAllCorrect">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsAllCorrect" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Username">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Username" generated properties.</summary>
@@ -258,6 +466,66 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.WarningMessage">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "WarningMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TokenBalance">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TokenBalance" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ShowTokenBalance">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ShowTokenBalance" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.GrossSalaryMonthly">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "GrossSalaryMonthly" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.GrossSalaryAnnual">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "GrossSalaryAnnual" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NetTakeHomePay">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NetTakeHomePay" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Score">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Score" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsChallengeComplete">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsChallengeComplete" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PayeInput">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PayeInput" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UifInput">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UifInput" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PensionFundInput">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PensionFundInput" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CalculatedTotal">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CalculatedTotal" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PayeFeedback">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PayeFeedback" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UifFeedback">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UifFeedback" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PensionFundFeedback">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PensionFundFeedback" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TotalFeedback">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TotalFeedback" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.OverallMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "OverallMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsPAYECorrect">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsPAYECorrect" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsUIFCorrect">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsUIFCorrect" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsPensionFundCorrect">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsPensionFundCorrect" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsAllCorrect">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsAllCorrect" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Username">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Username" generated properties.</summary>

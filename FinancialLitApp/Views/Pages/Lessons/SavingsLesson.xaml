@@ -50,7 +50,7 @@
             <!---Understanding what FWB (Financial Well-Being means):-->
             <Frame BackgroundColor="#16213e" CornerRadius="12" Padding="18">
                 <StackLayout Spacing="15">
-                    <Label Text=" 🍃 What is Financial Wellbeing ?"
+                    <Label Text=" 🍃 What is Financial Well-being ?"
                            FontSize="18"
                            FontAttributes="Bold"
                            TextColor="#ffebd7"
@@ -106,7 +106,7 @@
                     <Frame BackgroundColor="#103d81" CornerRadius="8" Padding="15">
                         <StackLayout Padding="12">
                             <StackLayout Orientation="Horizontal" Spacing="80">
-                                <Label Text="1. Active Saving."
+                                <Label Text="1. Active Saving:"
                                        FontSize="20"
                                        FontAttributes="Bold"
                                        TextColor="LimeGreen"
@@ -123,7 +123,7 @@
                     <Frame BackgroundColor="#103d81" CornerRadius="8" Padding="15">
                         <StackLayout Padding="12">
                             <StackLayout Orientation="Horizontal" Spacing="10">
-                                <Label Text="2. Smart Spending Choices."
+                                <Label Text="2. Smart Spending Choices:"
                                        FontSize="20"
                                        FontAttributes="Bold"
                                        TextColor="LimeGreen"
@@ -140,7 +140,7 @@
                     <Frame BackgroundColor="#103d81" CornerRadius="8" Padding="15">
                         <StackLayout Padding="12">
                             <StackLayout Orientation="Horizontal" Spacing="10">
-                                <Label Text="3. Avoid Daily Debt."
+                                <Label Text="3. Avoid Daily Debt:"
                                        FontSize="20"
                                        FontAttributes="Bold"
                                        TextColor="LimeGreen"
@@ -170,7 +170,7 @@
                             
                             <!--- the learning  pricess-->
                             <StackLayout Spacing="12">
-                                <Frame BackgroundColor="DarkGreen" CornerRadius="8" Padding="12">
+                                <Frame BackgroundColor="#2c3e50" CornerRadius="8" Padding="12">
                                     <Label Text="💡 Step 1: You start saving (R10)"
                                            FontSize="14"
                                            FontAttributes="Bold"
@@ -178,22 +178,22 @@
                                 </Frame>
                                 <Label Text="⬇️" FontSize="24" TextColor="#ffebd7" HorizontalOptions="Center"/>
 
-                                <Frame BackgroundColor="DarkGreen" CornerRadius="8" Padding="12">
+                                <Frame BackgroundColor="#2c3e50" CornerRadius="8" Padding="12">
                                     <Label Text="💡 Step 2: You start noticing your spending patterns."
                                            FontSize="14"
                                            FontAttributes="Bold"
                                            TextColor="#ffebd7"/>
                                 </Frame>
                                 <Label Text="⬇️" FontSize="24" TextColor="#ffebd7" HorizontalOptions="Center"/>
-                                
-                                <Frame BackgroundColor="DarkGreen" CornerRadius="8" Padding="12">
+
+                                <Frame BackgroundColor="#2c3e50" CornerRadius="8" Padding="12">
                                     <Label Text="💡 Step 3: You become more aware of your financial decisions"
                                            FontSize="14"
                                            FontAttributes="Bold"
                                            TextColor="#ffebd7"/>
                                 </Frame>
                                 <Label Text="⬇️" FontSize="24" TextColor="#ffebd7" HorizontalOptions="Center"/>
-                                <Frame BackgroundColor="DarkGreen" CornerRadius="8" Padding="12">
+                                <Frame BackgroundColor="#2c3e50" CornerRadius="8" Padding="12">
                                     <Label Text="🎉 Result: You're now financially smarter!"
                                            FontSize="16"
                                            FontAttributes="Bold"
@@ -212,12 +212,12 @@
                                    FontAttributes="Bold"
                                    TextColor="#ffebd7"/>
 
-                            <Label Text="Imagine youy decided to save R100 this month. You realize you spend R15 on coffee daily (R420/ month). By choosing to make coffee at home 3 days a week instead of buying it, you cut your spending to R240/month – that's R180 saved!"
+                            <Label Text="Imagine youy decided to save R100 this month. You realize you spend R15 on coffee daily (R420 per month). By choosing to make coffee at home 3 days a week instead of buying it, you cut your spending to R240 per month – that's R180 saved!"
                                    FontSize="14"
                                    TextColor="#ffebd7"
                                    LineBreakMode="WordWrap"/>
 
-                            <Frame BackgroundColor="#103d85" CornerRadius="8" Padding="12">
+                            <Frame BackgroundColor="#2c3e50" CornerRadius="8" Padding="12">
                                 <Label Text="What you learned: Small daily choices = big monthly impact. This awareness is financial literacy in action. Literally!"
                                        FontSize="14"
                                        FontAttributes="Italic"
