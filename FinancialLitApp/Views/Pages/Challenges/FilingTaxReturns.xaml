@@ -15,7 +15,7 @@
 			<!--- Header-->
 			<Frame BackgroundColor="#1a2e73" CornerRadius="15" Padding="20">
 				<StackLayout>
-					<Label Text="Filing Tax Returns Challenge"
+					<Label Text="Tax Returns Challenge"
                            FontSize="25"
                            FontAttributes="Bold"
                            TextColor="#ffebd7"

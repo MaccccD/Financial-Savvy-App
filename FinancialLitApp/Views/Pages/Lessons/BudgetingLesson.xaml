@@ -36,7 +36,7 @@
                                LineBreakMode="WordWrap"
                                TextColor="#ffebd7"/>
                     <Frame BackgroundColor="#103d81" CornerRadius="12" Padding="15">
-                        <Label Text="The act of achieving key budgeting competency takes times to master and requires practice"
+                        <Label Text="The act of achieving key budgeting competency takes times to master and requires practice."
                                    FontSize="14"
                                    FontAttributes="Italic"
                                    TextColor="#00d4aa"
@@ -48,7 +48,7 @@
             
             <Frame BackgroundColor="#16213e" CornerRadius="15" Padding="16">
                 <StackLayout Spacing="15">
-                    <Label Text="There are two distinct terms that need to be understood when it comes to responsible spending decision:"
+                    <Label Text="There are two distinct terms that need to be understood when it comes to responsible spending decisions:"
                            FontSize="15"
                            FontAttributes="Bold"
                            TextColor="#ffebd7"
@@ -63,7 +63,7 @@
                                    HorizontalOptions="Center"
                                    LineBreakMode="WordWrap"/>
                                 <Label Text="This refers to the process of creating a strategic plan of how to spend your resources, including money, time and personnel. It becomes a critical tool for financial planning and analysis."
-                                   FontSize="12"
+                                   FontSize="14"
                                    TextColor="#ffebd7"
                                    HorizontalOptions="Center"
                                    LineBreakMode="WordWrap"/>
@@ -82,7 +82,7 @@
                             TextColor="#ffebd7"
                             HorizontalOptions="Center"/>
                         <Label  Text="The act of buying buying something of a monetary value."
-                            FontSize="12"
+                            FontSize="14"
                             TextColor="#ffebd7"
                             HorizontalOptions="Center"
                             LineBreakMode="WordWrap"/>
@@ -92,7 +92,7 @@
 
             <Frame BackgroundColor="#16213e" CornerRadius="18" Padding="12"  HorizontalOptions="FillAndExpand">
                 <StackLayout Spacing="14">
-                    <Label Text="The disparity between the two above terms helps users understand the power that purchasing something has on their ability to spend their money on it in a sustainable way."
+                    <Label Text="The disparity between the two terms above helps users understand the power that purchasing something has on their ability to spend their money."
                            FontSize="16"
                            FontAttributes="Italic"
                            TextColor="#ffebd7"
@@ -163,7 +163,7 @@
 							   VerticalOptions="Center"/>
 					</StackLayout>
 					<Label Text="This means developing a behavior of not compromising on the priorities made by making impulse purchases."
-						   FontSize="13"
+						   FontSize="14"
                            Margin="10"
 						   FontAttributes="Italic"
 						   TextColor="#ffebd7"
@@ -172,38 +172,30 @@
 			</Frame>
 
 			<!---Connecting the example to the game challenge:-->
-			<Frame BackgroundColor="#103d81" CornerRadius="12" Padding="18">
-				<StackLayout Spacing="12">
-					<Label Text="🎮 Ready to Experience This?"
+            <Frame BackgroundColor="#103d81" CornerRadius="12" Padding="18">
+                <StackLayout Spacing="12">
+                    <Label Text="🎮 Ready to Experience This?"
 						   FontSize="18"
 						   FontAttributes="Bold"
 						   TextColor="#ffebd7"
 						   HorizontalOptions="Center"/>
 
-					<Label Text="The Budgeting Challenge puts this theory into practice. You'll make real spending decisions and see instantly how they affect your ability to budget effectively."
+                    <Label Text="The Budgeting Challenge puts this theory into practice. You'll make real spending decisions and see instantly how they affect your ability to budget effectively."
 						   FontSize="15"
                            FontAttributes="Italic"
 						   TextColor="#ffebd7"
 						   LineBreakMode="WordWrap"
 						   HorizontalOptions="Center"/>
 
-					<Label Text="Remember: Every choice you make in the challenge is building your financial skills, not just testing them!.It's not a test but a pratical way to learn a life-long skill!"
+                    <Label Text="Remember: Every choice you make in the challenge is building your financial skills, not just testing them! It's not a test but a practical way to learn a life-long skill."
 						   FontSize="15"
 						   FontAttributes="Italic"
 						   TextColor="#ecf0f1"
 						   HorizontalOptions="Center"
 						   LineBreakMode="WordWrap"/>
 
-                    <Label Text="This financial information is grounded  within Nicky Lalmuanpuia's research paper – A Study on Student Budgeting and Spending 
-                                Behaviour among the Collenge Students"
-                           FontSize="25"
-                           FontAttributes="Bold"
-                           TextColor="#FFEBD7"
-                           LineBreakMode="WordWrap"
-                           HorizontalOptions="Center"/>
-
                     <!--- The challenge btn to navigate user to the actual gameplay challenge:-->
-					<Button Text="🚀 Try this Budgeting Challenge!"
+                    <Button Text="🚀 Try this Budgeting Challenge!"
 							BackgroundColor="#2503FD"
 							TextColor="#ffebd7"
 							Margin="8"
@@ -214,10 +206,21 @@
 							FontAttributes="Bold"
 							Clicked="OnBudgetingChallengeClicked"/>
 
-				</StackLayout>
-			</Frame>
-				
-			
+                </StackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="#103d81" CornerRadius="12" Padding="8">
+                <StackLayout Spacing="12">
+                    <Label Text="This financial information is grounded within Nicky Lalmuanipuia's research paper (2021) – A Study on Student Budgeting and Spending 
+                                 Behaviour among the College Students."
+                                 FontSize="20"
+                                 FontAttributes="Bold"
+                                 TextColor="#FFEBD7"
+                                 LineBreakMode="WordWrap"
+                                 HorizontalOptions="Center"/>
+                </StackLayout>
+            </Frame>
+
         </StackLayout>
     </ScrollView>
 </ContentPage>

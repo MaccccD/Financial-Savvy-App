@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\views\\pages\\challenges\\filingtaxreturns.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:views\\pages\\challenges\\filingtaxreturns.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\views\\pages\\lessons\\savingslesson.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:views\\pages\\lessons\\savingslesson.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\views\\pages\\challenges\\filingtaxreturns.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|solutionrelative:views\\pages\\challenges\\filingtaxreturns.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2FC1F7A6-702D-FD55-55EC-3B8CAA5269C1}|FinancialLitApp.csproj|c:\\github\\financial-savvy-app\\financiallitapp\\views\\pages\\challenges\\budgeting.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -236,7 +236,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 21,
           "Children": [
             {
               "$type": "Document",
@@ -305,13 +305,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "FilingTaxReturns.xaml",
               "DocumentMoniker": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Views\\Pages\\Challenges\\FilingTaxReturns.xaml",
               "RelativeDocumentMoniker": "Views\\Pages\\Challenges\\FilingTaxReturns.xaml",
               "ToolTip": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Views\\Pages\\Challenges\\FilingTaxReturns.xaml",
               "RelativeToolTip": "Views\\Pages\\Challenges\\FilingTaxReturns.xaml",
-              "ViewState": "AgIAAKYAAAAAAAAAAAD4v7UAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAD4v0YAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-11-05T14:57:30.55Z",
               "EditorCaption": ""
@@ -486,13 +486,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "SavingsLesson.xaml",
               "DocumentMoniker": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Views\\Pages\\Lessons\\SavingsLesson.xaml",
               "RelativeDocumentMoniker": "Views\\Pages\\Lessons\\SavingsLesson.xaml",
               "ToolTip": "C:\\GitHub\\Financial-Savvy-App\\FinancialLitApp\\Views\\Pages\\Lessons\\SavingsLesson.xaml",
               "RelativeToolTip": "Views\\Pages\\Lessons\\SavingsLesson.xaml",
-              "ViewState": "AgIAAKAAAAAAAAAAAAD4v68AAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAFkAAAAAAAAAAAD4v3YAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-10-14T11:41:43.484Z",
               "EditorCaption": ""
