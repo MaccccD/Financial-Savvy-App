@@ -218,7 +218,7 @@ namespace FinancialLitApp.ViewModels
             
             if (item.IsSelected)
             {
-                SelectedItems.Add(item); // add item that has been slected to the list
+                SelectedItems.Add(item); // add item that has been selected to the list
                 MoneySpent += item.Price; //  take away the amount of money the item costs from the money that you had to spend
                 Console.WriteLine(MoneySpent);
 
@@ -357,7 +357,7 @@ namespace FinancialLitApp.ViewModels
             else if(CurrentlySaved < TargetAmount)
             {
                 var overspent = TargetAmount - CurrentlySaved; // to determine overspending, i am checking the difference between what was the target amount and the currrently saved amount
-                FeedbackMessage = $"⚠️ You've spent R{overspent:F2} too much. Consider removing some 'wants' to reach your saving's goal.";
+                FeedbackMessage = $"⚠️ You've spent R{overspent:F2} too much.";
 
             }
             else
