@@ -36,7 +36,7 @@
                            FontSize="18"
                            FontAttributes="Bold"
                            TextColor="#00d4aa"/>
-                    <Label Text="In this challenge, you'll learn how to file your tax returns by completing this mock ITR12 Form. Use the formulas given to calculate each amount. The aim is to understand how the tax calculator works and what deductions are applied to your salary."
+                    <Label Text="Learn how to file taxes by filling out a practice ITR12 form. Use the provided formulas to calculate each amount and see how deductions affect your salary."
                            FontSize="14"
                            TextColor="#ffebd7"
                            LineBreakMode="WordWrap"/>

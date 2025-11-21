@@ -354,7 +354,7 @@ namespace FinancialLitApp.ViewModels
         }
 
         private int CalculateScore(BudgetResult result)
-        {//in here i am creating score points based on tbe user's performance in the challenge and decisions made 
+        {//in here i am creating score points based on the user's performance in the challenge and decisions made 
             int score = 0;
 
             // Base score for completing challenge (40 points)
