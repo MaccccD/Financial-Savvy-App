@@ -247,11 +247,18 @@ namespace FinancialLitApp.ViewModels
         [RelayCommand]
         private async Task CheckBudget()
         {
+            var actualSavings = StartingAmount - CurrentCostsSpent;
+            if (actualSavings == 500)
+            {
+                Shell.Current.DisplayAlert("You need to actually spend on an items before you check your budget", "Okay", "");
+            }//checking if the person actually spent before giving results!
+            
             var result = EvaluateBudget();
             ShowResults = true;
 
-            var actualSavings = StartingAmount - CurrentCostsSpent;
+          //  var actualSavings = StartingAmount - CurrentCostsSpent;
 
+           
             if (result.IsSuccess)
             {
                 await SaveProgressLocally(result);
@@ -395,7 +402,13 @@ namespace FinancialLitApp.ViewModels
 
         private BudgetResult EvaluateBudget()
         { //here i'm checking if the amount the user saved is equal to the target and whether that was a success.
+            
             var actualSavings = StartingAmount - CurrentCostsSpent;
+            if (actualSavings == 500)
+            {
+                Shell.Current.DisplayAlert("You need to actually spend on an items before you check your budget", "Okay", "");
+            }//checking if the person actually spent before giving results!
+
             var isSuccess = actualSavings >= TargetSavings;// when the savings are equal to the set target
 
             return new BudgetResult
@@ -430,7 +443,7 @@ namespace FinancialLitApp.ViewModels
             }
             if (categorySpending[itemCategory.Investment] > 50)
             {
-                analysis += $"Love to see it! ⭐ An investment effort made into the your future self";
+                analysis += $" Love to see it! ⭐ An investment effort made into the your future self.";
             }
 
             return analysis; 

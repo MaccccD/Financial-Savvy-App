@@ -26,8 +26,18 @@
                            Margin="0,5,0,0"/>
                 </StackLayout>
             </Frame>
-            
-            
+
+            <Frame BackgroundColor="#34495e" CornerRadius="8" Padding="15" Margin="0,20,0,0">
+                <StackLayout>
+                    <Label Text="How It Works:" FontSize="20" FontAttributes="Bold" TextColor="#00d4aa"/>
+                    <Label Text ="You have a collection of expenses in different categories.Your goal is to spend the given allowance get to the savings target. To spend, just click on an item."
+               FontSize="15"
+               TextColor="#ffebd7"
+               LineBreakMode="WordWrap"/>
+                </StackLayout>
+            </Frame>
+
+
             <!---The 3 metrics dashboard layout:-->
             <Grid ColumnDefinitions="*,*,*" ColumnSpacing="10">
                 
@@ -77,8 +87,9 @@
                    Padding="15"
                    IsVisible="{Binding WarningMessage, Converter={StaticResource StringIsNotEmptyConverter}}">
                 <Label Text="{Binding WarningMessage}"
-                    FontSize="14"
-                    TextColor="#ffebd7"
+                    FontSize="15"
+                    FontAttributes="Bold"
+                    TextColor="Yellow"
                     HorizontalOptions="Center"
                     LineBreakMode="WordWrap"/>
             </Frame>
