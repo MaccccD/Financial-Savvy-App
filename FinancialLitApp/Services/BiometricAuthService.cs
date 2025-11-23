@@ -116,6 +116,7 @@ namespace FinancialLitApp.Services
             {
                 System.Diagnostics.Debug.WriteLine($"Enrollment failed@ : {ex.Message}");
                 return false;
+                
             }
         }
 
@@ -131,7 +132,7 @@ namespace FinancialLitApp.Services
                 return null;
             }
         }
-
+        
         public async Task <string> GetStoredUsername()
         {
             try
@@ -147,7 +148,7 @@ namespace FinancialLitApp.Services
 
         public async Task <bool> IsUserEnrolled()
         {
-            var userId = await GetStoredUserId();//so if user has been enrolled, i will return the user id key here
+            var userId = await GetStoredUserId();//so if user has been enrolled, i will return the user id key here // if u reading voetsek nya mmao!!!
             return !string.IsNullOrEmpty( userId );
         }
 
@@ -163,7 +164,7 @@ namespace FinancialLitApp.Services
             }
             catch(Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine($"Enrollment cleared out  successfully. :{ex.Message}");
+                System.Diagnostics.Debug.WriteLine($"Enrollment clear ed out  successfully. :{ex.Message}");
             }
         }
 
