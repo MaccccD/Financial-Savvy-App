@@ -21,7 +21,7 @@ namespace FinancialLitApp.Models
 
     }
 
-    public enum ItemCategory // this enum houses the distinction between what item  users would  categorise as a need or want 
+    public enum ItemCategory // this enum houses the distinction between what item  users would  categorize as a need or want 
     {
         Need,
         Want
